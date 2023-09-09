@@ -94,19 +94,19 @@ begin
     -- gerador de tick
     -- fator de divisao para 9600 bauds (5208=50M/9600)
     -- fator de divisao para 115.200 bauds (434=50M/115200)
-    RX_TICK: contador_m 
-       generic map (
-         M => 434, -- 115200 bauds
-         N => 13
-       ) 
-       port map (
-         clock => clock, 
-         zera  => s_zera, 
-         conta => '1', 
-         Q     => open, 
-         fim   => open, 
-         meio  => s_tick
-       );
+  RX_TICK: contador_m 
+     generic map (
+       M => 434, -- 115200 bauds
+       N => 13
+     ) 
+     port map (
+       clock => clock, 
+       zera  => s_zera, 
+       conta => '1', 
+       Q     => open, 
+       fim   => open, 
+       meio  => s_tick
+     );
  
 
   -- unidade de controle

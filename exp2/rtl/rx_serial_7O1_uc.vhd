@@ -19,7 +19,7 @@ end entity;
 
 architecture rx_serial_uc_arch of rx_serial_7O1_uc is
 
-    type tipo_estado is (inicial, preparacao, espera, amostra, checagem, final);
+    type tipo_estado is (inicial, preparacao, espera, amostra, final);
     signal Eatual: tipo_estado;  -- estado atual
     signal Eprox:  tipo_estado;  -- proximo estado
 
@@ -53,11 +53,7 @@ begin
                        end if;
 
       when amostra =>  if fim='0' then Eprox <= espera;
-                       else            Eprox <= checagem;
-                       end if;
-
-      when checagem => if stop_bit='1' then Eprox <= final;
-                       else Eprox <= inicial;
+                       else            Eprox <= final;
                        end if;
 
       when final =>    Eprox <= inicial;
@@ -86,7 +82,6 @@ begin
                    "0001" when preparacao, 
                    "0010" when espera, 
                    "0100" when amostra, 
-                   "1000" when checagem, 
                    "1111" when final,    -- Final
                    "1110" when others;   -- Erro
 

@@ -58,7 +58,7 @@ begin
     stop_bit    <= s_saida(8);
     start_bit   <= entrada_serial;
 
-    U1: deslocador_n 
+    RX_shifter: deslocador_n 
         generic map (
             N => 9
         )  
@@ -72,7 +72,7 @@ begin
             saida          => s_saida
         );
 
-    U2: contador_m 
+    RX_counter: contador_m 
         generic map (
             M => 11, 
             N => 4
