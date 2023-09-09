@@ -12,48 +12,23 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim work.tx_serial_7O1_tb 
-# Start time: 17:17:07 on Sep 08,2023
+# vsim work.rx_serial_tb 
+# Start time: 15:32:52 on Sep 09,2023
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.tx_serial_7o1_tb(tb)#1
-do wave.do
-add wave -position insertpoint  \
-sim:/tx_serial_7o1_tb/caso
+# Loading work.rx_serial_tb(tb)#1
+do wave2.do
+# ** UI-Msg: (vish-4014) No objects found matching '/rx_serial_tb/DUT/U3_TICK/IQ'.
+# Executing ONERROR command at macro ./wave2.do line 16
 run -all
-# ** Note: Inicio da simulacao
-#    Time: 0 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 0
-#    Time: 1440 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 1
-#    Time: 107410 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 2
-#    Time: 213370 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 3
-#    Time: 319330 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: Fim da simulacao
-#    Time: 425290 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-add wave -position insertpoint  \
-sim:/tx_serial_7o1_tb/dut/db_tick
-add wave -position insertpoint  \
-sim:/tx_serial_7o1_tb/dut/U1_UC/Eatual
-restart -f
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-run -all
-# ** Note: Inicio da simulacao
-#    Time: 0 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 0
-#    Time: 1440 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 1
-#    Time: 107410 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 2
-#    Time: 213370 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: caso: 3
-#    Time: 319330 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# ** Note: Fim da simulacao
-#    Time: 425290 ns  Iteration: 0  Instance: /tx_serial_7o1_tb
-# End time: 18:02:49 on Sep 08,2023, Elapsed time: 0:45:42
-# Errors: 0, Warnings: 0
+# ** Note: inicio da simulacao
+#    Time: 0 ns  Iteration: 0  Instance: /rx_serial_tb
+# ** Note: Caso de teste 1
+#    Time: 8680 ns  Iteration: 0  Instance: /rx_serial_tb
+# ** Note: Caso de teste 2
+#    Time: 147560 ns  Iteration: 0  Instance: /rx_serial_tb
+# ** Note: fim da simulacao
+#    Time: 303800 ns  Iteration: 0  Instance: /rx_serial_tb
