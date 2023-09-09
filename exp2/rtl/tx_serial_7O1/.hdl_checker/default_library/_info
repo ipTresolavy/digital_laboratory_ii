@@ -1,0 +1,181 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1
+Econtador_m
+Z1 w1693824206
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 4
+R0
+Z5 8/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/contador_m.vhd
+Z6 F/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/contador_m.vhd
+l0
+Z7 L24 1
+VY?1>KQ:9Tmn^K]DfGQR[O3
+!s100 FXKGl>fh4hdO]FVoolMca1
+Z8 OL;C;2021.2;73
+32
+Z9 !s110 1694199162
+!i10b 1
+Z10 !s108 1694199162.000000
+Z11 !s90 -modelsimini|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/modelsim.ini|-quiet|-work|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/default_library|-check_synthesis|-lint|-rangecheck|-pedanticerrors|-explicit|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/contador_m.vhd|
+Z12 !s107 /home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/contador_m.vhd|
+!i113 0
+Z13 o-quiet -work /home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/default_library -check_synthesis -lint -rangecheck -pedanticerrors -explicit
+Z14 tExplicit 1 CvgOpt 0
+Acontador_m_arch
+R2
+R3
+R4
+DEx4 work 10 contador_m 0 22 Y?1>KQ:9Tmn^K]DfGQR[O3
+!i122 4
+l41
+L39 29
+V20>EA1I<nKDiP>WohXS2:1
+!s100 biTU27[D3X0zWUK5YHzTF0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Etx_serial_7o1
+Z15 w1694046946
+R2
+R3
+R4
+!i122 1
+R0
+Z16 8/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_7O1.vhd
+Z17 F/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_7O1.vhd
+l0
+R7
+VazhLSfR]X?<8G<4A7=e190
+!s100 IMhG:Y`C4U`jUfebk:<@80
+R8
+32
+Z18 !s110 1694198932
+!i10b 1
+Z19 !s108 1694198931.000000
+Z20 !s90 -modelsimini|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/modelsim.ini|-quiet|-work|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/default_library|-check_synthesis|-lint|-rangecheck|-pedanticerrors|-explicit|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_7O1.vhd|
+Z21 !s107 /home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_7O1.vhd|
+!i113 0
+R13
+R14
+Atx_serial_7o1_arch
+R2
+R3
+R4
+DEx4 work 13 tx_serial_7o1 0 22 azhLSfR]X?<8G<4A7=e190
+!i122 1
+l107
+L40 146
+VY>6LNV^n_?mI^b4]je4N>0
+!s100 znbbZ;b;=E?[VhIVcU2<>3
+R8
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R13
+R14
+Etx_serial_7o1_tb
+Z22 w1694205637
+R2
+R3
+R4
+!i122 47
+R0
+Z23 8/tmp/tmp2880uytb.vhd
+Z24 F/tmp/tmp2880uytb.vhd
+l0
+L23 1
+V1[7C=<VJ[:W<g;=X?];6c1
+!s100 Tn8c=L8SOJ7[ob??o=RT51
+R8
+32
+Z25 !s110 1694205637
+!i10b 1
+Z26 !s108 1694205637.000000
+Z27 !s90 -modelsimini|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/modelsim.ini|-quiet|-work|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/default_library|-check_synthesis|-lint|-rangecheck|-pedanticerrors|-explicit|/tmp/tmp2880uytb.vhd|
+!s107 /tmp/tmp2880uytb.vhd|
+!i113 0
+R13
+R14
+Atb
+R2
+R3
+R4
+Z28 DEx4 work 16 tx_serial_7o1_tb 0 22 1[7C=<VJ[:W<g;=X?];6c1
+!i122 47
+l62
+Z29 L26 123
+VgK9RQD^lIg?310H9FmnGF3
+!s100 AliMSRN3mHPf9i>JfI;]43
+R8
+32
+R25
+!i10b 1
+R26
+R27
+Z30 !s107 /tmp/tmp2880uytb.vhd|
+!i113 0
+R13
+R14
+Etx_serial_uc
+Z31 w1692273118
+R3
+R4
+!i122 0
+R0
+Z32 8/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_uc.vhd
+Z33 F/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_uc.vhd
+l0
+L20 1
+V4@N_30JY]JHS`[IfZo1;`2
+!s100 IK07UW`9ba]U0LRhGj73n3
+R8
+32
+Z34 !s110 1694198929
+!i10b 1
+Z35 !s108 1694198929.000000
+Z36 !s90 -modelsimini|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/modelsim.ini|-quiet|-work|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/.hdl_checker/default_library|-check_synthesis|-lint|-rangecheck|-pedanticerrors|-explicit|/home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_uc.vhd|
+Z37 !s107 /home/ipontes3olavy/second_quadrimester/diglabii/exp2/rtl/tx_serial_7O1/tx_serial_uc.vhd|
+!i113 0
+R13
+R14
+Atx_serial_uc_arch
+R3
+R4
+DEx4 work 12 tx_serial_uc 0 22 4@N_30JY]JHS`[IfZo1;`2
+!i122 0
+l42
+L36 72
+V?EPdlZV<^FVKTgn5]8<[a2
+!s100 J>4n97DSB72UMULQ3ffjI2
+R8
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 0
+R13
+R14

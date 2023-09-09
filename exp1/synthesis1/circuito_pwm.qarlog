@@ -1,0 +1,18 @@
+Quartus Prime Archive log --	/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/circuito_pwm.qarlog
+
+Archive:	/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/circuito_pwm.qar
+Date:		Tue Sep  5 19:22:57 2023
+Quartus Prime		22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/ipontes3olavy/intelFPGA_lite/22.1std/quartus/linux64/assignment_defaults.qdf
+/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/circuito_pwm.qpf
+/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/circuito_pwm.qsf
+/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/circuito_pwm.vhd
+/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/circuito_pwm_tb.vhd
+/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/controle_servo.vhd
+/home/ipontes3olavy/second_quadrimester/diglabii/exp1/synthesis1/controle_servo_tb.vhd
+	======= Total: 7 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

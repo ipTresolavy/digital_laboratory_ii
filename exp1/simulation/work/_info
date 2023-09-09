@@ -1,0 +1,291 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/ipontes3olavy/second_quadrimester/labdigii/exp1/simulation
+T_opt
+!s110 1693916697
+VKH8_JcM<[Ii^bnW5MXWE>2
+04 15 2 work circuito_pwm_tb tb 1
+=1-000ae431a4f1-64f71e17-a9c75-1f89
+!s124 OEM10U2 
+Z2 o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;2021.2;73
+R1
+T_opt1
+!s110 1693920024
+VP99R@AMELRkaACik>DUZX2
+Z5 04 17 2 work controle_servo_tb tb 1
+=1-000ae431a4f1-64f72b18-5b6ff-2b10
+Z6 !s124 OEM10U3 
+R2
+R3
+n@_opt1
+R4
+R1
+T_opt2
+!s110 1693949866
+VAh2_F?CYAGLgIA28`6ZJm2
+R5
+=1-000ae431a4f1-64f79fa7-c94ab-19ea
+R6
+R2
+R3
+n@_opt2
+R4
+R1
+Ecircuito_pwm
+Z7 w1694008459
+Z8 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z9 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z10 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 8
+Z11 d/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation
+Z12 8circuito_pwm.vhd
+Z13 Fcircuito_pwm.vhd
+l0
+L28 1
+Vo6@1SahzL12dMmJblRDGI1
+!s100 Oh;BNn[]znhZd;a`PFhGS2
+Z14 OL;C;2021.2;73
+32
+Z15 !s110 1694008468
+!i10b 1
+Z16 !s108 1694008467.000000
+Z17 !s90 circuito_pwm.vhd|
+Z18 !s107 circuito_pwm.vhd|
+!i113 0
+Z19 tExplicit 1 CvgOpt 0
+Artl
+R8
+R9
+R10
+DEx4 work 12 circuito_pwm 0 22 o6@1SahzL12dMmJblRDGI1
+!i122 8
+l54
+L48 45
+V[h>1@iXV1@YbJ;7a9gQEZ0
+!s100 XiiPeI09X9O:z`A6?ZQS33
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 0
+R19
+Ecircuito_pwm_tb
+Z20 w1693615446
+R9
+R10
+!i122 7
+R1
+Z21 8circuito_pwm_tb.vhd
+Z22 Fcircuito_pwm_tb.vhd
+l0
+L18 1
+V>i8Ib@6>@MPCB=IeIeVa02
+!s100 0dSXnV]P]i1IdgBL17eHK2
+R14
+32
+Z23 !s110 1693919996
+!i10b 1
+Z24 !s108 1693919996.000000
+Z25 !s90 circuito_pwm_tb.vhd|circuito_pwm.vhd|controle_servo_tb.vhd|controle_servo.vhd|
+Z26 !s107 controle_servo.vhd|controle_servo_tb.vhd|circuito_pwm.vhd|circuito_pwm_tb.vhd|
+!i113 0
+R19
+Atb
+R9
+R10
+DEx4 work 15 circuito_pwm_tb 0 22 >i8Ib@6>@MPCB=IeIeVa02
+!i122 7
+l52
+L21 92
+V13h?mZ^5;Tgzjz:El>7^00
+!s100 L5P7B6Y0zi<E7haLjGmkZ1
+R14
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R19
+Econtrole_servo
+Z27 w1694008593
+R8
+R9
+R10
+!i122 11
+R11
+Z28 8controle_servo.vhd
+Z29 Fcontrole_servo.vhd
+l0
+L5 1
+VBNO0COaMVm9e1>YLhYd7S0
+!s100 ;Q_l@P:VWQ?=fNV7zb@A]3
+R14
+32
+Z30 !s110 1694008597
+!i10b 1
+Z31 !s108 1694008597.000000
+Z32 !s90 controle_servo.vhd|
+Z33 !s107 controle_servo.vhd|
+!i113 0
+R19
+Artl
+R8
+R9
+R10
+DEx4 work 14 controle_servo 0 22 BNO0COaMVm9e1>YLhYd7S0
+!i122 11
+l36
+L14 34
+VIPA>VN3>Z<HJPZj?fHK]g0
+!s100 LkaKoK_=6UCBhhM:Z9c031
+R14
+32
+R30
+!i10b 1
+R31
+R32
+R33
+!i113 0
+R19
+Econtrole_servo_tb
+Z34 w1693919994
+R9
+R10
+!i122 7
+R1
+Z35 8controle_servo_tb.vhd
+Z36 Fcontrole_servo_tb.vhd
+l0
+L19 1
+VOkdFbJh1nd2KPiIWznjk50
+!s100 nOGaOXX6d?A4n>_J2=LX@3
+R14
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R19
+Atb
+R9
+R10
+DEx4 work 17 controle_servo_tb 0 22 OkdFbJh1nd2KPiIWznjk50
+!i122 7
+l46
+L22 78
+Ved<<OIm_]ZI>=SHIVg[VQ1
+!s100 gJOQdKIQzWmcRN0OS`GG:3
+R14
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 0
+R19
+Ecounter
+Z37 w1694011528
+R8
+R9
+R10
+!i122 12
+R11
+Z38 8counter.vhd
+Z39 Fcounter.vhd
+l0
+L5 1
+VYJ]R^aeXlzea<QYAQjcZU2
+!s100 4F?AVon1Xzd0Zac2VS1X`1
+R14
+32
+Z40 !s110 1694012302
+!i10b 1
+Z41 !s108 1694012302.000000
+Z42 !s90 counter.vhd|
+Z43 !s107 counter.vhd|
+!i113 0
+R19
+Abhv
+R8
+R9
+R10
+DEx4 work 7 counter 0 22 YJ]R^aeXlzea<QYAQjcZU2
+!i122 12
+l15
+L10 23
+Vl;T]NP=Q1DbmD6?7j@46I1
+!s100 KGXQ6:A^]MXL:Rlh:^_k[1
+R14
+32
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 0
+R19
+Edesafio
+Z44 w1694013040
+Z45 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R8
+R9
+R10
+!i122 26
+R11
+Z46 8desafio.vhd
+Z47 Fdesafio.vhd
+l0
+L7 1
+V2D3XSbf2Z<_kFMRXEe;n91
+!s100 DJYLaPEAzbTl?P0YSY2;h1
+R14
+32
+Z48 !s110 1694013042
+!i10b 1
+Z49 !s108 1694013042.000000
+Z50 !s90 desafio.vhd|
+!s107 desafio.vhd|
+!i113 0
+R19
+Artl
+R45
+R8
+R9
+R10
+DEx4 work 7 desafio 0 22 2D3XSbf2Z<_kFMRXEe;n91
+!i122 26
+l52
+L17 77
+V^MHOASXGdXn7^;aAn7BEF0
+!s100 N<dkjFbi96[zLbaKkIb3R1
+R14
+32
+R48
+!i10b 1
+R49
+R50
+Z51 !s107 desafio.vhd|
+!i113 0
+R19

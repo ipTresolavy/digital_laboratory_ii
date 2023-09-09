@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pwm",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "largura[1]",
+					"strict" : false
+				},
+				{
+					"name" : "largura[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

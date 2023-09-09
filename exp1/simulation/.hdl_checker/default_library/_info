@@ -1,0 +1,54 @@
+m255
+K4
+z2
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation
+Econtrole_servo
+Z1 w1694190613
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/controle_servo.vhd
+Z6 F/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/controle_servo.vhd
+l0
+L5 1
+V250Zf_5R^A:^0FLS8EA7n0
+!s100 ;Q_l@P:VWQ?=fNV7zb@A]3
+Z7 OL;C;2021.2;73
+32
+Z8 !s110 1694190614
+!i10b 1
+Z9 !s108 1694190614.000000
+Z10 !s90 -modelsimini|/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/.hdl_checker/modelsim.ini|-quiet|-work|/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/.hdl_checker/default_library|-check_synthesis|-lint|-rangecheck|-pedanticerrors|-explicit|/home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/controle_servo.vhd|
+Z11 !s107 /home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/controle_servo.vhd|
+!i113 0
+Z12 o-quiet -work /home/ipontes3olavy/second_quadrimester/diglabii/exp1/simulation/.hdl_checker/default_library -check_synthesis -lint -rangecheck -pedanticerrors -explicit
+Z13 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+Z14 DEx4 work 14 controle_servo 0 22 250Zf_5R^A:^0FLS8EA7n0
+!i122 1
+l36
+Z15 L14 34
+Z16 VB`80kOOeE]]266c[f_E9:3
+Z17 !s100 ?97On2F6I;j]^C:hP=?MI2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13

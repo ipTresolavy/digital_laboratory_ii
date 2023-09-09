@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "controle",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "posicao[1]",
+					"strict" : false
+				},
+				{
+					"name" : "posicao[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

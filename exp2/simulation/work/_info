@@ -1,0 +1,341 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/home/ipontes3olavy/second_quadrimester/diglabii/exp2/simulation
+T_opt
+!s110 1694204227
+V2QGOi3FSVeZ>ha@MHWmKY2
+04 16 2 work tx_serial_7o1_tb tb 1
+=1-000ae431a4f1-64fb8143-67417-9c0d
+!s124 OEM10U9 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Econtador_m
+Z2 w1693824206
+Z3 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R1
+Z6 8../rtl/tx_serial_7O1/contador_m.vhd
+Z7 F../rtl/tx_serial_7O1/contador_m.vhd
+l0
+Z8 L24 1
+VPaDZOlJKlo8;T[@kl8NPZ2
+!s100 FXKGl>fh4hdO]FVoolMca1
+Z9 OL;C;2021.2;73
+32
+Z10 !s110 1694204220
+!i10b 1
+Z11 !s108 1694204220.000000
+Z12 !s90 ../rtl/tx_serial_7O1/contador_m.vhd|../rtl/tx_serial_7O1/deslocador_n.vhd|../rtl/tx_serial_7O1/edge_detector.vhd|../rtl/tx_serial_7O1/hexa7seg.vhd|../rtl/tx_serial_7O1/tx_serial_7O1_fd.vhd|../rtl/tx_serial_7O1/tx_serial_7O1_tb.vhd|../rtl/tx_serial_7O1/tx_serial_7O1.vhd|../rtl/tx_serial_7O1/tx_serial_uc.vhd|
+Z13 !s107 ../rtl/tx_serial_7O1/tx_serial_uc.vhd|../rtl/tx_serial_7O1/tx_serial_7O1.vhd|../rtl/tx_serial_7O1/tx_serial_7O1_tb.vhd|../rtl/tx_serial_7O1/tx_serial_7O1_fd.vhd|../rtl/tx_serial_7O1/hexa7seg.vhd|../rtl/tx_serial_7O1/edge_detector.vhd|../rtl/tx_serial_7O1/deslocador_n.vhd|../rtl/tx_serial_7O1/contador_m.vhd|
+!i113 0
+Z14 tExplicit 1 CvgOpt 0
+Acontador_m_arch
+R3
+R4
+R5
+DEx4 work 10 contador_m 0 22 PaDZOlJKlo8;T[@kl8NPZ2
+!i122 2
+l41
+L39 29
+V4FZzF0afC;azXo;ClbXfj0
+!s100 biTU27[D3X0zWUK5YHzTF0
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Edeslocador_n
+Z15 w1693824188
+R4
+R5
+!i122 2
+R1
+Z16 8../rtl/tx_serial_7O1/deslocador_n.vhd
+Z17 F../rtl/tx_serial_7O1/deslocador_n.vhd
+l0
+L19 1
+VH[VhMk5z2IXn:JACd1<1L0
+!s100 aMlkXhB?@eRk=A_n9]onN0
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Adeslocador_n_arch
+R4
+R5
+DEx4 work 12 deslocador_n 0 22 H[VhMk5z2IXn:JACd1<1L0
+!i122 2
+l38
+L34 19
+V@WkFih>VmN2b0f;DF]l:a2
+!s100 @kNG4@9Om<63==9`GmmE[2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Eedge_detector
+Z18 w1693824202
+R4
+R5
+!i122 2
+R1
+Z19 8../rtl/tx_serial_7O1/edge_detector.vhd
+Z20 F../rtl/tx_serial_7O1/edge_detector.vhd
+l0
+Z21 L22 1
+VHc6fKD>>H21P]9:RIeUm92
+!s100 L`O[OR4SU<oL=_PXLh0NM2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Abehavioral
+R4
+R5
+DEx4 work 13 edge_detector 0 22 Hc6fKD>>H21P]9:RIeUm92
+!i122 2
+l32
+L30 13
+V4gVG60^Hkj2d[:[`FcK8F3
+!s100 ]Pz0>OTaUcTKZjC[2C8K03
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Ehexa7seg
+Z22 w1693827290
+R4
+R5
+!i122 2
+R1
+Z23 8../rtl/tx_serial_7O1/hexa7seg.vhd
+Z24 F../rtl/tx_serial_7O1/hexa7seg.vhd
+l0
+L25 1
+Ve8Ki8zikUUBBR]=mL3OJD2
+!s100 z;7h:JE^SElEf<7jb_JB23
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Acomportamental
+R4
+R5
+DEx4 work 8 hexa7seg 0 22 e8Ki8zikUUBBR]=mL3OJD2
+!i122 2
+l33
+L32 22
+Vj=W:?VHBaFdbgS=FTZm=J2
+!s100 1I@mE2XHVTXm5aJbMT?V91
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Etx_serial_7o1
+Z25 w1694046946
+R3
+R4
+R5
+!i122 2
+R1
+Z26 8../rtl/tx_serial_7O1/tx_serial_7O1.vhd
+Z27 F../rtl/tx_serial_7O1/tx_serial_7O1.vhd
+l0
+R8
+V_cf8I8eV?bY7ZZ8>ZN6>11
+!s100 IMhG:Y`C4U`jUfebk:<@80
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Atx_serial_7o1_arch
+R3
+R4
+R5
+DEx4 work 13 tx_serial_7o1 0 22 _cf8I8eV?bY7ZZ8>ZN6>11
+!i122 2
+l107
+L40 146
+VHV0c?;l3R``5SPHo:jg6C3
+!s100 znbbZ;b;=E?[VhIVcU2<>3
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Etx_serial_7o1_fd
+Z28 w1694046908
+R4
+R5
+!i122 2
+R1
+Z29 8../rtl/tx_serial_7O1/tx_serial_7O1_fd.vhd
+Z30 F../rtl/tx_serial_7O1/tx_serial_7O1_fd.vhd
+l0
+R21
+ValbYEYQ;4LPCf7e;42hYj3
+!s100 KV<<?937fY=S[h4XXAila3
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Atx_serial_7o1_fd_arch
+R4
+R5
+DEx4 work 16 tx_serial_7o1_fd 0 22 albYEYQ;4LPCf7e;42hYj3
+!i122 2
+l70
+L36 77
+VkhI>da[O19OzEl8[]7Jd=1
+!s100 663k;;L`hJBdf=33g^Lm?3
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Etx_serial_7o1_tb
+Z31 w1694204212
+R3
+R4
+R5
+!i122 2
+R1
+Z32 8../rtl/tx_serial_7O1/tx_serial_7O1_tb.vhd
+Z33 F../rtl/tx_serial_7O1/tx_serial_7O1_tb.vhd
+l0
+L23 1
+VjECWX:CYZeC_iC[EnNW4L3
+!s100 Tn8c=L8SOJ7[ob??o=RT51
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Atb
+R3
+R4
+R5
+DEx4 work 16 tx_serial_7o1_tb 0 22 jECWX:CYZeC_iC[EnNW4L3
+!i122 2
+l62
+L26 123
+Vjho<OhjEXV:=ZHg:6DLSg0
+!s100 AliMSRN3mHPf9i>JfI;]43
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Etx_serial_uc
+Z34 w1692273118
+R4
+R5
+!i122 2
+R1
+Z35 8../rtl/tx_serial_7O1/tx_serial_uc.vhd
+Z36 F../rtl/tx_serial_7O1/tx_serial_uc.vhd
+l0
+L20 1
+VofjzJbkO>SzK7If1?MZIP2
+!s100 IK07UW`9ba]U0LRhGj73n3
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+Atx_serial_uc_arch
+R4
+R5
+DEx4 work 12 tx_serial_uc 0 22 ofjzJbkO>SzK7If1?MZIP2
+!i122 2
+l42
+L36 72
+V2]P29A7Af6i3AB=F^Bki43
+!s100 J>4n97DSB72UMULQ3ffjI2
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
