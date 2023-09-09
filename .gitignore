@@ -2,3 +2,9 @@
 **/**/vsim.wlf
 **/**/transcript
 **/**/.hdl_checker
+**/**/**/*.qpf
+**/**/**/*.qsf
+**/**/**/db
+**/**/**/incremental_db
+**/**/**/output_files
+**/**/**/*.autosave.xopp
