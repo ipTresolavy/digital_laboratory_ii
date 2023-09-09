@@ -1,8 +1,0 @@
-
-State Machine - |tx_serial_7O1|tx_serial_uc:U1_UC|Eatual
-Name Eatual.final Eatual.transmissao Eatual.espera Eatual.preparacao Eatual.inicial 
-Eatual.inicial 0 0 0 0 0 
-Eatual.preparacao 0 0 0 1 1 
-Eatual.espera 0 0 1 0 1 
-Eatual.transmissao 0 1 0 0 1 
-Eatual.final 1 0 0 0 1 
