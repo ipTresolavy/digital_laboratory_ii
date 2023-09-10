@@ -79,8 +79,15 @@ architecture tb of rx_serial_tb is
   constant casos_teste : casos_teste_array :=
       (
         (1, "00110101"), -- 35H (dado=35H + paridade=0) erro para 7O1
-        (2, "10110101")  -- B5H (dado=35H + paridade=1) ok para 7O1
+        (2, "10110101"), -- B5H (dado=35H + paridade=1) ok para 7O1
         -- inserir aqui outros casos de teste (inserir "," na linha anterior)
+        (3, "01001100"), -- 4CH (dado=4CH + paridade=0) L
+        (4, "01100001"), -- 61H (dado=61H + paridade=0) a
+        (5, "01100010"), -- 62H (dado=62H + paridade=0) b
+        (6, "00100000"), -- 20H (dado=20H + paridade=0)  
+        (7, "11000100"), -- 44H (dado=44H + paridade=1) D 
+        (8, "11101001"), -- 69H (dado=69H + paridade=1) i
+        (9, "01100111")  -- 67H (dado=67H + paridade=0) g 
       );
   signal caso : natural;
 
@@ -111,7 +118,8 @@ begin
   ---- Geracao dos sinais de entrada (estimulo)
   stimulus: process is
   begin
-  
+
+    assert caso = 0 severity note;
     ---- inicio da simulacao
     assert false report "inicio da simulacao" severity note;
     keep_simulating <= '1';
