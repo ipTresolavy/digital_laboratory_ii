@@ -8,3 +8,9 @@
 **/**/**/incremental_db
 **/**/**/output_files
 **/**/**/*.autosave.xopp
+**/**/**/*.zip
+**/**/**/c5_pin_model_dump.txt
+**/**/**/*.qarlog
+**/**/**/*.archive.rpt
+**/**/synthesis/simulation
+**/**/**/*.qws

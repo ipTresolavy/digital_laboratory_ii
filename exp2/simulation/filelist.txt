@@ -2,11 +2,11 @@
 ../rtl/tx_serial_7O1/edge_detector.vhd
 ../rtl/tx_serial_7O1/hexa7seg.vhd
 ../rtl/tx_serial_7O1/contador_m.vhd
-../rtl/rx_serial_7O1_uc.vhd
+../rtl/rx_serial_7O1/rx_serial_7O1_uc.vhd
 ../rtl/tx_serial_7O1/tx_serial_uc.vhd
-../rtl/rx_serial_7O1_fd.vhd
+../rtl/rx_serial_7O1/rx_serial_7O1_fd.vhd
 ../rtl/tx_serial_7O1/tx_serial_7O1_fd.vhd
-../rtl/rx_serial_7O1.vhd
+../rtl/rx_serial_7O1/rx_serial_7O1.vhd
 ../rtl/tx_serial_7O1/tx_serial_7O1.vhd
-../rtl/rx_serial_7O1_tb.vhd
+../rtl/rx_serial_7O1/rx_serial_7O1_tb.vhd
 ../rtl/tx_serial_7O1/tx_serial_7O1_tb.vhd
