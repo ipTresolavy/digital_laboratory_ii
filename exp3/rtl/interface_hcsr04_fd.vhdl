@@ -18,19 +18,34 @@ end entity interface_hcsr04_fd;
 architecture structural of interface_hcsr04_fd is
 
   component gerador_pulso is
-  generic (
-      largura: integer:= 25
+    generic (
+        largura: integer:= 25
+      );
+    port (
+      clock  : in  std_logic;
+      reset  : in  std_logic;
+      gera   : in  std_logic;
+      para   : in  std_logic;
+      pulso  : out std_logic;
+      pronto : out std_logic
     );
-  port (
-    clock  : in  std_logic;
-    reset  : in  std_logic;
-    gera   : in  std_logic;
-    para   : in  std_logic;
-    pulso  : out std_logic;
-    pronto : out std_logic
-  );
   end component gerador_pulso;
 
+  component contador_m
+    generic (
+      constant M : integer;
+      constant N : integer
+    );
+    port (
+      clock : in  std_logic;
+      zera  : in  std_logic;
+      conta : in  std_logic;
+      Q     : out std_logic_vector(N-1 downto 0);
+      fim   : out std_logic;
+      meio  : out std_logic
+    );
+  end component;
+    
   component contador_bcd_3digitos is 
     port ( 
       clock   : in  std_logic;
@@ -42,6 +57,8 @@ architecture structural of interface_hcsr04_fd is
       fim     : out std_logic
     );
   end component;
+
+  signal s_conta : std_logic;
 
 begin
 
@@ -60,14 +77,30 @@ begin
     pronto => pulse_sent
   );
 
+  clock_divider: contador_m 
+  generic map (
+    -- divisão do clock de 50MHz por 5882/2
+    M => 2941, 
+    N => 12
+  ) 
+  port map
+  (
+    clock => clock, 
+    zera  => reset_counter, 
+    conta => echo, 
+    Q     => open, 
+    fim   => s_conta, 
+    meio  => open
+  );
+
   contador_bcd: contador_bcd_3digitos
   port map
   (
     clock   => clock,
     zera    => reset_counter,
-    conta   => echo,
-    digito0 => medida(3 downto 0),
-    digito1 => medida(7 downto 4),
+    conta   => s_conta,
+    digito0 => medida(3  downto 0),
+    digito1 => medida(7  downto 4),
     digito2 => medida(11 downto 8),
     fim     => open
   );

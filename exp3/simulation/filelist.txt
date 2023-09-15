@@ -1,0 +1,7 @@
+../rtl/contador_m.vhd
+../rtl/contador_bcd_3digitos.vhd
+../rtl/gerador_pulso.vhd
+../rtl/interface_hcsr04_uc.vhdl
+../rtl/interface_hcsr04_fd.vhdl
+../rtl/interface_hcsr04.vhdl
+../rtl/interface_hcsr04_tb.vhd
