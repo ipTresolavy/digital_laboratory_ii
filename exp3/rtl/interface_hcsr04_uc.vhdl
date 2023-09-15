@@ -9,6 +9,7 @@ entity interface_hcsr04_uc is
     medir          : in std_logic;
     echo           : in std_logic;
     pulse_sent     : in std_logic;
+    reset_counter  : out std_logic;
     generate_pulse : out std_logic;
     pronto         : out std_logic;
     db_estado      : out std_logic_vector(3 downto 0) -- estado da UC
@@ -36,6 +37,7 @@ begin
 
     generate_pulse <= '0';
     pronto <= '0';
+    reset_counter <= '0';
 
     case state is
       when idle =>
@@ -47,6 +49,7 @@ begin
 
       when send_pulse =>
         generate_pulse <= '1';
+        reset_counter <= '1';
         if pulse_sent = '1' then
           next_state <= wait_echo_start;
         else
