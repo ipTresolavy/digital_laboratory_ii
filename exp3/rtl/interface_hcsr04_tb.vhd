@@ -63,8 +63,12 @@ architecture tb of interface_hcsr04_tb is
         (1, 5882),  -- 5882us (100cm)
         (2, 5899),  -- 5899us (100,29cm) truncar para 100cm
         (3, 4353),  -- 4353us (74cm)
-        (4, 4399)   -- 4399us (74,79cm)  arredondar para 75cm
+        (4, 4399),   -- 4399us (74,79cm)  arredondar para 75cm
         -- inserir aqui outros casos de teste (inserir "," na linha anterior)
+        (5, 29410),  -- 29410us (500cm)
+        (6, 52938),  -- 52938us (900cm)
+        (7, 21981),  -- 21981us (373.7cm)  arredondar para 374cm
+        (8, 12893)   -- 12893us (219.2cm)  truncar para 219cm
       );
 
   signal larguraPulso: time := 1 ns;
