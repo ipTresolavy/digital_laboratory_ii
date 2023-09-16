@@ -10,13 +10,12 @@ add wave -noupdate -color Magenta -height 48 /interface_hcsr04_tb/trigger_out
 add wave -noupdate -color Magenta -height 48 /interface_hcsr04_tb/pronto_out
 add wave -noupdate -color Magenta -height 48 /interface_hcsr04_tb/medida_out
 add wave -noupdate -divider Debug
-add wave -noupdate -color Orange -height 36 /interface_hcsr04_tb/dut/fd/s_1us_tick
-add wave -noupdate -color Orange -height 36 /interface_hcsr04_tb/dut/fd/s_conta
+add wave -noupdate -color Orange -height 48 /interface_hcsr04_tb/dut/fd/s_half
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {6343170 ns} 0}
+WaveRestoreCursors {{Cursor 1} {52416230 ns} 0} {{Cursor 2} {52357410 ns} 0} {{Cursor 3} {52545710 ns} 0} {{Cursor 4} {52555710 ns} 0}
 quietly wave cursor active 1
-configure wave -namecolwidth 329
-configure wave -valuecolwidth 100
+configure wave -namecolwidth 241
+configure wave -valuecolwidth 88
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -29,4 +28,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {23767349 ns}
+WaveRestoreZoom {52332137 ns} {52746108 ns}

@@ -58,7 +58,7 @@ architecture structural of interface_hcsr04_fd is
     );
   end component;
 
-  signal s_half           : std_logic;
+  signal s_half : std_logic;
 
 begin
 
