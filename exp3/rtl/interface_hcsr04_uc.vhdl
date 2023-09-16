@@ -9,10 +9,8 @@ entity interface_hcsr04_uc is
     medir          : in std_logic;
     echo           : in std_logic;
     pulse_sent     : in std_logic;
-    half_cm        : in std_logic;
     reset_counter  : out std_logic;
     generate_pulse : out std_logic;
-    round_distance : out std_logic;
     pronto         : out std_logic;
     db_estado      : out std_logic_vector(3 downto 0) -- estado da UC
   );
@@ -20,7 +18,7 @@ end entity interface_hcsr04_uc;
 
 architecture structural of interface_hcsr04_uc is
 
-  type state_type is (idle, send_pulse, wait_echo_start, wait_echo_end, round, end_transmission);
+  type state_type is (idle, send_pulse, wait_echo_start, wait_echo_end, end_transmission);
   signal state, next_state : state_type;
 
 begin
@@ -34,13 +32,12 @@ begin
     end if;
   end process;
 
-  next_state_decode: process(state, medir, echo, pulse_sent, half_cm) is
+  next_state_decode: process(state, medir, echo, pulse_sent) is
   begin
 
     generate_pulse <= '0';
     pronto <= '0';
     reset_counter <= '0';
-    round_distance <= '0';
 
     case state is
       when idle =>
@@ -68,16 +65,10 @@ begin
 
       when wait_echo_end =>
         if echo = '0' then
-          next_state <= round;
+          next_state <= end_transmission;
         else
           next_state <= wait_echo_end;
         end if;
-
-      when round =>
-        if half_cm = '1' then
-          round_distance <= '1';
-        end if;
-        next_state <= end_transmission;
 
       when end_transmission =>
         pronto <= '1';

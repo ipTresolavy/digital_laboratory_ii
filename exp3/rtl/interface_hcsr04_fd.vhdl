@@ -8,10 +8,8 @@ entity interface_hcsr04_fd is
     clock            : in  std_logic;
     reset_counter    : in  std_logic;
     generate_pulse   : in  std_logic;
-    round_distance   : in  std_logic;
     echo             : in  std_logic;
     pulse_sent       : out std_logic;
-    half_cm          : out std_logic;
     trigger          : out std_logic;
     medida           : out std_logic_vector(11 downto 0) -- 3 digitos BCD
   );
@@ -60,10 +58,7 @@ architecture structural of interface_hcsr04_fd is
     );
   end component;
 
-  signal s_count          : std_logic;
   signal s_half           : std_logic;
-  signal s_whole          : std_logic;
-  signal s_count_half_cm  : std_logic;
 
 begin
 
@@ -94,33 +89,16 @@ begin
     zera  => reset_counter, 
     conta => echo, 
     Q     => open, 
-    fim   => s_whole, 
+    fim   => open, 
     meio  => s_half
   );
 
-  s_count_half_cm <= s_half or s_whole;
-  half_cm_counter: contador_m 
-  generic map (
-    M => 2, 
-    N => 1
-  ) 
-  port map
-  (
-    clock => clock, 
-    zera  => reset_counter, 
-    conta => s_count_half_cm, 
-    Q     => open, 
-    fim   => half_cm, 
-    meio  => open
-  );
-
-  s_count <= round_distance or s_whole;
   contador_bcd: contador_bcd_3digitos
   port map
   (
     clock   => clock,
     zera    => reset_counter,
-    conta   => s_count,
+    conta   => s_half,
     digito0 => medida(3  downto 0),
     digito1 => medida(7  downto 4),
     digito2 => medida(11 downto 8),
