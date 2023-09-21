@@ -1,0 +1,31 @@
+// Funcionamento do circuito:
+// 1. Se reset = '1' a qualquer momento, a saída medida é zerada
+// 2. Se mensurar = '1', o circuito comanda o sensor ultrassônico a medir uma distância. Caso contrário, o circuito permanece inativo
+// 3. Após o recebimento da distância, o circuito envia os três caracteres em ascii serialmente, do mais significativo ao menos significativo, seguidos de um caractere '#'
+// 4. Após o envio, o circuito volta para o passo 2.
+// *obs.: o envio serial deve obedecer à configuração UART de baud rate 115200, 7 bits de dado, paridade ímpar e 1 stop bit
+
+digraph ASM {
+  splines=ortho;
+  nodesep=0.55
+
+  node [shape=box, fixedsize="true", width=2, height=1];
+  s0 [xlabel="S000", label=""];
+  s1 [xlabel="S001", label=""];
+  s2 [xlabel="S010", label=""];
+
+  // Decision boxes
+  node [shape=box, width=none, height=none, fixedsize="false"];
+  d0 [shape=diamond, label="x"];
+
+  node[shape=point, height=0, width=0];
+  x0 x1;
+
+  {rank = same; x0 d0 x1}
+
+  s0 -> d0;
+  d0 -> x1 [dir="none", label="1"];
+  x0 -> d0 [dir="none", label="0"];
+  x1 -> s1;
+  x0 -> s2;
+}
