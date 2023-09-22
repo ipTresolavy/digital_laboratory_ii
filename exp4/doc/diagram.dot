@@ -9,23 +9,64 @@ digraph ASM {
   splines=ortho;
   nodesep=0.55
 
+  // Junctions
+  node [shape=point, height=0.08, width=0.08];
+  j0;
+
+  // State boxes
   node [shape=box, fixedsize="true", width=2, height=1];
-  s0 [xlabel="S000", label=""];
-  s1 [xlabel="S001", label=""];
-  s2 [xlabel="S010", label=""];
+  idle [xlabel="idle", label=""];
+  send_pulse [xlabel="send_pulse", label="generate_pulse\nreset_counter"];
+  wait_echo_start [xlabel="wait_echo_start", label=""];
+  wait_echo_end [xlabel="wait_echo_end", label=""];
 
   // Decision boxes
   node [shape=box, width=none, height=none, fixedsize="false"];
-  d0 [shape=diamond, label="x"];
+  d0 [shape=hexagon, label="mensurar"];
+  d1 [shape=hexagon, label="pulse_sent"];
+  d2 [shape=diamond, label="echo"];
+  d3 [shape=diamond, label="echo"];
 
-  node[shape=point, height=0, width=0];
-  x0 x1;
+  // Auxiliary points
+  node [shape=point, height=0, width=0];
+  d0w d0e;
+  d1w d1e;
+  d2w d2e;
+  d3w d3e;
 
-  {rank = same; x0 d0 x1}
+  // ranking decision boxes and auxiliary dots
+  {rank = same; d0w d0 d0e}
+  {rank = same; d1w d1 d1e}
+  {rank = same; d2w d2 d2e}
+  {rank = same; d3w d3 d3e}
 
-  s0 -> d0;
-  d0 -> x1 [dir="none", label="1"];
-  x0 -> d0 [dir="none", label="0"];
-  x1 -> s1;
-  x0 -> s2;
+  j0:s -> idle;
+  idle   -> d0;
+
+  d0w  -> idle:w;
+  d0w  -> d0 [dir="none", label="0"];
+  d0   -> d0e [dir="none", label="1"];
+  d0e  -> send_pulse:n;
+
+  send_pulse -> d1;
+
+  d1w  -> send_pulse:w;
+  d1w  -> d1 [dir="none", label="0"];
+  d1   -> d1e [dir="none", label="1"];
+  d1e  -> wait_echo_start:n;
+
+  wait_echo_start -> d2;
+
+  d2w  -> wait_echo_start:w;
+  d2w  -> d2 [dir="none", label="0"];
+  d2   -> d2e [dir="none", label="1"];
+  d2e  -> wait_echo_end:n;
+
+  wait_echo_end -> d3;
+
+  //d3w  -> wait_echo_end:w;
+  d3w  -> d3 [dir="none", label="0"];
+  d3   -> d3e [dir="none", label="1"];
+  d3e  -> wait_echo_end:e;
+
 }
