@@ -7,7 +7,7 @@
 
 digraph ASM {
   splines=ortho;
-  nodesep=0.55
+  //nodesep=0.55
 
   // Junctions
   node [shape=point, height=0.08, width=0.08];
@@ -19,54 +19,111 @@ digraph ASM {
   send_pulse [xlabel="send_pulse", label="generate_pulse\nreset_counter"];
   wait_echo_start [xlabel="wait_echo_start", label=""];
   wait_echo_end [xlabel="wait_echo_end", label=""];
+  store_value [xlabel="store_value", label="store_measurement"];
+  send_value [xlabel="send_value", label="send_measurement"];
+  end_transmission [xlabel="end_transmission", label="pronto"];
 
   // Decision boxes
   node [shape=box, width=none, height=none, fixedsize="false"];
-  d0 [shape=hexagon, label="mensurar"];
-  d1 [shape=hexagon, label="pulse_sent"];
+  d0 [shape=diamond, label="mensurar"];
+  d1 [shape=diamond, label="pulse_sent"];
   d2 [shape=diamond, label="echo"];
   d3 [shape=diamond, label="echo"];
+  d4 [shape=hexagon, label="measurement_sent"];
 
   // Auxiliary points
   node [shape=point, height=0, width=0];
-  d0w d0e;
-  d1w d1e;
-  d2w d2e;
-  d3w d3e;
+  idle_aux;
+  d0w d0e d0se d0s;
+  d1w d1e d1se d1s;
+  d2w d2e d2se d2s;
+  wait_echo_end_aux d3w d3e d3sw d3s;
+  d4w d4e d4se d4s;
+  end_transmission_aux0 end_transmission_aux1;
 
   // ranking decision boxes and auxiliary dots
+  {rank = same; idle idle_aux}
   {rank = same; d0w d0 d0e}
+  {rank = same; d0s d0se}
   {rank = same; d1w d1 d1e}
+  {rank = same; d1s d1se}
   {rank = same; d2w d2 d2e}
+  {rank = same; d2s d2se}
+  {rank = same; wait_echo_end wait_echo_end_aux}
   {rank = same; d3w d3 d3e}
+  {rank = same; d3sw d3s}
+  {rank = same; d4w d4 d4e}
+  {rank = same; d4s d4se}
+  {rank = same; end_transmission_aux0 end_transmission_aux1}
 
   j0:s -> idle;
+
+  //
   idle   -> d0;
+  idle:e   -> idle_aux [dir="back", minlen=3];
+  idle_aux   -> end_transmission_aux1 [dir="none"];
 
   d0w  -> idle:w;
   d0w  -> d0 [dir="none", label="0"];
-  d0   -> d0e [dir="none", label="1"];
-  d0e  -> send_pulse:n;
+  d0   -> d0e [dir="none", label="1", minlen=0.5];
+  d0e  -> d0se [dir="none"];
+  d0s  -> d0se [dir="none", minlen=3];
+  d0s  -> send_pulse:n;
+  //
 
-  send_pulse -> d1;
+  //
+  send_pulse   -> d1;
 
   d1w  -> send_pulse:w;
   d1w  -> d1 [dir="none", label="0"];
-  d1   -> d1e [dir="none", label="1"];
-  d1e  -> wait_echo_start:n;
+  d1   -> d1e [dir="none", label="1", minlen=0.5];
+  d1e  -> d1se [dir="none"];
+  d1s  -> d1se [dir="none", minlen=3];
+  d1s  -> wait_echo_start:n;
+  //
 
-  wait_echo_start -> d2;
+  //
+  wait_echo_start   -> d2;
 
   d2w  -> wait_echo_start:w;
-  d2w  -> d2 [dir="none", label="0"];
-  d2   -> d2e [dir="none", label="1"];
-  d2e  -> wait_echo_end:n;
+  d2w  -> d2 [dir="none", label="0", minlen=2];
+  d2   -> d2e [dir="none", label="1", minlen=0];
+  d2e  -> d2se [dir="none"];
+  d2s  -> d2se [dir="none", minlen=3];
+  d2s  -> wait_echo_end:n;
+  //
 
-  wait_echo_end -> d3;
+  //
+  wait_echo_end   -> d3;
+  wait_echo_end:e -> wait_echo_end_aux [dir="back", minlen=2];
 
-  //d3w  -> wait_echo_end:w;
-  d3w  -> d3 [dir="none", label="0"];
-  d3   -> d3e [dir="none", label="1"];
-  d3e  -> wait_echo_end:e;
+  d3w  -> d3sw [dir="none"];
+  d3w  -> d3 [dir="none", label="0", minlen=0];
+  d3   -> d3e [dir="none", label="1", minlen=2];
+  wait_echo_end_aux  -> d3e [dir="none"];
+  d3sw -> d3s [dir="none", minlen=2];
+  d3s  -> store_value:n;
+  //
+
+  //
+  store_value:s   -> send_value:n;
+  //
+
+  //
+  send_value   -> d4;
+
+  d4w  -> send_value:w;
+  d4w  -> d4 [dir="none", label="0"];
+  d4   -> d4e [dir="none", label="1"];
+  d4e  -> d4se [dir="none"];
+  d4s  -> d4se [dir="none", minlen=4];
+  d4s  -> end_transmission:n;
+  //
+
+  //
+  end_transmission:s -> end_transmission_aux0 [dir="none"];
+  end_transmission_aux0 -> end_transmission_aux1 [dir="none", minlen=5];
+  //
+
 
 }
