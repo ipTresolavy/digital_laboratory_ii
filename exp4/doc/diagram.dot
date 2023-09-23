@@ -16,7 +16,7 @@ digraph ASM {
   // State boxes
   node [shape=box, fixedsize="true", width=2, height=1];
   idle [xlabel="idle", label=""];
-  send_pulse [xlabel="send_pulse", label="generate_pulse\nreset_counter"];
+  send_pulse [xlabel="send_pulse", label="generate_pulse\nreset_counters"];
   wait_echo_start [xlabel="wait_echo_start", label=""];
   wait_echo_end [xlabel="wait_echo_end", label=""];
   store_value [xlabel="store_value", label="store_measurement"];

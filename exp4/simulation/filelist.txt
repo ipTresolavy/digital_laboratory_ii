@@ -1,0 +1,11 @@
+../rtl/register_d.vhdl
+../rtl/contador_m.vhd
+../rtl/contador_bcd_3digitos.vhd
+../rtl/deslocador_n.vhd
+../rtl/gerador_pulso.vhd
+../rtl/edge_detector.vhd
+../rtl/hexa7seg.vhd
+../rtl/exp4_trena_uc.vhdl
+../rtl/exp4_trena_fd.vhdl
+../rtl/exp4_trena.vhdl
+../rtl/trena_saida_serial_tb.vhd

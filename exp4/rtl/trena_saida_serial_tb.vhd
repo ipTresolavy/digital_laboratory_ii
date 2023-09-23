@@ -26,7 +26,7 @@ end entity;
 architecture tb of trena_saida_serial_tb is
   
   -- Componente a ser testado (Device Under Test -- DUT)
-  component trena_saida_serial is
+  component exp4_trena is
     port (
         clock         : in  std_logic;
         reset         : in  std_logic;
@@ -87,7 +87,7 @@ begin
   clock_in <= (not clock_in) and keep_simulating after clockPeriod/2;
   
   -- Conecta DUT (Device Under Test)
-  dut: trena_saida_serial
+  dut: exp4_trena
        port map( 
            clock         => clock_in,
            reset         => reset_in,
