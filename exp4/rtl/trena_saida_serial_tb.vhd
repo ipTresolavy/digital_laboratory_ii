@@ -70,7 +70,7 @@ architecture tb of trena_saida_serial_tb is
   constant casos_teste : casos_teste_array :=
       (
         (1, 5882),  -- 5882us (100cm)
-        (2, 4399)   -- 4399us (74,79cm)  arredondar para 75cm
+        (2, 4399),  -- 4399us (74,79cm)  arredondar para 75cm
         -- inserir aqui outros casos de teste (inserir "," na linha anterior)
         (3, 29410),  -- 29410us (500cm)
         (4, 52938),  -- 52938us (900cm)

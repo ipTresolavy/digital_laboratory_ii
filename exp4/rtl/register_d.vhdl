@@ -20,7 +20,7 @@ end entity register_d;
 architecture behavioral of register_d is
 begin
 
-  register_procedure: process(clock, reset) is
+  register_procedure: process(clock, reset, enable) is
   begin
     if(reset = '1') then
       data_out <= (others => '0');

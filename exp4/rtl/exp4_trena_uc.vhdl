@@ -9,7 +9,7 @@ entity exp4_trena_uc is
     clock              : in std_logic;
     reset              : in std_logic;
 
-    -- sinais de controle e condição
+    -- sinais de controle e condicao
     mensurar           : in  std_logic;
     echo               : in  std_logic;
     pulse_sent         : in  std_logic;

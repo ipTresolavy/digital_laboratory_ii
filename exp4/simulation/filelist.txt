@@ -6,6 +6,8 @@
 ../rtl/edge_detector.vhd
 ../rtl/hexa7seg.vhd
 ../rtl/exp4_trena_uc.vhdl
+../rtl/hcsr04_interface.vhdl
+../rtl/measurement_sender.vhdl
 ../rtl/exp4_trena_fd.vhdl
 ../rtl/exp4_trena.vhdl
 ../rtl/trena_saida_serial_tb.vhd
