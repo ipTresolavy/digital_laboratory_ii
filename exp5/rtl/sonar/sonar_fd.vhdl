@@ -294,7 +294,7 @@ begin
   );
 
   with db_sw select
-    s_hex1 <= s_data_out(11 downto 8) when '0',
+    s_hex2 <= s_data_out(11 downto 8) when '0',
               s_angle2 when others;
   H2: hexa7seg
   port map

@@ -112,6 +112,7 @@ architecture structural of sonar is
   signal s_send_distance : std_logic;
   signal s_update_angle : std_logic;
   signal s_db_estado : std_logic_vector(3 downto 0);
+  signal s_reset : std_logic;
 begin
 
   continuous_measurement: contador_m
@@ -131,11 +132,12 @@ begin
     meio  => open
   );
 
+  s_reset <= reset or (not ligar);
   uc: sonar_uc
   port map
   (
       clock              => clock,
-      reset              => reset,
+      reset              => s_reset,
       mensurar           => s_mensurar,
       echo               => echo,
       pulse_sent         => s_pulse_sent,
