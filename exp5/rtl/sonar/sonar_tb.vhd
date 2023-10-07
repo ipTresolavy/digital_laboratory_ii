@@ -35,7 +35,11 @@ architecture tb of sonar_tb is
         pwm                : out std_logic;
         saida_serial       : out std_logic;
         fim_posicao        : out std_logic;
-        db_estado          : out std_logic_vector(6 downto 0)
+        medida0            : out std_logic_vector (6 downto 0);
+        medida1            : out std_logic_vector (6 downto 0);
+        medida2            : out std_logic_vector (6 downto 0);
+        db_sw              : in  std_logic;
+        db_estado          : out std_logic_vector (6 downto 0)
     );
   end component;
   
@@ -97,6 +101,10 @@ begin
            pwm          => pwm_out,
            saida_serial => saida_serial_out,
            fim_posicao  => fim_posicao_out,
+           medida0      => open,
+           medida1      => open,
+           medida2      => open,
+           db_sw        => '0',
            db_estado    => db_estado_out
        );
 

@@ -9,8 +9,9 @@ entity measurement_sender is
     reset               : in  std_logic;
     reset_counter       : in  std_logic;
     digito0             : in  std_logic_vector(3 downto 0);
-    digito2             : in  std_logic_vector(3 downto 0);
     digito1             : in  std_logic_vector(3 downto 0);
+    digito2             : in  std_logic_vector(3 downto 0);
+    end_char            : in  std_logic_vector(6 downto 0);
     store_measurement   : in  std_logic;
     send_measurement    : in  std_logic;
     saida_serial        : out std_logic;
@@ -62,7 +63,7 @@ begin
   
   s_dados(46)           <= '1';  -- stop bit 
   s_dados(45)           <= '0';  -- paridade
-  s_dados(44 downto 38) <= "0100011"; -- #
+  s_dados(44 downto 38) <= end_char;
   s_dados(37 downto 36) <= "01"; -- start bit e repouso
 
   s_dados(35)           <= '1';  -- separador (opcional)

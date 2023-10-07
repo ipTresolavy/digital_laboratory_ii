@@ -1,0 +1,33 @@
+digraph exp4_trena_uc {
+  rankdir="LR"
+  graph [dpi=1000]
+  node [shape = circle];
+  //edge [fontname = Helvetica, fontsize = 24];
+
+  idle [label = "idle"];
+  send_pulse [width=2, label = "send_pulse\n----------\ngenerate_pulse\nreset_counters"];
+  wait_echo_start [width=2, label = "wait_echo_start"];
+  wait_echo_end [width=2, label = "wait_echo_end"];
+  store_value [width=2, label = "store_value\n-----------\nstore_measurement"];
+  send_value [width=2, label = "send_value\n----------\nsend_measurement"];
+  end_transmission [width=2, label = "end_transmission\n----------------\npronto"];
+
+  idle -> send_pulse [label = "mensurar"];
+  idle -> idle:s [label = "~ mensurar"];
+  send_pulse -> wait_echo_start [label = "pulse_sent"];
+  send_pulse -> send_pulse [label = "~ pulse_sent"];
+  wait_echo_start -> wait_echo_end [label = "echo"];
+  wait_echo_start -> wait_echo_start [label = "~ echo"];
+  wait_echo_end -> store_value [label = "~ echo"];
+  wait_echo_end -> wait_echo_end [label = "echo"];
+  store_value -> send_value [label = ""];
+  send_value -> end_transmission [label = "measurement_sent"];
+  send_value -> send_value [label = "~ measurement_sent"];
+  end_transmission -> idle [label = ""];
+
+  // Estado padrão
+  node [shape = point, width = 0];
+  start [label = ""];
+  start -> idle;
+}
+
