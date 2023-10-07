@@ -55,7 +55,6 @@ begin
     send_distance     <= '0';
     send_angle        <= '0';
     s_pronto          <= '0';
-    update_angle      <= '0';
 
     case state is
       when idle =>

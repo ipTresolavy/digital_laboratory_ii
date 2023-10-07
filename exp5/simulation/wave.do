@@ -14,11 +14,14 @@ add wave -noupdate -color Magenta -height 36 /sonar_tb/saida_serial_out
 add wave -noupdate -color Magenta -height 36 /sonar_tb/trigger_out
 add wave -noupdate -color Magenta -height 36 /sonar_tb/pwm_out
 add wave -noupdate -divider Debug
+add wave -noupdate -color Orange -height 36 /sonar_tb/dut/fd/s_tick
 add wave -noupdate -color Orange -height 36 /sonar_tb/dut/uc/state
 add wave -noupdate -color Orange -height 36 /sonar_tb/dut/fd/s_data_out
+add wave -noupdate -color Orange -height 36 /sonar_tb/dut/fd/update_angle
+add wave -noupdate -color Orange -height 36 /sonar_tb/dut/fd/s_largura
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
-quietly wave cursor active 1
+WaveRestoreCursors {{Cursor 1} {340702010 ns} 0} {{Cursor 3} {109726242 ns} 0}
+quietly wave cursor active 2
 configure wave -namecolwidth 271
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -33,4 +36,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {1460 ns}
+WaveRestoreZoom {0 ns} {422347811 ns}

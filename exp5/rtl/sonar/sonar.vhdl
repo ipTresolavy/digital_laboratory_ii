@@ -117,7 +117,8 @@ begin
   continuous_measurement: contador_m
   generic map (
     -- gera um comando de medição a cada 2s
-    M => 100000000,
+    -- M => 100000000,
+    M => 2500000,
     N => 27
   )
   port map
