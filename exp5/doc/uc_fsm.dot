@@ -1,0 +1,27 @@
+digraph sonar_uc_fsm {
+    rankdir=LR;
+    node [shape = circle, width=1.5, fixedsize=true, fontsize=12];
+    
+    idle [label="idle\n--------------------\n"];
+    send_pulse [label="send_pulse\n--------------------\ngenerate_pulse='1'\n reset_counters='1'"];
+    wait_echo_start [label="wait_echo_start\n--------------------\n"];
+    wait_echo_end [label="wait_echo_end\n--------------------\n"];
+    store_value [label="store_value\n--------------------\nstore_measurement='1'"];
+    send_angle_value [label="send_angle_value\n--------------------\nsend_angle='1'"];
+    send_distance_value [label="send_distance_value\n--------------------\nsend_distance='1'"];
+    end_transmission [label="end_transmission\n--------------------\npronto='1'\nupdate_angle='1'"];
+    
+    idle -> send_pulse [label="mensurar='1'", fontcolor=blue];
+    send_pulse -> send_pulse [label="pulse_sent='0'", fontcolor=blue];
+    send_pulse -> wait_echo_start [label="pulse_sent='1'", fontcolor=blue];
+    wait_echo_start -> wait_echo_start [label="echo='0'", fontcolor=blue];
+    wait_echo_start -> wait_echo_end [label="echo='1'", fontcolor=blue];
+    wait_echo_end -> wait_echo_end [label="echo='1'", fontcolor=blue];
+    wait_echo_end -> store_value [label="echo='0'", fontcolor=blue];
+    store_value -> send_angle_value;
+    send_angle_value -> send_angle_value [label="angle_sent='0'", fontcolor=blue];
+    send_angle_value -> send_distance_value [label="angle_sent='1'", fontcolor=blue];
+    send_distance_value -> send_distance_value [label="distance_sent='0'", fontcolor=blue];
+    send_distance_value -> end_transmission [label="distance_sent='1'", fontcolor=blue];
+    end_transmission -> idle;
+}
