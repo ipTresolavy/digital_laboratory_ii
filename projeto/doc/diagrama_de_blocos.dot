@@ -1,0 +1,23 @@
+digraph G {
+    rankdir=LR;
+    node [shape=box, style=filled, color=lightblue, border=2];
+
+    // Componentes
+    LIDAR [label="LIDAR"];
+    FPGA [label="FPGA"];
+    Vibrador [label="Vibrador (Feedback Háptico)"];
+    ESP32 [label="ESP32"];
+    Acelerometro [label="Acelerômetro"];
+    Software [label="Software"];
+    Bateria [label="Bateria"];
+
+    // Conexões
+    LIDAR -> FPGA [label="Dados de Detecção"];
+    FPGA -> Vibrador [label="Sinal de Alerta"];
+    FPGA -> ESP32 [label="Dados de Detecção"];
+    ESP32 -> Software [label="Alerta de Queda"];
+    Acelerometro -> FPGA [label="Dados de Aceleração"];
+    Bateria -> FPGA [label="Alimentação"];
+    FPGA -> LIDAR [label="Alimentação"];
+}
+
