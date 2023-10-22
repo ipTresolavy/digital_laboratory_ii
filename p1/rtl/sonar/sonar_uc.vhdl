@@ -1,0 +1,204 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity sonar_uc is
+  port
+  (
+    -- sinais de sistema
+    clock              : in std_logic;
+    reset              : in std_logic;
+
+    -- sinais de controle e condicao
+    mensurar           : in  std_logic;
+    echo               : in  std_logic;
+    pulse_sent         : in  std_logic;
+    angle_sent         : in  std_logic;
+    distance_sent      : in  std_logic;
+    pronto_rx          : in  std_logic;
+    goto_sweep         : in  std_logic;
+    goto_alert         : in  std_logic;
+    goto_manual        : in  std_logic;
+    manual_measurement : in  std_logic;
+    generate_pulse     : out std_logic;
+    reset_counters     : out std_logic;
+    store_measurement  : out std_logic;
+    send_distance      : out std_logic;
+    send_angle         : out std_logic;
+    update_angle       : out std_logic;
+
+    -- sinais do toplevel
+    pronto             : out std_logic;
+    db_estado          : out std_logic_vector(3 downto 0); -- estado da UC
+    db_modo 			     : out std_logic
+  );
+end entity sonar_uc;
+
+architecture behavioral of sonar_uc is
+
+  type state_type is (idle, send_pulse, wait_echo_start, wait_echo_end, store_value, send_angle_value, send_distance_value, end_transmission);
+  signal state, next_state : state_type;
+  
+  type mode_type is (sweep, alert, manual);
+  signal mode, next_mode : mode_type;
+
+  signal s_pronto : std_logic;
+  signal s_mensurar : std_logic;
+  signal s_mensurar_manual : std_logic;
+
+begin
+
+  sync_process: process (clock, reset)
+  begin
+    if reset = '1' then
+      state <= idle;
+		mode <= sweep;
+    elsif rising_edge(clock) then 
+      state <= next_state;
+		if pronto_rx ='1' then 
+			mode  <= next_mode;
+		end if;
+    end if;
+  end process;
+
+  next_state_decode: process(state, s_mensurar, echo, pulse_sent, angle_sent, distance_sent) is
+  begin
+
+    generate_pulse    <= '0';
+    reset_counters    <= '0';
+    store_measurement <= '0';
+    send_distance     <= '0';
+    send_angle        <= '0';
+    s_pronto          <= '0';
+
+    case state is
+      when idle =>
+        if s_mensurar = '1' then
+          next_state <= send_pulse;
+        else 
+          next_state <= idle;
+        end if;
+
+      when send_pulse =>
+        generate_pulse <= '1';
+        reset_counters <= '1';
+        if pulse_sent = '1' then
+          next_state <= wait_echo_start;
+        else
+          next_state <= send_pulse;
+        end if;
+
+      when wait_echo_start =>
+        if echo = '1' then
+          next_state <= wait_echo_end;
+        else
+          next_state <= wait_echo_start;
+        end if;
+
+      when wait_echo_end =>
+        if echo = '0' then
+          next_state <= store_value;
+        else
+          next_state <= wait_echo_end;
+        end if;
+
+      when store_value =>
+        store_measurement <= '1';
+        next_state <= send_angle_value;
+
+      when send_angle_value =>
+        send_angle <= '1';
+        if angle_sent = '1' then
+          next_state <= send_distance_value;
+        else 
+          next_state <= send_angle_value;
+        end if;
+
+      when send_distance_value =>
+        send_distance <= '1';
+        if distance_sent = '1' then
+          next_state <= end_transmission;
+        else
+          next_state <= send_distance_value;
+        end if;
+
+      when end_transmission =>
+        s_pronto <= '1';
+        next_state <= idle;
+
+      when others =>
+        next_state <= idle;
+
+    end case;
+  end process;
+  
+  next_mode_decode: process(mode, goto_alert, goto_sweep, goto_manual, manual_measurement) is
+  begin
+		s_mensurar_manual <= '0';
+		
+		case mode is
+			when sweep =>
+				if goto_alert = '1' then
+					next_mode <= alert;
+				elsif goto_manual = '1' then
+					next_mode <= manual;
+				else
+					next_mode <= sweep;
+				end if;
+			when manual =>
+				if goto_sweep = '1' then
+					next_mode <= sweep;
+				elsif goto_alert = '1' then
+					next_mode <= alert;
+				else
+					next_mode <= manual;
+				end if;
+				
+				if manual_measurement = '1' then
+					s_mensurar_manual <= '1';
+				else
+					s_mensurar_manual <= '0';
+				end if;
+				
+			when alert =>
+				if goto_sweep = '1' then
+					next_mode <= sweep;
+				elsif goto_manual = '1' then
+					next_mode <= manual;
+				else
+					next_mode <= alert;
+				end if;
+				
+			when others =>
+				next_mode <= sweep;
+		end case;
+  end process;
+  
+  pronto <= s_pronto;
+  
+  with mode select
+    update_angle <= s_pronto when sweep,
+                    s_pronto when manual,
+                    '0' when others;
+							 
+  with mode select
+    s_mensurar   <= mensurar when sweep,
+                    mensurar when alert,
+                    manual_measurement when others;
+
+  with state select
+      db_estado <= "0000" when idle,
+                   "0001" when send_pulse,
+                   "0010" when wait_echo_start,
+                   "0011" when wait_echo_end,
+                   "0100" when store_value,
+                   "0101" when send_angle_value,
+                   "0110" when send_distance_value,
+                   "1111" when end_transmission,
+                   "1110" when others;
+						 
+  with mode select
+      db_modo   <= '0' when sweep,
+                   '1' when others;
+
+end architecture behavioral;

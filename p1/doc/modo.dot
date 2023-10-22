@@ -1,0 +1,18 @@
+digraph fsm_modes {
+    rankdir=LR;
+    size="8,5";
+    #node [shape = doublecircle]; sweep alert manual;
+    node [shape = circle]; sweep alert manual;
+
+    # sweep -> sweep [ label = "default" ];
+    sweep -> alert [ label = "goto_alert" ];
+    sweep -> manual [ label = "goto_manual" ];
+
+    # alert -> alert [ label = "default" ];
+    alert -> sweep [ label = "goto_sweep" ];
+    alert -> manual [ label = "goto_manual" ];
+
+    # manual -> manual [ label = "default/manual_measurement" ];
+    manual -> sweep [ label = "goto_sweep" ];
+    manual -> alert [ label = "goto_alert" ];
+}

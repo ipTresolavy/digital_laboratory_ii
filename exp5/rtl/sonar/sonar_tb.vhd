@@ -78,8 +78,11 @@ architecture tb of sonar_tb is
         ( 5,  882),  --  15cm ( 882us)
         ( 6,  882),  --  15cm ( 882us)
         ( 7, 5882),  -- 100cm (5882us)
-        ( 8,  588)   --  10cm ( 588us)
+        ( 8,  588),   --  10cm ( 588us)
         -- inserir aqui outros posicoes de teste (inserir "," na linha anterior)
+        ( 9,  1088), -- cm 
+        ( 10, 5000), -- cm 
+        ( 11, 2500)  --  m 
       );
 
   signal larguraPulso: time := 1 ns;

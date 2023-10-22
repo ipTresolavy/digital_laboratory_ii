@@ -1,0 +1,91 @@
+Restore Archived Project report for exp4_trena
+Sat Oct  7 10:59:01 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Sat Oct  7 10:59:01 2023 ;
+; Revision Name                   ; exp4_trena                            ;
+; Top-level Entity Name           ; exp4_trena_top                        ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored '/home/ipontes3olavy/second_quadrimester/diglabii/exp4/synthesis/exp4_final_t2bb2.qar' into the '/home/ipontes3olavy/second_quadrimester/diglabii/exp4/synthesis/exp4_final_t2bb2_restored/' directory
+Info: Generated report 'exp4_trena.restore.rpt'
+Info (23030): Evaluation of Tcl script /home/ipontes3olavy/intelFPGA_lite/22.1std/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 788 megabytes
+    Info: Processing ended: Sat Oct  7 10:59:01 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
+
+
++-----------------------------------+
+; Files Restored                    ;
++-----------------------------------+
+; File Name                         ;
++-----------------------------------+
+; qar_info.json                     ;
+; rtl/contador_bcd_3digitos.vhd     ;
+; rtl/contador_m.vhd                ;
+; rtl/deslocador_n.vhd              ;
+; rtl/edge_detector.vhd             ;
+; rtl/exp4_trena.vhdl               ;
+; rtl/exp4_trena_fd.vhdl            ;
+; rtl/exp4_trena_top.vhdl           ;
+; rtl/exp4_trena_uc.vhdl            ;
+; rtl/gerador_pulso.vhd             ;
+; rtl/hcsr04_interface.vhdl         ;
+; rtl/hexa7seg.vhd                  ;
+; rtl/measurement_sender.vhdl       ;
+; rtl/register_d.vhdl               ;
+; synthesis/assignment_defaults.qdf ;
+; synthesis/exp4_trena.qpf          ;
+; synthesis/exp4_trena.qsf          ;
++-----------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
