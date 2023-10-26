@@ -1,0 +1,19 @@
+digraph G {
+    graph [dpi = 300]
+    rankdir=LR;
+    node [shape=box, style=filled, color=lightblue, border=2];
+
+    // Componentes
+    LIDAR [label="LIDAR"];
+    Sonar [label="Sonar"];
+    FPGA [label="FPGA"];
+    Software [label="Software"];
+    MotorDC [label="Motor DC"];
+
+    // Conexões
+    LIDAR -> FPGA [label="Dados de distância"];
+    Sonar -> FPGA [label="Dados de distância"];
+    FPGA -> MotorDC [label="Controle PWM"];
+    FPGA  -> Software [label="Dados de monitoramento"]
+}
+
