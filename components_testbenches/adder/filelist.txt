@@ -1,2 +1,3 @@
 ../../components/adder/prefix_operator.vhdl
 ../../components/adder/sklansky_adder.vhdl
+sklansky_adder_tb.vhdl

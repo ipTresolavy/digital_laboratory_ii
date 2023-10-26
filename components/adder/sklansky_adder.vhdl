@@ -50,6 +50,8 @@ begin
 
   levels: for i in 0 to integer(ceil(log2(real(WIDTH))))-1 generate
 
+    -- 2**i-1 + k*(2**(i+1)) <= WIDTH-1
+    -- k <= (WIDTH-2**i+1)/(2**(i+1))
     g_blocks: for k in 0 to (WIDTH-2**i)/(2**(i+1)) generate
     begin
 

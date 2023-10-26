@@ -1,0 +1,72 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity sklansky_adder_tb is
+end entity sklansky_adder_tb;
+
+architecture testbench of sklansky_adder_tb is
+  component sklansky_adder is
+    generic
+    (
+      WIDTH : natural := 16
+    );
+    port
+    (
+      a     : in  std_logic_vector(WIDTH-1 downto 0);
+      b     : in  std_logic_vector(WIDTH-1 downto 0);
+      c_in  : in  std_logic;
+      c_out : out std_logic;
+      s     : out std_logic_vector(WIDTH-1 downto 0)
+    );
+  end component sklansky_adder;
+  -- Constants
+  constant WIDTH : natural := 16;
+  
+  -- Signals
+  signal a, b : std_logic_vector(WIDTH-1 downto 0);
+  signal c_in, c_out : std_logic;
+  signal s : std_logic_vector(WIDTH-1 downto 0);
+  
+begin
+  -- Instantiate the sklansky_adder component
+  UUT : sklansky_adder
+    generic map (
+      WIDTH => WIDTH
+    )
+    port map (
+      a => a,
+      b => b,
+      c_in => c_in,
+      c_out => c_out,
+      s => s
+    );
+
+  -- Stimulus process
+  stimulus: process
+  begin
+    -- Test case 1
+    a <= "1010101010101010";
+    b <= "0101010101010101";
+    c_in <= '0';
+    wait for 10 ns;
+    assert (s = "1111111111111111") report "Test case 1 failed" severity error;
+    
+    -- Test case 2
+    a <= "1111000011110000";
+    b <= "0000111100001111";
+    c_in <= '0';
+    wait for 10 ns;
+    assert (s = "1111111111111111") report "Test case 2 failed" severity error;
+    
+    -- Test case 3
+    a <= "1111000011110000";
+    b <= "0000111100001111";
+    c_in <= '1';
+    wait for 10 ns;
+    assert (s = "0000000000000000") report "Test case 3 failed" severity error;
+    
+    -- Add more test cases as needed
+    wait;
+  end process stimulus;
+end architecture testbench;
