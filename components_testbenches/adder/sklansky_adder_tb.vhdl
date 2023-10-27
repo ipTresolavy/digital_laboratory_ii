@@ -21,7 +21,7 @@ architecture testbench of sklansky_adder_tb is
     );
   end component sklansky_adder;
   -- Constants
-  constant WIDTH : natural := 16;
+  constant WIDTH : natural := 32;
   
   -- Signals
   signal a, b : std_logic_vector(WIDTH-1 downto 0);
@@ -46,22 +46,22 @@ begin
   stimulus: process
   begin
     -- Test case 1
-    a <= "1010101010101010";
-    b <= "0101010101010101";
+    a <= "10101010101010101010101010101010";
+    b <= "01010101010101010101010101010101";
     c_in <= '0';
     wait for 10 ns;
-    assert (s = "1111111111111111") report "Test case 1 failed" severity error;
+    assert (s = "11111111111111111111111111111111") report "Test case 1 failed" severity error;
     
     -- Test case 2
-    a <= "1111000011110000";
-    b <= "0000111100001111";
+    a <= "11110000111100001111000011110000";
+    b <= "00001111000011110000111100001111";
     c_in <= '0';
     wait for 10 ns;
-    assert (s = "1111111111111111") report "Test case 2 failed" severity error;
+    assert (s = "11111111111111111111111111111111") report "Test case 2 failed" severity error;
     
     -- Test case 3
-    a <= "1111000011110000";
-    b <= "0000111100001111";
+    a <= "11110000111100001111000011110000";
+    b <= "00001111000011110000111100001111";
     c_in <= '1';
     wait for 10 ns;
     assert (s = "0000000000000000") report "Test case 3 failed" severity error;
@@ -94,7 +94,13 @@ begin
     wait for 10 ns;
     assert (s = "1111111111111111") report "Test case 7 failed" severity error;
     
-    -- Add more test cases as needed
+    -- Test case 4
+    a <= x"0000DEAD";
+    b <= x"FEEDBEEF";
+    c_in <= '0';
+    wait for 10 ns;
+    assert (s = x"FEEE9D9C") report "Test case 4 failed" severity error;
+
     wait;
   end process stimulus;
 end architecture testbench;
