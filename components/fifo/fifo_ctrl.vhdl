@@ -26,17 +26,23 @@ architecture behavioral of fifo_ctrl is
   signal w_ptr_logic : std_logic_vector(ADDR_WIDTH-1 downto 0);
   signal w_ptr_next  : std_logic_vector(ADDR_WIDTH-1 downto 0);
   signal w_ptr_succ  : std_logic_vector(ADDR_WIDTH-1 downto 0);
+  signal tmp_w_ptr_succ  : std_logic_vector(ADDR_WIDTH downto 0);
   
   signal r_ptr_logic : std_logic_vector(ADDR_WIDTH-1 downto 0);
   signal r_ptr_next  : std_logic_vector(ADDR_WIDTH-1 downto 0);
   signal r_ptr_succ  : std_logic_vector(ADDR_WIDTH-1 downto 0);
+  signal tmp_r_ptr_succ  : std_logic_vector(ADDR_WIDTH downto 0);
 
   signal full_logic  : std_logic;
   signal empty_logic : std_logic;
   signal full_next   : std_logic;
   signal empty_next  : std_logic;
-  
+
+  signal wr_rd : std_logic_vector(1 downto 0);
+
 begin
+
+  wr_rd <= wr & rd;
   
   fifo_control_logic: process(clock, reset)
   begin
@@ -53,16 +59,19 @@ begin
     end if;
   end process fifo_control_logic;
 
-  next_state_logic: process(w_ptr_logic, r_ptr_logic, full_logic, empty_logic, wr, rd, r_ptr_succ, w_ptr_succ)
+  tmp_w_ptr_succ <= std_logic_vector(to_unsigned(to_integer(unsigned(w_ptr_logic)) + 1, tmp_w_ptr_succ'LENGTH));
+  tmp_r_ptr_succ <= std_logic_vector(to_unsigned(to_integer(unsigned(r_ptr_logic)) + 1, tmp_r_ptr_succ'LENGTH));
+
+  next_state_logic: process(w_ptr_logic, r_ptr_logic, full_logic, empty_logic, wr_rd, r_ptr_succ, w_ptr_succ, tmp_r_ptr_succ, tmp_w_ptr_succ)
   begin
-    w_ptr_succ <= std_logic_vector(to_unsigned(to_integer(unsigned(w_ptr_logic)) + 1, w_ptr_succ'LENGTH));
-    r_ptr_succ <= std_logic_vector(to_unsigned(to_integer(unsigned(r_ptr_logic)) + 1, r_ptr_succ'LENGTH));
+    w_ptr_succ <= tmp_w_ptr_succ(w_ptr_succ'LENGTH-1 downto 0);
+    r_ptr_succ <= tmp_r_ptr_succ(r_ptr_succ'LENGTH-1 downto 0);
     w_ptr_next <= w_ptr_logic;
     r_ptr_next <= r_ptr_logic;
     full_next  <= full_logic;
     empty_next <= empty_logic;
     
-    case std_logic_vector'(wr & rd) is
+    case wr_rd is
       when "01" =>
         if empty_logic = '0' then
           r_ptr_next <= r_ptr_succ;
@@ -84,6 +93,8 @@ begin
       when "11" =>
         w_ptr_next <= w_ptr_succ;
         r_ptr_next <= r_ptr_succ;
+
+      when others =>
 
     end case;
   end process next_state_logic;

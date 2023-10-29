@@ -46,7 +46,7 @@ architecture structural of reg_file is
 begin
 
   g_registers: for i in 0 to 2**ADDR_WIDTH-1 generate
-    reg_write_enables(i) <= '1' when w_addr = std_logic_vector(to_unsigned(i, w_addr'LENGTH)) else
+    reg_write_enables(i) <= '1' when ((w_addr = std_logic_vector(to_unsigned(i, w_addr'LENGTH))) and wr_en = '1') else
                             '0';
     reg: register_d
     generic map

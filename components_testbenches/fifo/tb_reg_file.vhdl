@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use std.env.stop;
 
 entity tb_reg_file is
 end entity tb_reg_file;
@@ -36,6 +37,8 @@ architecture testbench of tb_reg_file is
     );
   end component reg_file;
 
+  constant clockPeriod : time := 20 ns; -- 50MHz
+
 begin
   -- Instantiate the reg_file component
   uut: reg_file
@@ -54,45 +57,33 @@ begin
       r_data => r_data
     );
 
-  -- Clock process
-  process
-  begin
-    while now < 1000 ns loop
-      clock <= not clock;
-      wait for 5 ns;
-    end loop;
-    wait;
-  end process;
+  clock <= (not clock) after clockPeriod/2;
 
   -- Stimulus process
   process
   begin
     wait for 10 ns;  -- Wait for initial signals to settle
 
-    -- Test 1: Write data to registers
-    wr_en <= '1';
-    r_addr <= "00";
-    w_addr <= "00";
-    w_data <= "10101010";  -- Your write data here
-    wait for 10 ns;
+    for i in 0 to 2**ADDR_WIDTH - 1 loop
+      -- Write random data to registers
+      wr_en  <= '1';
+      w_addr <= std_logic_vector(to_unsigned(i, ADDR_WIDTH));
+      w_data <= std_logic_vector(to_unsigned(i, DATA_WIDTH));
+      wait until rising_edge(clock);
+      
+      -- Read data from registers
+      wr_en  <= '0';
+      r_addr <= std_logic_vector(to_unsigned(i, ADDR_WIDTH));
+      wait until rising_edge(clock);
+      
+      -- Assert the read operation
+      assert r_data = w_data
+        report "Read data does not match with the written data for address " & integer'image(i)
+        severity error;
+    end loop;
     
-    -- Assert the write operation
-    assert r_data = w_data
-      report "Write data does not match with read data."
-      severity error;
-    
-    -- Test 2: Read data from registers
-    wr_en <= '0';
-    r_addr <= "00";
-    wait for 10 ns;
-    
-    -- Assert the read operation
-    assert r_data = w_data
-      report "Read data does not match with the written data."
-      severity error;
-    
-    -- Add more test cases and assert statements as needed
-    
+    report "Calling 'stop'";
+    stop;
     wait;
   end process;
 end architecture testbench;

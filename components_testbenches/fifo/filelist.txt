@@ -1,0 +1,7 @@
+../../components/register_d.vhdl
+../../components/fifo/reg_file.vhdl
+../../components/fifo/fifo_ctrl.vhdl
+../../components/fifo/fifo.vhdl
+./tb_reg_file.vhdl
+./tb_fifo_ctrl.vhdl
+./tb_fifo.vhdl
