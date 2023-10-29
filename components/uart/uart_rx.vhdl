@@ -56,8 +56,8 @@ begin
     state_next <= state_reg;
     rx_done_tick <= '0';
     s_next <= s_reg;
-    b_next <= s_reg;
-    n_next <= b_reg;
+    n_next <= n_reg;
+    b_next <= b_reg;
     case state_reg is
       when idle =>
         if rx = '0' then

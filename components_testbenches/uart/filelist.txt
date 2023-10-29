@@ -6,3 +6,4 @@
 ../../components/fifo/fifo.vhdl
 ../../components/uart/uart.vhdl
 ./tb_baud_gen.vhdl
+./tb_uart_rx.vhdl
