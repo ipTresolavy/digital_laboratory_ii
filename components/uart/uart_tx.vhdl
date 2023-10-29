@@ -55,7 +55,7 @@ begin
     end if;
   end process tx_fsm;
   
-  next_state_logic: process(state_reg, s_reg, n_reg, b_reg, tx_reg, tx_start, din, s_tick, b_reg)
+  next_state_logic: process(state_reg, s_reg, n_reg, b_reg, tx_reg, tx_start, din, s_tick)
   begin
     state_next <= state_reg;
     tx_done_tick <= '0';

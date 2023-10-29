@@ -1,0 +1,8 @@
+../../components/uart/baud_gen.vhdl
+../../components/uart/uart_rx.vhdl
+../../components/uart/uart_tx.vhdl
+../../components/fifo/reg_file.vhdl
+../../components/fifo/fifo_ctrl.vhdl
+../../components/fifo/fifo.vhdl
+../../components/uart/uart.vhdl
+./tb_baud_gen.vhdl
