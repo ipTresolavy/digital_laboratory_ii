@@ -3,3 +3,7 @@
 components.files = [
   "components/**/*.vhdl"
 ]
+
+components_testbench.files = [
+  "components_testbenches/**/*.vhdl"
+]
