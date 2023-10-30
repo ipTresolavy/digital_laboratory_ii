@@ -1,0 +1,4 @@
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
+./tb_t_flip_flop.vhdl
+./tb_sync_par_counter.vhdl
