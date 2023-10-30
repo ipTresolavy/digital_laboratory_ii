@@ -1,3 +1,5 @@
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
 ../../components/register_d.vhdl
 ../../components/uart/baud_gen.vhdl
 ../../components/uart/uart_rx.vhdl

@@ -15,7 +15,7 @@ architecture sim of tb_uart_tx is
   signal tx_done_tick : std_logic;
   signal din          : std_logic_vector(7 downto 0) := "00000000";
   signal tx           : std_logic;
-  signal divisor      : std_logic_vector(10 downto 0) := "00000011010"; -- 26 in binary
+  signal divisor      : std_logic_vector(10 downto 0) := "00000011011"; -- 27 in binary
 
   constant clockPeriod : time := 20 ns; -- 50 MHz
   constant bitPeriod   : time := 8681 ns; -- 115200 baud rate

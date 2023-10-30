@@ -34,7 +34,7 @@ architecture structural of uart is
       clock   : in  std_logic;
       reset   : in  std_logic;
     -- divisor calculation:
-    -- divisor = clock freq. / (16 * baud rate) - 1
+    -- divisor = clock freq. / (16 * baud rate)
     -- (rounded up)
       divisor : in  std_logic_vector(10 downto 0);
       tick    : out std_logic

@@ -11,7 +11,7 @@ architecture testbench of tb_baud_gen is
   -- Constants
   constant CLOCK_FREQ  : natural := 50_000_000; -- 50 MHz
   constant BAUD_RATE   : natural := 115_200;
-  constant DIVISOR_VAL : natural := CLOCK_FREQ / (16 * BAUD_RATE) - 1;
+  constant DIVISOR_VAL : natural := CLOCK_FREQ / (16 * BAUD_RATE);
   constant EXPECTED_TICKS : natural := 16;
 
   -- Signals

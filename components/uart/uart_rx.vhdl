@@ -23,88 +23,163 @@ entity uart_rx is
 end entity uart_rx;
 
 architecture behavioral of uart_rx is
+  component sync_par_counter is
+    generic
+    (
+      constant MODU : natural := 16
+    );
+    port
+    (
+      clock  : in  std_logic;
+      reset  : in  std_logic;
+      cnt_en : in  std_logic;
+      q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0)
+    );
+  end component sync_par_counter;
 
-  constant n_reg_max : std_logic_vector(integer(ceil(log2(real(DBIT))))-1 downto 0) := std_logic_vector(to_unsigned(DBIT-1, integer(ceil(log2(real(DBIT))))));
-  constant s_reg_max : std_logic_vector(integer(ceil(log2(real(SB_TICK))))-1 downto 0) := std_logic_vector(to_unsigned(SB_TICK-1, integer(ceil(log2(real(SB_TICK))))));
+  component register_d is
+    generic
+    (
+      WIDTH : natural := 8
+    );
+    port
+    (
+      clock         : in  std_logic;
+      reset         : in  std_logic;
+      enable        : in  std_logic;
+      data_in       : in  std_logic_vector(WIDTH-1 downto 0);
+      data_out      : out std_logic_vector(WIDTH-1 downto 0)
+    );
+  end component register_d;
+
+  constant n_counter_max : std_logic_vector(integer(ceil(log2(real(DBIT))))-1 downto 0) := std_logic_vector(to_unsigned(DBIT-1, integer(ceil(log2(real(DBIT))))));
+  constant s_counter_max : std_logic_vector(integer(ceil(log2(real(SB_TICK))))-1 downto 0) := std_logic_vector(to_unsigned(SB_TICK-1, integer(ceil(log2(real(SB_TICK))))));
   
   type state_type is (idle, start, data, stop);
   signal state_reg, state_next : state_type;
 
-  signal s_reg, s_next : std_logic_vector(s_reg_max'LENGTH-1 downto 0);
-  signal s_next_tmp : std_logic_vector(s_reg_max'LENGTH downto 0);
-  signal n_reg, n_next : std_logic_vector(n_reg_max'LENGTH-1 downto 0);
-  signal n_next_tmp : std_logic_vector(n_reg_max'LENGTH downto 0);
+  -- tick counter
+  signal s_counter : std_logic_vector(s_counter_max'LENGTH-1 downto 0);
+  signal s_counter_clear : std_logic;
+  signal s_counter_reset : std_logic;
+  signal s_counter_en : std_logic;
+
+  -- bit counter
+  signal n_counter : std_logic_vector(n_counter_max'LENGTH-1 downto 0);
+  signal n_counter_clear : std_logic;
+  signal n_counter_reset : std_logic;
+  signal n_counter_en : std_logic;
+
   signal b_reg, b_next : std_logic_vector(DBIT-1 downto 0);
+  signal b_reg_en : std_logic;
+
   signal comp_en : std_logic;
  
 begin
 
-  s_next_tmp <= std_logic_vector(to_unsigned(to_integer(unsigned(s_reg)) + 1, s_next_tmp'LENGTH));
-  n_next_tmp <= std_logic_vector(to_unsigned(to_integer(unsigned(n_reg)) + 1, n_next_tmp'LENGTH));
+  s_counter_reset <= reset or s_counter_clear;
+  s_counter_inst: sync_par_counter
+  generic map
+  (
+    MODU => 2**(s_counter_max'LENGTH)
+  )
+  port map
+  (
+    clock => clock,
+    reset => s_counter_reset,
+    cnt_en => s_counter_en,
+    q => s_counter
+  );
+
+  n_counter_reset <= reset or n_counter_clear;
+  n_counter_inst: sync_par_counter
+  generic map
+  (
+    MODU => 2**(n_counter_max'LENGTH)
+  )
+  port map
+  (
+    clock => clock,
+    reset => n_counter_reset,
+    cnt_en => n_counter_en,
+    q => n_counter
+  );
+
+  b_next <= rx & b_reg(b_reg'LENGTH-1 downto 1);
+  b_reg_inst: register_d
+  generic map
+  (
+    WIDTH => DBIT
+  )
+  port map
+  (
+    clock => clock,
+    reset => reset,
+    enable => b_reg_en,
+    data_in => b_next,
+    data_out => b_reg
+  );
 
   rx_fsm: process(clock, reset)
   begin
     if reset = '1' then
       state_reg <= idle;
-      s_reg     <= (others => '0');
-      n_reg     <= (others => '0');
-      b_reg     <= (others => '0');
     elsif rising_edge(clock) then
       state_reg <= state_next;     
-      s_reg     <= s_next;
-      n_reg     <= n_next;
-      b_reg     <= b_next;
     end if;
   end process rx_fsm;
 
-  next_state_logic: process(state_reg, s_reg, n_reg, b_reg, rx, s_tick, comp_en, s_next_tmp, n_next_tmp)
+  next_state_logic: process(state_reg, s_counter, n_counter, rx, s_tick, comp_en)
   begin
     state_next <= state_reg;
     rx_done_tick <= '0';
-    s_next <= s_reg;
-    n_next <= n_reg;
-    b_next <= b_reg;
     comp_en <= '1';
+    s_counter_clear <= '0';
+    n_counter_clear <= '0';
+    s_counter_en <= '0';
+    n_counter_en <= '0';
+    b_reg_en <= '0';
+
     case state_reg is
       when idle =>
         if rx = '0' then
           state_next <= start;
-          s_next <= (others => '0');
+          s_counter_clear <= '1';
         end if;
 
       when start =>
         if s_tick = '1' then
-          if s_reg(2 downto 0) = "111" then
+          if s_counter(2 downto 0) = "111" then
             state_next <= data;
-            s_next <= (others => '0');
-            n_next <= (others => '0');
+            s_counter_clear <= s_counter(3);
+            n_counter_clear <= '1';
           else
-            s_next <= s_next_tmp(s_next'LENGTH-1 downto 0);
+            s_counter_en <= '1';
           end if;
         end if;
 
       when data =>
         if s_tick = '1' then
-          if s_reg(3 downto 0) = "1111" then
-            s_next <= (others => '0');
-            b_next <= rx & b_reg(b_reg'LENGTH-1 downto 1);
-            if n_reg = n_reg_max then
+          if s_counter(3 downto 0) = "1111" then
+            s_counter_clear <= s_counter(4);
+            b_reg_en <= '1';
+            if n_counter = n_counter_max then
               state_next <= stop;
             else
-              n_next <= n_next_tmp(n_next'LENGTH-1 downto 0);
+              n_counter_en <= '1';
             end if;
           else
-            s_next <= s_next_tmp(s_next'LENGTH-1 downto 0);
+            s_counter_en <= '1';
           end if;
         end if;
 
       when stop =>
         if s_tick = '1' then
-          if s_reg = s_reg_max and comp_en = '1' then
+          if s_counter = s_counter_max and comp_en = '1' then
             state_next <= idle;
             rx_done_tick <= '1';
           else
-            s_next <= s_next_tmp(s_next'LENGTH-1 downto 0);
+            s_counter_en <= '1';
             comp_en <= '0';
           end if;
         end if;
