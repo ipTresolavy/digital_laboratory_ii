@@ -1,3 +1,5 @@
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
 ../../components/register_d.vhdl
 ../../components/fifo/reg_file.vhdl
 ../../components/fifo/fifo_ctrl.vhdl
