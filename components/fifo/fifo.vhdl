@@ -50,8 +50,9 @@ architecture structural of fifo is
     );
     port
     (
-      wr_en  : in  std_logic;
       clock  : in  std_logic;
+      reset  : in  std_logic;
+      wr_en  : in  std_logic;
       w_addr : in  std_logic_vector(ADDR_WIDTH-1 downto 0);
       r_addr : in  std_logic_vector(ADDR_WIDTH-1 downto 0);
       w_data : in  std_logic_vector(DATA_WIDTH-1 downto 0);
@@ -96,6 +97,7 @@ begin
   port map
   (
     clock  => clock,
+    reset  => reset,
     wr_en  => wr_en,
     w_addr => w_addr,
     r_addr => r_addr,

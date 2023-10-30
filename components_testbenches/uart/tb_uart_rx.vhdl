@@ -108,6 +108,7 @@ begin
       -- Send a stop bit
       rx <= '1';
       wait until rx_done_tick = '1'; -- Wait for one full baud period
+      assert dout = rx_data_test(i).data report "Error on transmission: " & integer'image(rx_data_test(i).id) severity error;
       wait until rx_done_tick = '0';
     end loop;
 

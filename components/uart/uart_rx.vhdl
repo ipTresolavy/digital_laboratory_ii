@@ -31,10 +31,16 @@ architecture behavioral of uart_rx is
   signal state_reg, state_next : state_type;
 
   signal s_reg, s_next : std_logic_vector(s_reg_max'LENGTH-1 downto 0);
+  signal s_next_tmp : std_logic_vector(s_reg_max'LENGTH downto 0);
   signal n_reg, n_next : std_logic_vector(n_reg_max'LENGTH-1 downto 0);
+  signal n_next_tmp : std_logic_vector(n_reg_max'LENGTH downto 0);
   signal b_reg, b_next : std_logic_vector(DBIT-1 downto 0);
+  signal comp_en : std_logic;
  
 begin
+
+  s_next_tmp <= std_logic_vector(to_unsigned(to_integer(unsigned(s_reg)) + 1, s_next_tmp'LENGTH));
+  n_next_tmp <= std_logic_vector(to_unsigned(to_integer(unsigned(n_reg)) + 1, n_next_tmp'LENGTH));
 
   rx_fsm: process(clock, reset)
   begin
@@ -51,13 +57,14 @@ begin
     end if;
   end process rx_fsm;
 
-  next_state_logic: process(state_reg, s_reg, n_reg, b_reg, rx, s_tick)
+  next_state_logic: process(state_reg, s_reg, n_reg, b_reg, rx, s_tick, comp_en, s_next_tmp, n_next_tmp)
   begin
     state_next <= state_reg;
     rx_done_tick <= '0';
     s_next <= s_reg;
     n_next <= n_reg;
     b_next <= b_reg;
+    comp_en <= '1';
     case state_reg is
       when idle =>
         if rx = '0' then
@@ -72,7 +79,7 @@ begin
             s_next <= (others => '0');
             n_next <= (others => '0');
           else
-            s_next <= std_logic_vector(to_unsigned(to_integer(unsigned(s_reg)) + 1, s_next'LENGTH));
+            s_next <= s_next_tmp(s_next'LENGTH-1 downto 0);
           end if;
         end if;
 
@@ -84,20 +91,21 @@ begin
             if n_reg = n_reg_max then
               state_next <= stop;
             else
-              n_next <= std_logic_vector(to_unsigned(to_integer(unsigned(n_reg)) + 1, n_next'LENGTH));
+              n_next <= n_next_tmp(n_next'LENGTH-1 downto 0);
             end if;
           else
-            s_next <= std_logic_vector(to_unsigned(to_integer(unsigned(s_reg)) + 1, s_next'LENGTH));
+            s_next <= s_next_tmp(s_next'LENGTH-1 downto 0);
           end if;
         end if;
 
       when stop =>
         if s_tick = '1' then
-          if s_reg = s_reg_max then
+          if s_reg = s_reg_max and comp_en = '1' then
             state_next <= idle;
             rx_done_tick <= '1';
           else
-            s_next <= std_logic_vector(to_unsigned(to_integer(unsigned(s_reg)) + 1, s_next'LENGTH));
+            s_next <= s_next_tmp(s_next'LENGTH-1 downto 0);
+            comp_en <= '0';
           end if;
         end if;
 

@@ -13,6 +13,7 @@ architecture testbench of tb_reg_file is
   
   -- Signals
   signal clock     : std_logic := '0';
+  signal reset     : std_logic := '0';
   signal wr_en     : std_logic := '0';
   signal w_addr    : std_logic_vector(ADDR_WIDTH-1 downto 0) := "00";
   signal r_addr    : std_logic_vector(ADDR_WIDTH-1 downto 0) := "00";
@@ -29,6 +30,7 @@ architecture testbench of tb_reg_file is
     port
     (
       clock  : in  std_logic;
+      reset  : in  std_logic;
       wr_en  : in  std_logic;
       w_addr : in  std_logic_vector(ADDR_WIDTH-1 downto 0);
       r_addr : in  std_logic_vector(ADDR_WIDTH-1 downto 0);
@@ -50,6 +52,7 @@ begin
     port map
     (
       clock  => clock,
+      reset  => reset,
       wr_en  => wr_en,
       w_addr => w_addr,
       r_addr => r_addr,
@@ -62,7 +65,9 @@ begin
   -- Stimulus process
   process
   begin
+    reset <= '1';
     wait for 10 ns;  -- Wait for initial signals to settle
+    reset <= '0';
 
     for i in 0 to 2**ADDR_WIDTH - 1 loop
       -- Write random data to registers

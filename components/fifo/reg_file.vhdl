@@ -12,6 +12,7 @@ entity reg_file is
   port
   (
     clock  : in  std_logic;
+    reset  : in  std_logic;
     wr_en  : in  std_logic;
     w_addr : in  std_logic_vector(ADDR_WIDTH-1 downto 0);
     r_addr : in  std_logic_vector(ADDR_WIDTH-1 downto 0);
@@ -56,7 +57,7 @@ begin
     port map
     (
       clock    => clock,
-      reset    => '0',
+      reset    => reset,
       enable   => reg_write_enables(i),
       data_in  => w_data,
       data_out => reg_mux_outs(i)

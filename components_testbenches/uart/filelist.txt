@@ -1,3 +1,4 @@
+../../components/register_d.vhdl
 ../../components/uart/baud_gen.vhdl
 ../../components/uart/uart_rx.vhdl
 ../../components/uart/uart_tx.vhdl
@@ -7,3 +8,5 @@
 ../../components/uart/uart.vhdl
 ./tb_baud_gen.vhdl
 ./tb_uart_rx.vhdl
+./tb_uart_tx.vhdl
+./tb_uart.vhdl
