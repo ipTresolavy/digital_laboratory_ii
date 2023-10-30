@@ -27,24 +27,33 @@ architecture behavioral of sync_par_counter is
     );
   end component t_flip_flop;
 
+  type and_array_type is array (natural(ceil(log2(real(MODU))))-1 downto 0) of std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
   signal en_vector  : std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
-  signal and_vector : std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
+  signal and_array  : and_array_type;
   signal q_vector   : std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
   
 begin
 
-  en_vector(0) <= cnt_en;
+  en_vector(0)  <= cnt_en;
   en_vector(en_vector'LENGTH-1 downto 1) <= q_vector(q_vector'LENGTH-2 downto 0);
+  --g_first_bit: for i in 0 to natural(ceil(log2(real(MODU))))-1 generate
+    --and_array(i)(0) <= cnt_en;
+  --end generate g_first_bit;
 
   g_regs: for i in 0 to natural(ceil(log2(real(MODU))))-1 generate
-    and_vector(i) <= and en_vector(i downto 0);
+    and_array(i)(0) <= cnt_en;
+    g_test_cond: if i /= 0 generate
+      g_ands: for j in 1 to i generate
+        and_array(i)(j) <= and_array(i)(j-1) and en_vector(j);
+      end generate g_ands;
+    end generate g_test_cond;
     
     reg: t_flip_flop
     port map
     (
       clock => clock,
       reset => reset,
-      en    => and_vector(i),
+      en    => and_array(i)(i),
       q     => q_vector(i)
     );
   end generate g_regs;
