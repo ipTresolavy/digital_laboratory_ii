@@ -8,6 +8,8 @@ entity t_flip_flop is
     clock : in  std_logic;
     reset : in  std_logic;
     en    : in  std_logic;
+    q_in  : in  std_logic;
+    load  : in  std_logic; 
     q     : out std_logic
   );
 end entity t_flip_flop;
@@ -23,7 +25,11 @@ begin
     if reset  = '1' then
       s_q <= '0'; 
     elsif rising_edge(clock) then
-      s_q <= s_q xor en; 
+      if load = '1' then
+        s_q <= q_in; 
+      else
+        s_q <= s_q xor en; 
+      end if;
     end if;
   end process behavior;
   

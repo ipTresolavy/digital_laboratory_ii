@@ -32,6 +32,8 @@ architecture behavioral of fifo_ctrl is
       clock  : in  std_logic;
       reset  : in  std_logic;
       cnt_en : in  std_logic;
+      q_in   : in  std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
+      load   : in  std_logic;
       q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0)
     );
   end component sync_par_counter;
@@ -83,6 +85,8 @@ begin
     clock => clock,
     reset => w_ptr_logic_reset,
     cnt_en => w_ptr_logic_cnt_en,
+    load => '0',
+    q_in => (others => '0'),
     q => w_ptr_logic
   );
 
@@ -97,6 +101,8 @@ begin
     clock => clock,
     reset => r_ptr_logic_reset,
     cnt_en => r_ptr_logic_cnt_en,
+    load => '0',
+    q_in => (others => '0'),
     q => r_ptr_logic
   );
 

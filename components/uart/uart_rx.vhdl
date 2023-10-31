@@ -33,6 +33,8 @@ architecture behavioral of uart_rx is
       clock  : in  std_logic;
       reset  : in  std_logic;
       cnt_en : in  std_logic;
+      q_in   : in  std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
+      load   : in  std_logic;
       q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0)
     );
   end component sync_par_counter;
@@ -61,23 +63,19 @@ architecture behavioral of uart_rx is
   -- tick counter
   signal s_counter : std_logic_vector(s_counter_max'LENGTH-1 downto 0);
   signal s_counter_clear : std_logic;
-  signal s_counter_reset : std_logic;
   signal s_counter_en : std_logic;
 
   -- bit counter
   signal n_counter : std_logic_vector(n_counter_max'LENGTH-1 downto 0);
   signal n_counter_clear : std_logic;
-  signal n_counter_reset : std_logic;
   signal n_counter_en : std_logic;
 
   signal b_reg, b_next : std_logic_vector(DBIT-1 downto 0);
   signal b_reg_en : std_logic;
 
-  signal comp_en : std_logic;
  
 begin
 
-  s_counter_reset <= reset or s_counter_clear;
   s_counter_inst: sync_par_counter
   generic map
   (
@@ -86,12 +84,13 @@ begin
   port map
   (
     clock => clock,
-    reset => s_counter_reset,
+    reset => reset,
     cnt_en => s_counter_en,
+    load => s_counter_clear,
+    q_in => (others => '0'),
     q => s_counter
   );
 
-  n_counter_reset <= reset or n_counter_clear;
   n_counter_inst: sync_par_counter
   generic map
   (
@@ -100,8 +99,10 @@ begin
   port map
   (
     clock => clock,
-    reset => n_counter_reset,
+    reset => reset,
     cnt_en => n_counter_en,
+    load => n_counter_clear,
+    q_in => (others => '0'),
     q => n_counter
   );
 
@@ -129,11 +130,9 @@ begin
     end if;
   end process rx_fsm;
 
-  next_state_logic: process(state_reg, s_counter, n_counter, rx, s_tick, comp_en)
+  next_state_logic: process(state_reg, s_counter, n_counter, rx, s_tick)
   begin
-    state_next <= state_reg;
     rx_done_tick <= '0';
-    comp_en <= '1';
     s_counter_clear <= '0';
     n_counter_clear <= '0';
     s_counter_en <= '0';
@@ -142,16 +141,18 @@ begin
 
     case state_reg is
       when idle =>
+        state_next <= idle;
         if rx = '0' then
           state_next <= start;
           s_counter_clear <= '1';
         end if;
 
       when start =>
+        state_next <= start;
         if s_tick = '1' then
           if s_counter(2 downto 0) = "111" then
             state_next <= data;
-            s_counter_clear <= s_counter(3);
+            s_counter_clear <= '1';
             n_counter_clear <= '1';
           else
             s_counter_en <= '1';
@@ -159,9 +160,10 @@ begin
         end if;
 
       when data =>
+        state_next <= data;
         if s_tick = '1' then
           if s_counter(3 downto 0) = "1111" then
-            s_counter_clear <= s_counter(4);
+            s_counter_clear <= '1';
             b_reg_en <= '1';
             if n_counter = n_counter_max then
               state_next <= stop;
@@ -174,13 +176,13 @@ begin
         end if;
 
       when stop =>
+        state_next <= stop;
         if s_tick = '1' then
-          if s_counter = s_counter_max and comp_en = '1' then
+          if s_counter = s_counter_max then
             state_next <= idle;
             rx_done_tick <= '1';
           else
             s_counter_en <= '1';
-            comp_en <= '0';
           end if;
         end if;
 

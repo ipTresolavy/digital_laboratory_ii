@@ -6,7 +6,8 @@ add wave -noupdate -divider inputs
 add wave -noupdate /tb_uart_rx/rx
 add wave -noupdate /tb_uart_rx/s_tick
 add wave -noupdate -divider outputs
-add wave -noupdate /tb_uart_rx/uut_uart_rx/b_reg
+add wave -noupdate /tb_uart_rx/dout
+add wave -noupdate /tb_uart_rx/rx_done_tick
 add wave -noupdate -divider debug
 add wave -noupdate /tb_uart_rx/uut_uart_rx/state_reg
 TreeUpdate [SetDefaultTree]

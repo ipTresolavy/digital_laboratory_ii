@@ -8,8 +8,7 @@ entity uart_echo is
     clock : in  std_logic;
     reset : in  std_logic;
     rx    : in  std_logic;
-    tx    : out std_logic;
-	 r_data_leds : out std_logic_vector(7 downto 0)
+    tx    : out std_logic
   );
 end entity uart_echo;
 
@@ -36,15 +35,6 @@ architecture structural of uart_echo is
       r_data   : out std_logic_vector(DBIT-1 downto 0)
     );
   end component uart;
-  
-  COMPONENT pll IS
-	PORT
-	(
-		inclk0		: IN STD_LOGIC  := '0';
-		c0		: OUT STD_LOGIC ;
-		c1		: OUT STD_LOGIC 
-	);
-	END COMPONENT pll;
 
   signal rd_uart      : std_logic;
   signal wr_uart      : std_logic;
@@ -52,26 +42,15 @@ architecture structural of uart_echo is
   signal w_data       : std_logic_vector(7 downto 0);
   signal r_data       : std_logic_vector(7 downto 0);
   signal rx_empty     : std_logic;
-  signal clock_25M, clock_10M : std_logic;
-  constant divisor    : std_logic_vector(10 downto 0) := "00000011011"; -- 26 in binary
-  constant divisor_25M    : std_logic_vector(10 downto 0) := "00000001110"; -- 14 in binary
-  constant divisor_10M    : std_logic_vector(10 downto 0) := "00000000101"; -- 5 in binary
-
-  begin
-
-pll_inst : pll PORT MAP (
-		inclk0	 => clock,
-		c0	 => clock_25M,
-		c1	 => clock_10M
-	);
-
+  constant divisor    : std_logic_vector(10 downto 0) := "00000011010"; -- 26 in binary
+begin
 
   uut_uart: uart
   generic map
   (
     DBIT    => 8,
     SB_TICK => 16,
-    FIFO_W  => 4
+    FIFO_W  => 2
   )
   port map
   (
@@ -89,7 +68,6 @@ pll_inst : pll PORT MAP (
   );
 
   w_data <= r_data;
-  r_data_leds <= r_data;
   wr_uart <= not rx_empty;
   rd_uart <= not rx_empty;
 

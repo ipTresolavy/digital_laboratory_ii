@@ -10,6 +10,8 @@ architecture sim of tb_t_flip_flop is
   signal clock : std_logic := '0';
   signal reset : std_logic := '0';
   signal en    : std_logic := '0';
+  signal q_in  : std_logic := '0';
+  signal load  : std_logic := '0';
   signal q     : std_logic;
 
   constant clockPeriod : time := 20 ns; -- 50 MHz
@@ -21,6 +23,8 @@ architecture sim of tb_t_flip_flop is
       clock : in  std_logic;
       reset : in  std_logic;
       en    : in  std_logic;
+      q_in  : in  std_logic;
+      load  : in  std_logic; 
       q     : out std_logic
     );
   end component t_flip_flop;
@@ -32,6 +36,8 @@ begin
     clock => clock,
     reset => reset,
     en    => en,
+    q_in  => q_in,
+    load  => load,
     q     => q
   );
 
@@ -59,11 +65,19 @@ begin
     assert q = '0' report "Test case 2 failed" severity error;
     en <= '0';
 
-    -- Test case 3: Reset the flip-flop
+    -- Test case 3: Load the flip-flop
+    wait until falling_edge(clock);
+    q_in <= '1';
+    load <= '1';
+    wait until falling_edge(clock);
+    assert q = '1' report "Test case 3 failed" severity error;
+    load <= '1';
+
+    -- Test case 4: Reset the flip-flop
     wait until falling_edge(clock);
     reset <= '1';
     wait until falling_edge(clock);
-    assert q = '0' report "Test case 3 failed" severity error;
+    assert q = '0' report "Test case 4 failed" severity error;
     reset <= '0';
 
     -- Finish the simulation

@@ -13,6 +13,8 @@ entity sync_par_counter is
     clock  : in  std_logic;
     reset  : in  std_logic;
     cnt_en : in  std_logic;
+    q_in   : in  std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
+    load   : in  std_logic;
     q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0)
   );
 end entity sync_par_counter;
@@ -24,6 +26,8 @@ architecture behavioral of sync_par_counter is
       clock : in  std_logic;
       reset : in  std_logic;
       en    : in  std_logic;
+      q_in  : in  std_logic;
+      load  : in  std_logic; 
       q     : out std_logic
     );
   end component t_flip_flop;
@@ -56,6 +60,8 @@ begin
       clock => clock,
       reset => s_reset,
       en    => and_array(i)(i),
+      q_in  => q_in(i),
+      load  => load,
       q     => q_vector(i)
     );
   end generate g_regs;

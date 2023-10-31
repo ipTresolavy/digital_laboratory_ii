@@ -9,7 +9,7 @@ entity baud_gen is
     clock   : in  std_logic;
     reset   : in  std_logic;
   -- divisor calculation:
-  -- divisor = clock freq. / (16 * baud rate)
+  -- divisor = clock freq. / (16 * baud rate) - 1
   -- (rounded up)
     divisor : in  std_logic_vector(10 downto 0);
     tick    : out std_logic
@@ -28,6 +28,8 @@ architecture behavioral of baud_gen is
       clock  : in  std_logic;
       reset  : in  std_logic;
       cnt_en : in  std_logic;
+      q_in   : in  std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0);
+      load   : in  std_logic;
       q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0)
     );
   end component sync_par_counter;
@@ -50,6 +52,8 @@ begin
     clock => clock,
     reset => s_reset,
     cnt_en => '1',
+    load => '0',
+    q_in => (others => '0'),
     q => count
   );
 
