@@ -1,0 +1,14 @@
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
+../../components/register_d.vhdl
+../../components/uart/baud_gen.vhdl
+../../components/uart/uart_rx.vhdl
+../../components/uart/uart_tx.vhdl
+../../components/fifo/reg_file.vhdl
+../../components/fifo/fifo_ctrl.vhdl
+../../components/fifo/fifo.vhdl
+../../components/uart/uart.vhdl
+../rtl/uart_echo.vhdl
+../rtl/lidar_ctrl.vhdl
+./tb_lidar_ctrl.vhdl
+

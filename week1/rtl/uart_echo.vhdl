@@ -9,7 +9,7 @@ entity uart_echo is
     reset : in  std_logic;
     rx    : in  std_logic;
     tx    : out std_logic;
-	 r_data_leds : out std_logic_vector(7 downto 0)
+	  r_data_leds : out std_logic_vector(7 downto 0)
   );
 end entity uart_echo;
 
