@@ -1,0 +1,243 @@
+\doxysection{uart Entity Reference}
+\hypertarget{classuart}{}\label{classuart}\index{uart@{uart}}
+
+
+UART Interface Entity.  
+
+
+Inheritance diagram for uart\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.845528cm]{d8/dd4/classuart}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_1_1structural}{uart.\+structural}} architecture
+\begin{DoxyCompactList}\small\item\em Structural Architecture of UART Interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classuart_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\item 
+\mbox{\hyperlink{classuart_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Generics}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Number of data bits. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{16} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Number of ticks for stop bits. 16\+: 1 stop bit, 24\+: 1.\+5 stop bit, 32\+: 2 stop bits. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_a5300a12082350406618a83d2adaeef83}{FIFO\+\_\+W}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em FIFO width (depth). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reset input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_ac1ee343f6365e1beedb4d0deec198929}{rd\+\_\+uart}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief UART read signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_afa1f8e25be12f98bbd7bfb2e7364af4f}{wr\+\_\+uart}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief UART write signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_aac0fac1729520eecb19e9bc8061bec84}{rx}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Serial data input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_ae79342fa98b55dc6b9410ab94fd34637}{w\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Parallel data input for transmission. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_a854af6183d8d62f266ebd83de2b04898}{divisor}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Baud rate divisor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_afd2cc42a62c1cddbc96392b78aee3093}{tx\+\_\+full}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmit FIFO full flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_a51417a18080e924acb4a08359d4c611b}{rx\+\_\+empty}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Receive FIFO empty flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_a98dd33b35444db986d99130a0fecc550}{tx}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Serial data output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_a20f317dc09f223fdeb538339f8032ea9}{r\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Parallel data output from reception. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+UART Interface Entity. 
+
+The UART interface entity is responsible for handling the transmission and reception of data over a serial interface. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classuart_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classuart_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{uart@{uart}!clock@{clock}}
+\index{clock@{clock}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Clock input. 
+
+\Hypertarget{classuart_ac809a502575df941b823c2b93a2ce447}\label{classuart_ac809a502575df941b823c2b93a2ce447} 
+\index{uart@{uart}!DBIT@{DBIT}}
+\index{DBIT@{DBIT}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{DBIT}{DBIT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}
+
+
+
+\textbackslash{}brief Number of data bits. 
+
+\Hypertarget{classuart_a854af6183d8d62f266ebd83de2b04898}\label{classuart_a854af6183d8d62f266ebd83de2b04898} 
+\index{uart@{uart}!divisor@{divisor}}
+\index{divisor@{divisor}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{divisor}{divisor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a854af6183d8d62f266ebd83de2b04898}{divisor}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Baud rate divisor. 
+
+\Hypertarget{classuart_a5300a12082350406618a83d2adaeef83}\label{classuart_a5300a12082350406618a83d2adaeef83} 
+\index{uart@{uart}!FIFO\_W@{FIFO\_W}}
+\index{FIFO\_W@{FIFO\_W}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{FIFO\_W}{FIFO\_W}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a5300a12082350406618a83d2adaeef83}{FIFO\+\_\+W}} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}
+
+
+
+FIFO width (depth). 
+
+\Hypertarget{classuart_a0a6af6eef40212dbaf130d57ce711256}\label{classuart_a0a6af6eef40212dbaf130d57ce711256} 
+\index{uart@{uart}!ieee@{ieee}}
+\index{ieee@{ieee}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classuart_acb415f2e3abd505b8338da5b5bf9e2fb}\label{classuart_acb415f2e3abd505b8338da5b5bf9e2fb} 
+\index{uart@{uart}!math\_real@{math\_real}}
+\index{math\_real@{math\_real}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{math\_real}{math\_real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classuart_a2edc34402b573437d5f25fa90ba4013e}\label{classuart_a2edc34402b573437d5f25fa90ba4013e} 
+\index{uart@{uart}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classuart_a20f317dc09f223fdeb538339f8032ea9}\label{classuart_a20f317dc09f223fdeb538339f8032ea9} 
+\index{uart@{uart}!r\_data@{r\_data}}
+\index{r\_data@{r\_data}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{r\_data}{r\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a20f317dc09f223fdeb538339f8032ea9}{r\+\_\+data}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Parallel data output from reception. 
+
+\Hypertarget{classuart_ac1ee343f6365e1beedb4d0deec198929}\label{classuart_ac1ee343f6365e1beedb4d0deec198929} 
+\index{uart@{uart}!rd\_uart@{rd\_uart}}
+\index{rd\_uart@{rd\_uart}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{rd\_uart}{rd\_uart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_ac1ee343f6365e1beedb4d0deec198929}{rd\+\_\+uart}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief UART read signal. 
+
+\Hypertarget{classuart_a108f6801ba4104063b9d5f9286194302}\label{classuart_a108f6801ba4104063b9d5f9286194302} 
+\index{uart@{uart}!reset@{reset}}
+\index{reset@{reset}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Reset input. 
+
+\Hypertarget{classuart_aac0fac1729520eecb19e9bc8061bec84}\label{classuart_aac0fac1729520eecb19e9bc8061bec84} 
+\index{uart@{uart}!rx@{rx}}
+\index{rx@{rx}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{rx}{rx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_aac0fac1729520eecb19e9bc8061bec84}{rx}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Serial data input. 
+
+\Hypertarget{classuart_a51417a18080e924acb4a08359d4c611b}\label{classuart_a51417a18080e924acb4a08359d4c611b} 
+\index{uart@{uart}!rx\_empty@{rx\_empty}}
+\index{rx\_empty@{rx\_empty}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{rx\_empty}{rx\_empty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a51417a18080e924acb4a08359d4c611b}{rx\+\_\+empty}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Receive FIFO empty flag. 
+
+\Hypertarget{classuart_ae74a9b328cac9ecf06f54be731e2023c}\label{classuart_ae74a9b328cac9ecf06f54be731e2023c} 
+\index{uart@{uart}!SB\_TICK@{SB\_TICK}}
+\index{SB\_TICK@{SB\_TICK}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{SB\_TICK}{SB\_TICK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{16} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}
+
+
+
+\textbackslash{}brief Number of ticks for stop bits. 16\+: 1 stop bit, 24\+: 1.\+5 stop bit, 32\+: 2 stop bits. 
+
+\Hypertarget{classuart_acd03516902501cd1c7296a98e22c6fcb}\label{classuart_acd03516902501cd1c7296a98e22c6fcb} 
+\index{uart@{uart}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classuart_a98dd33b35444db986d99130a0fecc550}\label{classuart_a98dd33b35444db986d99130a0fecc550} 
+\index{uart@{uart}!tx@{tx}}
+\index{tx@{tx}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{tx}{tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_a98dd33b35444db986d99130a0fecc550}{tx}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Serial data output. 
+
+\Hypertarget{classuart_afd2cc42a62c1cddbc96392b78aee3093}\label{classuart_afd2cc42a62c1cddbc96392b78aee3093} 
+\index{uart@{uart}!tx\_full@{tx\_full}}
+\index{tx\_full@{tx\_full}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{tx\_full}{tx\_full}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_afd2cc42a62c1cddbc96392b78aee3093}{tx\+\_\+full}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Transmit FIFO full flag. 
+
+\Hypertarget{classuart_ae79342fa98b55dc6b9410ab94fd34637}\label{classuart_ae79342fa98b55dc6b9410ab94fd34637} 
+\index{uart@{uart}!w\_data@{w\_data}}
+\index{w\_data@{w\_data}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{w\_data}{w\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_ae79342fa98b55dc6b9410ab94fd34637}{w\+\_\+data}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Parallel data input for transmission. 
+
+\Hypertarget{classuart_afa1f8e25be12f98bbd7bfb2e7364af4f}\label{classuart_afa1f8e25be12f98bbd7bfb2e7364af4f} 
+\index{uart@{uart}!wr\_uart@{wr\_uart}}
+\index{wr\_uart@{wr\_uart}!uart@{uart}}
+\doxysubsubsection{\texorpdfstring{wr\_uart}{wr\_uart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_afa1f8e25be12f98bbd7bfb2e7364af4f}{wr\+\_\+uart}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief UART write signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/uart/\mbox{\hyperlink{uart_8vhdl}{uart.\+vhdl}}\end{DoxyCompactItemize}

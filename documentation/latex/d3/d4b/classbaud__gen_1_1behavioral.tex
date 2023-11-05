@@ -1,0 +1,80 @@
+\doxysection{baud\+\_\+gen.\+behavioral Architecture Reference}
+\hypertarget{classbaud__gen_1_1behavioral}{}\label{classbaud__gen_1_1behavioral}\index{baud\_gen.behavioral@{baud\_gen.behavioral}}
+
+
+Behavioral Architecture of Baud Rate Generator.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classbaud__gen_1_1behavioral}{baud\+\_\+gen\+::behavioral}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Modulus of the counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_1_1behavioral_a4ddc30b8838c6c2209465b01d30acb6a}{s\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Counter output. \textbackslash{}brief Synchronous reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbaud__gen_1_1behavioral_ae2e5f45f7da4f77ae3365eafb7bf5ca1}{count}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Counter output signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_1_1behavioral_ae4576c304f7dbb1fc291f4761abe53be}{main\+\_\+counter}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\begin{DoxyCompactList}\small\item\em Modulus set to 2\texorpdfstring{$^\wedge$}{\string^}11 for the counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Behavioral Architecture of Baud Rate Generator. 
+
+\textbackslash{}architecture behavioral 
+
+This architecture implements the logic for generating a tick signal based on the provided divisor. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbaud__gen_1_1behavioral_ae2e5f45f7da4f77ae3365eafb7bf5ca1}\label{classbaud__gen_1_1behavioral_ae2e5f45f7da4f77ae3365eafb7bf5ca1} 
+\index{baud\_gen.behavioral@{baud\_gen.behavioral}!count@{count}}
+\index{count@{count}!baud\_gen.behavioral@{baud\_gen.behavioral}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_1_1behavioral_ae2e5f45f7da4f77ae3365eafb7bf5ca1}{count}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Counter output signal. 
+
+\Hypertarget{classbaud__gen_1_1behavioral_ae4576c304f7dbb1fc291f4761abe53be}\label{classbaud__gen_1_1behavioral_ae4576c304f7dbb1fc291f4761abe53be} 
+\index{baud\_gen.behavioral@{baud\_gen.behavioral}!main\_counter@{main\_counter}}
+\index{main\_counter@{main\_counter}!baud\_gen.behavioral@{baud\_gen.behavioral}}
+\doxysubsubsection{\texorpdfstring{main\_counter}{main\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_1_1behavioral_ae4576c304f7dbb1fc291f4761abe53be}{main\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Modulus set to 2\texorpdfstring{$^\wedge$}{\string^}11 for the counter. 
+
+\Hypertarget{classbaud__gen_1_1behavioral_a4ddc30b8838c6c2209465b01d30acb6a}\label{classbaud__gen_1_1behavioral_a4ddc30b8838c6c2209465b01d30acb6a} 
+\index{baud\_gen.behavioral@{baud\_gen.behavioral}!s\_reset@{s\_reset}}
+\index{s\_reset@{s\_reset}!baud\_gen.behavioral@{baud\_gen.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_reset}{s\_reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_1_1behavioral_a4ddc30b8838c6c2209465b01d30acb6a}{s\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Counter output. \textbackslash{}brief Synchronous reset signal. 
+
+\Hypertarget{classbaud__gen_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}\label{classbaud__gen_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6} 
+\index{baud\_gen.behavioral@{baud\_gen.behavioral}!sync\_par\_counter@{sync\_par\_counter}}
+\index{sync\_par\_counter@{sync\_par\_counter}!baud\_gen.behavioral@{baud\_gen.behavioral}}
+\doxysubsubsection{\texorpdfstring{sync\_par\_counter}{sync\_par\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Modulus of the counter. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/uart/\mbox{\hyperlink{baud__gen_8vhdl}{baud\+\_\+gen.\+vhdl}}\end{DoxyCompactItemize}

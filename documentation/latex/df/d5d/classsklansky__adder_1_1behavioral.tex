@@ -1,0 +1,109 @@
+\doxysection{sklansky\+\_\+adder.\+behavioral Architecture Reference}
+\hypertarget{classsklansky__adder_1_1behavioral}{}\label{classsklansky__adder_1_1behavioral}\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+
+
+Behavioral Architecture of Sklansky Adder.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classsklansky__adder_1_1behavioral}{sklansky\+\_\+adder\+::behavioral}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_ae8551e3946dae47f9fbe6964583652fa}{prefix\+\_\+operator}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Prefix Operator Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}{wire\+\_\+array}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsklansky__adder_a32e10d680aa71558b1e483678f455210}{WIDTH}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsklansky__adder_a32e10d680aa71558b1e483678f455210}{WIDTH}}} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Propagate output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_a3dfbac33f34e1cf55d91e49c969e6d56}{g}} {\bfseries {\bfseries \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}{wire\+\_\+array}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_a51bbc850b4222367df19428a4bea85ec}{p}} {\bfseries {\bfseries \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}{wire\+\_\+array}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_aa71c07a4013d2a0e3f2ddd8a98670d9d}{half\+\_\+sum\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_a20baba37dfa418e5067b388f68bdb864}{prop\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_a4a59b5e36cfa9528306d19a0b79e1379}{gen\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsklansky__adder_1_1behavioral_a6717576ed6bea4268e38344bec9e58e4}{propagate\+\_\+generate}}  {\bfseries prefix\+\_\+operator}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Behavioral Architecture of Sklansky Adder. 
+
+\textbackslash{}architecture behavioral 
+
+This architecture implements the logic for a Sklansky parallel prefix adder. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsklansky__adder_1_1behavioral_a3dfbac33f34e1cf55d91e49c969e6d56}\label{classsklansky__adder_1_1behavioral_a3dfbac33f34e1cf55d91e49c969e6d56} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!g@{g}}
+\index{g@{g}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a3dfbac33f34e1cf55d91e49c969e6d56}{g}} {\bfseries {\bfseries \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}{wire\+\_\+array}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsklansky__adder_1_1behavioral_a4a59b5e36cfa9528306d19a0b79e1379}\label{classsklansky__adder_1_1behavioral_a4a59b5e36cfa9528306d19a0b79e1379} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!gen\_c\_out@{gen\_c\_out}}
+\index{gen\_c\_out@{gen\_c\_out}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{gen\_c\_out}{gen\_c\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a4a59b5e36cfa9528306d19a0b79e1379}{gen\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsklansky__adder_1_1behavioral_aa71c07a4013d2a0e3f2ddd8a98670d9d}\label{classsklansky__adder_1_1behavioral_aa71c07a4013d2a0e3f2ddd8a98670d9d} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!half\_sum\_c\_out@{half\_sum\_c\_out}}
+\index{half\_sum\_c\_out@{half\_sum\_c\_out}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{half\_sum\_c\_out}{half\_sum\_c\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_aa71c07a4013d2a0e3f2ddd8a98670d9d}{half\+\_\+sum\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsklansky__adder_1_1behavioral_a51bbc850b4222367df19428a4bea85ec}\label{classsklansky__adder_1_1behavioral_a51bbc850b4222367df19428a4bea85ec} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!p@{p}}
+\index{p@{p}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a51bbc850b4222367df19428a4bea85ec}{p}} {\bfseries {\bfseries \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}{wire\+\_\+array}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsklansky__adder_1_1behavioral_ae8551e3946dae47f9fbe6964583652fa}\label{classsklansky__adder_1_1behavioral_ae8551e3946dae47f9fbe6964583652fa} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!prefix\_operator@{prefix\_operator}}
+\index{prefix\_operator@{prefix\_operator}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{prefix\_operator}{prefix\_operator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_ae8551e3946dae47f9fbe6964583652fa}{prefix\+\_\+operator}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Prefix Operator Component. 
+
+\textbackslash{}component \doxylink{classprefix__operator}{prefix\+\_\+operator} 
+
+The prefix operator component is used to generate propagate and generate signals in the Sklansky adder. \Hypertarget{classsklansky__adder_1_1behavioral_a20baba37dfa418e5067b388f68bdb864}\label{classsklansky__adder_1_1behavioral_a20baba37dfa418e5067b388f68bdb864} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!prop\_c\_out@{prop\_c\_out}}
+\index{prop\_c\_out@{prop\_c\_out}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{prop\_c\_out}{prop\_c\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a20baba37dfa418e5067b388f68bdb864}{prop\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsklansky__adder_1_1behavioral_a6717576ed6bea4268e38344bec9e58e4}\label{classsklansky__adder_1_1behavioral_a6717576ed6bea4268e38344bec9e58e4} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!propagate\_generate@{propagate\_generate}}
+\index{propagate\_generate@{propagate\_generate}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{propagate\_generate}{propagate\_generate}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a6717576ed6bea4268e38344bec9e58e4}{propagate\+\_\+generate}} {\bfseries \textcolor{vhdlchar}{prefix\_operator}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}\label{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b} 
+\index{sklansky\_adder.behavioral@{sklansky\_adder.behavioral}!wire\_array@{wire\_array}}
+\index{wire\_array@{wire\_array}!sklansky\_adder.behavioral@{sklansky\_adder.behavioral}}
+\doxysubsubsection{\texorpdfstring{wire\_array}{wire\_array}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsklansky__adder_1_1behavioral_a39d66a8e0eab82099e0559f55b6fbd0b}{wire\+\_\+array}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsklansky__adder_a32e10d680aa71558b1e483678f455210}{WIDTH}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsklansky__adder_a32e10d680aa71558b1e483678f455210}{WIDTH}}} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+
+
+Propagate output. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/adder/\mbox{\hyperlink{sklansky__adder_8vhdl}{sklansky\+\_\+adder.\+vhdl}}\end{DoxyCompactItemize}

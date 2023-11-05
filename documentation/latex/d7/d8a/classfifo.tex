@@ -1,0 +1,195 @@
+\doxysection{fifo Entity Reference}
+\hypertarget{classfifo}{}\label{classfifo}\index{fifo@{fifo}}
+
+
+FIFO Entity.  
+
+
+Inheritance diagram for fifo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{d7/d8a/classfifo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_1_1structural}{fifo.\+structural}} architecture
+\begin{DoxyCompactList}\small\item\em Structural Architecture of FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classfifo_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\item 
+\mbox{\hyperlink{classfifo_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Generics}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Width of the data bus. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{4} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em Width of the address bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reset input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_ac22622d236e78eab4aca10c6dbb9e007}{rd}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Read enable input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a70acb5c3606f17c158d9d07d5df70204}{wr}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Write enable input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a80014221018ffd51234fb72048cc7fc6}{w\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Data input for writing. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a740dfa69a5cda978e53c8d517f70061e}{empty}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Flag indicating FIFO is empty. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_abc3ea2e37d83ccb991b87c2ef3105769}{full}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Flag indicating FIFO is full. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_a36d8aa71ffe3ac859b8553aaf2542c20}{r\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data output for reading. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+FIFO Entity. 
+
+The FIFO entity is the top-\/level entity for the FIFO buffer. It includes the FIFO control and register file components. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}\label{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3} 
+\index{fifo@{fifo}!ADDR\_WIDTH@{ADDR\_WIDTH}}
+\index{ADDR\_WIDTH@{ADDR\_WIDTH}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{ADDR\_WIDTH}{ADDR\_WIDTH}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{4} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}
+
+
+
+Width of the address bus. 
+
+\Hypertarget{classfifo_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classfifo_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{fifo@{fifo}!clock@{clock}}
+\index{clock@{clock}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Clock input. 
+
+\Hypertarget{classfifo_ab7bf2871224935c0416631ce6ea79f7b}\label{classfifo_ab7bf2871224935c0416631ce6ea79f7b} 
+\index{fifo@{fifo}!DATA\_WIDTH@{DATA\_WIDTH}}
+\index{DATA\_WIDTH@{DATA\_WIDTH}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{DATA\_WIDTH}{DATA\_WIDTH}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}
+
+
+
+\textbackslash{}brief Width of the data bus. 
+
+\Hypertarget{classfifo_a740dfa69a5cda978e53c8d517f70061e}\label{classfifo_a740dfa69a5cda978e53c8d517f70061e} 
+\index{fifo@{fifo}!empty@{empty}}
+\index{empty@{empty}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{empty}{empty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a740dfa69a5cda978e53c8d517f70061e}{empty}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Flag indicating FIFO is empty. 
+
+\Hypertarget{classfifo_abc3ea2e37d83ccb991b87c2ef3105769}\label{classfifo_abc3ea2e37d83ccb991b87c2ef3105769} 
+\index{fifo@{fifo}!full@{full}}
+\index{full@{full}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{full}{full}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_abc3ea2e37d83ccb991b87c2ef3105769}{full}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Flag indicating FIFO is full. 
+
+\Hypertarget{classfifo_a0a6af6eef40212dbaf130d57ce711256}\label{classfifo_a0a6af6eef40212dbaf130d57ce711256} 
+\index{fifo@{fifo}!ieee@{ieee}}
+\index{ieee@{ieee}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classfifo_acb415f2e3abd505b8338da5b5bf9e2fb}\label{classfifo_acb415f2e3abd505b8338da5b5bf9e2fb} 
+\index{fifo@{fifo}!math\_real@{math\_real}}
+\index{math\_real@{math\_real}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{math\_real}{math\_real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classfifo_a2edc34402b573437d5f25fa90ba4013e}\label{classfifo_a2edc34402b573437d5f25fa90ba4013e} 
+\index{fifo@{fifo}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classfifo_a36d8aa71ffe3ac859b8553aaf2542c20}\label{classfifo_a36d8aa71ffe3ac859b8553aaf2542c20} 
+\index{fifo@{fifo}!r\_data@{r\_data}}
+\index{r\_data@{r\_data}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{r\_data}{r\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a36d8aa71ffe3ac859b8553aaf2542c20}{r\+\_\+data}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Data output for reading. 
+
+\Hypertarget{classfifo_ac22622d236e78eab4aca10c6dbb9e007}\label{classfifo_ac22622d236e78eab4aca10c6dbb9e007} 
+\index{fifo@{fifo}!rd@{rd}}
+\index{rd@{rd}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{rd}{rd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_ac22622d236e78eab4aca10c6dbb9e007}{rd}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Read enable input. 
+
+\Hypertarget{classfifo_a108f6801ba4104063b9d5f9286194302}\label{classfifo_a108f6801ba4104063b9d5f9286194302} 
+\index{fifo@{fifo}!reset@{reset}}
+\index{reset@{reset}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Reset input. 
+
+\Hypertarget{classfifo_acd03516902501cd1c7296a98e22c6fcb}\label{classfifo_acd03516902501cd1c7296a98e22c6fcb} 
+\index{fifo@{fifo}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classfifo_a80014221018ffd51234fb72048cc7fc6}\label{classfifo_a80014221018ffd51234fb72048cc7fc6} 
+\index{fifo@{fifo}!w\_data@{w\_data}}
+\index{w\_data@{w\_data}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{w\_data}{w\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a80014221018ffd51234fb72048cc7fc6}{w\+\_\+data}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Data input for writing. 
+
+\Hypertarget{classfifo_a70acb5c3606f17c158d9d07d5df70204}\label{classfifo_a70acb5c3606f17c158d9d07d5df70204} 
+\index{fifo@{fifo}!wr@{wr}}
+\index{wr@{wr}!fifo@{fifo}}
+\doxysubsubsection{\texorpdfstring{wr}{wr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_a70acb5c3606f17c158d9d07d5df70204}{wr}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Write enable input. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/fifo/\mbox{\hyperlink{fifo_8vhdl}{fifo.\+vhdl}}\end{DoxyCompactItemize}

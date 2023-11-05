@@ -1,0 +1,122 @@
+\doxysection{fifo.\+structural Architecture Reference}
+\hypertarget{classfifo_1_1structural}{}\label{classfifo_1_1structural}\index{fifo.structural@{fifo.structural}}
+
+
+Structural Architecture of FIFO.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classfifo_1_1structural}{fifo\+::structural}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_1_1structural_a836a588bee2503d0b00431df0b751bb4}{fifo\+\_\+ctrl}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em FIFO Control Component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_1_1structural_ad2c653f0e637ddfbcf83b2efe8e40556}{reg\+\_\+file}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Read address output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_1_1structural_ae014d091fdea9b7180c03636469e2e11}{w\+\_\+addr}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data output for reading. \textbackslash{}brief Internal write address signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_1_1structural_a8f66b6e6c8608806281aab024978fa6a}{r\+\_\+addr}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Internal read address signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_1_1structural_a668a3ae00d04236b50318437a2028ecc}{wr\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Internal write enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo_1_1structural_a7ceb42cd4cf1d42d79d3d7c7578e4eec}{full\+\_\+tmp}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Internal full flag signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo_1_1structural_ad96bb2323ad696436bccbd33dd3a05ed}{fifo\+\_\+inst}}  {\bfseries fifo\+\_\+ctrl}   
+\item 
+\mbox{\hyperlink{classfifo_1_1structural_ac9227f6405d6ad3fe73aed688342c61a}{registers}}  {\bfseries reg\+\_\+file}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structural Architecture of FIFO. 
+
+\textbackslash{}architecture structural 
+
+This architecture instantiates the FIFO control and register file components and connects them. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfifo_1_1structural_a836a588bee2503d0b00431df0b751bb4}\label{classfifo_1_1structural_a836a588bee2503d0b00431df0b751bb4} 
+\index{fifo.structural@{fifo.structural}!fifo\_ctrl@{fifo\_ctrl}}
+\index{fifo\_ctrl@{fifo\_ctrl}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{fifo\_ctrl}{fifo\_ctrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_a836a588bee2503d0b00431df0b751bb4}{fifo\+\_\+ctrl}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+FIFO Control Component. 
+
+\textbackslash{}component \doxylink{classfifo__ctrl}{fifo\+\_\+ctrl} 
+
+This component handles the control logic for the FIFO buffer, including read and write operations. \Hypertarget{classfifo_1_1structural_ad96bb2323ad696436bccbd33dd3a05ed}\label{classfifo_1_1structural_ad96bb2323ad696436bccbd33dd3a05ed} 
+\index{fifo.structural@{fifo.structural}!fifo\_inst@{fifo\_inst}}
+\index{fifo\_inst@{fifo\_inst}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{fifo\_inst}{fifo\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_ad96bb2323ad696436bccbd33dd3a05ed}{fifo\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{fifo\_ctrl}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classfifo_1_1structural_a7ceb42cd4cf1d42d79d3d7c7578e4eec}\label{classfifo_1_1structural_a7ceb42cd4cf1d42d79d3d7c7578e4eec} 
+\index{fifo.structural@{fifo.structural}!full\_tmp@{full\_tmp}}
+\index{full\_tmp@{full\_tmp}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{full\_tmp}{full\_tmp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_a7ceb42cd4cf1d42d79d3d7c7578e4eec}{full\+\_\+tmp}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Internal full flag signal. 
+
+\Hypertarget{classfifo_1_1structural_a8f66b6e6c8608806281aab024978fa6a}\label{classfifo_1_1structural_a8f66b6e6c8608806281aab024978fa6a} 
+\index{fifo.structural@{fifo.structural}!r\_addr@{r\_addr}}
+\index{r\_addr@{r\_addr}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{r\_addr}{r\_addr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_a8f66b6e6c8608806281aab024978fa6a}{r\+\_\+addr}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Internal read address signal. 
+
+\Hypertarget{classfifo_1_1structural_ad2c653f0e637ddfbcf83b2efe8e40556}\label{classfifo_1_1structural_ad2c653f0e637ddfbcf83b2efe8e40556} 
+\index{fifo.structural@{fifo.structural}!reg\_file@{reg\_file}}
+\index{reg\_file@{reg\_file}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{reg\_file}{reg\_file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_ad2c653f0e637ddfbcf83b2efe8e40556}{reg\+\_\+file}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Read address output. 
+
+\Hypertarget{classfifo_1_1structural_ac9227f6405d6ad3fe73aed688342c61a}\label{classfifo_1_1structural_ac9227f6405d6ad3fe73aed688342c61a} 
+\index{fifo.structural@{fifo.structural}!registers@{registers}}
+\index{registers@{registers}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{registers}{registers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_ac9227f6405d6ad3fe73aed688342c61a}{registers}} {\bfseries \textcolor{vhdlchar}{reg\_file}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classfifo_1_1structural_ae014d091fdea9b7180c03636469e2e11}\label{classfifo_1_1structural_ae014d091fdea9b7180c03636469e2e11} 
+\index{fifo.structural@{fifo.structural}!w\_addr@{w\_addr}}
+\index{w\_addr@{w\_addr}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{w\_addr}{w\_addr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_ae014d091fdea9b7180c03636469e2e11}{w\+\_\+addr}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Data output for reading. \textbackslash{}brief Internal write address signal. 
+
+\Hypertarget{classfifo_1_1structural_a668a3ae00d04236b50318437a2028ecc}\label{classfifo_1_1structural_a668a3ae00d04236b50318437a2028ecc} 
+\index{fifo.structural@{fifo.structural}!wr\_en@{wr\_en}}
+\index{wr\_en@{wr\_en}!fifo.structural@{fifo.structural}}
+\doxysubsubsection{\texorpdfstring{wr\_en}{wr\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo_1_1structural_a668a3ae00d04236b50318437a2028ecc}{wr\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Internal write enable signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/fifo/\mbox{\hyperlink{fifo_8vhdl}{fifo.\+vhdl}}\end{DoxyCompactItemize}

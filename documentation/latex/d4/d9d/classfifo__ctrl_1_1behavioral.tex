@@ -1,0 +1,228 @@
+\doxysection{fifo\+\_\+ctrl.\+behavioral Architecture Reference}
+\hypertarget{classfifo__ctrl_1_1behavioral}{}\label{classfifo__ctrl_1_1behavioral}\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+
+
+Behavioral Architecture of FIFO Control.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classfifo__ctrl_1_1behavioral}{fifo\+\_\+ctrl\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ac7b2262a2320766c3923b0cf9ca08c18}{next\+\_\+state\+\_\+logic}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_adf12d3d70ec2ac787f2827f63ae31da5}{full\+\_\+logic}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a7debce8b92a43e9460ee559f5aa8dec9}{empty\+\_\+logic}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ac336a6a7c920e463d41429977cab62e9}{wr\+\_\+rd}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Synchronous Parallel Counter Component. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Counter output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a83591d3b1f60415f3d298e96d62fc453}{w\+\_\+ptr\+\_\+logic\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data output. \textbackslash{}brief Write pointer logic reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a50be445c3040d55da0593c440894cd24}{w\+\_\+ptr\+\_\+logic\+\_\+cnt\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Write pointer count enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ad84b7aedc156892b94156a68f654e079}{w\+\_\+ptr\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo__ctrl_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Write pointer logic signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a48ec1fb0978694aa2cc1e78a00d02e14}{r\+\_\+ptr\+\_\+logic\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Read pointer logic reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a69abee2b6109dfb788a6e015aec31639}{r\+\_\+ptr\+\_\+logic\+\_\+cnt\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Read pointer count enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a6b591c00e9d3e4c5533c96a1ac62f74d}{r\+\_\+ptr\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo__ctrl_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Read pointer logic signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a5457df53249f75874056171ab0e0f172}{last\+\_\+op\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Last operation enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a6d8503e8caf3e22894645b7cc3c03eec}{last\+\_\+op\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Last operation output signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_adf12d3d70ec2ac787f2827f63ae31da5}{full\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Full logic signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a7debce8b92a43e9460ee559f5aa8dec9}{empty\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Empty logic signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ac336a6a7c920e463d41429977cab62e9}{wr\+\_\+rd}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Write-\/read operation signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_aa24124938c79eb3ed3dc2e0f42105090}{w\+\_\+ptr\+\_\+logic\+\_\+counter}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ad81115b1844f663fdfd47a8ca16bb17e}{r\+\_\+ptr\+\_\+logic\+\_\+counter}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\item 
+\mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a6be5d2aaf49e6156a8249d90ba27fa3b}{last\+\_\+op\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Behavioral Architecture of FIFO Control. 
+
+\textbackslash{}architecture behavioral 
+
+This architecture implements the control logic for the FIFO buffer, including the read and write pointers. 
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classfifo__ctrl_1_1behavioral_ac7b2262a2320766c3923b0cf9ca08c18}\label{classfifo__ctrl_1_1behavioral_ac7b2262a2320766c3923b0cf9ca08c18} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!next\_state\_logic@{next\_state\_logic}}
+\index{next\_state\_logic@{next\_state\_logic}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state\_logic()}{next\_state\_logic()}}
+{\footnotesize\ttfamily next\+\_\+state\+\_\+logic (\begin{DoxyParamCaption}\item[{}]{full\+\_\+logic,  }\item[{}]{empty\+\_\+logic,  }\item[{}]{wr\+\_\+rd }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfifo__ctrl_1_1behavioral_a7debce8b92a43e9460ee559f5aa8dec9}\label{classfifo__ctrl_1_1behavioral_a7debce8b92a43e9460ee559f5aa8dec9} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!empty\_logic@{empty\_logic}}
+\index{empty\_logic@{empty\_logic}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{empty\_logic}{empty\_logic}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a7debce8b92a43e9460ee559f5aa8dec9}{empty\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Empty logic signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_adf12d3d70ec2ac787f2827f63ae31da5}\label{classfifo__ctrl_1_1behavioral_adf12d3d70ec2ac787f2827f63ae31da5} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!full\_logic@{full\_logic}}
+\index{full\_logic@{full\_logic}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{full\_logic}{full\_logic}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_adf12d3d70ec2ac787f2827f63ae31da5}{full\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Full logic signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a5457df53249f75874056171ab0e0f172}\label{classfifo__ctrl_1_1behavioral_a5457df53249f75874056171ab0e0f172} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!last\_op\_en@{last\_op\_en}}
+\index{last\_op\_en@{last\_op\_en}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{last\_op\_en}{last\_op\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a5457df53249f75874056171ab0e0f172}{last\+\_\+op\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Last operation enable signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a6d8503e8caf3e22894645b7cc3c03eec}\label{classfifo__ctrl_1_1behavioral_a6d8503e8caf3e22894645b7cc3c03eec} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!last\_op\_out@{last\_op\_out}}
+\index{last\_op\_out@{last\_op\_out}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{last\_op\_out}{last\_op\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a6d8503e8caf3e22894645b7cc3c03eec}{last\+\_\+op\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Last operation output signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a6be5d2aaf49e6156a8249d90ba27fa3b}\label{classfifo__ctrl_1_1behavioral_a6be5d2aaf49e6156a8249d90ba27fa3b} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!last\_op\_reg@{last\_op\_reg}}
+\index{last\_op\_reg@{last\_op\_reg}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{last\_op\_reg}{last\_op\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a6be5d2aaf49e6156a8249d90ba27fa3b}{last\+\_\+op\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a6b591c00e9d3e4c5533c96a1ac62f74d}\label{classfifo__ctrl_1_1behavioral_a6b591c00e9d3e4c5533c96a1ac62f74d} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!r\_ptr\_logic@{r\_ptr\_logic}}
+\index{r\_ptr\_logic@{r\_ptr\_logic}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{r\_ptr\_logic}{r\_ptr\_logic}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a6b591c00e9d3e4c5533c96a1ac62f74d}{r\+\_\+ptr\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo__ctrl_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Read pointer logic signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a69abee2b6109dfb788a6e015aec31639}\label{classfifo__ctrl_1_1behavioral_a69abee2b6109dfb788a6e015aec31639} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!r\_ptr\_logic\_cnt\_en@{r\_ptr\_logic\_cnt\_en}}
+\index{r\_ptr\_logic\_cnt\_en@{r\_ptr\_logic\_cnt\_en}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{r\_ptr\_logic\_cnt\_en}{r\_ptr\_logic\_cnt\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a69abee2b6109dfb788a6e015aec31639}{r\+\_\+ptr\+\_\+logic\+\_\+cnt\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Read pointer count enable signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_ad81115b1844f663fdfd47a8ca16bb17e}\label{classfifo__ctrl_1_1behavioral_ad81115b1844f663fdfd47a8ca16bb17e} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!r\_ptr\_logic\_counter@{r\_ptr\_logic\_counter}}
+\index{r\_ptr\_logic\_counter@{r\_ptr\_logic\_counter}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{r\_ptr\_logic\_counter}{r\_ptr\_logic\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ad81115b1844f663fdfd47a8ca16bb17e}{r\+\_\+ptr\+\_\+logic\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a48ec1fb0978694aa2cc1e78a00d02e14}\label{classfifo__ctrl_1_1behavioral_a48ec1fb0978694aa2cc1e78a00d02e14} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!r\_ptr\_logic\_reset@{r\_ptr\_logic\_reset}}
+\index{r\_ptr\_logic\_reset@{r\_ptr\_logic\_reset}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{r\_ptr\_logic\_reset}{r\_ptr\_logic\_reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a48ec1fb0978694aa2cc1e78a00d02e14}{r\+\_\+ptr\+\_\+logic\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Read pointer logic reset signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}\label{classfifo__ctrl_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!register\_d@{register\_d}}
+\index{register\_d@{register\_d}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{register\_d}{register\_d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Counter output. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}\label{classfifo__ctrl_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!sync\_par\_counter@{sync\_par\_counter}}
+\index{sync\_par\_counter@{sync\_par\_counter}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{sync\_par\_counter}{sync\_par\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Synchronous Parallel Counter Component. 
+
+\textbackslash{}component \doxylink{classsync__par__counter}{sync\+\_\+par\+\_\+counter} 
+
+This component implements a synchronous parallel counter used for the read and write pointers. \Hypertarget{classfifo__ctrl_1_1behavioral_ad84b7aedc156892b94156a68f654e079}\label{classfifo__ctrl_1_1behavioral_ad84b7aedc156892b94156a68f654e079} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!w\_ptr\_logic@{w\_ptr\_logic}}
+\index{w\_ptr\_logic@{w\_ptr\_logic}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{w\_ptr\_logic}{w\_ptr\_logic}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ad84b7aedc156892b94156a68f654e079}{w\+\_\+ptr\+\_\+logic}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo__ctrl_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Write pointer logic signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a50be445c3040d55da0593c440894cd24}\label{classfifo__ctrl_1_1behavioral_a50be445c3040d55da0593c440894cd24} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!w\_ptr\_logic\_cnt\_en@{w\_ptr\_logic\_cnt\_en}}
+\index{w\_ptr\_logic\_cnt\_en@{w\_ptr\_logic\_cnt\_en}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{w\_ptr\_logic\_cnt\_en}{w\_ptr\_logic\_cnt\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a50be445c3040d55da0593c440894cd24}{w\+\_\+ptr\+\_\+logic\+\_\+cnt\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Write pointer count enable signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_aa24124938c79eb3ed3dc2e0f42105090}\label{classfifo__ctrl_1_1behavioral_aa24124938c79eb3ed3dc2e0f42105090} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!w\_ptr\_logic\_counter@{w\_ptr\_logic\_counter}}
+\index{w\_ptr\_logic\_counter@{w\_ptr\_logic\_counter}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{w\_ptr\_logic\_counter}{w\_ptr\_logic\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_aa24124938c79eb3ed3dc2e0f42105090}{w\+\_\+ptr\+\_\+logic\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_a83591d3b1f60415f3d298e96d62fc453}\label{classfifo__ctrl_1_1behavioral_a83591d3b1f60415f3d298e96d62fc453} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!w\_ptr\_logic\_reset@{w\_ptr\_logic\_reset}}
+\index{w\_ptr\_logic\_reset@{w\_ptr\_logic\_reset}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{w\_ptr\_logic\_reset}{w\_ptr\_logic\_reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_a83591d3b1f60415f3d298e96d62fc453}{w\+\_\+ptr\+\_\+logic\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Data output. \textbackslash{}brief Write pointer logic reset signal. 
+
+\Hypertarget{classfifo__ctrl_1_1behavioral_ac336a6a7c920e463d41429977cab62e9}\label{classfifo__ctrl_1_1behavioral_ac336a6a7c920e463d41429977cab62e9} 
+\index{fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}!wr\_rd@{wr\_rd}}
+\index{wr\_rd@{wr\_rd}!fifo\_ctrl.behavioral@{fifo\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{wr\_rd}{wr\_rd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfifo__ctrl_1_1behavioral_ac336a6a7c920e463d41429977cab62e9}{wr\+\_\+rd}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Write-\/read operation signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/fifo/\mbox{\hyperlink{fifo__ctrl_8vhdl}{fifo\+\_\+ctrl.\+vhdl}}\end{DoxyCompactItemize}

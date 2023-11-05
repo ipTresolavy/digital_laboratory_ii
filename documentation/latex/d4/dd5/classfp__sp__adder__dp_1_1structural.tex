@@ -1,0 +1,125 @@
+\doxysection{fp\+\_\+sp\+\_\+adder\+\_\+dp.\+structural Architecture Reference}
+\hypertarget{classfp__sp__adder__dp_1_1structural}{}\label{classfp__sp__adder__dp_1_1structural}\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+
+
+Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural}{fp\+\_\+sp\+\_\+adder\+\_\+dp\+::structural}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Sklansky Adder Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ade1210be5d43cf3487968bc2d25f5b1c}{n\+\_\+multiplier\+\_\+exponent}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a2e5c5c59035bdeb42fee34932cbd6cca}{exponent\+\_\+difference}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4}{small\+\_\+alu}}  {\bfseries sklansky\+\_\+adder}   
+\begin{DoxyCompactList}\small\item\em Small ALU instantiation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Aliases}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ab3afe1bfe82eb696a61f9bd9a4b44221}{multiplicand\+\_\+sign}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_a3ff855f44cc01ed7d8c0920b672708c5}{multiplicand}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Sum output \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a9b7241b8874cbef95edfb9dd762fd756}{multiplicand\+\_\+exponent}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_a3ff855f44cc01ed7d8c0920b672708c5}{multiplicand}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_aa79424fe6fe2d88bb692169672d207c7}{multiplicand\+\_\+fraction}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_a3ff855f44cc01ed7d8c0920b672708c5}{multiplicand}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a7fb2c17592ca6ebfac68c5138e20f4cc}{multiplier\+\_\+sign}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_aee871c07f0fee1a163ff580423e34dfc}{multiplier}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_af1036c88785ace4f2e127fc09ffeab5a}{multiplier\+\_\+exponent}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_aee871c07f0fee1a163ff580423e34dfc}{multiplier}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a6910f434498640fc22593487687f1c29}{multiplier\+\_\+fraction}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_aee871c07f0fee1a163ff580423e34dfc}{multiplier}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP. 
+
+This architecture defines the internal structure and components used by the \doxylink{classfp__sp__adder__dp}{fp\+\_\+sp\+\_\+adder\+\_\+dp} entity. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classfp__sp__adder__dp_1_1structural_a2e5c5c59035bdeb42fee34932cbd6cca}\label{classfp__sp__adder__dp_1_1structural_a2e5c5c59035bdeb42fee34932cbd6cca} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!exponent\_difference@{exponent\_difference}}
+\index{exponent\_difference@{exponent\_difference}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{exponent\_difference}{exponent\_difference}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a2e5c5c59035bdeb42fee34932cbd6cca}{exponent\+\_\+difference}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_a9b7241b8874cbef95edfb9dd762fd756}\label{classfp__sp__adder__dp_1_1structural_a9b7241b8874cbef95edfb9dd762fd756} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!multiplicand\_exponent@{multiplicand\_exponent}}
+\index{multiplicand\_exponent@{multiplicand\_exponent}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_exponent}{multiplicand\_exponent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a9b7241b8874cbef95edfb9dd762fd756}{multiplicand\+\_\+exponent}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_a3ff855f44cc01ed7d8c0920b672708c5}{multiplicand}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_aa79424fe6fe2d88bb692169672d207c7}\label{classfp__sp__adder__dp_1_1structural_aa79424fe6fe2d88bb692169672d207c7} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!multiplicand\_fraction@{multiplicand\_fraction}}
+\index{multiplicand\_fraction@{multiplicand\_fraction}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_fraction}{multiplicand\_fraction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_aa79424fe6fe2d88bb692169672d207c7}{multiplicand\+\_\+fraction}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_a3ff855f44cc01ed7d8c0920b672708c5}{multiplicand}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_ab3afe1bfe82eb696a61f9bd9a4b44221}\label{classfp__sp__adder__dp_1_1structural_ab3afe1bfe82eb696a61f9bd9a4b44221} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!multiplicand\_sign@{multiplicand\_sign}}
+\index{multiplicand\_sign@{multiplicand\_sign}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_sign}{multiplicand\_sign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ab3afe1bfe82eb696a61f9bd9a4b44221}{multiplicand\+\_\+sign}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_a3ff855f44cc01ed7d8c0920b672708c5}{multiplicand}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+
+
+\texorpdfstring{$<$}{<} Sum output 
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_af1036c88785ace4f2e127fc09ffeab5a}\label{classfp__sp__adder__dp_1_1structural_af1036c88785ace4f2e127fc09ffeab5a} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!multiplier\_exponent@{multiplier\_exponent}}
+\index{multiplier\_exponent@{multiplier\_exponent}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_exponent}{multiplier\_exponent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_af1036c88785ace4f2e127fc09ffeab5a}{multiplier\+\_\+exponent}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_aee871c07f0fee1a163ff580423e34dfc}{multiplier}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_a6910f434498640fc22593487687f1c29}\label{classfp__sp__adder__dp_1_1structural_a6910f434498640fc22593487687f1c29} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!multiplier\_fraction@{multiplier\_fraction}}
+\index{multiplier\_fraction@{multiplier\_fraction}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_fraction}{multiplier\_fraction}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a6910f434498640fc22593487687f1c29}{multiplier\+\_\+fraction}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_aee871c07f0fee1a163ff580423e34dfc}{multiplier}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_a7fb2c17592ca6ebfac68c5138e20f4cc}\label{classfp__sp__adder__dp_1_1structural_a7fb2c17592ca6ebfac68c5138e20f4cc} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!multiplier\_sign@{multiplier\_sign}}
+\index{multiplier\_sign@{multiplier\_sign}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_sign}{multiplier\_sign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a7fb2c17592ca6ebfac68c5138e20f4cc}{multiplier\+\_\+sign}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfp__sp__adder__dp_aee871c07f0fee1a163ff580423e34dfc}{multiplier}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_ade1210be5d43cf3487968bc2d25f5b1c}\label{classfp__sp__adder__dp_1_1structural_ade1210be5d43cf3487968bc2d25f5b1c} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!n\_multiplier\_exponent@{n\_multiplier\_exponent}}
+\index{n\_multiplier\_exponent@{n\_multiplier\_exponent}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{n\_multiplier\_exponent}{n\_multiplier\_exponent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ade1210be5d43cf3487968bc2d25f5b1c}{n\+\_\+multiplier\+\_\+exponent}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classfp__sp__adder__dp_1_1structural_a61bb95b7aff675edd529b4109382862f}\label{classfp__sp__adder__dp_1_1structural_a61bb95b7aff675edd529b4109382862f} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!sklansky\_adder@{sklansky\_adder}}
+\index{sklansky\_adder@{sklansky\_adder}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{sklansky\_adder}{sklansky\_adder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Sklansky Adder Component. 
+
+This component represents a Sklansky adder, which is used for addition operations within the \doxylink{classfp__sp__adder__dp}{fp\+\_\+sp\+\_\+adder\+\_\+dp}. \Hypertarget{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4}\label{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4} 
+\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!small\_alu@{small\_alu}}
+\index{small\_alu@{small\_alu}!fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
+\doxysubsubsection{\texorpdfstring{small\_alu}{small\_alu}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4}{small\+\_\+alu}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Small ALU instantiation. 
+
+This instance of \doxylink{classsklansky__adder}{sklansky\+\_\+adder} is used to compute the exponent difference. \texorpdfstring{$<$}{<} Set the width of the adder to 8 for exponent operations 
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/fpu/adder/\mbox{\hyperlink{fp__sp__adder__dp_8vhdl}{fp\+\_\+sp\+\_\+adder\+\_\+dp.\+vhdl}}\end{DoxyCompactItemize}

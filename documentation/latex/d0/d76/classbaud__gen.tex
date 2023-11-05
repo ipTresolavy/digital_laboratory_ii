@@ -1,0 +1,118 @@
+\doxysection{baud\+\_\+gen Entity Reference}
+\hypertarget{classbaud__gen}{}\label{classbaud__gen}\index{baud\_gen@{baud\_gen}}
+
+
+Baud Rate Generator Entity.  
+
+
+Inheritance diagram for baud\+\_\+gen\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{d0/d76/classbaud__gen}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_1_1behavioral}{baud\+\_\+gen.\+behavioral}} architecture
+\begin{DoxyCompactList}\small\item\em Behavioral Architecture of Baud Rate Generator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classbaud__gen_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\item 
+\mbox{\hyperlink{classbaud__gen_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbaud__gen_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbaud__gen_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classbaud__gen_a854af6183d8d62f266ebd83de2b04898}{divisor}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Reset input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbaud__gen_a44e47ddb8ef04ddc92f33575b084e05a}{tick}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Baud rate tick output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Baud Rate Generator Entity. 
+
+The baud rate generator entity is responsible for generating a tick signal at a specific baud rate for UART communication. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classbaud__gen_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classbaud__gen_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{baud\_gen@{baud\_gen}!clock@{clock}}
+\index{clock@{clock}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Clock input. 
+
+\Hypertarget{classbaud__gen_a854af6183d8d62f266ebd83de2b04898}\label{classbaud__gen_a854af6183d8d62f266ebd83de2b04898} 
+\index{baud\_gen@{baud\_gen}!divisor@{divisor}}
+\index{divisor@{divisor}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{divisor}{divisor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_a854af6183d8d62f266ebd83de2b04898}{divisor}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Reset input. 
+
+Baud rate divisor.
+
+The divisor is calculated as\+: clock freq. / (16 \texorpdfstring{$\ast$}{*} baud rate) -\/ 1 (rounded up). \Hypertarget{classbaud__gen_a0a6af6eef40212dbaf130d57ce711256}\label{classbaud__gen_a0a6af6eef40212dbaf130d57ce711256} 
+\index{baud\_gen@{baud\_gen}!ieee@{ieee}}
+\index{ieee@{ieee}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classbaud__gen_acb415f2e3abd505b8338da5b5bf9e2fb}\label{classbaud__gen_acb415f2e3abd505b8338da5b5bf9e2fb} 
+\index{baud\_gen@{baud\_gen}!math\_real@{math\_real}}
+\index{math\_real@{math\_real}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{math\_real}{math\_real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classbaud__gen_a2edc34402b573437d5f25fa90ba4013e}\label{classbaud__gen_a2edc34402b573437d5f25fa90ba4013e} 
+\index{baud\_gen@{baud\_gen}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classbaud__gen_a108f6801ba4104063b9d5f9286194302}\label{classbaud__gen_a108f6801ba4104063b9d5f9286194302} 
+\index{baud\_gen@{baud\_gen}!reset@{reset}}
+\index{reset@{reset}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+\Hypertarget{classbaud__gen_acd03516902501cd1c7296a98e22c6fcb}\label{classbaud__gen_acd03516902501cd1c7296a98e22c6fcb} 
+\index{baud\_gen@{baud\_gen}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classbaud__gen_a44e47ddb8ef04ddc92f33575b084e05a}\label{classbaud__gen_a44e47ddb8ef04ddc92f33575b084e05a} 
+\index{baud\_gen@{baud\_gen}!tick@{tick}}
+\index{tick@{tick}!baud\_gen@{baud\_gen}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbaud__gen_a44e47ddb8ef04ddc92f33575b084e05a}{tick}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Baud rate tick output. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/uart/\mbox{\hyperlink{baud__gen_8vhdl}{baud\+\_\+gen.\+vhdl}}\end{DoxyCompactItemize}

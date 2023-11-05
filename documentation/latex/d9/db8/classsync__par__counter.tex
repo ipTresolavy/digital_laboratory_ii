@@ -1,0 +1,159 @@
+\doxysection{sync\+\_\+par\+\_\+counter Entity Reference}
+\hypertarget{classsync__par__counter}{}\label{classsync__par__counter}\index{sync\_par\_counter@{sync\_par\_counter}}
+
+
+Synchronous Parallel Counter Entity.  
+
+
+Inheritance diagram for sync\+\_\+par\+\_\+counter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{d9/db8/classsync__par__counter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsync__par__counter_1_1behavioral}{sync\+\_\+par\+\_\+counter.\+behavioral}} architecture
+\begin{DoxyCompactList}\small\item\em Behavioral Architecture of Synchronous Parallel Counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsync__par__counter_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsync__par__counter_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classsync__par__counter_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\item 
+\mbox{\hyperlink{classsync__par__counter_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Generics}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}{MODU}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{16} \textcolor{vhdlchar}{ }}}
+\begin{DoxyCompactList}\small\item\em Modulus of the counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsync__par__counter_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsync__par__counter_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reset input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsync__par__counter_a5cfbcf51f67f601f9955f1827db4d2a6}{cnt\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Count enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsync__par__counter_ad968f9e2b84c33f2035c1b0a66347d03}{q\+\_\+in}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}{MODU}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Parallel load input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsync__par__counter_a8228f784cce74e4e4f25ca91de3d71b5}{load}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Load signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsync__par__counter_a8d41d53e3a519b0fa3bc795b56294a03}{q}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}{MODU}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Counter output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Synchronous Parallel Counter Entity. 
+
+The synchronous parallel counter entity is a counter with a parameterizable modulus. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsync__par__counter_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classsync__par__counter_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{sync\_par\_counter@{sync\_par\_counter}!clock@{clock}}
+\index{clock@{clock}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Clock input. 
+
+\Hypertarget{classsync__par__counter_a5cfbcf51f67f601f9955f1827db4d2a6}\label{classsync__par__counter_a5cfbcf51f67f601f9955f1827db4d2a6} 
+\index{sync\_par\_counter@{sync\_par\_counter}!cnt\_en@{cnt\_en}}
+\index{cnt\_en@{cnt\_en}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{cnt\_en}{cnt\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_a5cfbcf51f67f601f9955f1827db4d2a6}{cnt\+\_\+en}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Count enable signal. 
+
+\Hypertarget{classsync__par__counter_a0a6af6eef40212dbaf130d57ce711256}\label{classsync__par__counter_a0a6af6eef40212dbaf130d57ce711256} 
+\index{sync\_par\_counter@{sync\_par\_counter}!ieee@{ieee}}
+\index{ieee@{ieee}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classsync__par__counter_a8228f784cce74e4e4f25ca91de3d71b5}\label{classsync__par__counter_a8228f784cce74e4e4f25ca91de3d71b5} 
+\index{sync\_par\_counter@{sync\_par\_counter}!load@{load}}
+\index{load@{load}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{load}{load}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_a8228f784cce74e4e4f25ca91de3d71b5}{load}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Load signal. 
+
+\Hypertarget{classsync__par__counter_acb415f2e3abd505b8338da5b5bf9e2fb}\label{classsync__par__counter_acb415f2e3abd505b8338da5b5bf9e2fb} 
+\index{sync\_par\_counter@{sync\_par\_counter}!math\_real@{math\_real}}
+\index{math\_real@{math\_real}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{math\_real}{math\_real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}\label{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38} 
+\index{sync\_par\_counter@{sync\_par\_counter}!MODU@{MODU}}
+\index{MODU@{MODU}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{MODU}{MODU}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}{MODU}} {\bfseries \textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{16} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Generic]}}
+
+
+
+Modulus of the counter. 
+
+\Hypertarget{classsync__par__counter_a2edc34402b573437d5f25fa90ba4013e}\label{classsync__par__counter_a2edc34402b573437d5f25fa90ba4013e} 
+\index{sync\_par\_counter@{sync\_par\_counter}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classsync__par__counter_a8d41d53e3a519b0fa3bc795b56294a03}\label{classsync__par__counter_a8d41d53e3a519b0fa3bc795b56294a03} 
+\index{sync\_par\_counter@{sync\_par\_counter}!q@{q}}
+\index{q@{q}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_a8d41d53e3a519b0fa3bc795b56294a03}{q}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}{MODU}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Counter output. 
+
+\Hypertarget{classsync__par__counter_ad968f9e2b84c33f2035c1b0a66347d03}\label{classsync__par__counter_ad968f9e2b84c33f2035c1b0a66347d03} 
+\index{sync\_par\_counter@{sync\_par\_counter}!q\_in@{q\_in}}
+\index{q\_in@{q\_in}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{q\_in}{q\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_ad968f9e2b84c33f2035c1b0a66347d03}{q\+\_\+in}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsync__par__counter_ad1fb3d73ae420e915d17d2d6526a8b38}{MODU}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Parallel load input. 
+
+\Hypertarget{classsync__par__counter_a108f6801ba4104063b9d5f9286194302}\label{classsync__par__counter_a108f6801ba4104063b9d5f9286194302} 
+\index{sync\_par\_counter@{sync\_par\_counter}!reset@{reset}}
+\index{reset@{reset}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+\textbackslash{}brief Reset input. 
+
+\Hypertarget{classsync__par__counter_acd03516902501cd1c7296a98e22c6fcb}\label{classsync__par__counter_acd03516902501cd1c7296a98e22c6fcb} 
+\index{sync\_par\_counter@{sync\_par\_counter}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!sync\_par\_counter@{sync\_par\_counter}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsync__par__counter_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/counter/\mbox{\hyperlink{sync__par__counter_8vhdl}{sync\+\_\+par\+\_\+counter.\+vhdl}}\end{DoxyCompactItemize}

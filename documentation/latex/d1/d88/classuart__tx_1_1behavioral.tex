@@ -1,0 +1,308 @@
+\doxysection{uart\+\_\+tx.\+behavioral Architecture Reference}
+\hypertarget{classuart__tx_1_1behavioral}{}\label{classuart__tx_1_1behavioral}\index{uart\_tx.behavioral@{uart\_tx.behavioral}}
+
+
+Behavioral Architecture of UART Transmitter.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classuart__tx_1_1behavioral}{uart\+\_\+tx\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_afdaa07d90c755f194c0f33572274bd27}{tx\+\_\+fsm}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} )}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a320198a7fd0405eea9be12058bac7ad9}{next\+\_\+state\+\_\+logic}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_afc6f53276d3a8115dc25018bc38e1693}{state\+\_\+reg}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a9406e2cc7eb14d8c65f91e3e889c1b61}{s\+\_\+counter}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_af01771b2c0a0c1666ea76172b0bc9f3c}{n\+\_\+counter}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a6ee3b51e919d55ef8ab60869f1c0bb5e}{b\+\_\+reg}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a5cfe37324afa344b92c021bb19f4fb1c}{tx\+\_\+start}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a1c65b18b938fe10f12d04183444195f8}{s\+\_\+tick}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a4596e1d8eea8676cb4bd7ca35b486bc6}{din}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Modulus of the counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Counter output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Constants}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a6a880a0d780cd5e4e54fb5d6081f2e21}{n\+\_\+counter\+\_\+max}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{to\_unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_ac543b0cc8640c12134f9fbca868dac33}{s\+\_\+counter\+\_\+max}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{to\_unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{start}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{data}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{stop}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief State type for the UART transmitter state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_afc6f53276d3a8115dc25018bc38e1693}{state\+\_\+reg}} {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief State machine registers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a084d1595c6fe2784ec4e3ce5ef9bc9df}{state\+\_\+next}} {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief State machine registers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a9406e2cc7eb14d8c65f91e3e889c1b61}{s\+\_\+counter}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_ac543b0cc8640c12134f9fbca868dac33}{s\+\_\+counter\+\_\+max}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlkeyword}{LENGTH}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Sampling counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_ab3bf7c3f54431e9d1867afadcb21ae42}{s\+\_\+counter\+\_\+clear}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Sampling counter clear signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_ac89afc9e76e927097c89e9a56f89725e}{s\+\_\+counter\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Sampling counter enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_af01771b2c0a0c1666ea76172b0bc9f3c}{n\+\_\+counter}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a6a880a0d780cd5e4e54fb5d6081f2e21}{n\+\_\+counter\+\_\+max}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlkeyword}{LENGTH}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Bit counter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_accefd7b21d6ec3015cd9133b07a9bd98}{n\+\_\+counter\+\_\+clear}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Bit counter clear signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_afed406c0dd36eecaf5662b1549ba7c9d}{n\+\_\+counter\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Bit counter enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a6ee3b51e919d55ef8ab60869f1c0bb5e}{b\+\_\+reg}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Data buffer registers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a757f0d75ed95c24df2727e6b83bec575}{b\+\_\+next}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Data buffer registers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a7818427633ec5ff09b42f572088bc43e}{b\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Data buffer register enable signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_aeb2d0d603c130ce669d3c467b9d6a47a}{tx\+\_\+reg}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmission buffer registers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a7f798c124e0f32700ee11c792129d332}{tx\+\_\+next}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmission buffer registers. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_ab8125305bcd36d9f803adef9a738bc26}{tx\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmission buffer register enable signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_ac0ccce8655a5458b3e8e18b35488141c}{s\+\_\+counter\+\_\+inst}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_ab06ac258659a9c8da38d7e664fb265a6}{n\+\_\+counter\+\_\+inst}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\item 
+\mbox{\hyperlink{classuart__tx_1_1behavioral_a6cc99f0b0490d6a6e6de22bbcbe6a28f}{b\+\_\+reg\+\_\+inst}}  {\bfseries register\+\_\+d}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Behavioral Architecture of UART Transmitter. 
+
+\textbackslash{}architecture behavioral 
+
+This architecture implements the state machine and logic for the UART transmitter. 
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classuart__tx_1_1behavioral_a320198a7fd0405eea9be12058bac7ad9}\label{classuart__tx_1_1behavioral_a320198a7fd0405eea9be12058bac7ad9} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!next\_state\_logic@{next\_state\_logic}}
+\index{next\_state\_logic@{next\_state\_logic}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state\_logic()}{next\_state\_logic()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} next\+\_\+state\+\_\+logic(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_afc6f53276d3a8115dc25018bc38e1693}{state\+\_\+reg}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a9406e2cc7eb14d8c65f91e3e889c1b61}{s\+\_\+counter}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_af01771b2c0a0c1666ea76172b0bc9f3c}{n\+\_\+counter}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a6ee3b51e919d55ef8ab60869f1c0bb5e}{b\+\_\+reg}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a5cfe37324afa344b92c021bb19f4fb1c}{tx\+\_\+start}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a1c65b18b938fe10f12d04183444195f8}{s\+\_\+tick}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_a4596e1d8eea8676cb4bd7ca35b486bc6}{din}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+\Hypertarget{classuart__tx_1_1behavioral_afdaa07d90c755f194c0f33572274bd27}\label{classuart__tx_1_1behavioral_afdaa07d90c755f194c0f33572274bd27} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!tx\_fsm@{tx\_fsm}}
+\index{tx\_fsm@{tx\_fsm}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{tx\_fsm()}{tx\_fsm()}}
+{\footnotesize\ttfamily tx\+\_\+fsm (\begin{DoxyParamCaption}\item[{}]{clock,  }\item[{}]{reset }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classuart__tx_1_1behavioral_a757f0d75ed95c24df2727e6b83bec575}\label{classuart__tx_1_1behavioral_a757f0d75ed95c24df2727e6b83bec575} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!b\_next@{b\_next}}
+\index{b\_next@{b\_next}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_next}{b\_next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a757f0d75ed95c24df2727e6b83bec575}{b\+\_\+next}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Data buffer registers. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a6ee3b51e919d55ef8ab60869f1c0bb5e}\label{classuart__tx_1_1behavioral_a6ee3b51e919d55ef8ab60869f1c0bb5e} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!b\_reg@{b\_reg}}
+\index{b\_reg@{b\_reg}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_reg}{b\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a6ee3b51e919d55ef8ab60869f1c0bb5e}{b\+\_\+reg}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Data buffer registers. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a7818427633ec5ff09b42f572088bc43e}\label{classuart__tx_1_1behavioral_a7818427633ec5ff09b42f572088bc43e} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!b\_reg\_en@{b\_reg\_en}}
+\index{b\_reg\_en@{b\_reg\_en}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_reg\_en}{b\_reg\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a7818427633ec5ff09b42f572088bc43e}{b\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Data buffer register enable signal. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a6cc99f0b0490d6a6e6de22bbcbe6a28f}\label{classuart__tx_1_1behavioral_a6cc99f0b0490d6a6e6de22bbcbe6a28f} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!b\_reg\_inst@{b\_reg\_inst}}
+\index{b\_reg\_inst@{b\_reg\_inst}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_reg\_inst}{b\_reg\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a6cc99f0b0490d6a6e6de22bbcbe6a28f}{b\+\_\+reg\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart__tx_1_1behavioral_af01771b2c0a0c1666ea76172b0bc9f3c}\label{classuart__tx_1_1behavioral_af01771b2c0a0c1666ea76172b0bc9f3c} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!n\_counter@{n\_counter}}
+\index{n\_counter@{n\_counter}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{n\_counter}{n\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_af01771b2c0a0c1666ea76172b0bc9f3c}{n\+\_\+counter}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a6a880a0d780cd5e4e54fb5d6081f2e21}{n\+\_\+counter\+\_\+max}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlkeyword}{LENGTH}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Bit counter. 
+
+\Hypertarget{classuart__tx_1_1behavioral_accefd7b21d6ec3015cd9133b07a9bd98}\label{classuart__tx_1_1behavioral_accefd7b21d6ec3015cd9133b07a9bd98} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!n\_counter\_clear@{n\_counter\_clear}}
+\index{n\_counter\_clear@{n\_counter\_clear}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{n\_counter\_clear}{n\_counter\_clear}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_accefd7b21d6ec3015cd9133b07a9bd98}{n\+\_\+counter\+\_\+clear}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Bit counter clear signal. 
+
+\Hypertarget{classuart__tx_1_1behavioral_afed406c0dd36eecaf5662b1549ba7c9d}\label{classuart__tx_1_1behavioral_afed406c0dd36eecaf5662b1549ba7c9d} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!n\_counter\_en@{n\_counter\_en}}
+\index{n\_counter\_en@{n\_counter\_en}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{n\_counter\_en}{n\_counter\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_afed406c0dd36eecaf5662b1549ba7c9d}{n\+\_\+counter\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Bit counter enable signal. 
+
+\Hypertarget{classuart__tx_1_1behavioral_ab06ac258659a9c8da38d7e664fb265a6}\label{classuart__tx_1_1behavioral_ab06ac258659a9c8da38d7e664fb265a6} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!n\_counter\_inst@{n\_counter\_inst}}
+\index{n\_counter\_inst@{n\_counter\_inst}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{n\_counter\_inst}{n\_counter\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_ab06ac258659a9c8da38d7e664fb265a6}{n\+\_\+counter\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart__tx_1_1behavioral_a6a880a0d780cd5e4e54fb5d6081f2e21}\label{classuart__tx_1_1behavioral_a6a880a0d780cd5e4e54fb5d6081f2e21} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!n\_counter\_max@{n\_counter\_max}}
+\index{n\_counter\_max@{n\_counter\_max}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{n\_counter\_max}{n\_counter\_max}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a6a880a0d780cd5e4e54fb5d6081f2e21}{n\+\_\+counter\+\_\+max}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{to\_unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Constant]}}
+
+
+
+Data output. 
+
+\Hypertarget{classuart__tx_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}\label{classuart__tx_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!register\_d@{register\_d}}
+\index{register\_d@{register\_d}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{register\_d}{register\_d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Counter output. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a9406e2cc7eb14d8c65f91e3e889c1b61}\label{classuart__tx_1_1behavioral_a9406e2cc7eb14d8c65f91e3e889c1b61} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!s\_counter@{s\_counter}}
+\index{s\_counter@{s\_counter}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_counter}{s\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a9406e2cc7eb14d8c65f91e3e889c1b61}{s\+\_\+counter}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_ac543b0cc8640c12134f9fbca868dac33}{s\+\_\+counter\+\_\+max}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlkeyword}{LENGTH}\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Sampling counter. 
+
+\Hypertarget{classuart__tx_1_1behavioral_ab3bf7c3f54431e9d1867afadcb21ae42}\label{classuart__tx_1_1behavioral_ab3bf7c3f54431e9d1867afadcb21ae42} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!s\_counter\_clear@{s\_counter\_clear}}
+\index{s\_counter\_clear@{s\_counter\_clear}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_counter\_clear}{s\_counter\_clear}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_ab3bf7c3f54431e9d1867afadcb21ae42}{s\+\_\+counter\+\_\+clear}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Sampling counter clear signal. 
+
+\Hypertarget{classuart__tx_1_1behavioral_ac89afc9e76e927097c89e9a56f89725e}\label{classuart__tx_1_1behavioral_ac89afc9e76e927097c89e9a56f89725e} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!s\_counter\_en@{s\_counter\_en}}
+\index{s\_counter\_en@{s\_counter\_en}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_counter\_en}{s\_counter\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_ac89afc9e76e927097c89e9a56f89725e}{s\+\_\+counter\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Sampling counter enable signal. 
+
+\Hypertarget{classuart__tx_1_1behavioral_ac0ccce8655a5458b3e8e18b35488141c}\label{classuart__tx_1_1behavioral_ac0ccce8655a5458b3e8e18b35488141c} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!s\_counter\_inst@{s\_counter\_inst}}
+\index{s\_counter\_inst@{s\_counter\_inst}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_counter\_inst}{s\_counter\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_ac0ccce8655a5458b3e8e18b35488141c}{s\+\_\+counter\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart__tx_1_1behavioral_ac543b0cc8640c12134f9fbca868dac33}\label{classuart__tx_1_1behavioral_ac543b0cc8640c12134f9fbca868dac33} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!s\_counter\_max@{s\_counter\_max}}
+\index{s\_counter\_max@{s\_counter\_max}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_counter\_max}{s\_counter\_max}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_ac543b0cc8640c12134f9fbca868dac33}{s\+\_\+counter\+\_\+max}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{to\_unsigned}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Constant]}}
+
+\Hypertarget{classuart__tx_1_1behavioral_a084d1595c6fe2784ec4e3ce5ef9bc9df}\label{classuart__tx_1_1behavioral_a084d1595c6fe2784ec4e3ce5ef9bc9df} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!state\_next@{state\_next}}
+\index{state\_next@{state\_next}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_next}{state\_next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a084d1595c6fe2784ec4e3ce5ef9bc9df}{state\+\_\+next}} {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief State machine registers. 
+
+\Hypertarget{classuart__tx_1_1behavioral_afc6f53276d3a8115dc25018bc38e1693}\label{classuart__tx_1_1behavioral_afc6f53276d3a8115dc25018bc38e1693} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!state\_reg@{state\_reg}}
+\index{state\_reg@{state\_reg}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_reg}{state\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_afc6f53276d3a8115dc25018bc38e1693}{state\+\_\+reg}} {\bfseries {\bfseries \mbox{\hyperlink{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief State machine registers. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}\label{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!state\_type@{state\_type}}
+\index{state\_type@{state\_type}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_type}{state\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a388af42806a937e3770b88bb4030d765}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{start}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{data}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{stop}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+
+
+\textbackslash{}brief State type for the UART transmitter state machine. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}\label{classuart__tx_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!sync\_par\_counter@{sync\_par\_counter}}
+\index{sync\_par\_counter@{sync\_par\_counter}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{sync\_par\_counter}{sync\_par\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Modulus of the counter. 
+
+\Hypertarget{classuart__tx_1_1behavioral_a7f798c124e0f32700ee11c792129d332}\label{classuart__tx_1_1behavioral_a7f798c124e0f32700ee11c792129d332} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!tx\_next@{tx\_next}}
+\index{tx\_next@{tx\_next}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{tx\_next}{tx\_next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_a7f798c124e0f32700ee11c792129d332}{tx\+\_\+next}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Transmission buffer registers. 
+
+\Hypertarget{classuart__tx_1_1behavioral_aeb2d0d603c130ce669d3c467b9d6a47a}\label{classuart__tx_1_1behavioral_aeb2d0d603c130ce669d3c467b9d6a47a} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!tx\_reg@{tx\_reg}}
+\index{tx\_reg@{tx\_reg}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{tx\_reg}{tx\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_aeb2d0d603c130ce669d3c467b9d6a47a}{tx\+\_\+reg}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Transmission buffer registers. 
+
+\Hypertarget{classuart__tx_1_1behavioral_ab8125305bcd36d9f803adef9a738bc26}\label{classuart__tx_1_1behavioral_ab8125305bcd36d9f803adef9a738bc26} 
+\index{uart\_tx.behavioral@{uart\_tx.behavioral}!tx\_reg\_en@{tx\_reg\_en}}
+\index{tx\_reg\_en@{tx\_reg\_en}!uart\_tx.behavioral@{uart\_tx.behavioral}}
+\doxysubsubsection{\texorpdfstring{tx\_reg\_en}{tx\_reg\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart__tx_1_1behavioral_ab8125305bcd36d9f803adef9a738bc26}{tx\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Transmission buffer register enable signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/uart/\mbox{\hyperlink{uart__tx_8vhdl}{uart\+\_\+tx.\+vhdl}}\end{DoxyCompactItemize}

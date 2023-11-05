@@ -1,0 +1,204 @@
+\doxysection{uart.\+structural Architecture Reference}
+\hypertarget{classuart_1_1structural}{}\label{classuart_1_1structural}\index{uart.structural@{uart.structural}}
+
+
+Structural Architecture of UART Interface.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classuart_1_1structural}{uart\+::structural}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_1_1structural_aa28dbe3bb4f067e5e00037d9cefb6a99}{baud\+\_\+gen}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Instantiates the baud rate generator component. See \doxylink{classbaud__gen}{baud\+\_\+gen} for details. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_a6c58c94e66d38e41efd03b5400f7d411}{uart\+\_\+tx}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Baud rate tick output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_addf6a9a572ef84949a21d72fc26b2497}{uart\+\_\+rx}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Serial data output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_a576cc2b7670fbb1753a2eb96fe3c0d1d}{fifo}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Parallel data output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_1_1structural_adeddca5f4fe6074d6d63b3e011a02ca5}{tick}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data output. \textbackslash{}brief Baud rate tick signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_aead8c0c4ad25f261a4cd50dfdc864630}{rx\+\_\+done\+\_\+tick}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reception done flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_ad329bf14816a608089ce7ff6c27348cd}{tx\+\_\+done\+\_\+tick}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmission done flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_a67372f7ac503ded85cac847dbb00abb4}{tx\+\_\+empty}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmit FIFO empty flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_a816b28c370ce7e711be9dca16344806b}{tx\+\_\+fifo\+\_\+not\+\_\+empty}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Inverse of transmit FIFO empty flag. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_a9da0b804ec465dde9a4c62ed918a3d2b}{tx\+\_\+fifo\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Transmit FIFO data output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classuart_1_1structural_a4ca169373527bf522920d96701053dca}{rx\+\_\+data\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Receive FIFO data output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classuart_1_1structural_ad4af5babb189e63c1ab8d10b7c7850c5}{baud\+\_\+gen\+\_\+unit}}  {\bfseries baud\+\_\+gen}   
+\item 
+\mbox{\hyperlink{classuart_1_1structural_aa537cc01cabd47cffbffbef516195831}{rx\+\_\+unit}}  {\bfseries uart\+\_\+rx}   
+\item 
+\mbox{\hyperlink{classuart_1_1structural_adf57c09eb7a1e638956bd62213dfdce2}{tx\+\_\+unit}}  {\bfseries uart\+\_\+tx}   
+\item 
+\mbox{\hyperlink{classuart_1_1structural_a47121792d0ad7a15db79457a8637d333}{rx\+\_\+fifo}}  {\bfseries fifo}   
+\item 
+\mbox{\hyperlink{classuart_1_1structural_a2d3497d9531e969ddc1c9bc5cff5397e}{tx\+\_\+fifo}}  {\bfseries fifo}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structural Architecture of UART Interface. 
+
+\textbackslash{}architecture structural 
+
+This architecture connects the UART transmitter, receiver, baud rate generator, and FIFOs to form a complete UART interface. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classuart_1_1structural_aa28dbe3bb4f067e5e00037d9cefb6a99}\label{classuart_1_1structural_aa28dbe3bb4f067e5e00037d9cefb6a99} 
+\index{uart.structural@{uart.structural}!baud\_gen@{baud\_gen}}
+\index{baud\_gen@{baud\_gen}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{baud\_gen}{baud\_gen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_aa28dbe3bb4f067e5e00037d9cefb6a99}{baud\+\_\+gen}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Instantiates the baud rate generator component. See \doxylink{classbaud__gen}{baud\+\_\+gen} for details. 
+
+\Hypertarget{classuart_1_1structural_ad4af5babb189e63c1ab8d10b7c7850c5}\label{classuart_1_1structural_ad4af5babb189e63c1ab8d10b7c7850c5} 
+\index{uart.structural@{uart.structural}!baud\_gen\_unit@{baud\_gen\_unit}}
+\index{baud\_gen\_unit@{baud\_gen\_unit}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{baud\_gen\_unit}{baud\_gen\_unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_ad4af5babb189e63c1ab8d10b7c7850c5}{baud\+\_\+gen\+\_\+unit}} {\bfseries \textcolor{vhdlchar}{baud\_gen}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart_1_1structural_a576cc2b7670fbb1753a2eb96fe3c0d1d}\label{classuart_1_1structural_a576cc2b7670fbb1753a2eb96fe3c0d1d} 
+\index{uart.structural@{uart.structural}!fifo@{fifo}}
+\index{fifo@{fifo}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{fifo}{fifo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a576cc2b7670fbb1753a2eb96fe3c0d1d}{fifo}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Parallel data output. 
+
+\Hypertarget{classuart_1_1structural_a4ca169373527bf522920d96701053dca}\label{classuart_1_1structural_a4ca169373527bf522920d96701053dca} 
+\index{uart.structural@{uart.structural}!rx\_data\_out@{rx\_data\_out}}
+\index{rx\_data\_out@{rx\_data\_out}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{rx\_data\_out}{rx\_data\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a4ca169373527bf522920d96701053dca}{rx\+\_\+data\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Receive FIFO data output. 
+
+\Hypertarget{classuart_1_1structural_aead8c0c4ad25f261a4cd50dfdc864630}\label{classuart_1_1structural_aead8c0c4ad25f261a4cd50dfdc864630} 
+\index{uart.structural@{uart.structural}!rx\_done\_tick@{rx\_done\_tick}}
+\index{rx\_done\_tick@{rx\_done\_tick}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{rx\_done\_tick}{rx\_done\_tick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_aead8c0c4ad25f261a4cd50dfdc864630}{rx\+\_\+done\+\_\+tick}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Reception done flag. 
+
+\Hypertarget{classuart_1_1structural_a47121792d0ad7a15db79457a8637d333}\label{classuart_1_1structural_a47121792d0ad7a15db79457a8637d333} 
+\index{uart.structural@{uart.structural}!rx\_fifo@{rx\_fifo}}
+\index{rx\_fifo@{rx\_fifo}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{rx\_fifo}{rx\_fifo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a47121792d0ad7a15db79457a8637d333}{rx\+\_\+fifo}} {\bfseries \textcolor{vhdlchar}{fifo}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart_1_1structural_aa537cc01cabd47cffbffbef516195831}\label{classuart_1_1structural_aa537cc01cabd47cffbffbef516195831} 
+\index{uart.structural@{uart.structural}!rx\_unit@{rx\_unit}}
+\index{rx\_unit@{rx\_unit}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{rx\_unit}{rx\_unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_aa537cc01cabd47cffbffbef516195831}{rx\+\_\+unit}} {\bfseries \textcolor{vhdlchar}{uart\_rx}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart_1_1structural_adeddca5f4fe6074d6d63b3e011a02ca5}\label{classuart_1_1structural_adeddca5f4fe6074d6d63b3e011a02ca5} 
+\index{uart.structural@{uart.structural}!tick@{tick}}
+\index{tick@{tick}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_adeddca5f4fe6074d6d63b3e011a02ca5}{tick}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Data output. \textbackslash{}brief Baud rate tick signal. 
+
+\Hypertarget{classuart_1_1structural_ad329bf14816a608089ce7ff6c27348cd}\label{classuart_1_1structural_ad329bf14816a608089ce7ff6c27348cd} 
+\index{uart.structural@{uart.structural}!tx\_done\_tick@{tx\_done\_tick}}
+\index{tx\_done\_tick@{tx\_done\_tick}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tx\_done\_tick}{tx\_done\_tick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_ad329bf14816a608089ce7ff6c27348cd}{tx\+\_\+done\+\_\+tick}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Transmission done flag. 
+
+\Hypertarget{classuart_1_1structural_a67372f7ac503ded85cac847dbb00abb4}\label{classuart_1_1structural_a67372f7ac503ded85cac847dbb00abb4} 
+\index{uart.structural@{uart.structural}!tx\_empty@{tx\_empty}}
+\index{tx\_empty@{tx\_empty}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tx\_empty}{tx\_empty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a67372f7ac503ded85cac847dbb00abb4}{tx\+\_\+empty}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Transmit FIFO empty flag. 
+
+\Hypertarget{classuart_1_1structural_a2d3497d9531e969ddc1c9bc5cff5397e}\label{classuart_1_1structural_a2d3497d9531e969ddc1c9bc5cff5397e} 
+\index{uart.structural@{uart.structural}!tx\_fifo@{tx\_fifo}}
+\index{tx\_fifo@{tx\_fifo}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tx\_fifo}{tx\_fifo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a2d3497d9531e969ddc1c9bc5cff5397e}{tx\+\_\+fifo}} {\bfseries \textcolor{vhdlchar}{fifo}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart_1_1structural_a816b28c370ce7e711be9dca16344806b}\label{classuart_1_1structural_a816b28c370ce7e711be9dca16344806b} 
+\index{uart.structural@{uart.structural}!tx\_fifo\_not\_empty@{tx\_fifo\_not\_empty}}
+\index{tx\_fifo\_not\_empty@{tx\_fifo\_not\_empty}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tx\_fifo\_not\_empty}{tx\_fifo\_not\_empty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a816b28c370ce7e711be9dca16344806b}{tx\+\_\+fifo\+\_\+not\+\_\+empty}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Inverse of transmit FIFO empty flag. 
+
+\Hypertarget{classuart_1_1structural_a9da0b804ec465dde9a4c62ed918a3d2b}\label{classuart_1_1structural_a9da0b804ec465dde9a4c62ed918a3d2b} 
+\index{uart.structural@{uart.structural}!tx\_fifo\_out@{tx\_fifo\_out}}
+\index{tx\_fifo\_out@{tx\_fifo\_out}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tx\_fifo\_out}{tx\_fifo\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a9da0b804ec465dde9a4c62ed918a3d2b}{tx\+\_\+fifo\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+\textbackslash{}brief Transmit FIFO data output. 
+
+\Hypertarget{classuart_1_1structural_adf57c09eb7a1e638956bd62213dfdce2}\label{classuart_1_1structural_adf57c09eb7a1e638956bd62213dfdce2} 
+\index{uart.structural@{uart.structural}!tx\_unit@{tx\_unit}}
+\index{tx\_unit@{tx\_unit}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{tx\_unit}{tx\_unit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_adf57c09eb7a1e638956bd62213dfdce2}{tx\+\_\+unit}} {\bfseries \textcolor{vhdlchar}{uart\_tx}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classuart_1_1structural_addf6a9a572ef84949a21d72fc26b2497}\label{classuart_1_1structural_addf6a9a572ef84949a21d72fc26b2497} 
+\index{uart.structural@{uart.structural}!uart\_rx@{uart\_rx}}
+\index{uart\_rx@{uart\_rx}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{uart\_rx}{uart\_rx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_addf6a9a572ef84949a21d72fc26b2497}{uart\+\_\+rx}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Serial data output. 
+
+\Hypertarget{classuart_1_1structural_a6c58c94e66d38e41efd03b5400f7d411}\label{classuart_1_1structural_a6c58c94e66d38e41efd03b5400f7d411} 
+\index{uart.structural@{uart.structural}!uart\_tx@{uart\_tx}}
+\index{uart\_tx@{uart\_tx}!uart.structural@{uart.structural}}
+\doxysubsubsection{\texorpdfstring{uart\_tx}{uart\_tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classuart_1_1structural_a6c58c94e66d38e41efd03b5400f7d411}{uart\+\_\+tx}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Baud rate tick output. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/uart/\mbox{\hyperlink{uart_8vhdl}{uart.\+vhdl}}\end{DoxyCompactItemize}
