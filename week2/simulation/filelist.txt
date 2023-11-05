@@ -20,3 +20,4 @@
 ./tb_hcsr04_ctrl.vhdl
 ./tb_hcsr04_interface.vhdl
 ./tb_hcsr04.vhdl
+./tb_comm_interface.vhdl
