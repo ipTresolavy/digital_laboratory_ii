@@ -1,0 +1,11 @@
+../../components/hexa7seg.vhd
+../../components/gerador_pulso.vhd
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
+../../components/register_d.vhdl
+../rtl/hcsr04_ctrl.vhdl
+../rtl/hcsr04_interface.vhdl
+../rtl/hcsr04.vhdl
+./tb_hcsr04_ctrl.vhdl
+./tb_hcsr04_interface.vhdl
+./tb_hcsr04.vhdl
