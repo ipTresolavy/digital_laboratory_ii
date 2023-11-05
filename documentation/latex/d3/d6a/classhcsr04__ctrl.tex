@@ -1,0 +1,215 @@
+\doxysection{hcsr04\+\_\+ctrl Entity Reference}
+\hypertarget{classhcsr04__ctrl}{}\label{classhcsr04__ctrl}\index{hcsr04\_ctrl@{hcsr04\_ctrl}}
+Inheritance diagram for hcsr04\+\_\+ctrl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d3/d6a/classhcsr04__ctrl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral}{hcsr04\+\_\+ctrl.\+behavioral}} architecture
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em System clock signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em System reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_aa5fbb6d3d35eae436714f958dd5b9eee}{mensurar}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Trigger signal to start measurement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a6b5c00a7cdd7df827680371cea5a815e}{echo}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Echo signal from the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_ac83f68cbbc9928bc5acfbcc8e83ea407}{pulse\+\_\+sent}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Indicates if a pulse was sent. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a5e775577baceffd3007625e67fa087ba}{timeout}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Timeout signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a686849a232320b41e5541cc0566c350c}{generate\+\_\+pulse}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to generate a pulse. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_ada4e6b0d9659b2741d41de9e476d608d}{reset\+\_\+counters}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to reset counters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_ad9147cb1dd1d2bea129491a23c407f26}{store\+\_\+measurement}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to store the measurement. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_aa4efab7a74eeea9c9d26d0a99c2ab49d}{watchdog\+\_\+en}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Enable signal for the watchdog timer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a54374e0f546c44acc926c1f7f79fc412}{reset\+\_\+watchdog}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Reset signal for the watchdog timer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a9b8c532fce6acef2d3050ba3876c13eb}{pronto}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal indicating the process is complete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04__ctrl_a6b5bfff0fc8a6aa092a71c69ed92822f}{db\+\_\+estado}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Debug signal representing the state of the control unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entity for controlling the HCSR04 ultrasonic sensor.
+
+This entity manages the measurement process of the HCSR04 sensor by generating pulses, measuring echo return time, and handling timeouts. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classhcsr04__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classhcsr04__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!clock@{clock}}
+\index{clock@{clock}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+System clock signal. 
+
+\Hypertarget{classhcsr04__ctrl_a6b5bfff0fc8a6aa092a71c69ed92822f}\label{classhcsr04__ctrl_a6b5bfff0fc8a6aa092a71c69ed92822f} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!db\_estado@{db\_estado}}
+\index{db\_estado@{db\_estado}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{db\_estado}{db\_estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a6b5bfff0fc8a6aa092a71c69ed92822f}{db\+\_\+estado}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Debug signal representing the state of the control unit. 
+
+\Hypertarget{classhcsr04__ctrl_a6b5c00a7cdd7df827680371cea5a815e}\label{classhcsr04__ctrl_a6b5c00a7cdd7df827680371cea5a815e} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!echo@{echo}}
+\index{echo@{echo}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{echo}{echo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a6b5c00a7cdd7df827680371cea5a815e}{echo}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Echo signal from the sensor. 
+
+\Hypertarget{classhcsr04__ctrl_a686849a232320b41e5541cc0566c350c}\label{classhcsr04__ctrl_a686849a232320b41e5541cc0566c350c} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!generate\_pulse@{generate\_pulse}}
+\index{generate\_pulse@{generate\_pulse}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{generate\_pulse}{generate\_pulse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a686849a232320b41e5541cc0566c350c}{generate\+\_\+pulse}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to generate a pulse. 
+
+\Hypertarget{classhcsr04__ctrl_a0a6af6eef40212dbaf130d57ce711256}\label{classhcsr04__ctrl_a0a6af6eef40212dbaf130d57ce711256} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!ieee@{ieee}}
+\index{ieee@{ieee}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classhcsr04__ctrl_aa5fbb6d3d35eae436714f958dd5b9eee}\label{classhcsr04__ctrl_aa5fbb6d3d35eae436714f958dd5b9eee} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!mensurar@{mensurar}}
+\index{mensurar@{mensurar}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{mensurar}{mensurar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_aa5fbb6d3d35eae436714f958dd5b9eee}{mensurar}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Trigger signal to start measurement. 
+
+\Hypertarget{classhcsr04__ctrl_a2edc34402b573437d5f25fa90ba4013e}\label{classhcsr04__ctrl_a2edc34402b573437d5f25fa90ba4013e} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classhcsr04__ctrl_a9b8c532fce6acef2d3050ba3876c13eb}\label{classhcsr04__ctrl_a9b8c532fce6acef2d3050ba3876c13eb} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!pronto@{pronto}}
+\index{pronto@{pronto}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{pronto}{pronto}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a9b8c532fce6acef2d3050ba3876c13eb}{pronto}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal indicating the process is complete. 
+
+\Hypertarget{classhcsr04__ctrl_ac83f68cbbc9928bc5acfbcc8e83ea407}\label{classhcsr04__ctrl_ac83f68cbbc9928bc5acfbcc8e83ea407} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!pulse\_sent@{pulse\_sent}}
+\index{pulse\_sent@{pulse\_sent}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{pulse\_sent}{pulse\_sent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_ac83f68cbbc9928bc5acfbcc8e83ea407}{pulse\+\_\+sent}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Indicates if a pulse was sent. 
+
+\Hypertarget{classhcsr04__ctrl_a108f6801ba4104063b9d5f9286194302}\label{classhcsr04__ctrl_a108f6801ba4104063b9d5f9286194302} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!reset@{reset}}
+\index{reset@{reset}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+System reset signal. 
+
+\Hypertarget{classhcsr04__ctrl_ada4e6b0d9659b2741d41de9e476d608d}\label{classhcsr04__ctrl_ada4e6b0d9659b2741d41de9e476d608d} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!reset\_counters@{reset\_counters}}
+\index{reset\_counters@{reset\_counters}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{reset\_counters}{reset\_counters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_ada4e6b0d9659b2741d41de9e476d608d}{reset\+\_\+counters}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to reset counters. 
+
+\Hypertarget{classhcsr04__ctrl_a54374e0f546c44acc926c1f7f79fc412}\label{classhcsr04__ctrl_a54374e0f546c44acc926c1f7f79fc412} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!reset\_watchdog@{reset\_watchdog}}
+\index{reset\_watchdog@{reset\_watchdog}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{reset\_watchdog}{reset\_watchdog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a54374e0f546c44acc926c1f7f79fc412}{reset\+\_\+watchdog}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Reset signal for the watchdog timer. 
+
+\Hypertarget{classhcsr04__ctrl_acd03516902501cd1c7296a98e22c6fcb}\label{classhcsr04__ctrl_acd03516902501cd1c7296a98e22c6fcb} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classhcsr04__ctrl_ad9147cb1dd1d2bea129491a23c407f26}\label{classhcsr04__ctrl_ad9147cb1dd1d2bea129491a23c407f26} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!store\_measurement@{store\_measurement}}
+\index{store\_measurement@{store\_measurement}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{store\_measurement}{store\_measurement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_ad9147cb1dd1d2bea129491a23c407f26}{store\+\_\+measurement}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to store the measurement. 
+
+\Hypertarget{classhcsr04__ctrl_a5e775577baceffd3007625e67fa087ba}\label{classhcsr04__ctrl_a5e775577baceffd3007625e67fa087ba} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!timeout@{timeout}}
+\index{timeout@{timeout}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_a5e775577baceffd3007625e67fa087ba}{timeout}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Timeout signal. 
+
+\Hypertarget{classhcsr04__ctrl_aa4efab7a74eeea9c9d26d0a99c2ab49d}\label{classhcsr04__ctrl_aa4efab7a74eeea9c9d26d0a99c2ab49d} 
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!watchdog\_en@{watchdog\_en}}
+\index{watchdog\_en@{watchdog\_en}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\doxysubsubsection{\texorpdfstring{watchdog\_en}{watchdog\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_aa4efab7a74eeea9c9d26d0a99c2ab49d}{watchdog\+\_\+en}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Enable signal for the watchdog timer. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+week2/rtl/\mbox{\hyperlink{hcsr04__ctrl_8vhdl}{hcsr04\+\_\+ctrl.\+vhdl}}\end{DoxyCompactItemize}

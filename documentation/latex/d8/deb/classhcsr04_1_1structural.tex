@@ -1,0 +1,196 @@
+\doxysection{hcsr04.\+structural Architecture Reference}
+\hypertarget{classhcsr04_1_1structural}{}\label{classhcsr04_1_1structural}\index{hcsr04.structural@{hcsr04.structural}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classhcsr04_1_1structural}{hcsr04\+::structural}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_aa5b74bab2ae2cf05d2545639786dd91c}{hexa7seg}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em 4-\/bit hexadecimal input. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_ab6f0cbc00f845983e264a9e29cdd3091}{hcsr04\+\_\+interface}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em 7-\/segment display output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a80460e2651a5567bac2735fae97d54d7}{hcsr04\+\_\+ctrl}}  {\bfseries }  
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_aa4eecf554239564654debbdb3462bc62}{reset\+\_\+counters}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a9d54002745431e794538ad34cc5e6c94}{generate\+\_\+pulse}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a9cecc7027a1d1c633586995852356e9d}{mensurar}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a53db4f41565a1c6320d010d9df9f666f}{pulse\+\_\+sent}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_aa77a3e175b9f93fdda607084ef7e05f0}{store\+\_\+measurement}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a892d0da66e0781f9cd7b14cd3a4ee354}{watchdog\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_aa9f0bff99541906dca97d90c5c886a44}{reset\+\_\+watchdog}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a299c538d95969d8b1d92261dc6215a7d}{timeout}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a59b31bb85d7b2bf20e7bab1b01413d7b}{s\+\_\+db\+\_\+estado}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a2fe348bf946dd128e96d445843b814f7}{dist\+\_\+l}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a06f72a9409a88e2e944cf712f455f2a1}{dist\+\_\+h}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_ae42eef9243907fadfda2c3145ca7eb23}{hcsr04\+\_\+interface\+\_\+inst}}  {\bfseries hcsr04\+\_\+interface}   
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a206b3a491e7db438a214c0b9e8c140ae}{hcsr04\+\_\+ctrl\+\_\+inst}}  {\bfseries hcsr04\+\_\+ctrl}   
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}}  {\bfseries hexa7seg}   
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_a8ea5b47bab50be05608c883cc49a3f75}{h1}}  {\bfseries hexa7seg}   
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_ac9e7e0722796a9a2748cfe71e5c1eacb}{h2}}  {\bfseries hexa7seg}   
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_ad8bba894a37a322932dc80e05de59fe3}{h3}}  {\bfseries hexa7seg}   
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural_ab30ad01496f14e60d923a1937ffc98d4}{h5}}  {\bfseries hexa7seg}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classhcsr04_1_1structural_a06f72a9409a88e2e944cf712f455f2a1}\label{classhcsr04_1_1structural_a06f72a9409a88e2e944cf712f455f2a1} 
+\index{hcsr04.structural@{hcsr04.structural}!dist\_h@{dist\_h}}
+\index{dist\_h@{dist\_h}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{dist\_h}{dist\_h}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a06f72a9409a88e2e944cf712f455f2a1}{dist\+\_\+h}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a2fe348bf946dd128e96d445843b814f7}\label{classhcsr04_1_1structural_a2fe348bf946dd128e96d445843b814f7} 
+\index{hcsr04.structural@{hcsr04.structural}!dist\_l@{dist\_l}}
+\index{dist\_l@{dist\_l}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{dist\_l}{dist\_l}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a2fe348bf946dd128e96d445843b814f7}{dist\+\_\+l}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a9d54002745431e794538ad34cc5e6c94}\label{classhcsr04_1_1structural_a9d54002745431e794538ad34cc5e6c94} 
+\index{hcsr04.structural@{hcsr04.structural}!generate\_pulse@{generate\_pulse}}
+\index{generate\_pulse@{generate\_pulse}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{generate\_pulse}{generate\_pulse}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a9d54002745431e794538ad34cc5e6c94}{generate\+\_\+pulse}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a2308d0c2ae7d54f6c8cdc7144797f414}\label{classhcsr04_1_1structural_a2308d0c2ae7d54f6c8cdc7144797f414} 
+\index{hcsr04.structural@{hcsr04.structural}!h0@{h0}}
+\index{h0@{h0}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{h0}{h0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a2308d0c2ae7d54f6c8cdc7144797f414}{h0}} {\bfseries \textcolor{vhdlchar}{hexa7seg}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_a8ea5b47bab50be05608c883cc49a3f75}\label{classhcsr04_1_1structural_a8ea5b47bab50be05608c883cc49a3f75} 
+\index{hcsr04.structural@{hcsr04.structural}!h1@{h1}}
+\index{h1@{h1}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{h1}{h1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a8ea5b47bab50be05608c883cc49a3f75}{h1}} {\bfseries \textcolor{vhdlchar}{hexa7seg}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_ac9e7e0722796a9a2748cfe71e5c1eacb}\label{classhcsr04_1_1structural_ac9e7e0722796a9a2748cfe71e5c1eacb} 
+\index{hcsr04.structural@{hcsr04.structural}!h2@{h2}}
+\index{h2@{h2}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{h2}{h2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_ac9e7e0722796a9a2748cfe71e5c1eacb}{h2}} {\bfseries \textcolor{vhdlchar}{hexa7seg}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_ad8bba894a37a322932dc80e05de59fe3}\label{classhcsr04_1_1structural_ad8bba894a37a322932dc80e05de59fe3} 
+\index{hcsr04.structural@{hcsr04.structural}!h3@{h3}}
+\index{h3@{h3}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{h3}{h3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_ad8bba894a37a322932dc80e05de59fe3}{h3}} {\bfseries \textcolor{vhdlchar}{hexa7seg}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_ab30ad01496f14e60d923a1937ffc98d4}\label{classhcsr04_1_1structural_ab30ad01496f14e60d923a1937ffc98d4} 
+\index{hcsr04.structural@{hcsr04.structural}!h5@{h5}}
+\index{h5@{h5}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{h5}{h5}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_ab30ad01496f14e60d923a1937ffc98d4}{h5}} {\bfseries \textcolor{vhdlchar}{hexa7seg}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_a80460e2651a5567bac2735fae97d54d7}\label{classhcsr04_1_1structural_a80460e2651a5567bac2735fae97d54d7} 
+\index{hcsr04.structural@{hcsr04.structural}!hcsr04\_ctrl@{hcsr04\_ctrl}}
+\index{hcsr04\_ctrl@{hcsr04\_ctrl}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_ctrl}{hcsr04\_ctrl}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a80460e2651a5567bac2735fae97d54d7}{hcsr04\+\_\+ctrl}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+\Hypertarget{classhcsr04_1_1structural_a206b3a491e7db438a214c0b9e8c140ae}\label{classhcsr04_1_1structural_a206b3a491e7db438a214c0b9e8c140ae} 
+\index{hcsr04.structural@{hcsr04.structural}!hcsr04\_ctrl\_inst@{hcsr04\_ctrl\_inst}}
+\index{hcsr04\_ctrl\_inst@{hcsr04\_ctrl\_inst}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_ctrl\_inst}{hcsr04\_ctrl\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a206b3a491e7db438a214c0b9e8c140ae}{hcsr04\+\_\+ctrl\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{hcsr04\_ctrl}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_ab6f0cbc00f845983e264a9e29cdd3091}\label{classhcsr04_1_1structural_ab6f0cbc00f845983e264a9e29cdd3091} 
+\index{hcsr04.structural@{hcsr04.structural}!hcsr04\_interface@{hcsr04\_interface}}
+\index{hcsr04\_interface@{hcsr04\_interface}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_interface}{hcsr04\_interface}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_ab6f0cbc00f845983e264a9e29cdd3091}{hcsr04\+\_\+interface}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+7-\/segment display output. 
+
+\Hypertarget{classhcsr04_1_1structural_ae42eef9243907fadfda2c3145ca7eb23}\label{classhcsr04_1_1structural_ae42eef9243907fadfda2c3145ca7eb23} 
+\index{hcsr04.structural@{hcsr04.structural}!hcsr04\_interface\_inst@{hcsr04\_interface\_inst}}
+\index{hcsr04\_interface\_inst@{hcsr04\_interface\_inst}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_interface\_inst}{hcsr04\_interface\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_ae42eef9243907fadfda2c3145ca7eb23}{hcsr04\+\_\+interface\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{hcsr04\_interface}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classhcsr04_1_1structural_aa5b74bab2ae2cf05d2545639786dd91c}\label{classhcsr04_1_1structural_aa5b74bab2ae2cf05d2545639786dd91c} 
+\index{hcsr04.structural@{hcsr04.structural}!hexa7seg@{hexa7seg}}
+\index{hexa7seg@{hexa7seg}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{hexa7seg}{hexa7seg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_aa5b74bab2ae2cf05d2545639786dd91c}{hexa7seg}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+4-\/bit hexadecimal input. 
+
+\Hypertarget{classhcsr04_1_1structural_a9cecc7027a1d1c633586995852356e9d}\label{classhcsr04_1_1structural_a9cecc7027a1d1c633586995852356e9d} 
+\index{hcsr04.structural@{hcsr04.structural}!mensurar@{mensurar}}
+\index{mensurar@{mensurar}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{mensurar}{mensurar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a9cecc7027a1d1c633586995852356e9d}{mensurar}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a53db4f41565a1c6320d010d9df9f666f}\label{classhcsr04_1_1structural_a53db4f41565a1c6320d010d9df9f666f} 
+\index{hcsr04.structural@{hcsr04.structural}!pulse\_sent@{pulse\_sent}}
+\index{pulse\_sent@{pulse\_sent}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{pulse\_sent}{pulse\_sent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a53db4f41565a1c6320d010d9df9f666f}{pulse\+\_\+sent}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_aa4eecf554239564654debbdb3462bc62}\label{classhcsr04_1_1structural_aa4eecf554239564654debbdb3462bc62} 
+\index{hcsr04.structural@{hcsr04.structural}!reset\_counters@{reset\_counters}}
+\index{reset\_counters@{reset\_counters}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{reset\_counters}{reset\_counters}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_aa4eecf554239564654debbdb3462bc62}{reset\+\_\+counters}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_aa9f0bff99541906dca97d90c5c886a44}\label{classhcsr04_1_1structural_aa9f0bff99541906dca97d90c5c886a44} 
+\index{hcsr04.structural@{hcsr04.structural}!reset\_watchdog@{reset\_watchdog}}
+\index{reset\_watchdog@{reset\_watchdog}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{reset\_watchdog}{reset\_watchdog}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_aa9f0bff99541906dca97d90c5c886a44}{reset\+\_\+watchdog}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a59b31bb85d7b2bf20e7bab1b01413d7b}\label{classhcsr04_1_1structural_a59b31bb85d7b2bf20e7bab1b01413d7b} 
+\index{hcsr04.structural@{hcsr04.structural}!s\_db\_estado@{s\_db\_estado}}
+\index{s\_db\_estado@{s\_db\_estado}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{s\_db\_estado}{s\_db\_estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a59b31bb85d7b2bf20e7bab1b01413d7b}{s\+\_\+db\+\_\+estado}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{3} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_aa77a3e175b9f93fdda607084ef7e05f0}\label{classhcsr04_1_1structural_aa77a3e175b9f93fdda607084ef7e05f0} 
+\index{hcsr04.structural@{hcsr04.structural}!store\_measurement@{store\_measurement}}
+\index{store\_measurement@{store\_measurement}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{store\_measurement}{store\_measurement}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_aa77a3e175b9f93fdda607084ef7e05f0}{store\+\_\+measurement}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a299c538d95969d8b1d92261dc6215a7d}\label{classhcsr04_1_1structural_a299c538d95969d8b1d92261dc6215a7d} 
+\index{hcsr04.structural@{hcsr04.structural}!timeout@{timeout}}
+\index{timeout@{timeout}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a299c538d95969d8b1d92261dc6215a7d}{timeout}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04_1_1structural_a892d0da66e0781f9cd7b14cd3a4ee354}\label{classhcsr04_1_1structural_a892d0da66e0781f9cd7b14cd3a4ee354} 
+\index{hcsr04.structural@{hcsr04.structural}!watchdog\_en@{watchdog\_en}}
+\index{watchdog\_en@{watchdog\_en}!hcsr04.structural@{hcsr04.structural}}
+\doxysubsubsection{\texorpdfstring{watchdog\_en}{watchdog\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_1_1structural_a892d0da66e0781f9cd7b14cd3a4ee354}{watchdog\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+week2/rtl/\mbox{\hyperlink{hcsr04_8vhdl}{hcsr04.\+vhdl}}\end{DoxyCompactItemize}

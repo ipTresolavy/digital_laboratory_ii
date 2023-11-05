@@ -1,38 +1,45 @@
+--! @file
+--! @brief VHDL module for the main system integration.
+--! @details This module integrates the lidar, HC-SR04, and communication interfaces into a single system.
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.math_real.all;
 
+--! @entity main
+--! @brief Entity for the main system integration.
 entity main is
   port
   (
     -- system signals
-    clock    : in  std_logic;
-    reset    : in  std_logic;
+    clock    : in  std_logic; --! @brief System clock signal.
+    reset    : in  std_logic; --! @brief System reset signal.
 
     -- lidar interface
-    lidar_rx : in  std_logic;
-    lidar_tx : out std_logic;
+    lidar_rx : in  std_logic; --! @brief Receive signal for lidar.
+    lidar_tx : out std_logic; --! @brief Transmit signal for lidar.
 
     -- HC-SR04 interface
-    echo     : in  std_logic;
-    trigger  : out std_logic;
+    echo     : in  std_logic; --! @brief Echo signal from HC-SR04 sensor.
+    trigger  : out std_logic; --! @brief Trigger signal for HC-SR04 sensor.
 
     -- communication interface
-    rx       : in  std_logic;
-    tx       : out std_logic;
+    rx       : in  std_logic; --! @brief UART receive signal.
+    tx       : out std_logic; --! @brief UART transmit signal.
 
     -- debugging
-    db_sw       : in  std_logic; -- chooses between lidar and hc-sr04
-    db_estado   : out std_logic_vector(6 downto 0);
-    db_dist_l0  : out std_logic_vector(6 downto 0);
-    db_dist_l1  : out std_logic_vector(6 downto 0);
-    db_dist_h0  : out std_logic_vector(6 downto 0);
-    db_dist_h1  : out std_logic_vector(6 downto 0)
+    db_sw       : in  std_logic; --! @brief Switch for choosing between lidar and HC-SR04 for debugging.
+    db_estado   : out std_logic_vector(6 downto 0); --! @brief Debugging signal for state.
+    db_dist_l0  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for lower byte of lidar distance.
+    db_dist_l1  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for upper byte of lidar distance.
+    db_dist_h0  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for lower byte of HC-SR04 distance.
+    db_dist_h1  : out std_logic_vector(6 downto 0) --! @brief Debugging signal for upper byte of HC-SR04 distance.
   );
 end entity main;
 
 architecture structural of main is
+  -- Component declarations
   component lidar is
     port
     (
@@ -78,6 +85,7 @@ architecture structural of main is
     );
   end component comm_interface;
 
+  -- Signal declarations
   signal lidar_dist        : std_logic_vector(15 downto 0);
   signal hcsr04_dist       : std_logic_vector(15 downto 0);
   signal send_data         : std_logic;
@@ -128,6 +136,7 @@ begin
     db_estado   => db_estado
   );
 
+  -- Instantiate the Communication Interface component
   comm_interface_inst: comm_interface
   port map
   (
@@ -140,6 +149,7 @@ begin
     tx          => tx
   );
 
+  -- Debugging signal assignments
   with db_sw select
     s_l0 <= lidar_db_dist_l0 when '1',
             hcsr04_db_dist_l0 when others;

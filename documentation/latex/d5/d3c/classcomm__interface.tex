@@ -1,0 +1,149 @@
+\doxysection{comm\+\_\+interface Entity Reference}
+\hypertarget{classcomm__interface}{}\label{classcomm__interface}\index{comm\_interface@{comm\_interface}}
+Inheritance diagram for comm\+\_\+interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.983740cm]{d5/d3c/classcomm__interface}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral}{comm\+\_\+interface.\+behavioral}} architecture
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classcomm__interface_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\item 
+\mbox{\hyperlink{classcomm__interface_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em System clock signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em System reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_a0814e24cfcb7438186cbf52d4f1b547a}{lidar\+\_\+dist}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Distance measurement from Li\+DAR sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_a002e25cde95dbad02fa9b1a3882afd53}{hcsr04\+\_\+dist}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Distance measurement from HC-\/\+SR04 sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_a49193e4c2f34af188fdd91fa97d1e13c}{send\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to initiate data transmission. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_aac0fac1729520eecb19e9bc8061bec84}{rx}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em UART receive signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_a98dd33b35444db986d99130a0fecc550}{tx}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em UART transmit signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entity for communication interface. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcomm__interface_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classcomm__interface_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{comm\_interface@{comm\_interface}!clock@{clock}}
+\index{clock@{clock}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+System clock signal. 
+
+\Hypertarget{classcomm__interface_a002e25cde95dbad02fa9b1a3882afd53}\label{classcomm__interface_a002e25cde95dbad02fa9b1a3882afd53} 
+\index{comm\_interface@{comm\_interface}!hcsr04\_dist@{hcsr04\_dist}}
+\index{hcsr04\_dist@{hcsr04\_dist}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_dist}{hcsr04\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a002e25cde95dbad02fa9b1a3882afd53}{hcsr04\+\_\+dist}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Distance measurement from HC-\/\+SR04 sensor. 
+
+\Hypertarget{classcomm__interface_a0a6af6eef40212dbaf130d57ce711256}\label{classcomm__interface_a0a6af6eef40212dbaf130d57ce711256} 
+\index{comm\_interface@{comm\_interface}!ieee@{ieee}}
+\index{ieee@{ieee}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classcomm__interface_a0814e24cfcb7438186cbf52d4f1b547a}\label{classcomm__interface_a0814e24cfcb7438186cbf52d4f1b547a} 
+\index{comm\_interface@{comm\_interface}!lidar\_dist@{lidar\_dist}}
+\index{lidar\_dist@{lidar\_dist}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{lidar\_dist}{lidar\_dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a0814e24cfcb7438186cbf52d4f1b547a}{lidar\+\_\+dist}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Distance measurement from Li\+DAR sensor. 
+
+\Hypertarget{classcomm__interface_acb415f2e3abd505b8338da5b5bf9e2fb}\label{classcomm__interface_acb415f2e3abd505b8338da5b5bf9e2fb} 
+\index{comm\_interface@{comm\_interface}!math\_real@{math\_real}}
+\index{math\_real@{math\_real}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{math\_real}{math\_real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classcomm__interface_a2edc34402b573437d5f25fa90ba4013e}\label{classcomm__interface_a2edc34402b573437d5f25fa90ba4013e} 
+\index{comm\_interface@{comm\_interface}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classcomm__interface_a108f6801ba4104063b9d5f9286194302}\label{classcomm__interface_a108f6801ba4104063b9d5f9286194302} 
+\index{comm\_interface@{comm\_interface}!reset@{reset}}
+\index{reset@{reset}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+System reset signal. 
+
+\Hypertarget{classcomm__interface_aac0fac1729520eecb19e9bc8061bec84}\label{classcomm__interface_aac0fac1729520eecb19e9bc8061bec84} 
+\index{comm\_interface@{comm\_interface}!rx@{rx}}
+\index{rx@{rx}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{rx}{rx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_aac0fac1729520eecb19e9bc8061bec84}{rx}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+UART receive signal. 
+
+\Hypertarget{classcomm__interface_a49193e4c2f34af188fdd91fa97d1e13c}\label{classcomm__interface_a49193e4c2f34af188fdd91fa97d1e13c} 
+\index{comm\_interface@{comm\_interface}!send\_data@{send\_data}}
+\index{send\_data@{send\_data}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{send\_data}{send\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a49193e4c2f34af188fdd91fa97d1e13c}{send\+\_\+data}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to initiate data transmission. 
+
+\Hypertarget{classcomm__interface_acd03516902501cd1c7296a98e22c6fcb}\label{classcomm__interface_acd03516902501cd1c7296a98e22c6fcb} 
+\index{comm\_interface@{comm\_interface}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classcomm__interface_a98dd33b35444db986d99130a0fecc550}\label{classcomm__interface_a98dd33b35444db986d99130a0fecc550} 
+\index{comm\_interface@{comm\_interface}!tx@{tx}}
+\index{tx@{tx}!comm\_interface@{comm\_interface}}
+\doxysubsubsection{\texorpdfstring{tx}{tx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_a98dd33b35444db986d99130a0fecc550}{tx}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+UART transmit signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+week2/rtl/\mbox{\hyperlink{comm__interface_8vhdl}{comm\+\_\+interface.\+vhdl}}\end{DoxyCompactItemize}

@@ -1,28 +1,23 @@
 \doxysection{reg\+\_\+file.\+structural Architecture Reference}
 \hypertarget{classreg__file_1_1structural}{}\label{classreg__file_1_1structural}\index{reg\_file.structural@{reg\_file.structural}}
-
-
-Structural Architecture of Register File.  
-
-
 {\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classreg__file_1_1structural}{reg\+\_\+file\+::structural}}\newline
 \doxysubsubsection*{Components}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classreg__file_1_1structural_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}}  {\bfseries }  
-\begin{DoxyCompactList}\small\item\em D-\/\+Type Register Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Types}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classreg__file_1_1structural_a27d4b44d02c9a88dd627c148ae910909}{array\+\_\+reg\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{*}\textcolor{vhdlchar}{*}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classreg__file_aa743b3ca5c40506bdf726a9631d3717a}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classreg__file_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em Data output. \textbackslash{}brief Array type for register outputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Data output. Array type for register outputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Signals}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classreg__file_1_1structural_ad26162ae22cf3bb27f54485f70f7f54c}{reg\+\_\+mux\+\_\+outs}} {\bfseries {\bfseries \mbox{\hyperlink{classreg__file_1_1structural_a27d4b44d02c9a88dd627c148ae910909}{array\+\_\+reg\+\_\+type}}} \textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Register outputs signal array. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Register outputs signal array. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classreg__file_1_1structural_a50bb2d1a44b6ac8507aaf7aa2a04a3d4}{reg\+\_\+write\+\_\+enables}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{2} \textcolor{vhdlchar}{*}\textcolor{vhdlchar}{*}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classreg__file_aa743b3ca5c40506bdf726a9631d3717a}{ADDR\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Register write enables signal array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Register write enables signal array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Instantiations}
  \begin{DoxyCompactItemize}
 \item 
@@ -31,9 +26,7 @@ Structural Architecture of Register File.
 
 
 \doxysubsection{Detailed Description}
-Structural Architecture of Register File. 
-
-\textbackslash{}architecture structural 
+\textbackslash{}architecture structural Structural Architecture of Register File
 
 This architecture implements the register file using an array of D-\/type registers. 
 
@@ -46,7 +39,7 @@ This architecture implements the register file using an array of D-\/type regist
 
 
 
-Data output. \textbackslash{}brief Array type for register outputs. 
+Data output. Array type for register outputs. 
 
 \Hypertarget{classreg__file_1_1structural_ad53b1ff8af38a0fc111be7b9fd536191}\label{classreg__file_1_1structural_ad53b1ff8af38a0fc111be7b9fd536191} 
 \index{reg\_file.structural@{reg\_file.structural}!reg@{reg}}
@@ -62,7 +55,7 @@ Data output. \textbackslash{}brief Array type for register outputs.
 
 
 
-\textbackslash{}brief Register outputs signal array. 
+Register outputs signal array. 
 
 \Hypertarget{classreg__file_1_1structural_a50bb2d1a44b6ac8507aaf7aa2a04a3d4}\label{classreg__file_1_1structural_a50bb2d1a44b6ac8507aaf7aa2a04a3d4} 
 \index{reg\_file.structural@{reg\_file.structural}!reg\_write\_enables@{reg\_write\_enables}}
@@ -72,7 +65,7 @@ Data output. \textbackslash{}brief Array type for register outputs.
 
 
 
-\textbackslash{}brief Register write enables signal array. 
+Register write enables signal array. 
 
 \Hypertarget{classreg__file_1_1structural_abb1f4b1077fed42215491ace6164cf2c}\label{classreg__file_1_1structural_abb1f4b1077fed42215491ace6164cf2c} 
 \index{reg\_file.structural@{reg\_file.structural}!register\_d@{register\_d}}
@@ -80,11 +73,7 @@ Data output. \textbackslash{}brief Array type for register outputs.
 \doxysubsubsection{\texorpdfstring{register\_d}{register\_d}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classreg__file_1_1structural_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
 
-
-
-D-\/\+Type Register Component. 
-
-\textbackslash{}component \doxylink{classregister__d}{register\+\_\+d} 
+\textbackslash{}component \doxylink{classregister__d}{register\+\_\+d} D-\/\+Type Register Component
 
 This component implements a D-\/type register used for storing data in the register file. 
 

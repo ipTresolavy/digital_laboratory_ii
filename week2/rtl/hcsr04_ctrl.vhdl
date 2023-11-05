@@ -1,3 +1,11 @@
+--! @file
+--! @brief This file contains the hcsr04_ctrl entity which controls the HCSR04 ultrasonic sensor.
+
+--! @entity hcsr04_ctrl
+--! @brief Entity for controlling the HCSR04 ultrasonic sensor.
+--! @details This entity manages the measurement process of the HCSR04 sensor by generating pulses,
+--!          measuring echo return time, and handling timeouts.
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -5,23 +13,31 @@ use ieee.numeric_std.all;
 entity hcsr04_ctrl is
   port
   (
-    -- sinais de sistema
+    --! @brief System clock signal.
     clock              : in std_logic;
+    --! @brief System reset signal.
     reset              : in std_logic;
-
-    -- sinais de controle e condicao
+    --! @brief Trigger signal to start measurement.
     mensurar           : in  std_logic;
+    --! @brief Echo signal from the sensor.
     echo               : in  std_logic;
+    --! @brief Indicates if a pulse was sent.
     pulse_sent         : in  std_logic;
+    --! @brief Timeout signal.
     timeout            : in  std_logic;
+    --! @brief Signal to generate a pulse.
     generate_pulse     : out std_logic;
+    --! @brief Signal to reset counters.
     reset_counters     : out std_logic;
+    --! @brief Signal to store the measurement.
     store_measurement  : out std_logic;
+    --! @brief Enable signal for the watchdog timer.
     watchdog_en        : out std_logic;
+    --! @brief Reset signal for the watchdog timer.
     reset_watchdog     : out std_logic;
-
-    -- sinais do toplevel
+    --! @brief Signal indicating the process is complete.
     pronto             : out std_logic;
+    --! @brief Debug signal representing the state of the control unit.
     db_estado          : out std_logic_vector(3 downto 0) -- estado da UC
   );
 end entity hcsr04_ctrl;

@@ -1,21 +1,16 @@
 \doxysection{uart\+\_\+rx Entity Reference}
 \hypertarget{classuart__rx}{}\label{classuart__rx}\index{uart\_rx@{uart\_rx}}
-
-
-UART Receiver Entity.  
-
-
 Inheritance diagram for uart\+\_\+rx\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{d0/d43/classuart__rx}
+\includegraphics[height=6.000000cm]{d0/d43/classuart__rx}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Entities}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classuart__rx_1_1behavioral}{uart\+\_\+rx.\+behavioral}} architecture
-\begin{DoxyCompactList}\small\item\em Behavioral Architecture of UART Receiver. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Libraries}
  \begin{DoxyCompactItemize}
 \item 
@@ -34,28 +29,28 @@ Inheritance diagram for uart\+\_\+rx\+:\begin{figure}[H]
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classuart__rx_ac809a502575df941b823c2b93a2ce447}{DBIT}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Number of data bits. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number of data bits. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__rx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{16} \textcolor{vhdlchar}{ }}}
 \begin{DoxyCompactList}\small\item\em Number of ticks for stop bits. 16\+: 1 stop bit, 24\+: 1.\+5 stop bit, 32\+: 2 stop bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Ports}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classuart__rx_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clock input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__rx_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reset input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Reset input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__rx_aac0fac1729520eecb19e9bc8061bec84}{rx}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Serial data input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Serial data input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__rx_a1c65b18b938fe10f12d04183444195f8}{s\+\_\+tick}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Sampling tick input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sampling tick input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__rx_a960d9e368b380b59c03b5debb92a6784}{rx\+\_\+done\+\_\+tick}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Flag indicating reception is done. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag indicating reception is done. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__rx_a2bc0176254244b80e2399ad17f1f956d}{dout}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__rx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em Parallel data output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-UART Receiver Entity. 
+UART Receiver Entity
 
 The UART receiver entity is responsible for receiving serial data and converting it into parallel data. 
 
@@ -68,7 +63,7 @@ The UART receiver entity is responsible for receiving serial data and converting
 
 
 
-\textbackslash{}brief Clock input. 
+Clock input. 
 
 \Hypertarget{classuart__rx_ac809a502575df941b823c2b93a2ce447}\label{classuart__rx_ac809a502575df941b823c2b93a2ce447} 
 \index{uart\_rx@{uart\_rx}!DBIT@{DBIT}}
@@ -78,7 +73,7 @@ The UART receiver entity is responsible for receiving serial data and converting
 
 
 
-\textbackslash{}brief Number of data bits. 
+Number of data bits. 
 
 \Hypertarget{classuart__rx_a2bc0176254244b80e2399ad17f1f956d}\label{classuart__rx_a2bc0176254244b80e2399ad17f1f956d} 
 \index{uart\_rx@{uart\_rx}!dout@{dout}}
@@ -116,7 +111,7 @@ Parallel data output.
 
 
 
-\textbackslash{}brief Reset input. 
+Reset input. 
 
 \Hypertarget{classuart__rx_aac0fac1729520eecb19e9bc8061bec84}\label{classuart__rx_aac0fac1729520eecb19e9bc8061bec84} 
 \index{uart\_rx@{uart\_rx}!rx@{rx}}
@@ -126,7 +121,7 @@ Parallel data output.
 
 
 
-\textbackslash{}brief Serial data input. 
+Serial data input. 
 
 \Hypertarget{classuart__rx_a960d9e368b380b59c03b5debb92a6784}\label{classuart__rx_a960d9e368b380b59c03b5debb92a6784} 
 \index{uart\_rx@{uart\_rx}!rx\_done\_tick@{rx\_done\_tick}}
@@ -136,7 +131,7 @@ Parallel data output.
 
 
 
-\textbackslash{}brief Flag indicating reception is done. 
+Flag indicating reception is done. 
 
 \Hypertarget{classuart__rx_a1c65b18b938fe10f12d04183444195f8}\label{classuart__rx_a1c65b18b938fe10f12d04183444195f8} 
 \index{uart\_rx@{uart\_rx}!s\_tick@{s\_tick}}
@@ -146,7 +141,7 @@ Parallel data output.
 
 
 
-\textbackslash{}brief Sampling tick input. 
+Sampling tick input. 
 
 \Hypertarget{classuart__rx_ae74a9b328cac9ecf06f54be731e2023c}\label{classuart__rx_ae74a9b328cac9ecf06f54be731e2023c} 
 \index{uart\_rx@{uart\_rx}!SB\_TICK@{SB\_TICK}}

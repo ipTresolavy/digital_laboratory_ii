@@ -80,28 +80,24 @@ $(function() {
   <div class="headertitle"><div class="title">fifo.structural Architecture Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p>Structural Architecture of FIFO.  
- <a href="../../dd/dec/classfifo_1_1structural.html#details">More...</a></p>
 <b>Architecture &gt;&gt; </b><a class="el" href="../../dd/dec/classfifo_1_1structural.html">fifo::structural</a><br />
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Components" name="Components"></a>
 Components</h2></td></tr>
  <tr class="memitem:a836a588bee2503d0b00431df0b751bb4" id="r_a836a588bee2503d0b00431df0b751bb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#a836a588bee2503d0b00431df0b751bb4">fifo_ctrl</a>&#160;</td><td class="memItemRight" valign="bottom">  <b></b>  <em><a class="el" href="../../d0/dfd/classfifo__ctrl.html">&lt;Entity fifo_ctrl&gt; </a></em></td></tr>
-<tr class="memdesc:a836a588bee2503d0b00431df0b751bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">FIFO Control Component.  <a href="#a836a588bee2503d0b00431df0b751bb4"></a><br /></td></tr>
 <tr class="memitem:ad2c653f0e637ddfbcf83b2efe8e40556" id="r_ad2c653f0e637ddfbcf83b2efe8e40556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#ad2c653f0e637ddfbcf83b2efe8e40556">reg_file</a>&#160;</td><td class="memItemRight" valign="bottom">  <b></b>  <em><a class="el" href="../../d8/d6f/classreg__file.html">&lt;Entity reg_file&gt; </a></em></td></tr>
 <tr class="memdesc:ad2c653f0e637ddfbcf83b2efe8e40556"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read address output.  <a href="#ad2c653f0e637ddfbcf83b2efe8e40556"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Signals" name="Signals"></a>
 Signals</h2></td></tr>
  <tr class="memitem:ae014d091fdea9b7180c03636469e2e11" id="r_ae014d091fdea9b7180c03636469e2e11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#ae014d091fdea9b7180c03636469e2e11">w_addr</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="../../d7/d8a/classfifo.html#a97ed8c4ac7d6de2665dc3b2d8ab90ea3">ADDR_WIDTH</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:ae014d091fdea9b7180c03636469e2e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data output for reading. \brief Internal write address signal.  <a href="#ae014d091fdea9b7180c03636469e2e11"></a><br /></td></tr>
+<tr class="memdesc:ae014d091fdea9b7180c03636469e2e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data output for reading. Internal write address signal.  <a href="#ae014d091fdea9b7180c03636469e2e11"></a><br /></td></tr>
 <tr class="memitem:a8f66b6e6c8608806281aab024978fa6a" id="r_a8f66b6e6c8608806281aab024978fa6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#a8f66b6e6c8608806281aab024978fa6a">r_addr</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">std_logic_vector</span><span class="vhdlchar"> </span><span class="vhdlchar">(</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><span class="vhdlchar"> </span><b><a class="el" href="../../d7/d8a/classfifo.html#a97ed8c4ac7d6de2665dc3b2d8ab90ea3">ADDR_WIDTH</a></b> <span class="vhdlchar">-</span><span class="vhdlchar"> </span> <span class="vhdldigit">1</span> <span class="vhdlchar"> </span><span class="keywordflow">downto</span><span class="vhdlchar"> </span><span class="vhdlchar"> </span> <span class="vhdldigit">0</span> <span class="vhdlchar"> </span><span class="vhdlchar">)</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:a8f66b6e6c8608806281aab024978fa6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">\brief Internal read address signal.  <a href="#a8f66b6e6c8608806281aab024978fa6a"></a><br /></td></tr>
+<tr class="memdesc:a8f66b6e6c8608806281aab024978fa6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal read address signal.  <a href="#a8f66b6e6c8608806281aab024978fa6a"></a><br /></td></tr>
 <tr class="memitem:a668a3ae00d04236b50318437a2028ecc" id="r_a668a3ae00d04236b50318437a2028ecc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#a668a3ae00d04236b50318437a2028ecc">wr_en</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:a668a3ae00d04236b50318437a2028ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">\brief Internal write enable signal.  <a href="#a668a3ae00d04236b50318437a2028ecc"></a><br /></td></tr>
+<tr class="memdesc:a668a3ae00d04236b50318437a2028ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal write enable signal.  <a href="#a668a3ae00d04236b50318437a2028ecc"></a><br /></td></tr>
 <tr class="memitem:a7ceb42cd4cf1d42d79d3d7c7578e4eec" id="r_a7ceb42cd4cf1d42d79d3d7c7578e4eec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#a7ceb42cd4cf1d42d79d3d7c7578e4eec">full_tmp</a> &#160;</td><td class="memItemRight" valign="bottom"><b><span class="keywordtype">std_logic</span><span class="vhdlchar"> </span></b></td></tr>
-<tr class="memdesc:a7ceb42cd4cf1d42d79d3d7c7578e4eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">\brief Internal full flag signal.  <a href="#a7ceb42cd4cf1d42d79d3d7c7578e4eec"></a><br /></td></tr>
+<tr class="memdesc:a7ceb42cd4cf1d42d79d3d7c7578e4eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal full flag signal.  <a href="#a7ceb42cd4cf1d42d79d3d7c7578e4eec"></a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="Instantiations" name="Instantiations"></a>
 Instantiations</h2></td></tr>
@@ -109,8 +105,7 @@ Instantiations</h2></td></tr>
 <tr class="memitem:ac9227f6405d6ad3fe73aed688342c61a" id="r_ac9227f6405d6ad3fe73aed688342c61a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/dec/classfifo_1_1structural.html#ac9227f6405d6ad3fe73aed688342c61a">registers</a>&#160;</td><td class="memItemRight" valign="bottom">  <b>reg_file</b>  <em><a class="el" href="../../d8/d6f/classreg__file.html">&lt;Entity reg_file&gt;</a></em></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Structural Architecture of FIFO. </p>
-<p>\architecture structural </p>
+<div class="textblock"><p>\architecture structural Structural Architecture of FIFO</p>
 <p>This architecture instantiates the FIFO control and register file components and connects them. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a836a588bee2503d0b00431df0b751bb4" name="a836a588bee2503d0b00431df0b751bb4"></a>
@@ -132,9 +127,7 @@ Instantiations</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
-<p>FIFO Control Component. </p>
-<p>\component <a class="el" href="../../d0/dfd/classfifo__ctrl.html" title="FIFO Control Entity.">fifo_ctrl</a> </p>
+<p>\component <a class="el" href="../../d0/dfd/classfifo__ctrl.html">fifo_ctrl</a> FIFO Control Component</p>
 <p>This component handles the control logic for the FIFO buffer, including read and write operations. </p>
 
 </div>
@@ -181,7 +174,7 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>\brief Internal full flag signal. </p>
+<p>Internal full flag signal. </p>
 
 </div>
 </div>
@@ -205,7 +198,7 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>\brief Internal read address signal. </p>
+<p>Internal read address signal. </p>
 
 </div>
 </div>
@@ -275,7 +268,7 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Data output for reading. \brief Internal write address signal. </p>
+<p>Data output for reading. Internal write address signal. </p>
 
 </div>
 </div>
@@ -299,7 +292,7 @@ Instantiations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>\brief Internal write enable signal. </p>
+<p>Internal write enable signal. </p>
 
 </div>
 </div>

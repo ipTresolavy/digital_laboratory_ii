@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tx_5ffsm_0',['tx_fsm',['../d1/d88/classuart__tx_1_1behavioral.html#afdaa07d90c755f194c0f33572274bd27',1,'uart_tx::behavioral']]]
+  ['process_5f0_0',['PROCESS_0',['../d7/d04/classgerador__pulso_1_1fsm__arch.html#ae6d30b9a9db715fbf3a762420cdfdf13',1,'gerador_pulso::fsm_arch']]],
+  ['process_5f1_1',['PROCESS_1',['../d7/d04/classgerador__pulso_1_1fsm__arch.html#a613228dd8970752537a6e2be49fc0245',1,'gerador_pulso::fsm_arch']]]
 ];

@@ -1,0 +1,79 @@
+\doxysection{gerador\+\_\+pulso.\+fsm\+\_\+arch Architecture Reference}
+\hypertarget{classgerador__pulso_1_1fsm__arch}{}\label{classgerador__pulso_1_1fsm__arch}\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch}{gerador\+\_\+pulso\+::fsm\+\_\+arch}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ae6d30b9a9db715fbf3a762420cdfdf13}{PROCESS\+\_\+0}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} )}
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a613228dd8970752537a6e2be49fc0245}{PROCESS\+\_\+1}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a608e028b4c37c08bca5db72dcde1d76f}{reg\+\_\+estado}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_a1cd1b8d0057f02d6ca0391a6b4e02b16}{gera}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_afb3636e081ebd67c08ced2d547611880}{para}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a54623901882015a0d6fc6b47f9d62ad7}{reg\+\_\+cont}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}{tipo\+\_\+estado}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{parado}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{contagem}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{final}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a608e028b4c37c08bca5db72dcde1d76f}{reg\+\_\+estado}} {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}{tipo\+\_\+estado}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a9ef4c9a116cd53994c983d8c7dc9bd9e}{prox\+\_\+estado}} {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}{tipo\+\_\+estado}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a54623901882015a0d6fc6b47f9d62ad7}{reg\+\_\+cont}} {\bfseries \textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{range}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classgerador__pulso_a9a083069414d5ca65da6bc40d1a01cf7}{largura}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a674849a92dde8e18907739787351c75c}{prox\+\_\+cont}} {\bfseries \textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{range}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classgerador__pulso_a9a083069414d5ca65da6bc40d1a01cf7}{largura}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classgerador__pulso_1_1fsm__arch_ae6d30b9a9db715fbf3a762420cdfdf13}\label{classgerador__pulso_1_1fsm__arch_ae6d30b9a9db715fbf3a762420cdfdf13} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!PROCESS\_0@{PROCESS\_0}}
+\index{PROCESS\_0@{PROCESS\_0}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{PROCESS\_0()}{PROCESS\_0()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} PROCESS\+\_\+0(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+\Hypertarget{classgerador__pulso_1_1fsm__arch_a613228dd8970752537a6e2be49fc0245}\label{classgerador__pulso_1_1fsm__arch_a613228dd8970752537a6e2be49fc0245} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!PROCESS\_1@{PROCESS\_1}}
+\index{PROCESS\_1@{PROCESS\_1}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{PROCESS\_1()}{PROCESS\_1()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} PROCESS\+\_\+1(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a608e028b4c37c08bca5db72dcde1d76f}{reg\+\_\+estado}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_a1cd1b8d0057f02d6ca0391a6b4e02b16}{gera}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_afb3636e081ebd67c08ced2d547611880}{para}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a54623901882015a0d6fc6b47f9d62ad7}{reg\+\_\+cont}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classgerador__pulso_1_1fsm__arch_a674849a92dde8e18907739787351c75c}\label{classgerador__pulso_1_1fsm__arch_a674849a92dde8e18907739787351c75c} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!prox\_cont@{prox\_cont}}
+\index{prox\_cont@{prox\_cont}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{prox\_cont}{prox\_cont}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a674849a92dde8e18907739787351c75c}{prox\+\_\+cont}} {\bfseries \textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{range}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classgerador__pulso_a9a083069414d5ca65da6bc40d1a01cf7}{largura}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classgerador__pulso_1_1fsm__arch_a9ef4c9a116cd53994c983d8c7dc9bd9e}\label{classgerador__pulso_1_1fsm__arch_a9ef4c9a116cd53994c983d8c7dc9bd9e} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!prox\_estado@{prox\_estado}}
+\index{prox\_estado@{prox\_estado}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{prox\_estado}{prox\_estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a9ef4c9a116cd53994c983d8c7dc9bd9e}{prox\+\_\+estado}} {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}{tipo\+\_\+estado}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classgerador__pulso_1_1fsm__arch_a54623901882015a0d6fc6b47f9d62ad7}\label{classgerador__pulso_1_1fsm__arch_a54623901882015a0d6fc6b47f9d62ad7} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!reg\_cont@{reg\_cont}}
+\index{reg\_cont@{reg\_cont}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{reg\_cont}{reg\_cont}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a54623901882015a0d6fc6b47f9d62ad7}{reg\+\_\+cont}} {\bfseries \textcolor{keywordtype}{integer}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{range}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{to}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classgerador__pulso_a9a083069414d5ca65da6bc40d1a01cf7}{largura}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classgerador__pulso_1_1fsm__arch_a608e028b4c37c08bca5db72dcde1d76f}\label{classgerador__pulso_1_1fsm__arch_a608e028b4c37c08bca5db72dcde1d76f} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!reg\_estado@{reg\_estado}}
+\index{reg\_estado@{reg\_estado}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{reg\_estado}{reg\_estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_a608e028b4c37c08bca5db72dcde1d76f}{reg\+\_\+estado}} {\bfseries {\bfseries \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}{tipo\+\_\+estado}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}\label{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514} 
+\index{gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}!tipo\_estado@{tipo\_estado}}
+\index{tipo\_estado@{tipo\_estado}!gerador\_pulso.fsm\_arch@{gerador\_pulso.fsm\_arch}}
+\doxysubsubsection{\texorpdfstring{tipo\_estado}{tipo\_estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classgerador__pulso_1_1fsm__arch_ad994f454d3334e81cc6efd1518a4e514}{tipo\+\_\+estado}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{parado}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{contagem}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{final}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/\mbox{\hyperlink{gerador__pulso_8vhd}{gerador\+\_\+pulso.\+vhd}}\end{DoxyCompactItemize}

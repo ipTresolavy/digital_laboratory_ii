@@ -1,0 +1,216 @@
+\doxysection{comm\+\_\+interface.\+behavioral Architecture Reference}
+\hypertarget{classcomm__interface_1_1behavioral}{}\label{classcomm__interface_1_1behavioral}\index{comm\_interface.behavioral@{comm\_interface.behavioral}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classcomm__interface_1_1behavioral}{comm\+\_\+interface\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_acc3698299cb73913a7f7faf22f3054c3}{fsm}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} )}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_ad708b95b211904a3878bbbc443dc60b0}{fsm\+\_\+logic}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_a49193e4c2f34af188fdd91fa97d1e13c}{send\+\_\+data}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_a928977234a871a4a8582409b3192cbf3}{tx\+\_\+full}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a169d0b4cc1e83e6cfd48bb4d8fb324fd}{uart}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Data bits. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Data read from UART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Constants}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a636e440072702abd69a83e15fe810f90}{divisor}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keyword}{"{} 00000011011 "{}}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em 27 in binary, sets the baud rate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{lidar\_byte0}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{lidar\_byte1}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{hcsr04\_byte0}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{hcsr04\_byte1}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a866ed29475d4663ccbdaa470c4846b27}{rd\+\_\+uart}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Output data of the register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_adfaf88998051ed17ce5007718ef240be}{wr\+\_\+uart}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_ac91ffadea1239672d90449e6dbf8d39d}{r\+\_\+data}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a0a144da8f417ee72838ca684e75e5af7}{w\+\_\+data}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a928977234a871a4a8582409b3192cbf3}{tx\+\_\+full}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_ac9cde56a82301bd8d1e84f9c6eb3ce4a}{rx\+\_\+empty}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a7bc8becbe4d4f3e8ba12af9d61337770}{buffer\+\_\+inputs}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a8e92941e29905f3c8dfc2d938af7ae5d}{lidar\+\_\+dist\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a747b69e5a60bf5137384da08110f16b3}{hcsr04\+\_\+dist\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a1b2aabb713c45bba5cc6ab9255a359ce}{w\+\_\+data\+\_\+src}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_a54226d66e09c8174a94679b486f63298}{uart\+\_\+inst}}  {\bfseries uart}   
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_ae70e2c38d7c74e375d770089078a1c23}{lidar\+\_\+buf}}  {\bfseries register\+\_\+d}   
+\item 
+\mbox{\hyperlink{classcomm__interface_1_1behavioral_ab603ab62634728509c33f94b50993b47}{hcsr04\+\_\+buf}}  {\bfseries register\+\_\+d}   
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classcomm__interface_1_1behavioral_acc3698299cb73913a7f7faf22f3054c3}\label{classcomm__interface_1_1behavioral_acc3698299cb73913a7f7faf22f3054c3} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!fsm@{fsm}}
+\index{fsm@{fsm}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{fsm()}{fsm()}}
+{\footnotesize\ttfamily fsm (\begin{DoxyParamCaption}\item[{}]{clock,  }\item[{}]{reset }\end{DoxyParamCaption})}
+
+\Hypertarget{classcomm__interface_1_1behavioral_ad708b95b211904a3878bbbc443dc60b0}\label{classcomm__interface_1_1behavioral_ad708b95b211904a3878bbbc443dc60b0} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!fsm\_logic@{fsm\_logic}}
+\index{fsm\_logic@{fsm\_logic}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{fsm\_logic()}{fsm\_logic()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} fsm\+\_\+logic(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_a49193e4c2f34af188fdd91fa97d1e13c}{send\+\_\+data}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_a928977234a871a4a8582409b3192cbf3}{tx\+\_\+full}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcomm__interface_1_1behavioral_a7bc8becbe4d4f3e8ba12af9d61337770}\label{classcomm__interface_1_1behavioral_a7bc8becbe4d4f3e8ba12af9d61337770} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!buffer\_inputs@{buffer\_inputs}}
+\index{buffer\_inputs@{buffer\_inputs}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{buffer\_inputs}{buffer\_inputs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a7bc8becbe4d4f3e8ba12af9d61337770}{buffer\+\_\+inputs}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a636e440072702abd69a83e15fe810f90}\label{classcomm__interface_1_1behavioral_a636e440072702abd69a83e15fe810f90} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!divisor@{divisor}}
+\index{divisor@{divisor}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{divisor}{divisor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a636e440072702abd69a83e15fe810f90}{divisor}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{10} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keyword}{"{} 00000011011 "{}}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Constant]}}
+
+
+
+27 in binary, sets the baud rate. 
+
+\Hypertarget{classcomm__interface_1_1behavioral_ab603ab62634728509c33f94b50993b47}\label{classcomm__interface_1_1behavioral_ab603ab62634728509c33f94b50993b47} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!hcsr04\_buf@{hcsr04\_buf}}
+\index{hcsr04\_buf@{hcsr04\_buf}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_buf}{hcsr04\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_ab603ab62634728509c33f94b50993b47}{hcsr04\+\_\+buf}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a747b69e5a60bf5137384da08110f16b3}\label{classcomm__interface_1_1behavioral_a747b69e5a60bf5137384da08110f16b3} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!hcsr04\_dist\_buf@{hcsr04\_dist\_buf}}
+\index{hcsr04\_dist\_buf@{hcsr04\_dist\_buf}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{hcsr04\_dist\_buf}{hcsr04\_dist\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a747b69e5a60bf5137384da08110f16b3}{hcsr04\+\_\+dist\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_ae70e2c38d7c74e375d770089078a1c23}\label{classcomm__interface_1_1behavioral_ae70e2c38d7c74e375d770089078a1c23} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!lidar\_buf@{lidar\_buf}}
+\index{lidar\_buf@{lidar\_buf}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{lidar\_buf}{lidar\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_ae70e2c38d7c74e375d770089078a1c23}{lidar\+\_\+buf}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a8e92941e29905f3c8dfc2d938af7ae5d}\label{classcomm__interface_1_1behavioral_a8e92941e29905f3c8dfc2d938af7ae5d} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!lidar\_dist\_buf@{lidar\_dist\_buf}}
+\index{lidar\_dist\_buf@{lidar\_dist\_buf}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{lidar\_dist\_buf}{lidar\_dist\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a8e92941e29905f3c8dfc2d938af7ae5d}{lidar\+\_\+dist\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}\label{classcomm__interface_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!next\_state@{next\_state}}
+\index{next\_state@{next\_state}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state}{next\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_ac91ffadea1239672d90449e6dbf8d39d}\label{classcomm__interface_1_1behavioral_ac91ffadea1239672d90449e6dbf8d39d} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!r\_data@{r\_data}}
+\index{r\_data@{r\_data}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{r\_data}{r\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_ac91ffadea1239672d90449e6dbf8d39d}{r\+\_\+data}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a866ed29475d4663ccbdaa470c4846b27}\label{classcomm__interface_1_1behavioral_a866ed29475d4663ccbdaa470c4846b27} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!rd\_uart@{rd\_uart}}
+\index{rd\_uart@{rd\_uart}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{rd\_uart}{rd\_uart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a866ed29475d4663ccbdaa470c4846b27}{rd\+\_\+uart}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Output data of the register. 
+
+\Hypertarget{classcomm__interface_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}\label{classcomm__interface_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!register\_d@{register\_d}}
+\index{register\_d@{register\_d}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{register\_d}{register\_d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Data read from UART. 
+
+\Hypertarget{classcomm__interface_1_1behavioral_ac9cde56a82301bd8d1e84f9c6eb3ce4a}\label{classcomm__interface_1_1behavioral_ac9cde56a82301bd8d1e84f9c6eb3ce4a} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!rx\_empty@{rx\_empty}}
+\index{rx\_empty@{rx\_empty}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{rx\_empty}{rx\_empty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_ac9cde56a82301bd8d1e84f9c6eb3ce4a}{rx\+\_\+empty}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}\label{classcomm__interface_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!state@{state}}
+\index{state@{state}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}\label{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!state\_type@{state\_type}}
+\index{state\_type@{state\_type}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_type}{state\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a39583ab43ca3b7c8e5f4b9257dbe4124}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{lidar\_byte0}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{lidar\_byte1}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{hcsr04\_byte0}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{hcsr04\_byte1}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a928977234a871a4a8582409b3192cbf3}\label{classcomm__interface_1_1behavioral_a928977234a871a4a8582409b3192cbf3} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!tx\_full@{tx\_full}}
+\index{tx\_full@{tx\_full}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{tx\_full}{tx\_full}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a928977234a871a4a8582409b3192cbf3}{tx\+\_\+full}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a169d0b4cc1e83e6cfd48bb4d8fb324fd}\label{classcomm__interface_1_1behavioral_a169d0b4cc1e83e6cfd48bb4d8fb324fd} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!uart@{uart}}
+\index{uart@{uart}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{uart}{uart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a169d0b4cc1e83e6cfd48bb4d8fb324fd}{uart}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Data bits. 
+
+\Hypertarget{classcomm__interface_1_1behavioral_a54226d66e09c8174a94679b486f63298}\label{classcomm__interface_1_1behavioral_a54226d66e09c8174a94679b486f63298} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!uart\_inst@{uart\_inst}}
+\index{uart\_inst@{uart\_inst}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{uart\_inst}{uart\_inst}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a54226d66e09c8174a94679b486f63298}{uart\+\_\+inst}} {\bfseries \textcolor{vhdlchar}{uart}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a0a144da8f417ee72838ca684e75e5af7}\label{classcomm__interface_1_1behavioral_a0a144da8f417ee72838ca684e75e5af7} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!w\_data@{w\_data}}
+\index{w\_data@{w\_data}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{w\_data}{w\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a0a144da8f417ee72838ca684e75e5af7}{w\+\_\+data}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_a1b2aabb713c45bba5cc6ab9255a359ce}\label{classcomm__interface_1_1behavioral_a1b2aabb713c45bba5cc6ab9255a359ce} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!w\_data\_src@{w\_data\_src}}
+\index{w\_data\_src@{w\_data\_src}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{w\_data\_src}{w\_data\_src}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_a1b2aabb713c45bba5cc6ab9255a359ce}{w\+\_\+data\+\_\+src}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classcomm__interface_1_1behavioral_adfaf88998051ed17ce5007718ef240be}\label{classcomm__interface_1_1behavioral_adfaf88998051ed17ce5007718ef240be} 
+\index{comm\_interface.behavioral@{comm\_interface.behavioral}!wr\_uart@{wr\_uart}}
+\index{wr\_uart@{wr\_uart}!comm\_interface.behavioral@{comm\_interface.behavioral}}
+\doxysubsubsection{\texorpdfstring{wr\_uart}{wr\_uart}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classcomm__interface_1_1behavioral_adfaf88998051ed17ce5007718ef240be}{wr\+\_\+uart}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+week2/rtl/\mbox{\hyperlink{comm__interface_8vhdl}{comm\+\_\+interface.\+vhdl}}\end{DoxyCompactItemize}

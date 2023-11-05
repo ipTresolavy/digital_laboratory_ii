@@ -1,0 +1,71 @@
+\doxysection{hcsr04\+\_\+ctrl.\+behavioral Architecture Reference}
+\hypertarget{classhcsr04__ctrl_1_1behavioral}{}\label{classhcsr04__ctrl_1_1behavioral}\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral}{hcsr04\+\_\+ctrl\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ab9cb9512a566666eb52a96e6a8077141}{sync\+\_\+process}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} )}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_a4cfc1ab19dca0c984e69dfa4f300ac37}{next\+\_\+state\+\_\+decode}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_aa5fbb6d3d35eae436714f958dd5b9eee}{mensurar}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_a6b5c00a7cdd7df827680371cea5a815e}{echo}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_ac83f68cbbc9928bc5acfbcc8e83ea407}{pulse\+\_\+sent}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_a5e775577baceffd3007625e67fa087ba}{timeout}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{send\_pulse}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{wait\_echo\_start}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{wait\_echo\_end}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{store\_value}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{end\_transmission}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_a8168ff5073b17b5cc8a7bc04cd92e4cc}{s\+\_\+pronto}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classhcsr04__ctrl_1_1behavioral_a4cfc1ab19dca0c984e69dfa4f300ac37}\label{classhcsr04__ctrl_1_1behavioral_a4cfc1ab19dca0c984e69dfa4f300ac37} 
+\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}!next\_state\_decode@{next\_state\_decode}}
+\index{next\_state\_decode@{next\_state\_decode}!hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state\_decode()}{next\_state\_decode()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} next\+\_\+state\+\_\+decode(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_aa5fbb6d3d35eae436714f958dd5b9eee}{mensurar}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_a6b5c00a7cdd7df827680371cea5a815e}{echo}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_ac83f68cbbc9928bc5acfbcc8e83ea407}{pulse\+\_\+sent}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_a5e775577baceffd3007625e67fa087ba}{timeout}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+\Hypertarget{classhcsr04__ctrl_1_1behavioral_ab9cb9512a566666eb52a96e6a8077141}\label{classhcsr04__ctrl_1_1behavioral_ab9cb9512a566666eb52a96e6a8077141} 
+\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}!sync\_process@{sync\_process}}
+\index{sync\_process@{sync\_process}!hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{sync\_process()}{sync\_process()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} sync\+\_\+process(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classhcsr04__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}\label{classhcsr04__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b} 
+\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}!next\_state@{next\_state}}
+\index{next\_state@{next\_state}!hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state}{next\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04__ctrl_1_1behavioral_a8168ff5073b17b5cc8a7bc04cd92e4cc}\label{classhcsr04__ctrl_1_1behavioral_a8168ff5073b17b5cc8a7bc04cd92e4cc} 
+\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}!s\_pronto@{s\_pronto}}
+\index{s\_pronto@{s\_pronto}!hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_pronto}{s\_pronto}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_a8168ff5073b17b5cc8a7bc04cd92e4cc}{s\+\_\+pronto}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}\label{classhcsr04__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec} 
+\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}!state@{state}}
+\index{state@{state}!hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}\label{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9} 
+\index{hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}!state\_type@{state\_type}}
+\index{state\_type@{state\_type}!hcsr04\_ctrl.behavioral@{hcsr04\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_type}{state\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04__ctrl_1_1behavioral_ad48f88cfc0589cd97dbdfa1ec347a5d9}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{send\_pulse}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{wait\_echo\_start}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{wait\_echo\_end}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{store\_value}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{end\_transmission}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+week2/rtl/\mbox{\hyperlink{hcsr04__ctrl_8vhdl}{hcsr04\+\_\+ctrl.\+vhdl}}\end{DoxyCompactItemize}

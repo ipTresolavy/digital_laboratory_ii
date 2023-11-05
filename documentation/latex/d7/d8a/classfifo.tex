@@ -1,21 +1,16 @@
 \doxysection{fifo Entity Reference}
 \hypertarget{classfifo}{}\label{classfifo}\index{fifo@{fifo}}
-
-
-FIFO Entity.  
-
-
 Inheritance diagram for fifo\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=5.000000cm]{d7/d8a/classfifo}
+\includegraphics[height=7.000000cm]{d7/d8a/classfifo}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Entities}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfifo_1_1structural}{fifo.\+structural}} architecture
-\begin{DoxyCompactList}\small\item\em Structural Architecture of FIFO. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Libraries}
  \begin{DoxyCompactItemize}
 \item 
@@ -34,32 +29,32 @@ Inheritance diagram for fifo\+:\begin{figure}[H]
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Width of the data bus. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Width of the data bus. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_a97ed8c4ac7d6de2665dc3b2d8ab90ea3}{ADDR\+\_\+\+WIDTH}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{4} \textcolor{vhdlchar}{ }}}
 \begin{DoxyCompactList}\small\item\em Width of the address bus. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Ports}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfifo_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clock input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reset input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Reset input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_ac22622d236e78eab4aca10c6dbb9e007}{rd}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Read enable input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Read enable input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_a70acb5c3606f17c158d9d07d5df70204}{wr}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Write enable input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Write enable input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_a80014221018ffd51234fb72048cc7fc6}{w\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Data input for writing. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Data input for writing. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_a740dfa69a5cda978e53c8d517f70061e}{empty}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Flag indicating FIFO is empty. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag indicating FIFO is empty. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_abc3ea2e37d83ccb991b87c2ef3105769}{full}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Flag indicating FIFO is full. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag indicating FIFO is full. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classfifo_a36d8aa71ffe3ac859b8553aaf2542c20}{r\+\_\+data}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classfifo_ab7bf2871224935c0416631ce6ea79f7b}{DATA\+\_\+\+WIDTH}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em Data output for reading. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-FIFO Entity. 
+FIFO Entity
 
 The FIFO entity is the top-\/level entity for the FIFO buffer. It includes the FIFO control and register file components. 
 
@@ -82,7 +77,7 @@ Width of the address bus.
 
 
 
-\textbackslash{}brief Clock input. 
+Clock input. 
 
 \Hypertarget{classfifo_ab7bf2871224935c0416631ce6ea79f7b}\label{classfifo_ab7bf2871224935c0416631ce6ea79f7b} 
 \index{fifo@{fifo}!DATA\_WIDTH@{DATA\_WIDTH}}
@@ -92,7 +87,7 @@ Width of the address bus.
 
 
 
-\textbackslash{}brief Width of the data bus. 
+Width of the data bus. 
 
 \Hypertarget{classfifo_a740dfa69a5cda978e53c8d517f70061e}\label{classfifo_a740dfa69a5cda978e53c8d517f70061e} 
 \index{fifo@{fifo}!empty@{empty}}
@@ -102,7 +97,7 @@ Width of the address bus.
 
 
 
-\textbackslash{}brief Flag indicating FIFO is empty. 
+Flag indicating FIFO is empty. 
 
 \Hypertarget{classfifo_abc3ea2e37d83ccb991b87c2ef3105769}\label{classfifo_abc3ea2e37d83ccb991b87c2ef3105769} 
 \index{fifo@{fifo}!full@{full}}
@@ -112,7 +107,7 @@ Width of the address bus.
 
 
 
-\textbackslash{}brief Flag indicating FIFO is full. 
+Flag indicating FIFO is full. 
 
 \Hypertarget{classfifo_a0a6af6eef40212dbaf130d57ce711256}\label{classfifo_a0a6af6eef40212dbaf130d57ce711256} 
 \index{fifo@{fifo}!ieee@{ieee}}
@@ -150,7 +145,7 @@ Data output for reading.
 
 
 
-\textbackslash{}brief Read enable input. 
+Read enable input. 
 
 \Hypertarget{classfifo_a108f6801ba4104063b9d5f9286194302}\label{classfifo_a108f6801ba4104063b9d5f9286194302} 
 \index{fifo@{fifo}!reset@{reset}}
@@ -160,7 +155,7 @@ Data output for reading.
 
 
 
-\textbackslash{}brief Reset input. 
+Reset input. 
 
 \Hypertarget{classfifo_acd03516902501cd1c7296a98e22c6fcb}\label{classfifo_acd03516902501cd1c7296a98e22c6fcb} 
 \index{fifo@{fifo}!std\_logic\_1164@{std\_logic\_1164}}
@@ -176,7 +171,7 @@ Data output for reading.
 
 
 
-\textbackslash{}brief Data input for writing. 
+Data input for writing. 
 
 \Hypertarget{classfifo_a70acb5c3606f17c158d9d07d5df70204}\label{classfifo_a70acb5c3606f17c158d9d07d5df70204} 
 \index{fifo@{fifo}!wr@{wr}}
@@ -186,7 +181,7 @@ Data output for reading.
 
 
 
-\textbackslash{}brief Write enable input. 
+Write enable input. 
 
 
 

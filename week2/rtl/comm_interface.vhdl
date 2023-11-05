@@ -1,66 +1,74 @@
+--! @file
+--! @brief VHDL module for communication interface.
+--! @details This module provides the communication logic for interfacing with external devices,
+--!          including UART transmission of sensor data.
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.math_real.all;
 
+--! @entity comm_interface
+--! @brief Entity for communication interface.
 entity comm_interface is
   port
   (
-    clock       : in  std_logic;
-    reset       : in  std_logic;
-    lidar_dist  : in  std_logic_vector(15 downto 0);
-    hcsr04_dist : in  std_logic_vector(15 downto 0);
-    send_data   : in  std_logic;
-    rx          : in  std_logic;
-    tx          : out std_logic
+    clock       : in  std_logic; --! @brief System clock signal.
+    reset       : in  std_logic; --! @brief System reset signal.
+    lidar_dist  : in  std_logic_vector(15 downto 0); --! @brief Distance measurement from LiDAR sensor.
+    hcsr04_dist : in  std_logic_vector(15 downto 0); --! @brief Distance measurement from HC-SR04 sensor.
+    send_data   : in  std_logic; --! @brief Signal to initiate data transmission.
+    rx          : in  std_logic; --! @brief UART receive signal.
+    tx          : out std_logic --! @brief UART transmit signal.
   );
 end entity comm_interface;
 
 architecture behavioral of comm_interface is
+  -- Component declarations
   component uart is
     generic
     (
-      DBIT    : natural := 8;
-      SB_TICK : natural := 16;
-      FIFO_W  : natural := 2
+      DBIT    : natural := 8; --! @brief Data bits.
+      SB_TICK : natural := 16; --! @brief Stop bits.
+      FIFO_W  : natural := 2 --! @brief FIFO width.
     );
     port
     (
-      clock    : in  std_logic;
-      reset    : in  std_logic;
-      rd_uart  : in  std_logic;
-      wr_uart  : in  std_logic;
-      rx       : in  std_logic;
-      w_data   : in  std_logic_vector(DBIT-1 downto 0);
-      divisor  : in  std_logic_vector(10 downto 0);
-      tx_full  : out std_logic;
-      rx_empty : out std_logic;
-      tx       : out std_logic;
-      r_data   : out std_logic_vector(DBIT-1 downto 0)
+      clock    : in  std_logic; --! @brief System clock signal.
+      reset    : in  std_logic; --! @brief System reset signal.
+      rd_uart  : in  std_logic; --! @brief UART read signal.
+      wr_uart  : in  std_logic; --! @brief UART write signal.
+      rx       : in  std_logic; --! @brief UART receive signal.
+      w_data   : in  std_logic_vector(DBIT-1 downto 0); --! @brief Data to write to UART.
+      divisor  : in  std_logic_vector(10 downto 0); --! @brief Baud rate divisor.
+      tx_full  : out std_logic; --! @brief UART transmit buffer full signal.
+      rx_empty : out std_logic; --! @brief UART receive buffer empty signal.
+      tx       : out std_logic; --! @brief UART transmit signal.
+      r_data   : out std_logic_vector(DBIT-1 downto 0) --! @brief Data read from UART.
     );
   end component uart;
 
   component register_d is
     generic
     (
-      WIDTH : natural := 8
+      WIDTH : natural := 8 --! @brief Width of the register.
     );
     port
     (
-      clock         : in  std_logic;
-      reset         : in  std_logic;
-      enable        : in  std_logic;
-      data_in       : in  std_logic_vector(WIDTH-1 downto 0);
-      data_out      : out std_logic_vector(WIDTH-1 downto 0)
+      clock         : in  std_logic; --! @brief System clock signal.
+      reset         : in  std_logic; --! @brief System reset signal.
+      enable        : in  std_logic; --! @brief Enable signal for the register.
+      data_in       : in  std_logic_vector(WIDTH-1 downto 0); --! @brief Input data for the register.
+      data_out      : out std_logic_vector(WIDTH-1 downto 0) --! @brief Output data of the register.
     );
   end component register_d;
 
-
+  -- Signal declarations
   signal rd_uart : std_logic;
   signal wr_uart : std_logic;
   signal r_data  : std_logic_vector(7 downto 0);
   signal w_data  : std_logic_vector(7 downto 0);
-  constant divisor : std_logic_vector(10 downto 0) := "00000011011"; -- 27 in binary
+  constant divisor : std_logic_vector(10 downto 0) := "00000011011"; --! @brief 27 in binary, sets the baud rate.
   signal tx_full  : std_logic;
   signal rx_empty : std_logic;
 
@@ -70,11 +78,13 @@ architecture behavioral of comm_interface is
   
   signal w_data_src : std_logic_vector(1 downto 0);
 
+  -- State machine for controlling data transmission
   type state_type is (idle, lidar_byte0, lidar_byte1, hcsr04_byte0, hcsr04_byte1);
   signal state, next_state : state_type;
   
 begin
   
+  -- UART instantiation
   uart_inst: uart
   generic map
   (
@@ -97,6 +107,7 @@ begin
     r_data   => r_data
   );
 
+  -- Buffer registers for sensor data
   lidar_buf: register_d
   generic map
   (
@@ -125,6 +136,7 @@ begin
     data_out => hcsr04_dist_buf
   );
   
+  -- Finite state machine for controlling the data transmission process
   fsm: process(clock, reset)
   begin
     if reset = '1' then
@@ -134,6 +146,7 @@ begin
     end if;
   end process fsm;
 
+  -- Logic for the finite state machine
   fsm_logic: process(state, send_data, tx_full)
   begin
     buffer_inputs <= '0';
@@ -194,6 +207,7 @@ begin
 
   rd_uart <= '0';
 
+  -- Data selection for UART transmission based on current state
   with w_data_src select
     w_data <= lidar_dist_buf(7 downto 0) when "00",
               lidar_dist_buf(15 downto 8) when "01",

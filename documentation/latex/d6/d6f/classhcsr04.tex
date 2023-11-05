@@ -1,0 +1,197 @@
+\doxysection{hcsr04 Entity Reference}
+\hypertarget{classhcsr04}{}\label{classhcsr04}\index{hcsr04@{hcsr04}}
+Inheritance diagram for hcsr04\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{d6/d6f/classhcsr04}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_1_1structural}{hcsr04.\+structural}} architecture
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classhcsr04_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\item 
+\mbox{\hyperlink{classhcsr04_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhcsr04_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em System clock signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em System reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_a6b5c00a7cdd7df827680371cea5a815e}{echo}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Echo signal from the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_a435c82d5035d94404607983d6c48e6f7}{trigger}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Trigger signal to the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_a9b8c532fce6acef2d3050ba3876c13eb}{pronto}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal indicating the process is complete. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_ac07b96ddb04b093aad38358b9b3af2b2}{dist}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Distance measured by the sensor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_a235e2eb833275efa5c1b9b80a3105df8}{db\+\_\+dist\+\_\+l0}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Debug signal for lower nibble of lower byte of distance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_adf75b8ed3c92b6ff5bf7642e60fb9d2d}{db\+\_\+dist\+\_\+l1}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Debug signal for upper nibble of lower byte of distance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_afff0b31486740f200ab39769b64555e0}{db\+\_\+dist\+\_\+h0}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Debug signal for lower nibble of upper byte of distance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_afea280bba5f8db4afa551c47088c77a6}{db\+\_\+dist\+\_\+h1}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Debug signal for upper nibble of upper byte of distance. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classhcsr04_a3e54dae1b6039ba2a8b11c22d8da7b34}{db\+\_\+estado}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Debug signal representing the state of the control unit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Entity for interfacing with the HCSR04 ultrasonic sensor. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classhcsr04_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classhcsr04_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{hcsr04@{hcsr04}!clock@{clock}}
+\index{clock@{clock}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+System clock signal. 
+
+\Hypertarget{classhcsr04_afff0b31486740f200ab39769b64555e0}\label{classhcsr04_afff0b31486740f200ab39769b64555e0} 
+\index{hcsr04@{hcsr04}!db\_dist\_h0@{db\_dist\_h0}}
+\index{db\_dist\_h0@{db\_dist\_h0}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{db\_dist\_h0}{db\_dist\_h0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_afff0b31486740f200ab39769b64555e0}{db\+\_\+dist\+\_\+h0}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Debug signal for lower nibble of upper byte of distance. 
+
+\Hypertarget{classhcsr04_afea280bba5f8db4afa551c47088c77a6}\label{classhcsr04_afea280bba5f8db4afa551c47088c77a6} 
+\index{hcsr04@{hcsr04}!db\_dist\_h1@{db\_dist\_h1}}
+\index{db\_dist\_h1@{db\_dist\_h1}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{db\_dist\_h1}{db\_dist\_h1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_afea280bba5f8db4afa551c47088c77a6}{db\+\_\+dist\+\_\+h1}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Debug signal for upper nibble of upper byte of distance. 
+
+\Hypertarget{classhcsr04_a235e2eb833275efa5c1b9b80a3105df8}\label{classhcsr04_a235e2eb833275efa5c1b9b80a3105df8} 
+\index{hcsr04@{hcsr04}!db\_dist\_l0@{db\_dist\_l0}}
+\index{db\_dist\_l0@{db\_dist\_l0}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{db\_dist\_l0}{db\_dist\_l0}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a235e2eb833275efa5c1b9b80a3105df8}{db\+\_\+dist\+\_\+l0}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Debug signal for lower nibble of lower byte of distance. 
+
+\Hypertarget{classhcsr04_adf75b8ed3c92b6ff5bf7642e60fb9d2d}\label{classhcsr04_adf75b8ed3c92b6ff5bf7642e60fb9d2d} 
+\index{hcsr04@{hcsr04}!db\_dist\_l1@{db\_dist\_l1}}
+\index{db\_dist\_l1@{db\_dist\_l1}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{db\_dist\_l1}{db\_dist\_l1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_adf75b8ed3c92b6ff5bf7642e60fb9d2d}{db\+\_\+dist\+\_\+l1}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Debug signal for upper nibble of lower byte of distance. 
+
+\Hypertarget{classhcsr04_a3e54dae1b6039ba2a8b11c22d8da7b34}\label{classhcsr04_a3e54dae1b6039ba2a8b11c22d8da7b34} 
+\index{hcsr04@{hcsr04}!db\_estado@{db\_estado}}
+\index{db\_estado@{db\_estado}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{db\_estado}{db\_estado}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a3e54dae1b6039ba2a8b11c22d8da7b34}{db\+\_\+estado}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{6} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Debug signal representing the state of the control unit. 
+
+\Hypertarget{classhcsr04_ac07b96ddb04b093aad38358b9b3af2b2}\label{classhcsr04_ac07b96ddb04b093aad38358b9b3af2b2} 
+\index{hcsr04@{hcsr04}!dist@{dist}}
+\index{dist@{dist}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{dist}{dist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_ac07b96ddb04b093aad38358b9b3af2b2}{dist}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Distance measured by the sensor. 
+
+\Hypertarget{classhcsr04_a6b5c00a7cdd7df827680371cea5a815e}\label{classhcsr04_a6b5c00a7cdd7df827680371cea5a815e} 
+\index{hcsr04@{hcsr04}!echo@{echo}}
+\index{echo@{echo}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{echo}{echo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a6b5c00a7cdd7df827680371cea5a815e}{echo}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Echo signal from the sensor. 
+
+\Hypertarget{classhcsr04_a0a6af6eef40212dbaf130d57ce711256}\label{classhcsr04_a0a6af6eef40212dbaf130d57ce711256} 
+\index{hcsr04@{hcsr04}!ieee@{ieee}}
+\index{ieee@{ieee}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classhcsr04_acb415f2e3abd505b8338da5b5bf9e2fb}\label{classhcsr04_acb415f2e3abd505b8338da5b5bf9e2fb} 
+\index{hcsr04@{hcsr04}!math\_real@{math\_real}}
+\index{math\_real@{math\_real}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{math\_real}{math\_real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_acb415f2e3abd505b8338da5b5bf9e2fb}{math\+\_\+real}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classhcsr04_a2edc34402b573437d5f25fa90ba4013e}\label{classhcsr04_a2edc34402b573437d5f25fa90ba4013e} 
+\index{hcsr04@{hcsr04}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classhcsr04_a9b8c532fce6acef2d3050ba3876c13eb}\label{classhcsr04_a9b8c532fce6acef2d3050ba3876c13eb} 
+\index{hcsr04@{hcsr04}!pronto@{pronto}}
+\index{pronto@{pronto}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{pronto}{pronto}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a9b8c532fce6acef2d3050ba3876c13eb}{pronto}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal indicating the process is complete. 
+
+\Hypertarget{classhcsr04_a108f6801ba4104063b9d5f9286194302}\label{classhcsr04_a108f6801ba4104063b9d5f9286194302} 
+\index{hcsr04@{hcsr04}!reset@{reset}}
+\index{reset@{reset}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+System reset signal. 
+
+\Hypertarget{classhcsr04_acd03516902501cd1c7296a98e22c6fcb}\label{classhcsr04_acd03516902501cd1c7296a98e22c6fcb} 
+\index{hcsr04@{hcsr04}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classhcsr04_a435c82d5035d94404607983d6c48e6f7}\label{classhcsr04_a435c82d5035d94404607983d6c48e6f7} 
+\index{hcsr04@{hcsr04}!trigger@{trigger}}
+\index{trigger@{trigger}!hcsr04@{hcsr04}}
+\doxysubsubsection{\texorpdfstring{trigger}{trigger}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classhcsr04_a435c82d5035d94404607983d6c48e6f7}{trigger}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Trigger signal to the sensor. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+week2/rtl/\mbox{\hyperlink{hcsr04_8vhdl}{hcsr04.\+vhdl}}\end{DoxyCompactItemize}

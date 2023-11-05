@@ -1,21 +1,16 @@
 \doxysection{uart\+\_\+tx Entity Reference}
 \hypertarget{classuart__tx}{}\label{classuart__tx}\index{uart\_tx@{uart\_tx}}
-
-
-UART Transmitter Entity.  
-
-
 Inheritance diagram for uart\+\_\+tx\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=4.000000cm]{d6/d43/classuart__tx}
+\includegraphics[height=6.000000cm]{d6/d43/classuart__tx}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Entities}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classuart__tx_1_1behavioral}{uart\+\_\+tx.\+behavioral}} architecture
-\begin{DoxyCompactList}\small\item\em Behavioral Architecture of UART Transmitter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Libraries}
  \begin{DoxyCompactItemize}
 \item 
@@ -34,30 +29,30 @@ Inheritance diagram for uart\+\_\+tx\+:\begin{figure}[H]
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{8} \textcolor{vhdlchar}{ }}}
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Number of data bits. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Number of data bits. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}{SB\+\_\+\+TICK}} {\bfseries {\bfseries \textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{16} \textcolor{vhdlchar}{ }}}
 \begin{DoxyCompactList}\small\item\em Number of ticks for stop bits. 16\+: 1 stop bit, 24\+: 1.\+5 stop bit, 32\+: 2 stop bits. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Ports}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classuart__tx_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Clock input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clock input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Reset input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Reset input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_a5cfe37324afa344b92c021bb19f4fb1c}{tx\+\_\+start}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Start transmission input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Start transmission input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_a1c65b18b938fe10f12d04183444195f8}{s\+\_\+tick}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Sampling tick input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Sampling tick input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_a4596e1d8eea8676cb4bd7ca35b486bc6}{din}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classuart__tx_ac809a502575df941b823c2b93a2ce447}{DBIT}}} \textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Parallel data input. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parallel data input. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_a83913bc5958983ca324f1db38e61a0a3}{tx\+\_\+done\+\_\+tick}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
-\begin{DoxyCompactList}\small\item\em \textbackslash{}brief Flag indicating transmission is done. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Flag indicating transmission is done. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classuart__tx_a98dd33b35444db986d99130a0fecc550}{tx}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
 \begin{DoxyCompactList}\small\item\em Serial data output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-UART Transmitter Entity. 
+UART Transmitter Entity
 
 The UART transmitter entity is responsible for converting parallel data into serial data and transmitting it. 
 
@@ -70,7 +65,7 @@ The UART transmitter entity is responsible for converting parallel data into ser
 
 
 
-\textbackslash{}brief Clock input. 
+Clock input. 
 
 \Hypertarget{classuart__tx_ac809a502575df941b823c2b93a2ce447}\label{classuart__tx_ac809a502575df941b823c2b93a2ce447} 
 \index{uart\_tx@{uart\_tx}!DBIT@{DBIT}}
@@ -80,7 +75,7 @@ The UART transmitter entity is responsible for converting parallel data into ser
 
 
 
-\textbackslash{}brief Number of data bits. 
+Number of data bits. 
 
 \Hypertarget{classuart__tx_a4596e1d8eea8676cb4bd7ca35b486bc6}\label{classuart__tx_a4596e1d8eea8676cb4bd7ca35b486bc6} 
 \index{uart\_tx@{uart\_tx}!din@{din}}
@@ -90,7 +85,7 @@ The UART transmitter entity is responsible for converting parallel data into ser
 
 
 
-\textbackslash{}brief Parallel data input. 
+Parallel data input. 
 
 \Hypertarget{classuart__tx_a0a6af6eef40212dbaf130d57ce711256}\label{classuart__tx_a0a6af6eef40212dbaf130d57ce711256} 
 \index{uart\_tx@{uart\_tx}!ieee@{ieee}}
@@ -118,7 +113,7 @@ The UART transmitter entity is responsible for converting parallel data into ser
 
 
 
-\textbackslash{}brief Reset input. 
+Reset input. 
 
 \Hypertarget{classuart__tx_a1c65b18b938fe10f12d04183444195f8}\label{classuart__tx_a1c65b18b938fe10f12d04183444195f8} 
 \index{uart\_tx@{uart\_tx}!s\_tick@{s\_tick}}
@@ -128,7 +123,7 @@ The UART transmitter entity is responsible for converting parallel data into ser
 
 
 
-\textbackslash{}brief Sampling tick input. 
+Sampling tick input. 
 
 \Hypertarget{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c}\label{classuart__tx_ae74a9b328cac9ecf06f54be731e2023c} 
 \index{uart\_tx@{uart\_tx}!SB\_TICK@{SB\_TICK}}
@@ -164,7 +159,7 @@ Serial data output.
 
 
 
-\textbackslash{}brief Flag indicating transmission is done. 
+Flag indicating transmission is done. 
 
 \Hypertarget{classuart__tx_a5cfe37324afa344b92c021bb19f4fb1c}\label{classuart__tx_a5cfe37324afa344b92c021bb19f4fb1c} 
 \index{uart\_tx@{uart\_tx}!tx\_start@{tx\_start}}
@@ -174,7 +169,7 @@ Serial data output.
 
 
 
-\textbackslash{}brief Start transmission input. 
+Start transmission input. 
 
 
 

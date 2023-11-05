@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['lidar_2evhdl_0',['lidar.vhdl',['../dd/d39/lidar_8vhdl.html',1,'']]],
-  ['lidar_5fctrl_2evhdl_1',['lidar_ctrl.vhdl',['../d9/d95/lidar__ctrl_8vhdl.html',1,'']]]
+  ['sklansky_5fadder_2evhdl_0',['sklansky_adder.vhdl',['../d0/d7c/sklansky__adder_8vhdl.html',1,'']]],
+  ['sync_5fpar_5fcounter_2evhdl_1',['sync_par_counter.vhdl',['../da/d3a/sync__par__counter_8vhdl.html',1,'']]]
 ];

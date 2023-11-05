@@ -1,30 +1,38 @@
+--! @file
+--! @brief VHDL module for interfacing with the HCSR04 ultrasonic sensor.
+--! @details This module provides an interface to the HCSR04 ultrasonic sensor,
+--!          handling the generation of trigger pulses, echo timing, and distance calculation.
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.math_real.all;
 
+--! @entity hcsr04
+--! @brief Entity for interfacing with the HCSR04 ultrasonic sensor.
 entity hcsr04 is
   port
   (
-    clock       : in  std_logic;
-    reset       : in  std_logic;
-    echo        : in  std_logic;
-    trigger     : out std_logic;
-    pronto      : out std_logic;
-    dist        : out std_logic_vector(15 downto 0);
-    db_dist_l0  : out std_logic_vector(6 downto 0);
-    db_dist_l1  : out std_logic_vector(6 downto 0);
-    db_dist_h0  : out std_logic_vector(6 downto 0);
-    db_dist_h1  : out std_logic_vector(6 downto 0);
-    db_estado   : out std_logic_vector(6 downto 0)
+    clock       : in  std_logic; --! @brief System clock signal.
+    reset       : in  std_logic; --! @brief System reset signal.
+    echo        : in  std_logic; --! @brief Echo signal from the sensor.
+    trigger     : out std_logic; --! @brief Trigger signal to the sensor.
+    pronto      : out std_logic; --! @brief Signal indicating the process is complete.
+    dist        : out std_logic_vector(15 downto 0); --! @brief Distance measured by the sensor.
+    db_dist_l0  : out std_logic_vector(6 downto 0); --! @brief Debug signal for lower nibble of lower byte of distance.
+    db_dist_l1  : out std_logic_vector(6 downto 0); --! @brief Debug signal for upper nibble of lower byte of distance.
+    db_dist_h0  : out std_logic_vector(6 downto 0); --! @brief Debug signal for lower nibble of upper byte of distance.
+    db_dist_h1  : out std_logic_vector(6 downto 0); --! @brief Debug signal for upper nibble of upper byte of distance.
+    db_estado   : out std_logic_vector(6 downto 0)  --! @brief Debug signal representing the state of the control unit.
   );
 end entity hcsr04;
 
 architecture structural of hcsr04 is
+  -- Component declarations
   component hexa7seg is
       port (
-          hexa : in  std_logic_vector(3 downto 0);
-          sseg : out std_logic_vector(6 downto 0)
+          hexa : in  std_logic_vector(3 downto 0); --! @brief 4-bit hexadecimal input.
+          sseg : out std_logic_vector(6 downto 0)  --! @brief 7-segment display output.
       );
   end component hexa7seg;
 
@@ -33,14 +41,12 @@ architecture structural of hcsr04 is
     (
       clock            : in  std_logic;
       reset            : in  std_logic;
-
       reset_counters    : in  std_logic;
       generate_pulse    : in  std_logic;
       echo              : in  std_logic;
       store_measurement : in std_logic;
       watchdog_en       : in std_logic;
       reset_watchdog    : in std_logic;
-
       mensurar         : out std_logic;
       pulse_sent       : out std_logic;
       trigger          : out std_logic;
@@ -53,11 +59,8 @@ architecture structural of hcsr04 is
   component hcsr04_ctrl is
     port
     (
-      -- sinais de sistema
       clock              : in std_logic;
       reset              : in std_logic;
-
-      -- sinais de controle e condicao
       mensurar           : in  std_logic;
       echo               : in  std_logic;
       pulse_sent         : in  std_logic;
@@ -67,13 +70,12 @@ architecture structural of hcsr04 is
       store_measurement  : out std_logic;
       watchdog_en        : out std_logic;
       reset_watchdog     : out std_logic;
-
-      -- sinais do toplevel
       pronto             : out std_logic;
-      db_estado          : out std_logic_vector(3 downto 0) -- estado da UC
+      db_estado          : out std_logic_vector(3 downto 0)
     );
   end component hcsr04_ctrl;
 
+  -- Signal declarations
   signal reset_counters : std_logic;
   signal generate_pulse : std_logic;
   signal mensurar : std_logic;
@@ -87,7 +89,7 @@ architecture structural of hcsr04 is
   signal dist_h : std_logic_vector(7 downto 0);
   
 begin
-  
+  -- Instantiations and port mappings
   hcsr04_interface_inst: hcsr04_interface
   port map
   (
@@ -160,6 +162,7 @@ begin
     sseg => db_estado
   );
 
+  -- Concatenate the high and low distance signals
   dist <= dist_h & dist_l;
   
 end architecture structural;

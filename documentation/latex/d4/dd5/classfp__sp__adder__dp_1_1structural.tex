@@ -1,16 +1,11 @@
 \doxysection{fp\+\_\+sp\+\_\+adder\+\_\+dp.\+structural Architecture Reference}
 \hypertarget{classfp__sp__adder__dp_1_1structural}{}\label{classfp__sp__adder__dp_1_1structural}\index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}}
-
-
-Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP.  
-
-
 {\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classfp__sp__adder__dp_1_1structural}{fp\+\_\+sp\+\_\+adder\+\_\+dp\+::structural}}\newline
 \doxysubsubsection*{Components}
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}}  {\bfseries }  
-\begin{DoxyCompactList}\small\item\em Sklansky Adder Component. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Signals}
  \begin{DoxyCompactItemize}
 \item 
@@ -22,7 +17,7 @@ Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP.
  \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4}{small\+\_\+alu}}  {\bfseries sklansky\+\_\+adder}   
-\begin{DoxyCompactList}\small\item\em Small ALU instantiation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \texorpdfstring{$<$}{<} Set the width of the adder to 8 for exponent operations \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Aliases}
  \begin{DoxyCompactItemize}
 \item 
@@ -41,7 +36,7 @@ Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP.
 
 
 \doxysubsection{Detailed Description}
-Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP. 
+Structural architecture of FP\+\_\+\+SP\+\_\+\+ADDER\+\_\+\+DP
 
 This architecture defines the internal structure and components used by the \doxylink{classfp__sp__adder__dp}{fp\+\_\+sp\+\_\+adder\+\_\+dp} entity. 
 
@@ -104,9 +99,7 @@ This architecture defines the internal structure and components used by the \dox
 \doxysubsubsection{\texorpdfstring{sklansky\_adder}{sklansky\_adder}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classfp__sp__adder__dp_1_1structural_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
 
-
-
-Sklansky Adder Component. 
+Sklansky Adder Component
 
 This component represents a Sklansky adder, which is used for addition operations within the \doxylink{classfp__sp__adder__dp}{fp\+\_\+sp\+\_\+adder\+\_\+dp}. \Hypertarget{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4}\label{classfp__sp__adder__dp_1_1structural_ab5294c6d0d3f80516023f20190295ef4} 
 \index{fp\_sp\_adder\_dp.structural@{fp\_sp\_adder\_dp.structural}!small\_alu@{small\_alu}}
@@ -116,9 +109,11 @@ This component represents a Sklansky adder, which is used for addition operation
 
 
 
-Small ALU instantiation. 
+\texorpdfstring{$<$}{<} Set the width of the adder to 8 for exponent operations 
 
-This instance of \doxylink{classsklansky__adder}{sklansky\+\_\+adder} is used to compute the exponent difference. \texorpdfstring{$<$}{<} Set the width of the adder to 8 for exponent operations 
+Small ALU instantiation
+
+This instance of \doxylink{classsklansky__adder}{sklansky\+\_\+adder} is used to compute the exponent difference. 
 
 The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
