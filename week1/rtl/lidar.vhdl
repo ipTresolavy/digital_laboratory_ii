@@ -6,15 +6,15 @@ use ieee.math_real.all;
 entity lidar is
   port
   (
-    clock       : in std_logic;
-    reset       : in std_logic;
+    clock       : in  std_logic;
+    reset       : in  std_logic;
     rx          : in  std_logic;
     tx          : out std_logic;
-	  r_data_leds : out std_logic_vector(7 downto 0);
-    dist_l0     : out std_logic_vector(6 downto 0);
-    dist_l1     : out std_logic_vector(6 downto 0);
-    dist_h0     : out std_logic_vector(6 downto 0);
-    dist_h1     : out std_logic_vector(6 downto 0)
+    dist        : out std_logic_vector(15 downto 0);
+    db_dist_l0  : out std_logic_vector(6 downto 0);
+    db_dist_l1  : out std_logic_vector(6 downto 0);
+    db_dist_h0  : out std_logic_vector(6 downto 0);
+    db_dist_h1  : out std_logic_vector(6 downto 0)
   );
 end entity lidar;
 
@@ -70,7 +70,7 @@ architecture structural of lidar is
   signal dist_l       : std_logic_vector(7 downto 0);
   signal dist_h       : std_logic_vector(7 downto 0);
   signal rx_empty     : std_logic;
-  constant divisor    : std_logic_vector(10 downto 0) := "00000011011"; -- 26 in binary
+  constant divisor    : std_logic_vector(10 downto 0) := "00000011011"; -- 27 in binary
 
 begin
   
@@ -112,28 +112,30 @@ begin
   port map
   (
     hexa => dist_l(3 downto 0),
-    sseg => dist_l0
+    sseg => db_dist_l0
   );
 
   H1: hexa7seg
   port map
   (
     hexa => dist_l(7 downto 4),
-    sseg => dist_l1
+    sseg => db_dist_l1
   );
 
   H2: hexa7seg
   port map
   (
     hexa => dist_h(3 downto 0),
-    sseg => dist_h0
+    sseg => db_dist_h0
   );
 
   H3: hexa7seg
   port map
   (
     hexa => dist_h(7 downto 4),
-    sseg => dist_h1
+    sseg => db_dist_h1
   );
+
+  dist <= dist_h & dist_l;
   
 end architecture structural;

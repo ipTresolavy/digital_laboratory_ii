@@ -45,23 +45,18 @@ architecture sim of tb_hcsr04_ctrl is
   type test_array_type is record
       id    : natural; 
       duration : integer;     
+      distance_cm : std_logic_vector(15 downto 0);     
   end record;
 
   type test_array is array (natural range <>) of test_array_type;
   constant test_array_inst : test_array :=
       ( 
-        ( 1,  294),   --   5cm ( 294us)
-        ( 2,  353),    --   6cm ( 353us)
-        ( 3, 5882),  -- 100cm (5882us)
-        ( 4, 5882),  -- 100cm (5882us)
-        ( 5,  882),  --  15cm ( 882us)
-        ( 6,  882),  --  15cm ( 882us)
-        ( 7, 5882),  -- 100cm (5882us)
-        ( 8,  588),   --  10cm ( 588us)
-        -- inserir aqui outros posicoes de teste (inserir "," na linha anterior)
-        ( 9,  1088), -- cm 
-        ( 10, 5000), -- cm 
-        ( 11, 2500)  --  m 
+        ( 1,  294, std_logic_vector(to_unsigned(5, 16))), --   5cm ( 294us)
+        ( 2,  353, std_logic_vector(to_unsigned(6, 16))), --   6cm ( 353us)
+        ( 3, 5882, std_logic_vector(to_unsigned(100, 16))), -- 100cm (5882us)
+        ( 4, 6176, std_logic_vector(to_unsigned(105, 16))), -- 105cm (6176us)
+        ( 5,  882, std_logic_vector(to_unsigned(15, 16))), --  15cm ( 882us)
+        ( 6,17646, std_logic_vector(to_unsigned(300, 16))) --  300cm ( 17646us)
       );
 
   signal pulse_width: time := 1 us;
@@ -105,6 +100,7 @@ begin
     timeout           <= '0';
 
     for i in test_array_inst'range  loop
+      report "test case " & integer'image(test_array_inst(i).id);
       wait until falling_edge(clock);
 
       -- Start a measurement

@@ -7,3 +7,12 @@ components.files = [
 components_testbench.files = [
   "components_testbenches/**/*.vhdl"
 ]
+
+week1.files = [
+  "week1/rtl/*.vhdl"
+]
+
+week2.files = [
+  "week2/rtl/*.vhdl",
+  "week2/simulation/*.vhdl"
+]

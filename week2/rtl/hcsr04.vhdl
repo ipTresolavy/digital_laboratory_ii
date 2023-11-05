@@ -159,5 +159,7 @@ begin
     hexa => s_db_estado,
     sseg => db_estado
   );
+
+  dist <= dist_h & dist_l;
   
 end architecture structural;

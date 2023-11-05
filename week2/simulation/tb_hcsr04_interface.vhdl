@@ -59,7 +59,7 @@ architecture sim of tb_hcsr04_interface is
         ( 3, 5882, std_logic_vector(to_unsigned(100, 16))), -- 100cm (5882us)
         ( 4, 6176, std_logic_vector(to_unsigned(105, 16))), -- 105cm (6176us)
         ( 5,  882, std_logic_vector(to_unsigned(15, 16))), --  15cm ( 882us)
-        ( 6,  882, std_logic_vector(to_unsigned(15, 16)))  --  15cm ( 882us)
+        ( 6,17646, std_logic_vector(to_unsigned(300, 16))) --  300cm ( 17646us)
       );
 
   signal pulse_width: time := 1 us;
@@ -100,6 +100,7 @@ begin
     reset_watchdog <= '0';
 
     for i in test_array_inst'range loop
+      report "test case " & integer'image(test_array_inst(i).id);
       wait until mensurar = '1';
       wait until rising_edge(clock);
 
