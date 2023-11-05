@@ -107,9 +107,6 @@ begin
     dist_l      => dist_l,
     dist_h      => dist_h
   );
-  
-  wr_uart <= '0';
-  w_data <= (others => '0');
 
   H0: hexa7seg
   port map

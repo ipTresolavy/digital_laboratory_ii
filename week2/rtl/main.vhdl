@@ -31,10 +31,10 @@ entity main is
     -- debugging
     db_sw       : in  std_logic; --! @brief Switch for choosing between lidar and HC-SR04 for debugging.
     db_estado   : out std_logic_vector(6 downto 0); --! @brief Debugging signal for state.
-    db_dist_l0  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for lower byte of lidar distance.
-    db_dist_l1  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for upper byte of lidar distance.
-    db_dist_h0  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for lower byte of HC-SR04 distance.
-    db_dist_h1  : out std_logic_vector(6 downto 0) --! @brief Debugging signal for upper byte of HC-SR04 distance.
+    db_dist_l0  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for lower byte of distance.
+    db_dist_l1  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for upper byte of distance.
+    db_dist_h0  : out std_logic_vector(6 downto 0); --! @brief Debugging signal for lower byte of distance.
+    db_dist_h1  : out std_logic_vector(6 downto 0) --! @brief Debugging signal for upper byte of distance.
   );
 end entity main;
 
@@ -151,19 +151,19 @@ begin
 
   -- Debugging signal assignments
   with db_sw select
-    s_l0 <= lidar_db_dist_l0 when '1',
-            hcsr04_db_dist_l0 when others;
+    db_dist_l0 <= lidar_db_dist_l0 when '1',
+						hcsr04_db_dist_l0 when others;
 
   with db_sw select
-    s_l1 <= lidar_db_dist_l1 when '1',
-            hcsr04_db_dist_l1 when others;
+    db_dist_l1 <= lidar_db_dist_l1 when '1',
+						hcsr04_db_dist_l1 when others;
 
   with db_sw select
-    s_h0 <= lidar_db_dist_h0 when '1',
-            hcsr04_db_dist_h0 when others;
+    db_dist_h0 <= lidar_db_dist_h0 when '1',
+						hcsr04_db_dist_h0 when others;
 
   with db_sw select
-    s_h1 <= lidar_db_dist_h1 when '1',
-            hcsr04_db_dist_h1 when others;
+    db_dist_h1 <= lidar_db_dist_h1 when '1',
+						hcsr04_db_dist_h1 when others;
 
 end architecture structural;
