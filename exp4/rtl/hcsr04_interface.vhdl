@@ -21,7 +21,7 @@ end entity hcsr04_interface;
 architecture rtl of hcsr04_interface is
   component gerador_pulso is
     generic (
-        largura: integer:= 25
+        largura: integer := 25
       );
     port (
       clock  : in  std_logic;

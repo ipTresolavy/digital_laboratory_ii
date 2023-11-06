@@ -9,7 +9,8 @@ components_testbench.files = [
 ]
 
 week1.files = [
-  "week1/rtl/*.vhdl"
+  "week1/rtl/*.vhdl",
+  "week1/simulation/*.vhdl"
 ]
 
 week2.files = [
