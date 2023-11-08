@@ -1,0 +1,7 @@
+../../components/register_d.vhdl
+../../components/arithmetic/prefix_operator.vhdl
+../../components/arithmetic/sklansky_adder.vhdl
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
+../../components/fpu/sp_fp_adder_dpath.vhdl
+./tb_sp_fp_adder_dpath.vhdl

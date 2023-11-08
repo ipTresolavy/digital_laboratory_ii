@@ -14,9 +14,13 @@ entity sp_fp_adder_dpath is
     buffer_inputs        : in std_logic;
     load_smaller         : in std_logic;
     shift_smaller_signif : in std_logic;
+    store_sum            : in std_logic;
+    count_zeroes         : in std_logic;
     
     -- control outputs
-    equal_exps : out std_logic;
+    equal_exps     : out std_logic;
+    sum_is_zero    : out std_logic;
+    finished_shift : out std_logic;
     
     -- data inputs
     a     : in  std_logic_vector(31 downto 0);
@@ -83,8 +87,11 @@ architecture behavioral of sp_fp_adder_dpath is
 
   signal smaller_exp : std_logic_vector(7 downto 0);
   signal larger_exp : std_logic_vector(7 downto 0);
+  signal incremented_exp : std_logic_vector(7 downto 0);
+  signal exp_inc_reg_in : std_logic_vector(7 downto 0);
+  signal exp_inc_reg_out : std_logic_vector(7 downto 0);
   signal smaller_signif : std_logic_vector(23 downto 0);
-  signal larger_signif : std_logic_vector(23 downto 0);
+  signal larger_signif : std_logic_vector(31 downto 0);
 
   -- aliases
   alias a_sign : std_logic is a_buf(31);
@@ -94,6 +101,10 @@ architecture behavioral of sp_fp_adder_dpath is
   alias b_sign : std_logic is b_buf(31);
   alias b_exp : std_logic_vector(7 downto 0) is b_buf(30 downto 23);
   alias b_mant : std_logic_vector(22 downto 0) is b_buf(22 downto 0);
+
+  alias y_sign : std_logic is y(31);
+  alias y_exp : std_logic_vector(7 downto 0) is y(30 downto 23);
+  alias y_mant : std_logic_vector(22 downto 0) is y(22 downto 0);
   -- ---
 
   signal not_b_exp : std_logic_vector(7 downto 0);
@@ -103,13 +114,26 @@ architecture behavioral of sp_fp_adder_dpath is
   signal smaller_signif_reg_en  : std_logic;
   signal smaller_signif_reg_in  : std_logic_vector(23 downto 0);
   signal smaller_signif_reg_out : std_logic_vector(23 downto 0);
-  signal not_smaller_signif_reg_out : std_logic_vector(23 downto 0);
+  signal not_smaller_signif_reg_out : std_logic_vector(31 downto 0);
   signal smaller_exp_cnt_out : std_logic_vector(7 downto 0);
 
   signal ones_complement_decoder : std_logic_vector(1 downto 0);
   signal sum_c_in, sum_c_out : std_logic;
-  signal sum_a, sum_b : std_logic_vector(23 downto 0);
-  signal sum_out : std_logic_vector(23 downto 0);
+  signal sum_a, sum_b : std_logic_vector(31 downto 0);
+  signal sum_out : std_logic_vector(31 downto 0);
+  signal shifted_sum_out : std_logic_vector(23 downto 0);
+  signal final_sum_out : std_logic_vector(23 downto 0);
+
+  signal shifted_sum_reg_en : std_logic;
+  signal shifted_sum_reg_in : std_logic_vector(23 downto 0);
+  signal shifted_sum_reg_out : std_logic_vector(23 downto 0);
+
+  signal tmp_sel : std_logic;
+  signal zero_counter_reset : std_logic;
+  signal zero_count : std_logic_vector(natural(ceil(log2(real(25))))-1 downto 0);
+  signal not_zero_count : std_logic_vector(7 downto 0);
+
+  signal final_exp : std_logic_vector(7 downto 0);
 
 begin
 
@@ -170,8 +194,8 @@ begin
                    b_exp when others;
 
   with exp_b_gt_a select
-    larger_signif <= b_signif when '1',
-                     a_signif when others;
+    larger_signif <= x"00" & b_signif when '1',
+                     x"00" & a_signif when others;
 
   with exp_b_gt_a select
     smaller_signif <= a_signif when '1',
@@ -214,17 +238,17 @@ begin
     q      => smaller_exp_cnt_out
   );
 
-  equal_exps <= '1' when (smaller_exp_cnt_out = larger_exp) else
+  equal_exps <= '1' when smaller_exp_cnt_out = larger_exp else
                 '0';
   -- ---
 
   -- compare significands
-  not_smaller_signif_reg_out <= not smaller_signif_reg_out;
+  not_smaller_signif_reg_out <= x"FF" & (not smaller_signif_reg_out);
 
   signif_comparator: sklansky_adder
   generic map
   (
-    WIDTH => 24
+    WIDTH => 32
   )
   port map
   (
@@ -244,7 +268,7 @@ begin
 
   with ones_complement_decoder(0) select
     sum_b <= not_smaller_signif_reg_out when '1',
-             smaller_signif_reg_out when others; 
+             x"00" & smaller_signif_reg_out when others; 
   -- ---
 
   -- sum significands
@@ -253,17 +277,136 @@ begin
   signif_adder: sklansky_adder
   generic map
   (
-    WIDTH => 24
+    WIDTH => 32
   )
   port map
   (
     a     => sum_a,
     b     => sum_b,
     c_in  => sum_c_in,
-    c_out => sum_c_out,
+    c_out => open,
     s     => sum_out
   );
 
+  sum_c_out <= sum_out(24);
+  
+  exp_incrementer: sklansky_adder
+  generic map
+  (
+    WIDTH => 8
+  )
+  port map
+  (
+    a     => larger_exp,
+    b     => x"01",
+    c_in  => '0',
+    c_out => open,
+    s     => incremented_exp
+  );
+
+  tmp_sel <= sum_c_out and (a_sign xor b_sign);
+
+  with tmp_sel select
+    shifted_sum_out <= "1" & sum_out(shifted_sum_out'LENGTH-1 downto 1) when '1',
+                       sum_out(shifted_sum_out'length-1 downto 0) when others;
+
+  with tmp_sel select
+    exp_inc_reg_in <= incremented_exp when '1',
+                      larger_exp when others;
+
+  with count_zeroes select
+    shifted_sum_reg_in <= shifted_sum_reg_out(shifted_sum_reg_out'LENGTH-1 downto 1) & "0" when '1',
+                          shifted_sum_out(shifted_sum_reg_out'length-1 downto 0) when others;
+
+  shifted_sum_reg_en <= store_sum or count_zeroes;
+
+  sum_reg: register_d
+  generic map
+  (
+    WIDTH => 24
+  )
+  port map
+  (
+    clock    => clock,
+    reset    => reset,
+    enable   => shifted_sum_reg_en,
+    data_in  => shifted_sum_reg_in,
+    data_out => shifted_sum_reg_out
+  );
+
+  exp_inc_reg: register_d
+  generic map
+  (
+    WIDTH => 8
+  )
+  port map
+  (
+    clock    => clock,
+    reset    => reset,
+    enable   => store_sum,
+    data_in  => exp_inc_reg_in,
+    data_out => exp_inc_reg_out
+  );
   -- ---
+
+  -- final calculations
+  zero_counter_reset <= reset or store_sum;
+  zero_counter: sync_par_counter
+  generic map
+  (
+    MODU => 25
+  )
+  port map
+  (
+    clock  => clock,
+    reset  => zero_counter_reset,
+    cnt_en => count_zeroes,
+    q_in   => (others => '0'),
+    load   => '0',
+    q      => zero_count
+  );
+
+  not_zero_count <= "000" & (not zero_count);
+
+  exp_decrementer: sklansky_adder
+  generic map
+  (
+    WIDTH => 8
+  )
+  port map
+  (
+    a     => exp_inc_reg_out,
+    b     => not_zero_count,
+    c_in  => '1',
+    c_out => open,
+    s     => final_exp
+  );
+
+  sum_is_zero <= '1' when zero_count = "11000" else
+                 '0';
+
+  finished_shift <= shifted_sum_reg_out(shifted_sum_reg_out'LENGTH-1);
+  -- ---
+
+  -- sign logic
+  sign_logic: process(a_sign, b_sign, a_exp, b_exp, a_signif, b_signif)
+  begin
+    if a_sign = b_sign then
+      y_sign <= a_sign;
+    elsif a_exp = b_exp then
+      if a_signif > b_signif then
+        y_sign <= a_sign;
+      else
+        y_sign <= b_sign;
+      end if;
+    elsif a_exp > b_exp then
+      y_sign <= a_sign;
+    else
+      y_sign <= b_sign;
+    end if;
+  end process sign_logic;
+  -- ---
+  y_exp <= final_exp;
+  y_mant <= shifted_sum_reg_out(shifted_sum_reg_out'LENGTH-2 downto 0);
   
 end architecture behavioral;
