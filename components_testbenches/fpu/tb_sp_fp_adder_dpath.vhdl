@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use ieee.math_real.all;
+use ieee.float_pkg.all;
 use std.env.stop;
 
 entity tb_sp_fp_adder_dpath is
@@ -18,6 +19,10 @@ architecture sim of tb_sp_fp_adder_dpath is
   signal a : std_logic_vector(31 downto 0) := (others => '0');
   signal b : std_logic_vector(31 downto 0) := (others => '0');
   signal y : std_logic_vector(31 downto 0) := (others => '0');
+
+  signal a_real : real := 0.0;
+  signal b_real : real := 0.0;
+  constant AMNT_OF_TESTS : integer := 5;
 
   constant clockPeriod : time := 20 ns;  -- Clock period (50 MHz)
 
@@ -44,11 +49,16 @@ architecture sim of tb_sp_fp_adder_dpath is
   signal a_mant, b_mant, y_mant : std_logic_vector(23 downto 0);
   signal exp_b_gt_a, signif_b_gt_a : std_logic;
   signal equal_exps, sum_is_zero, finished_shift : std_logic;
+  signal sum_is_zero_or_finished_shift : std_logic;
   signal expected_result : std_logic_vector(31 downto 0);
 
   begin
+
+    sum_is_zero_or_finished_shift <= sum_is_zero or  finished_shift;
+
     uut_sp_fp_adder: sp_fp_adder_dpath
-    port map (
+    port map
+    (
       clock => clock,
       reset => reset,
       buffer_inputs => buffer_inputs,
@@ -69,88 +79,50 @@ architecture sim of tb_sp_fp_adder_dpath is
 
     stimulus_process : process
     begin
-      -- Test case 1: a and b are equal
+
       reset <= '1';
       wait until rising_edge(clock);
       reset <= '0';
       wait until falling_edge(clock);
 
-      a <= "00111111100000000000000000000000";  -- a = 1.0
-      b <= "00111111100000000000000000000000";  -- b = 1.0
+      for i in 0 to AMNT_OF_TESTS loop
+        a_real <= 1.0;
+        b_real <= 1.0;
+        expected_result <= to_std_logic_vector(to_float(a_real + b_real));
 
-      buffer_inputs <= '1';
-      wait until falling_edge(clock);
+        a <= to_std_logic_vector(to_float(a_real));
+        b <= to_std_logic_vector(to_float(b_real));
 
-      load_smaller <= '1';
-      wait until falling_edge(clock);
+        buffer_inputs <= '1';
+        wait until falling_edge(clock);
+        buffer_inputs <= '0';
 
-      if equal_exps = '0' then
-        shift_smaller_signif <= '1';
-        wait until equal_exps = '1';
-        shift_smaller_signif <= '0';
-      end if;
-      wait until falling_edge(clock);
+        load_smaller <= '1';
+        wait until falling_edge(clock);
+        load_smaller <= '0';
 
-      store_sum <= '1';
-      wait until falling_edge(clock);
+        if equal_exps = '0' then
+          shift_smaller_signif <= '1';
+          wait until equal_exps = '1';
+          shift_smaller_signif <= '0';
+        end if;
+        wait until falling_edge(clock);
 
-      count_zeroes <= '1';
-      wait until (sum_is_zero or finished_shift) = '1';
-      count_zeroes <= '0';
+        store_sum <= '1';
+        wait until falling_edge(clock);
+        store_sum <= '0';
 
-      -- Expected result: 2.0
-      expected_result <= "01000000000000000000000000000000";
-      stop;
+        if sum_is_zero_or_finished_shift = '0' then
+          count_zeroes <= '1';
+          wait until sum_is_zero_or_finished_shift = '1';
+          count_zeroes <= '0';
+        else
+          count_zeroes <= '0';
+        end if;
 
-      wait for 100 ns;
-
-      -- Check the result
-      assert y = expected_result
-        report "Test Case 1 Failed" severity error;
-      
-      -- Test case 2: a is smaller than b
-      reset <= '1';
-      wait for clockPeriod;
-      reset <= '0';
-
-      a <= "00111111000000000000000000000000";  -- a = 0.5
-      b <= "00111111100000000000000000000000";  -- b = 1.0
-      buffer_inputs <= '1';
-      load_smaller <= '1';
-      shift_smaller_signif <= '1';
-      store_sum <= '1';
-      count_zeroes <= '1';
-
-      -- Expected result: 1.5
-      expected_result <= "00111111110000000000000000000000";
-
-      wait for 100 ns;
-
-      -- Check the result
-      assert y = expected_result
-        report "Test Case 2 Failed" severity error;
-
-      -- Test case 3: b is smaller than a
-      reset <= '1';
-      wait for clockPeriod;
-      reset <= '0';
-
-      a <= "00111111000000000000000000000000";  -- a = 0.5
-      b <= "00111111011000000000000000000000";  -- b = 0.75
-      buffer_inputs <= '1';
-      load_smaller <= '1';
-      shift_smaller_signif <= '1';
-      store_sum <= '1';
-      count_zeroes <= '1';
-
-      -- Expected result: 1.25
-      expected_result <= "00111111100010000000000000000000";
-
-      wait for 100 ns;
-
-      -- Check the result
-      assert y = expected_result
-        report "Test Case 3 Failed" severity error;
+        wait until falling_edge(clock);
+        assert y = expected_result report "incorrect sum" severity failure;
+      end loop;
 
       report "All test cases passed";
       stop;

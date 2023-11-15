@@ -304,7 +304,7 @@ begin
     s     => incremented_exp
   );
 
-  tmp_sel <= sum_c_out and (a_sign xor b_sign);
+  tmp_sel <= sum_c_out and (a_sign xnor b_sign);
 
   with tmp_sel select
     shifted_sum_out <= "1" & sum_out(shifted_sum_out'LENGTH-1 downto 1) when '1',
@@ -366,7 +366,7 @@ begin
     q      => zero_count
   );
 
-  not_zero_count <= "000" & (not zero_count);
+  not_zero_count <= "111" & (not zero_count);
 
   exp_decrementer: sklansky_adder
   generic map
