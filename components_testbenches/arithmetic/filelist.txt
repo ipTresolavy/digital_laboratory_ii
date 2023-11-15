@@ -1,0 +1,8 @@
+../../components/arithmetic/prefix_operator.vhdl
+../../components/arithmetic/sklansky_adder.vhdl
+../../components/register_d.vhdl
+../../components/arithmetic/multiplier_dpath.vhdl
+../../components/arithmetic/multiplier_ctrl.vhdl
+./tb_sklansky_adder.vhdl
+./tb_multiplier_dpath.vhdl
+./tb_multiplier_ctrl.vhdl

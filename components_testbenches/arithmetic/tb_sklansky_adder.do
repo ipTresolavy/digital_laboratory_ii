@@ -1,10 +1,10 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /sklansky_adder_tb/a
-add wave -noupdate /sklansky_adder_tb/b
-add wave -noupdate /sklansky_adder_tb/c_in
-add wave -noupdate /sklansky_adder_tb/c_out
-add wave -noupdate /sklansky_adder_tb/s
+add wave -noupdate /tb_sklansky_adder/a
+add wave -noupdate /tb_sklansky_adder/b
+add wave -noupdate /tb_sklansky_adder/c_in
+add wave -noupdate /tb_sklansky_adder/c_out
+add wave -noupdate /tb_sklansky_adder/s
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {{Cursor 1} {10 ns} 0}
 quietly wave cursor active 1

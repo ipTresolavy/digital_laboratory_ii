@@ -2,10 +2,10 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity sklansky_adder_tb is
-end entity sklansky_adder_tb;
+entity tb_sklansky_adder is
+end entity tb_sklansky_adder;
 
-architecture testbench of sklansky_adder_tb is
+architecture testbench of tb_sklansky_adder is
   component sklansky_adder is
     generic
     (
@@ -64,35 +64,7 @@ begin
     b <= "00001111000011110000111100001111";
     c_in <= '1';
     wait for 10 ns;
-    assert (s = "0000000000000000") report "Test case 3 failed" severity error;
-
-    -- Test Case 4
-    a <= "0000000011111111";
-    b <= "0000000011111111";
-    c_in <= '0';
-    wait for 10 ns;
-    assert (s = "0000000111111110") report "Test case 4 failed" severity error;
-    
-    -- Test Case 5
-    a <= "1010101010101010";
-    b <= "0101010101010101";
-    c_in <= '1';
-    wait for 10 ns;
-    assert (s = "1111111111111111") report "Test case 5 failed" severity error;
-    
-    -- Test Case 6
-    a <= "1000000000000000";
-    b <= "1000000000000000";
-    c_in <= '0';
-    wait for 10 ns;
-    assert (s = "0000000000000000") report "Test case 6 failed" severity error;
-    
-    -- Test Case 7
-    a <= "0111111111111111";
-    b <= "0111111111111111";
-    c_in <= '1';
-    wait for 10 ns;
-    assert (s = "1111111111111111") report "Test case 7 failed" severity error;
+    assert (s = "00000000000000000000000000000000") report "Test case 3 failed" severity error;
     
     -- Test case 4
     a <= x"0000DEAD";
