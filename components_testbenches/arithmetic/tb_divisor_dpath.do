@@ -18,19 +18,20 @@ add wave -noupdate -radix unsigned /tb_divisor_dpath/quotient
 add wave -noupdate -radix unsigned /tb_divisor_dpath/remainder
 add wave -noupdate -divider debug
 add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/divisor_reg_en
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/divisor_reg_in
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/divisor_reg_out
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/divisor_reg_in
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/divisor_reg_out
 add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/remainder_reg_reset
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/remainder_reg_in
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/remainder_reg_out
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/b
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/remainder_reg_in
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/remainder_reg_out
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/b
 add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/c_in
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/s
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/s
 add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/quotient_reg_en
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/quotient_reg_in
-add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/quotient_reg_out
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/quotient_reg_in
+add wave -noupdate -radix unsigned /tb_divisor_dpath/uut_divisor_dpath/quotient_reg_out
+add wave -noupdate /tb_divisor_dpath/uut_divisor_dpath/iteration_count
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+WaveRestoreCursors {{Cursor 1} {639 ns} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 370
 configure wave -valuecolwidth 100
@@ -46,4 +47,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {1354 ns}
+WaveRestoreZoom {605 ns} {781 ns}

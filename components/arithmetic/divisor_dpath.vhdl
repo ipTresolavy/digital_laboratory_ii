@@ -1,6 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use ieee.math_real.all;
 
 entity divisor_dpath is
   port
@@ -61,6 +62,22 @@ architecture structural of divisor_dpath is
     );
   end component register_d;
 
+  component sync_par_counter is
+    generic
+    (
+      constant MODU : natural := 16 --! \brief Modulus of the counter.
+    );
+    port
+    (
+      clock  : in  std_logic; --! \brief Clock input.
+      reset  : in  std_logic; --! \brief Reset input.
+      cnt_en : in  std_logic; --! \brief Count enable signal.
+      q_in   : in  std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0); --! \brief Parallel load input.
+      load   : in  std_logic; --! \brief Load signal.
+      q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0) --! \brief Counter output.
+    );
+  end component sync_par_counter;
+
   constant zero_vector : std_logic_vector(15 downto 0) := (others => '0');
 
   signal quotient_reg_en  : std_logic;
@@ -79,6 +96,9 @@ architecture structural of divisor_dpath is
   signal b : std_logic_vector(31 downto 0);
   signal c_in : std_logic;
   signal s : std_logic_vector(31 downto 0);
+
+  signal iteration_counter_reset : std_logic;
+  signal iteration_count : std_logic_vector(natural(ceil(log2(real(18))))-1 downto 0);
 
 begin
 
@@ -157,8 +177,24 @@ begin
     data_out => remainder_reg_out
   );
 
+  iteration_counter_reset <= reset or load;
+  iteration_counter: sync_par_counter
+  generic map
+  (
+    MODU => 18
+  )
+  port map
+  (
+    clock  => clock,
+    reset  => iteration_counter_reset,
+    cnt_en => shift_quotient,
+    q_in   => (others => '0'),
+    load   => '0',
+    q      => iteration_count
+  );
+
   neg_remainder <= remainder_reg_out(remainder_reg_out'LENGTH-1) or divisor_reg_out(divisor_reg_out'LENGTH-1);
-  finished <= '1' when divisor_reg_out(divisor_reg_out'LENGTH-1 downto divisor_reg_out'LENGTH-16) = zero_vector else
+  finished <= '1' when iteration_count = "10001" else
               '0';
   remainder <= remainder_reg_out;
   quotient <= x"0000" & quotient_reg_out;

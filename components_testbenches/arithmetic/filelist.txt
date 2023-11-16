@@ -1,3 +1,5 @@
+../../components/counter/t_flip_flop.vhdl
+../../components/counter/sync_par_counter.vhdl
 ../../components/arithmetic/prefix_operator.vhdl
 ../../components/arithmetic/sklansky_adder.vhdl
 ../../components/register_d.vhdl
@@ -6,9 +8,11 @@
 ../../components/arithmetic/multiplier_top.vhdl
 ../../components/arithmetic/divisor_dpath.vhdl
 ../../components/arithmetic/divisor_ctrl.vhdl
+../../components/arithmetic/divisor_top.vhdl
 ./tb_sklansky_adder.vhdl
 ./tb_multiplier_dpath.vhdl
 ./tb_multiplier_ctrl.vhdl
 ./tb_multiplier_top.vhdl
 ./tb_divisor_dpath.vhdl
 ./tb_divisor_ctrl.vhdl
+./tb_divisor_top.vhdl

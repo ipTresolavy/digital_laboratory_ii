@@ -24,7 +24,7 @@ architecture sim of tb_divisor_dpath is
   signal remainder        : std_logic_vector(31 downto 0);
 
   constant clockPeriod : time := 20 ns; -- Clock period (50 MHz)
-  constant num_tests   : natural := 10;   -- Number of tests
+  constant num_tests   : natural := 100;   -- Number of tests
 
   component divisor_dpath is
     port
