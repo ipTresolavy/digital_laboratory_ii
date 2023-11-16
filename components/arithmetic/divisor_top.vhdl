@@ -1,27 +1,34 @@
+--! \file
+--! \brief VHDL file for the top-level entity of a divisor module.
+
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+--! \brief Top-level entity for the divisor module.
+--! This entity interfaces with the system and handles data inputs and outputs, along with system and handshake signals.
 entity divisor_top is
   port
   (
     -- system signals
-    clock : in std_logic;
-    reset : in std_logic;
+    clock : in std_logic; --! Clock signal.
+    reset : in std_logic; --! Reset signal.
     
     -- handshake signals
-    valid : in  std_logic;
-    ready : out std_logic;
+    valid : in  std_logic; --! Input validation signal.
+    ready : out std_logic; --! Output ready signal.
 
     -- data inputs and outputs
-    dividend  : in  std_logic_vector(15 downto 0);
-    divisor   : in  std_logic_vector(15 downto 0);
-    quotient  : out std_logic_vector(31 downto 0);
-    remainder : out std_logic_vector(31 downto 0)
+    dividend  : in  std_logic_vector(15 downto 0); --! Input dividend.
+    divisor   : in  std_logic_vector(15 downto 0); --! Input divisor.
+    quotient  : out std_logic_vector(31 downto 0); --! Output quotient.
+    remainder : out std_logic_vector(31 downto 0)  --! Output remainder.
   );
 end entity divisor_top;
 
 architecture structural of divisor_top is
+  --! Component declarations for the datapath and control units.
+
   component divisor_dpath is
     port
     (
@@ -73,6 +80,8 @@ architecture structural of divisor_top is
     );
   end component divisor_ctrl;
 
+  -- Signal declarations for interfacing between the datapath and control units.
+
   signal load : std_logic;
   signal shift_quotient : std_logic;
   signal set_quotient_bit : std_logic;
@@ -83,7 +92,7 @@ architecture structural of divisor_top is
   signal finished : std_logic;
   
 begin
-  
+  --! Instantiation of the datapath component.
   datapath: divisor_dpath
   port map
   (
@@ -103,6 +112,7 @@ begin
     remainder        => remainder
   );
   
+  --! Instantiation of the control unit component.
   control_unit: divisor_ctrl
   port map
   (
