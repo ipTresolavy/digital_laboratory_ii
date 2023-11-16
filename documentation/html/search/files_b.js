@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['readme_2emd_0',['README.md',['../d9/dd6/_r_e_a_d_m_e_8md.html',1,'']]],
-  ['reg_5ffile_2evhdl_1',['reg_file.vhdl',['../d4/ddf/reg__file_8vhdl.html',1,'']]],
-  ['register_5fd_2evhdl_2',['register_d.vhdl',['../d1/d55/exp4_2rtl_2register__d_8vhdl.html',1,'(Global Namespace)'],['../d2/d7b/exp4_2synthesis_2exp4__desafio__t2bb2__restored_2rtl_2register__d_8vhdl.html',1,'(Global Namespace)'],['../d0/d3e/exp4_2synthesis_2exp4__final__t2bb2__restored_2rtl_2register__d_8vhdl.html',1,'(Global Namespace)'],['../d6/d4f/exp5_2rtl_2sonar_2register__d_8vhdl.html',1,'(Global Namespace)'],['../d7/d18/p1_2rtl_2sonar_2register__d_8vhdl.html',1,'(Global Namespace)'],['../d9/db9/p1_2synthesis_2sonar__desafio__restored_2rtl_2sonar_2register__d_8vhdl.html',1,'(Global Namespace)'],['../d0/d4e/components_2register__d_8vhdl.html',1,'(Global Namespace)']]],
-  ['rx_5fserial_5f7o1_2evhd_3',['rx_serial_7o1.vhd',['../da/d57/p1_2rtl_2rx__serial__7_o1_2rx__serial__7_o1_8vhd.html',1,'(Global Namespace)'],['../d8/d53/exp2_2rtl_2rx__serial__7_o1_2rx__serial__7_o1_8vhd.html',1,'(Global Namespace)'],['../d6/d43/p1_2synthesis_2sonar__desafio__restored_2rtl_2rx__serial__7_o1_2rx__serial__7_o1_8vhd.html',1,'(Global Namespace)']]],
-  ['rx_5fserial_5f7o1_5ffd_2evhd_4',['rx_serial_7o1_fd.vhd',['../dd/d4e/exp2_2rtl_2rx__serial__7_o1_2rx__serial__7_o1__fd_8vhd.html',1,'(Global Namespace)'],['../dc/dd1/p1_2rtl_2rx__serial__7_o1_2rx__serial__7_o1__fd_8vhd.html',1,'(Global Namespace)'],['../d2/d21/p1_2synthesis_2sonar__desafio__restored_2rtl_2rx__serial__7_o1_2rx__serial__7_o1__fd_8vhd.html',1,'(Global Namespace)']]],
-  ['rx_5fserial_5f7o1_5ftb_2evhd_5',['rx_serial_7O1_tb.vhd',['../dd/d84/rx__serial__7_o1__tb_8vhd.html',1,'']]],
-  ['rx_5fserial_5f7o1_5fuc_2evhd_6',['rx_serial_7o1_uc.vhd',['../d1/ded/exp2_2rtl_2rx__serial__7_o1_2rx__serial__7_o1__uc_8vhd.html',1,'(Global Namespace)'],['../d0/d24/p1_2rtl_2rx__serial__7_o1_2rx__serial__7_o1__uc_8vhd.html',1,'(Global Namespace)'],['../d0/da7/p1_2synthesis_2sonar__desafio__restored_2rtl_2rx__serial__7_o1_2rx__serial__7_o1__uc_8vhd.html',1,'(Global Namespace)']]]
+  ['uart_2evhdl_0',['uart.vhdl',['../d0/dd5/uart_8vhdl.html',1,'']]],
+  ['uart_5frx_2evhdl_1',['uart_rx.vhdl',['../da/d5e/uart__rx_8vhdl.html',1,'']]],
+  ['uart_5ftx_2evhdl_2',['uart_tx.vhdl',['../df/dfc/uart__tx_8vhdl.html',1,'']]]
 ];

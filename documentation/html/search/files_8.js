@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sklansky_5fadder_2evhdl_0',['sklansky_adder.vhdl',['../d0/d7c/sklansky__adder_8vhdl.html',1,'']]],
-  ['sync_5fpar_5fcounter_2evhdl_1',['sync_par_counter.vhdl',['../da/d3a/sync__par__counter_8vhdl.html',1,'']]]
+  ['reg_5ffile_2evhdl_0',['reg_file.vhdl',['../d4/ddf/reg__file_8vhdl.html',1,'']]],
+  ['register_5fd_2evhdl_1',['register_d.vhdl',['../d9/daf/register__d_8vhdl.html',1,'']]]
 ];

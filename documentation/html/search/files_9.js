@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['t_5fflip_5fflop_2evhdl_0',['t_flip_flop.vhdl',['../d8/d83/t__flip__flop_8vhdl.html',1,'']]],
-  ['tb_5fcomm_5finterface_2evhdl_1',['tb_comm_interface.vhdl',['../db/d94/tb__comm__interface_8vhdl.html',1,'']]],
-  ['tb_5fhcsr04_2evhdl_2',['tb_hcsr04.vhdl',['../de/dac/tb__hcsr04_8vhdl.html',1,'']]],
-  ['tb_5fhcsr04_5fctrl_2evhdl_3',['tb_hcsr04_ctrl.vhdl',['../d1/dbf/tb__hcsr04__ctrl_8vhdl.html',1,'']]],
-  ['tb_5fhcsr04_5finterface_2evhdl_4',['tb_hcsr04_interface.vhdl',['../de/ddc/tb__hcsr04__interface_8vhdl.html',1,'']]]
+  ['sklansky_5fadder_2evhdl_0',['sklansky_adder.vhdl',['../d0/d7c/sklansky__adder_8vhdl.html',1,'']]],
+  ['sp_5ffp_5fadder_5fdpath_2evhdl_1',['sp_fp_adder_dpath.vhdl',['../db/d9e/sp__fp__adder__dpath_8vhdl.html',1,'']]],
+  ['sync_5fpar_5fcounter_2evhdl_2',['sync_par_counter.vhdl',['../da/d3a/sync__par__counter_8vhdl.html',1,'']]]
 ];

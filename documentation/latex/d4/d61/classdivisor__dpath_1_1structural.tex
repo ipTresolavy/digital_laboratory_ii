@@ -1,0 +1,74 @@
+\doxysection{divisor\+\_\+dpath.\+structural Architecture Reference}
+\hypertarget{classdivisor__dpath_1_1structural}{}\label{classdivisor__dpath_1_1structural}\index{divisor\_dpath.structural@{divisor\_dpath.structural}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classdivisor__dpath_1_1structural}{divisor\+\_\+dpath\+::structural}}\newline
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdivisor__dpath_1_1structural_afc0d48e87bb67a46b04eeb8103040aaa}{quotient\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\begin{DoxyCompactList}\small\item\em Behavioral part of the architecture. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdivisor__dpath_1_1structural_a3eced2f64179c3fbe1ab558383f3e8a0}{divisor\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\begin{DoxyCompactList}\small\item\em Logic for shifting the divisor register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdivisor__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{adder}}  {\bfseries sklansky\+\_\+adder}   
+\begin{DoxyCompactList}\small\item\em Logic for selecting the adder\textquotesingle{}s second operand based on restore\+\_\+sub signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdivisor__dpath_1_1structural_a5134111832030d92ba904064d9054bbc}{remainder\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\begin{DoxyCompactList}\small\item\em Logic for loading or updating the remainder register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdivisor__dpath_1_1structural_ac43779aea969777069a9b4161dd3b9ca}{iteration\+\_\+counter}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\begin{DoxyCompactList}\small\item\em Logic for controlling the iteration counter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdivisor__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}\label{classdivisor__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f} 
+\index{divisor\_dpath.structural@{divisor\_dpath.structural}!adder@{adder}}
+\index{adder@{adder}!divisor\_dpath.structural@{divisor\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{adder}{adder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{adder}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for selecting the adder\textquotesingle{}s second operand based on restore\+\_\+sub signal. 
+
+Instantiation of the Sklansky adder. \Hypertarget{classdivisor__dpath_1_1structural_a3eced2f64179c3fbe1ab558383f3e8a0}\label{classdivisor__dpath_1_1structural_a3eced2f64179c3fbe1ab558383f3e8a0} 
+\index{divisor\_dpath.structural@{divisor\_dpath.structural}!divisor\_reg@{divisor\_reg}}
+\index{divisor\_reg@{divisor\_reg}!divisor\_dpath.structural@{divisor\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{divisor\_reg}{divisor\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__dpath_1_1structural_a3eced2f64179c3fbe1ab558383f3e8a0}{divisor\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for shifting the divisor register. 
+
+Instantiation of the divisor register. \Hypertarget{classdivisor__dpath_1_1structural_ac43779aea969777069a9b4161dd3b9ca}\label{classdivisor__dpath_1_1structural_ac43779aea969777069a9b4161dd3b9ca} 
+\index{divisor\_dpath.structural@{divisor\_dpath.structural}!iteration\_counter@{iteration\_counter}}
+\index{iteration\_counter@{iteration\_counter}!divisor\_dpath.structural@{divisor\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{iteration\_counter}{iteration\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__dpath_1_1structural_ac43779aea969777069a9b4161dd3b9ca}{iteration\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for controlling the iteration counter. 
+
+\Hypertarget{classdivisor__dpath_1_1structural_afc0d48e87bb67a46b04eeb8103040aaa}\label{classdivisor__dpath_1_1structural_afc0d48e87bb67a46b04eeb8103040aaa} 
+\index{divisor\_dpath.structural@{divisor\_dpath.structural}!quotient\_reg@{quotient\_reg}}
+\index{quotient\_reg@{quotient\_reg}!divisor\_dpath.structural@{divisor\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{quotient\_reg}{quotient\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__dpath_1_1structural_afc0d48e87bb67a46b04eeb8103040aaa}{quotient\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Behavioral part of the architecture. 
+
+Instantiation of the quotient register. \Hypertarget{classdivisor__dpath_1_1structural_a5134111832030d92ba904064d9054bbc}\label{classdivisor__dpath_1_1structural_a5134111832030d92ba904064d9054bbc} 
+\index{divisor\_dpath.structural@{divisor\_dpath.structural}!remainder\_reg@{remainder\_reg}}
+\index{remainder\_reg@{remainder\_reg}!divisor\_dpath.structural@{divisor\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{remainder\_reg}{remainder\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__dpath_1_1structural_a5134111832030d92ba904064d9054bbc}{remainder\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for loading or updating the remainder register. 
+
+Instantiation of the remainder register. 
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/arithmetic/\mbox{\hyperlink{divisor__dpath_8vhdl}{divisor\+\_\+dpath.\+vhdl}}\end{DoxyCompactItemize}

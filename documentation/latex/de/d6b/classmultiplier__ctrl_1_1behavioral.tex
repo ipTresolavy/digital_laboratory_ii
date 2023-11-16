@@ -1,0 +1,83 @@
+\doxysection{multiplier\+\_\+ctrl.\+behavioral Architecture Reference}
+\hypertarget{classmultiplier__ctrl_1_1behavioral}{}\label{classmultiplier__ctrl_1_1behavioral}\index{multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}}
+
+
+Behavioral architecture for the multiplier control entity.  
+
+
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral}{multiplier\+\_\+ctrl\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_ad9e15439dc63c3598854ce458afd507f}{fetch\+\_\+next\+\_\+state}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} )}
+\begin{DoxyCompactList}\small\item\em State transition process. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_aa52aae72cf1234cdefb481efb593e81e}{next\+\_\+state\+\_\+logic}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_a073693c43dd31e8f81c032743beb988a}{finished}}} \textcolor{vhdlchar}{ }} )}
+\begin{DoxyCompactList}\small\item\em Transition to the next state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{multiplying}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em States for the control state machine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Behavioral architecture for the multiplier control entity. 
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classmultiplier__ctrl_1_1behavioral_ad9e15439dc63c3598854ce458afd507f}\label{classmultiplier__ctrl_1_1behavioral_ad9e15439dc63c3598854ce458afd507f} 
+\index{multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}!fetch\_next\_state@{fetch\_next\_state}}
+\index{fetch\_next\_state@{fetch\_next\_state}!multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{fetch\_next\_state()}{fetch\_next\_state()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} fetch\+\_\+next\+\_\+state(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+State transition process. 
+
+\Hypertarget{classmultiplier__ctrl_1_1behavioral_aa52aae72cf1234cdefb481efb593e81e}\label{classmultiplier__ctrl_1_1behavioral_aa52aae72cf1234cdefb481efb593e81e} 
+\index{multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}!next\_state\_logic@{next\_state\_logic}}
+\index{next\_state\_logic@{next\_state\_logic}!multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state\_logic()}{next\_state\_logic()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} next\+\_\+state\+\_\+logic(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_a073693c43dd31e8f81c032743beb988a}{finished}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+
+
+Transition to the next state. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmultiplier__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}\label{classmultiplier__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b} 
+\index{multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}!next\_state@{next\_state}}
+\index{next\_state@{next\_state}!multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state}{next\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}\label{classmultiplier__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec} 
+\index{multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}!state@{state}}
+\index{state@{state}!multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_ac1c6ac02c90e1d7f9b1b3d40b9be61ec}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}\label{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02} 
+\index{multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}!state\_type@{state\_type}}
+\index{state\_type@{state\_type}!multiplier\_ctrl.behavioral@{multiplier\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_type}{state\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral_af48eb1a3c448b14dc99d8e16a67d1f02}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{multiplying}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+
+
+States for the control state machine. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/arithmetic/\mbox{\hyperlink{multiplier__ctrl_8vhdl}{multiplier\+\_\+ctrl.\+vhdl}}\end{DoxyCompactItemize}

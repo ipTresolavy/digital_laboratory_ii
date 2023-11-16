@@ -1,0 +1,141 @@
+\doxysection{multiplier\+\_\+top Entity Reference}
+\hypertarget{classmultiplier__top}{}\label{classmultiplier__top}\index{multiplier\_top@{multiplier\_top}}
+Inheritance diagram for multiplier\+\_\+top\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{de/dde/classmultiplier__top}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__top_1_1structural}{multiplier\+\_\+top.\+structural}} architecture
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__top_a0a6af6eef40212dbaf130d57ce711256}{ieee}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__top_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classmultiplier__top_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__top_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Clock signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__top_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__top_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Input validation signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__top_a3ebc9855ae39cd9921a8b9fcddeb8e19}{ready}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Output ready signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__top_a2457d7010430ea4889dcfea9cf7986d8}{multiplicand}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Input multiplicand. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__top_a88ed0488f3e94da3bd760b379825f741}{multiplier}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Input multiplier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__top_ae47fa6777bcb06878e30b89410c6e9a9}{product}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Output product. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Top-\/level entity for the multiplier module. This entity serves as the interface between the system and the multiplier module, handling data inputs and outputs, system signals, and handshake signals. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmultiplier__top_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classmultiplier__top_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{multiplier\_top@{multiplier\_top}!clock@{clock}}
+\index{clock@{clock}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Clock signal. 
+
+\Hypertarget{classmultiplier__top_a0a6af6eef40212dbaf130d57ce711256}\label{classmultiplier__top_a0a6af6eef40212dbaf130d57ce711256} 
+\index{multiplier\_top@{multiplier\_top}!ieee@{ieee}}
+\index{ieee@{ieee}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{ieee}{ieee}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_a0a6af6eef40212dbaf130d57ce711256}{ieee}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classmultiplier__top_a2457d7010430ea4889dcfea9cf7986d8}\label{classmultiplier__top_a2457d7010430ea4889dcfea9cf7986d8} 
+\index{multiplier\_top@{multiplier\_top}!multiplicand@{multiplicand}}
+\index{multiplicand@{multiplicand}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{multiplicand}{multiplicand}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_a2457d7010430ea4889dcfea9cf7986d8}{multiplicand}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Input multiplicand. 
+
+\Hypertarget{classmultiplier__top_a88ed0488f3e94da3bd760b379825f741}\label{classmultiplier__top_a88ed0488f3e94da3bd760b379825f741} 
+\index{multiplier\_top@{multiplier\_top}!multiplier@{multiplier}}
+\index{multiplier@{multiplier}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{multiplier}{multiplier}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_a88ed0488f3e94da3bd760b379825f741}{multiplier}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Input multiplier. 
+
+\Hypertarget{classmultiplier__top_a2edc34402b573437d5f25fa90ba4013e}\label{classmultiplier__top_a2edc34402b573437d5f25fa90ba4013e} 
+\index{multiplier\_top@{multiplier\_top}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classmultiplier__top_ae47fa6777bcb06878e30b89410c6e9a9}\label{classmultiplier__top_ae47fa6777bcb06878e30b89410c6e9a9} 
+\index{multiplier\_top@{multiplier\_top}!product@{product}}
+\index{product@{product}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{product}{product}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_ae47fa6777bcb06878e30b89410c6e9a9}{product}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Output product. 
+
+\Hypertarget{classmultiplier__top_a3ebc9855ae39cd9921a8b9fcddeb8e19}\label{classmultiplier__top_a3ebc9855ae39cd9921a8b9fcddeb8e19} 
+\index{multiplier\_top@{multiplier\_top}!ready@{ready}}
+\index{ready@{ready}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_a3ebc9855ae39cd9921a8b9fcddeb8e19}{ready}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Output ready signal. 
+
+\Hypertarget{classmultiplier__top_a108f6801ba4104063b9d5f9286194302}\label{classmultiplier__top_a108f6801ba4104063b9d5f9286194302} 
+\index{multiplier\_top@{multiplier\_top}!reset@{reset}}
+\index{reset@{reset}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Reset signal. 
+
+\Hypertarget{classmultiplier__top_acd03516902501cd1c7296a98e22c6fcb}\label{classmultiplier__top_acd03516902501cd1c7296a98e22c6fcb} 
+\index{multiplier\_top@{multiplier\_top}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classmultiplier__top_ab0d9464755fcd2cecd3faaf470fd5a7c}\label{classmultiplier__top_ab0d9464755fcd2cecd3faaf470fd5a7c} 
+\index{multiplier\_top@{multiplier\_top}!valid@{valid}}
+\index{valid@{valid}!multiplier\_top@{multiplier\_top}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__top_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Input validation signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/arithmetic/\mbox{\hyperlink{multiplier__top_8vhdl}{multiplier\+\_\+top.\+vhdl}}\end{DoxyCompactItemize}

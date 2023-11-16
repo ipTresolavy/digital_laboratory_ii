@@ -1,0 +1,533 @@
+\doxysection{sp\+\_\+fp\+\_\+adder\+\_\+dpath.\+behavioral Architecture Reference}
+\hypertarget{classsp__fp__adder__dpath_1_1behavioral}{}\label{classsp__fp__adder__dpath_1_1behavioral}\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral}{sp\+\_\+fp\+\_\+adder\+\_\+dpath\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a92205dc069a422921585a459d1dc9b53}{sign\+\_\+logic}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_acee10b4657fb9e289d885e07fe6536eb}{a\+\_\+sign}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8473b4b17d1b2c516f8fb6098d59bc5f}{b\+\_\+sign}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a5de17a01dd9f8b332355fbf039449077}{a\+\_\+exp}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3cae3b78e4193d3bc2ce51402ac85d10}{b\+\_\+exp}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2cfaddefdf8322247de8a3b6e0e17737}{a\+\_\+signif}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0c9d1a004441e081fd06b9ac201c48f2}{b\+\_\+signif}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Width of the register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Output data of the register. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Sum output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Counter output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a675e63947762fc3f8db7d15f35751bba}{s\+\_\+y}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2cfaddefdf8322247de8a3b6e0e17737}{a\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0c9d1a004441e081fd06b9ac201c48f2}{b\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae6ca25740133ca9cbe02284cdd1b9974}{smaller\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a32220465cc0c71414c9289d89cddc8cc}{larger\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3c30a9083c540d668eef061027ef950a}{incremented\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae1362aab0ea1f054137edd7f2ec92c18}{exp\+\_\+inc\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a4f90c7127ba29664efde1e0df3e13ef2}{exp\+\_\+inc\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7e3ae0fe74c6dc573363fd35a217ca86}{smaller\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae190882a1fb0ac4be5b5cc817adf617e}{larger\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a954cf05484191e9f12d3181455e0a060}{not\+\_\+b\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a181baaf5fbdd42594909174008599fea}{exp\+\_\+b\+\_\+gt\+\_\+a}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7eeba6c68aebc28377a773e6cbd5b214}{signif\+\_\+b\+\_\+gt\+\_\+a}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_affde83f817e4ac337190ecf8081d5a56}{smaller\+\_\+signif\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_aed66343d92b6a3d3651f3564882f5e2f}{smaller\+\_\+signif\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7c7f23ad9383fc5597edb71fefa2420b}{smaller\+\_\+signif\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8e6da741a50d42e67d3e6ce357833d2e}{not\+\_\+smaller\+\_\+signif\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8a2d3edbe1aa4d11adba18b60e96a219}{smaller\+\_\+exp\+\_\+cnt\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_afd6d71481fd2f190bb8e9a226ff70c47}{ones\+\_\+complement\+\_\+decoder}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a4e337e6473aaa7b4ca9146f4cca96ef5}{sum\+\_\+c\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a07dfa33cd0b3c60d4a4060e3c74436eb}{sum\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a56f1251916ef0cf85ec13bbb6d6a069d}{sum\+\_\+a}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_abb2e7e827c8c684dbfc8b8fe1b79b3a7}{sum\+\_\+b}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0e64a4de68d9564e8f59692e7e9bc727}{sum\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a10fe4f1380886c47a834527369936aa3}{shifted\+\_\+sum\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a930c29a96856e6f80858db3d65c20976}{final\+\_\+sum\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a72fd0662bf30edbd8487b6fa48511cae}{shifted\+\_\+sum\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a857f72cdb2d95fe8d7f65680d647604c}{shifted\+\_\+sum\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ad1e508a4d2c71a5139c1ff3975a18fd1}{shifted\+\_\+sum\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a6c5633671292a709483c2d6a8e14b2aa}{tmp\+\_\+sel}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_afc0dae00d58d1945c61ac774abb3e471}{zero\+\_\+counter\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a22d3efe64db0081666cb03afde615070}{zero\+\_\+count}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{25} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a20ee1947b448750bb90c28e6f390926d}{not\+\_\+zero\+\_\+count}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2e9bb6e3988eac12fa318c5629fb8cf4}{final\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7f38de9677f77cef300093dcf15be7b7}{a\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ac6ad0f51eae78a72d84af0cfa6655991}{b\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3b14f796e0df919b39b92e68c5375c7b}{exp\+\_\+comparator}}  {\bfseries sklansky\+\_\+adder}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a019618dfce7630ee4453dc8c13cd81d8}{smaller\+\_\+signif\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2f8017210f396aada6d9400fb4accb24}{smaller\+\_\+exp\+\_\+cnt}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2b71a545d55c9e32788754c384e01150}{signif\+\_\+comparator}}  {\bfseries sklansky\+\_\+adder}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ace12047435509a9cee6cb722cdc41712}{signif\+\_\+adder}}  {\bfseries sklansky\+\_\+adder}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a03a3d8e35dc988c96ec43f62177258b0}{exp\+\_\+incrementer}}  {\bfseries sklansky\+\_\+adder}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0ed39ee6154e80f8ec234dbc3e8c0f17}{sum\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2ac942416c52405094c47532fd8fa083}{exp\+\_\+inc\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae8f8a0cf6925a8ff6a546fbc7a7b2380}{zero\+\_\+counter}}  {\bfseries sync\+\_\+par\+\_\+counter}   
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a1826e9e5323d45bfe8aa81bec192eddf}{exp\+\_\+decrementer}}  {\bfseries sklansky\+\_\+adder}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Aliases}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_acee10b4657fb9e289d885e07fe6536eb}{a\+\_\+sign}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a5de17a01dd9f8b332355fbf039449077}{a\+\_\+exp}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a35600c099d716be9e118ce1828740291}{a\+\_\+mant}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8473b4b17d1b2c516f8fb6098d59bc5f}{b\+\_\+sign}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3cae3b78e4193d3bc2ce51402ac85d10}{b\+\_\+exp}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_afd527f2dbd4f7327e83be08e4dc23555}{b\+\_\+mant}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a1aa5a155a692b511582b4f804ccc7358}{y\+\_\+sign}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_aec4067d9d57abea261fb12d1cabfc4a8}{y}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a6858bfa3e25b82dd99013b5595821039}{y\+\_\+exp}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_aec4067d9d57abea261fb12d1cabfc4a8}{y}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_af199c53c8af29fa21fc281ca63e3eff9}{y\+\_\+mant}}  {\bfseries {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_aec4067d9d57abea261fb12d1cabfc4a8}{y}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a92205dc069a422921585a459d1dc9b53}\label{classsp__fp__adder__dpath_1_1behavioral_a92205dc069a422921585a459d1dc9b53} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sign\_logic@{sign\_logic}}
+\index{sign\_logic@{sign\_logic}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sign\_logic()}{sign\_logic()}}
+{\footnotesize\ttfamily sign\+\_\+logic (\begin{DoxyParamCaption}\item[{}]{a\+\_\+sign,  }\item[{}]{b\+\_\+sign,  }\item[{}]{a\+\_\+exp,  }\item[{}]{b\+\_\+exp,  }\item[{}]{a\+\_\+signif,  }\item[{}]{b\+\_\+signif }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}\label{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!a\_buf@{a\_buf}}
+\index{a\_buf@{a\_buf}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{a\_buf}{a\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Counter output. 
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a5de17a01dd9f8b332355fbf039449077}\label{classsp__fp__adder__dpath_1_1behavioral_a5de17a01dd9f8b332355fbf039449077} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!a\_exp@{a\_exp}}
+\index{a\_exp@{a\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{a\_exp}{a\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a5de17a01dd9f8b332355fbf039449077}{a\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a35600c099d716be9e118ce1828740291}\label{classsp__fp__adder__dpath_1_1behavioral_a35600c099d716be9e118ce1828740291} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!a\_mant@{a\_mant}}
+\index{a\_mant@{a\_mant}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{a\_mant}{a\_mant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a35600c099d716be9e118ce1828740291}{a\+\_\+mant}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a7f38de9677f77cef300093dcf15be7b7}\label{classsp__fp__adder__dpath_1_1behavioral_a7f38de9677f77cef300093dcf15be7b7} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!a\_reg@{a\_reg}}
+\index{a\_reg@{a\_reg}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{a\_reg}{a\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7f38de9677f77cef300093dcf15be7b7}{a\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_acee10b4657fb9e289d885e07fe6536eb}\label{classsp__fp__adder__dpath_1_1behavioral_acee10b4657fb9e289d885e07fe6536eb} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!a\_sign@{a\_sign}}
+\index{a\_sign@{a\_sign}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{a\_sign}{a\_sign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_acee10b4657fb9e289d885e07fe6536eb}{a\+\_\+sign}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3f108f744e30580014ba85261489a8e9}{a\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a2cfaddefdf8322247de8a3b6e0e17737}\label{classsp__fp__adder__dpath_1_1behavioral_a2cfaddefdf8322247de8a3b6e0e17737} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!a\_signif@{a\_signif}}
+\index{a\_signif@{a\_signif}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{a\_signif}{a\_signif}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2cfaddefdf8322247de8a3b6e0e17737}{a\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}\label{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!b\_buf@{b\_buf}}
+\index{b\_buf@{b\_buf}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_buf}{b\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a3cae3b78e4193d3bc2ce51402ac85d10}\label{classsp__fp__adder__dpath_1_1behavioral_a3cae3b78e4193d3bc2ce51402ac85d10} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!b\_exp@{b\_exp}}
+\index{b\_exp@{b\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_exp}{b\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3cae3b78e4193d3bc2ce51402ac85d10}{b\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_afd527f2dbd4f7327e83be08e4dc23555}\label{classsp__fp__adder__dpath_1_1behavioral_afd527f2dbd4f7327e83be08e4dc23555} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!b\_mant@{b\_mant}}
+\index{b\_mant@{b\_mant}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_mant}{b\_mant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_afd527f2dbd4f7327e83be08e4dc23555}{b\+\_\+mant}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ac6ad0f51eae78a72d84af0cfa6655991}\label{classsp__fp__adder__dpath_1_1behavioral_ac6ad0f51eae78a72d84af0cfa6655991} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!b\_reg@{b\_reg}}
+\index{b\_reg@{b\_reg}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_reg}{b\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ac6ad0f51eae78a72d84af0cfa6655991}{b\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a8473b4b17d1b2c516f8fb6098d59bc5f}\label{classsp__fp__adder__dpath_1_1behavioral_a8473b4b17d1b2c516f8fb6098d59bc5f} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!b\_sign@{b\_sign}}
+\index{b\_sign@{b\_sign}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_sign}{b\_sign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8473b4b17d1b2c516f8fb6098d59bc5f}{b\+\_\+sign}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a480f1f6df144dd78bfbf409ba8dd6b15}{b\+\_\+buf}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a0c9d1a004441e081fd06b9ac201c48f2}\label{classsp__fp__adder__dpath_1_1behavioral_a0c9d1a004441e081fd06b9ac201c48f2} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!b\_signif@{b\_signif}}
+\index{b\_signif@{b\_signif}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{b\_signif}{b\_signif}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0c9d1a004441e081fd06b9ac201c48f2}{b\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a181baaf5fbdd42594909174008599fea}\label{classsp__fp__adder__dpath_1_1behavioral_a181baaf5fbdd42594909174008599fea} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_b\_gt\_a@{exp\_b\_gt\_a}}
+\index{exp\_b\_gt\_a@{exp\_b\_gt\_a}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_b\_gt\_a}{exp\_b\_gt\_a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a181baaf5fbdd42594909174008599fea}{exp\+\_\+b\+\_\+gt\+\_\+a}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a3b14f796e0df919b39b92e68c5375c7b}\label{classsp__fp__adder__dpath_1_1behavioral_a3b14f796e0df919b39b92e68c5375c7b} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_comparator@{exp\_comparator}}
+\index{exp\_comparator@{exp\_comparator}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_comparator}{exp\_comparator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3b14f796e0df919b39b92e68c5375c7b}{exp\+\_\+comparator}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a1826e9e5323d45bfe8aa81bec192eddf}\label{classsp__fp__adder__dpath_1_1behavioral_a1826e9e5323d45bfe8aa81bec192eddf} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_decrementer@{exp\_decrementer}}
+\index{exp\_decrementer@{exp\_decrementer}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_decrementer}{exp\_decrementer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a1826e9e5323d45bfe8aa81bec192eddf}{exp\+\_\+decrementer}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a2ac942416c52405094c47532fd8fa083}\label{classsp__fp__adder__dpath_1_1behavioral_a2ac942416c52405094c47532fd8fa083} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_inc\_reg@{exp\_inc\_reg}}
+\index{exp\_inc\_reg@{exp\_inc\_reg}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_inc\_reg}{exp\_inc\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2ac942416c52405094c47532fd8fa083}{exp\+\_\+inc\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ae1362aab0ea1f054137edd7f2ec92c18}\label{classsp__fp__adder__dpath_1_1behavioral_ae1362aab0ea1f054137edd7f2ec92c18} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_inc\_reg\_in@{exp\_inc\_reg\_in}}
+\index{exp\_inc\_reg\_in@{exp\_inc\_reg\_in}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_inc\_reg\_in}{exp\_inc\_reg\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae1362aab0ea1f054137edd7f2ec92c18}{exp\+\_\+inc\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a4f90c7127ba29664efde1e0df3e13ef2}\label{classsp__fp__adder__dpath_1_1behavioral_a4f90c7127ba29664efde1e0df3e13ef2} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_inc\_reg\_out@{exp\_inc\_reg\_out}}
+\index{exp\_inc\_reg\_out@{exp\_inc\_reg\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_inc\_reg\_out}{exp\_inc\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a4f90c7127ba29664efde1e0df3e13ef2}{exp\+\_\+inc\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a03a3d8e35dc988c96ec43f62177258b0}\label{classsp__fp__adder__dpath_1_1behavioral_a03a3d8e35dc988c96ec43f62177258b0} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!exp\_incrementer@{exp\_incrementer}}
+\index{exp\_incrementer@{exp\_incrementer}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{exp\_incrementer}{exp\_incrementer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a03a3d8e35dc988c96ec43f62177258b0}{exp\+\_\+incrementer}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a2e9bb6e3988eac12fa318c5629fb8cf4}\label{classsp__fp__adder__dpath_1_1behavioral_a2e9bb6e3988eac12fa318c5629fb8cf4} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!final\_exp@{final\_exp}}
+\index{final\_exp@{final\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{final\_exp}{final\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2e9bb6e3988eac12fa318c5629fb8cf4}{final\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a930c29a96856e6f80858db3d65c20976}\label{classsp__fp__adder__dpath_1_1behavioral_a930c29a96856e6f80858db3d65c20976} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!final\_sum\_out@{final\_sum\_out}}
+\index{final\_sum\_out@{final\_sum\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{final\_sum\_out}{final\_sum\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a930c29a96856e6f80858db3d65c20976}{final\+\_\+sum\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a3c30a9083c540d668eef061027ef950a}\label{classsp__fp__adder__dpath_1_1behavioral_a3c30a9083c540d668eef061027ef950a} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!incremented\_exp@{incremented\_exp}}
+\index{incremented\_exp@{incremented\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{incremented\_exp}{incremented\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a3c30a9083c540d668eef061027ef950a}{incremented\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a32220465cc0c71414c9289d89cddc8cc}\label{classsp__fp__adder__dpath_1_1behavioral_a32220465cc0c71414c9289d89cddc8cc} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!larger\_exp@{larger\_exp}}
+\index{larger\_exp@{larger\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{larger\_exp}{larger\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a32220465cc0c71414c9289d89cddc8cc}{larger\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ae190882a1fb0ac4be5b5cc817adf617e}\label{classsp__fp__adder__dpath_1_1behavioral_ae190882a1fb0ac4be5b5cc817adf617e} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!larger\_signif@{larger\_signif}}
+\index{larger\_signif@{larger\_signif}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{larger\_signif}{larger\_signif}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae190882a1fb0ac4be5b5cc817adf617e}{larger\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a954cf05484191e9f12d3181455e0a060}\label{classsp__fp__adder__dpath_1_1behavioral_a954cf05484191e9f12d3181455e0a060} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!not\_b\_exp@{not\_b\_exp}}
+\index{not\_b\_exp@{not\_b\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{not\_b\_exp}{not\_b\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a954cf05484191e9f12d3181455e0a060}{not\+\_\+b\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a8e6da741a50d42e67d3e6ce357833d2e}\label{classsp__fp__adder__dpath_1_1behavioral_a8e6da741a50d42e67d3e6ce357833d2e} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!not\_smaller\_signif\_reg\_out@{not\_smaller\_signif\_reg\_out}}
+\index{not\_smaller\_signif\_reg\_out@{not\_smaller\_signif\_reg\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{not\_smaller\_signif\_reg\_out}{not\_smaller\_signif\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8e6da741a50d42e67d3e6ce357833d2e}{not\+\_\+smaller\+\_\+signif\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a20ee1947b448750bb90c28e6f390926d}\label{classsp__fp__adder__dpath_1_1behavioral_a20ee1947b448750bb90c28e6f390926d} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!not\_zero\_count@{not\_zero\_count}}
+\index{not\_zero\_count@{not\_zero\_count}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{not\_zero\_count}{not\_zero\_count}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a20ee1947b448750bb90c28e6f390926d}{not\+\_\+zero\+\_\+count}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_afd6d71481fd2f190bb8e9a226ff70c47}\label{classsp__fp__adder__dpath_1_1behavioral_afd6d71481fd2f190bb8e9a226ff70c47} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!ones\_complement\_decoder@{ones\_complement\_decoder}}
+\index{ones\_complement\_decoder@{ones\_complement\_decoder}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{ones\_complement\_decoder}{ones\_complement\_decoder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_afd6d71481fd2f190bb8e9a226ff70c47}{ones\+\_\+complement\+\_\+decoder}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}\label{classsp__fp__adder__dpath_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!register\_d@{register\_d}}
+\index{register\_d@{register\_d}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{register\_d}{register\_d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Width of the register. 
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a675e63947762fc3f8db7d15f35751bba}\label{classsp__fp__adder__dpath_1_1behavioral_a675e63947762fc3f8db7d15f35751bba} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!s\_y@{s\_y}}
+\index{s\_y@{s\_y}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{s\_y}{s\_y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a675e63947762fc3f8db7d15f35751bba}{s\+\_\+y}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a10fe4f1380886c47a834527369936aa3}\label{classsp__fp__adder__dpath_1_1behavioral_a10fe4f1380886c47a834527369936aa3} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!shifted\_sum\_out@{shifted\_sum\_out}}
+\index{shifted\_sum\_out@{shifted\_sum\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{shifted\_sum\_out}{shifted\_sum\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a10fe4f1380886c47a834527369936aa3}{shifted\+\_\+sum\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a72fd0662bf30edbd8487b6fa48511cae}\label{classsp__fp__adder__dpath_1_1behavioral_a72fd0662bf30edbd8487b6fa48511cae} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!shifted\_sum\_reg\_en@{shifted\_sum\_reg\_en}}
+\index{shifted\_sum\_reg\_en@{shifted\_sum\_reg\_en}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{shifted\_sum\_reg\_en}{shifted\_sum\_reg\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a72fd0662bf30edbd8487b6fa48511cae}{shifted\+\_\+sum\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a857f72cdb2d95fe8d7f65680d647604c}\label{classsp__fp__adder__dpath_1_1behavioral_a857f72cdb2d95fe8d7f65680d647604c} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!shifted\_sum\_reg\_in@{shifted\_sum\_reg\_in}}
+\index{shifted\_sum\_reg\_in@{shifted\_sum\_reg\_in}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{shifted\_sum\_reg\_in}{shifted\_sum\_reg\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a857f72cdb2d95fe8d7f65680d647604c}{shifted\+\_\+sum\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ad1e508a4d2c71a5139c1ff3975a18fd1}\label{classsp__fp__adder__dpath_1_1behavioral_ad1e508a4d2c71a5139c1ff3975a18fd1} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!shifted\_sum\_reg\_out@{shifted\_sum\_reg\_out}}
+\index{shifted\_sum\_reg\_out@{shifted\_sum\_reg\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{shifted\_sum\_reg\_out}{shifted\_sum\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ad1e508a4d2c71a5139c1ff3975a18fd1}{shifted\+\_\+sum\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ace12047435509a9cee6cb722cdc41712}\label{classsp__fp__adder__dpath_1_1behavioral_ace12047435509a9cee6cb722cdc41712} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!signif\_adder@{signif\_adder}}
+\index{signif\_adder@{signif\_adder}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{signif\_adder}{signif\_adder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ace12047435509a9cee6cb722cdc41712}{signif\+\_\+adder}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a7eeba6c68aebc28377a773e6cbd5b214}\label{classsp__fp__adder__dpath_1_1behavioral_a7eeba6c68aebc28377a773e6cbd5b214} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!signif\_b\_gt\_a@{signif\_b\_gt\_a}}
+\index{signif\_b\_gt\_a@{signif\_b\_gt\_a}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{signif\_b\_gt\_a}{signif\_b\_gt\_a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7eeba6c68aebc28377a773e6cbd5b214}{signif\+\_\+b\+\_\+gt\+\_\+a}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a2b71a545d55c9e32788754c384e01150}\label{classsp__fp__adder__dpath_1_1behavioral_a2b71a545d55c9e32788754c384e01150} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!signif\_comparator@{signif\_comparator}}
+\index{signif\_comparator@{signif\_comparator}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{signif\_comparator}{signif\_comparator}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2b71a545d55c9e32788754c384e01150}{signif\+\_\+comparator}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a61bb95b7aff675edd529b4109382862f}\label{classsp__fp__adder__dpath_1_1behavioral_a61bb95b7aff675edd529b4109382862f} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sklansky\_adder@{sklansky\_adder}}
+\index{sklansky\_adder@{sklansky\_adder}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sklansky\_adder}{sklansky\_adder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Output data of the register. 
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ae6ca25740133ca9cbe02284cdd1b9974}\label{classsp__fp__adder__dpath_1_1behavioral_ae6ca25740133ca9cbe02284cdd1b9974} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_exp@{smaller\_exp}}
+\index{smaller\_exp@{smaller\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_exp}{smaller\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae6ca25740133ca9cbe02284cdd1b9974}{smaller\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a2f8017210f396aada6d9400fb4accb24}\label{classsp__fp__adder__dpath_1_1behavioral_a2f8017210f396aada6d9400fb4accb24} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_exp\_cnt@{smaller\_exp\_cnt}}
+\index{smaller\_exp\_cnt@{smaller\_exp\_cnt}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_exp\_cnt}{smaller\_exp\_cnt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a2f8017210f396aada6d9400fb4accb24}{smaller\+\_\+exp\+\_\+cnt}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a8a2d3edbe1aa4d11adba18b60e96a219}\label{classsp__fp__adder__dpath_1_1behavioral_a8a2d3edbe1aa4d11adba18b60e96a219} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_exp\_cnt\_out@{smaller\_exp\_cnt\_out}}
+\index{smaller\_exp\_cnt\_out@{smaller\_exp\_cnt\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_exp\_cnt\_out}{smaller\_exp\_cnt\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a8a2d3edbe1aa4d11adba18b60e96a219}{smaller\+\_\+exp\+\_\+cnt\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a7e3ae0fe74c6dc573363fd35a217ca86}\label{classsp__fp__adder__dpath_1_1behavioral_a7e3ae0fe74c6dc573363fd35a217ca86} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_signif@{smaller\_signif}}
+\index{smaller\_signif@{smaller\_signif}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_signif}{smaller\_signif}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7e3ae0fe74c6dc573363fd35a217ca86}{smaller\+\_\+signif}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a019618dfce7630ee4453dc8c13cd81d8}\label{classsp__fp__adder__dpath_1_1behavioral_a019618dfce7630ee4453dc8c13cd81d8} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_signif\_reg@{smaller\_signif\_reg}}
+\index{smaller\_signif\_reg@{smaller\_signif\_reg}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_signif\_reg}{smaller\_signif\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a019618dfce7630ee4453dc8c13cd81d8}{smaller\+\_\+signif\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_affde83f817e4ac337190ecf8081d5a56}\label{classsp__fp__adder__dpath_1_1behavioral_affde83f817e4ac337190ecf8081d5a56} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_signif\_reg\_en@{smaller\_signif\_reg\_en}}
+\index{smaller\_signif\_reg\_en@{smaller\_signif\_reg\_en}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_signif\_reg\_en}{smaller\_signif\_reg\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_affde83f817e4ac337190ecf8081d5a56}{smaller\+\_\+signif\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_aed66343d92b6a3d3651f3564882f5e2f}\label{classsp__fp__adder__dpath_1_1behavioral_aed66343d92b6a3d3651f3564882f5e2f} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_signif\_reg\_in@{smaller\_signif\_reg\_in}}
+\index{smaller\_signif\_reg\_in@{smaller\_signif\_reg\_in}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_signif\_reg\_in}{smaller\_signif\_reg\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_aed66343d92b6a3d3651f3564882f5e2f}{smaller\+\_\+signif\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a7c7f23ad9383fc5597edb71fefa2420b}\label{classsp__fp__adder__dpath_1_1behavioral_a7c7f23ad9383fc5597edb71fefa2420b} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!smaller\_signif\_reg\_out@{smaller\_signif\_reg\_out}}
+\index{smaller\_signif\_reg\_out@{smaller\_signif\_reg\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{smaller\_signif\_reg\_out}{smaller\_signif\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a7c7f23ad9383fc5597edb71fefa2420b}{smaller\+\_\+signif\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a56f1251916ef0cf85ec13bbb6d6a069d}\label{classsp__fp__adder__dpath_1_1behavioral_a56f1251916ef0cf85ec13bbb6d6a069d} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sum\_a@{sum\_a}}
+\index{sum\_a@{sum\_a}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sum\_a}{sum\_a}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a56f1251916ef0cf85ec13bbb6d6a069d}{sum\+\_\+a}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_abb2e7e827c8c684dbfc8b8fe1b79b3a7}\label{classsp__fp__adder__dpath_1_1behavioral_abb2e7e827c8c684dbfc8b8fe1b79b3a7} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sum\_b@{sum\_b}}
+\index{sum\_b@{sum\_b}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sum\_b}{sum\_b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_abb2e7e827c8c684dbfc8b8fe1b79b3a7}{sum\+\_\+b}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a4e337e6473aaa7b4ca9146f4cca96ef5}\label{classsp__fp__adder__dpath_1_1behavioral_a4e337e6473aaa7b4ca9146f4cca96ef5} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sum\_c\_in@{sum\_c\_in}}
+\index{sum\_c\_in@{sum\_c\_in}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sum\_c\_in}{sum\_c\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a4e337e6473aaa7b4ca9146f4cca96ef5}{sum\+\_\+c\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a07dfa33cd0b3c60d4a4060e3c74436eb}\label{classsp__fp__adder__dpath_1_1behavioral_a07dfa33cd0b3c60d4a4060e3c74436eb} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sum\_c\_out@{sum\_c\_out}}
+\index{sum\_c\_out@{sum\_c\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sum\_c\_out}{sum\_c\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a07dfa33cd0b3c60d4a4060e3c74436eb}{sum\+\_\+c\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a0e64a4de68d9564e8f59692e7e9bc727}\label{classsp__fp__adder__dpath_1_1behavioral_a0e64a4de68d9564e8f59692e7e9bc727} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sum\_out@{sum\_out}}
+\index{sum\_out@{sum\_out}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sum\_out}{sum\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0e64a4de68d9564e8f59692e7e9bc727}{sum\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a0ed39ee6154e80f8ec234dbc3e8c0f17}\label{classsp__fp__adder__dpath_1_1behavioral_a0ed39ee6154e80f8ec234dbc3e8c0f17} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sum\_reg@{sum\_reg}}
+\index{sum\_reg@{sum\_reg}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sum\_reg}{sum\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a0ed39ee6154e80f8ec234dbc3e8c0f17}{sum\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}\label{classsp__fp__adder__dpath_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!sync\_par\_counter@{sync\_par\_counter}}
+\index{sync\_par\_counter@{sync\_par\_counter}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{sync\_par\_counter}{sync\_par\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a91db294fcb9fcb66fc8d9ca0f821c4a6}{sync\+\_\+par\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Sum output. 
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a6c5633671292a709483c2d6a8e14b2aa}\label{classsp__fp__adder__dpath_1_1behavioral_a6c5633671292a709483c2d6a8e14b2aa} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!tmp\_sel@{tmp\_sel}}
+\index{tmp\_sel@{tmp\_sel}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{tmp\_sel}{tmp\_sel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a6c5633671292a709483c2d6a8e14b2aa}{tmp\+\_\+sel}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a6858bfa3e25b82dd99013b5595821039}\label{classsp__fp__adder__dpath_1_1behavioral_a6858bfa3e25b82dd99013b5595821039} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!y\_exp@{y\_exp}}
+\index{y\_exp@{y\_exp}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{y\_exp}{y\_exp}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a6858bfa3e25b82dd99013b5595821039}{y\+\_\+exp}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{7} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_aec4067d9d57abea261fb12d1cabfc4a8}{y}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{30} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{23} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_af199c53c8af29fa21fc281ca63e3eff9}\label{classsp__fp__adder__dpath_1_1behavioral_af199c53c8af29fa21fc281ca63e3eff9} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!y\_mant@{y\_mant}}
+\index{y\_mant@{y\_mant}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{y\_mant}{y\_mant}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_af199c53c8af29fa21fc281ca63e3eff9}{y\+\_\+mant}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_aec4067d9d57abea261fb12d1cabfc4a8}{y}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{22} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a1aa5a155a692b511582b4f804ccc7358}\label{classsp__fp__adder__dpath_1_1behavioral_a1aa5a155a692b511582b4f804ccc7358} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!y\_sign@{y\_sign}}
+\index{y\_sign@{y\_sign}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{y\_sign}{y\_sign}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a1aa5a155a692b511582b4f804ccc7358}{y\+\_\+sign}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{is}\textcolor{vhdlchar}{ }{\bfseries \mbox{\hyperlink{classsp__fp__adder__dpath_aec4067d9d57abea261fb12d1cabfc4a8}{y}}} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Alias]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_a22d3efe64db0081666cb03afde615070}\label{classsp__fp__adder__dpath_1_1behavioral_a22d3efe64db0081666cb03afde615070} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!zero\_count@{zero\_count}}
+\index{zero\_count@{zero\_count}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{zero\_count}{zero\_count}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_a22d3efe64db0081666cb03afde615070}{zero\+\_\+count}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{natural}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ceil}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{log2}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordtype}{real}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{25} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{-\/}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{1} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_ae8f8a0cf6925a8ff6a546fbc7a7b2380}\label{classsp__fp__adder__dpath_1_1behavioral_ae8f8a0cf6925a8ff6a546fbc7a7b2380} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!zero\_counter@{zero\_counter}}
+\index{zero\_counter@{zero\_counter}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{zero\_counter}{zero\_counter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_ae8f8a0cf6925a8ff6a546fbc7a7b2380}{zero\+\_\+counter}} {\bfseries \textcolor{vhdlchar}{sync\_par\_counter}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+\Hypertarget{classsp__fp__adder__dpath_1_1behavioral_afc0dae00d58d1945c61ac774abb3e471}\label{classsp__fp__adder__dpath_1_1behavioral_afc0dae00d58d1945c61ac774abb3e471} 
+\index{sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}!zero\_counter\_reset@{zero\_counter\_reset}}
+\index{zero\_counter\_reset@{zero\_counter\_reset}!sp\_fp\_adder\_dpath.behavioral@{sp\_fp\_adder\_dpath.behavioral}}
+\doxysubsubsection{\texorpdfstring{zero\_counter\_reset}{zero\_counter\_reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classsp__fp__adder__dpath_1_1behavioral_afc0dae00d58d1945c61ac774abb3e471}{zero\+\_\+counter\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/fpu/\mbox{\hyperlink{sp__fp__adder__dpath_8vhdl}{sp\+\_\+fp\+\_\+adder\+\_\+dpath.\+vhdl}}\end{DoxyCompactItemize}

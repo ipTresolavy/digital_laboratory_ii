@@ -1,0 +1,141 @@
+\doxysection{multiplier\+\_\+ctrl Entity Reference}
+\hypertarget{classmultiplier__ctrl}{}\label{classmultiplier__ctrl}\index{multiplier\_ctrl@{multiplier\_ctrl}}
+Inheritance diagram for multiplier\+\_\+ctrl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{d4/d31/classmultiplier__ctrl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Entities}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_1_1behavioral}{multiplier\+\_\+ctrl.\+behavioral}} architecture
+\begin{DoxyCompactList}\small\item\em Behavioral architecture for the multiplier control entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Libraries}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_ae4f03c286607f3181e16b9aa12d0c6d4}{IEEE}} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Use Clauses}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}   
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}   
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Ports}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Clock signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Reset signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Input validation signal. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_a073693c43dd31e8f81c032743beb988a}{finished}}  {\bfseries {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal indicating the completion of multiplication. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_a3ebc9855ae39cd9921a8b9fcddeb8e19}{ready}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to indicate the system is ready. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_a37dbd137befab3e3968194c5efd942cb}{load}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to initiate loading of operands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__ctrl_a029947026d0f0ddf7b79f97d4e36bbb4}{shift\+\_\+operands}}  {\bfseries {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Signal to shift the operands. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Control entity for a multiplier module. Handles control logic for the multiplication process including receiving input validation and signaling when the multiplication is finished. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmultiplier__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}\label{classmultiplier__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!clock@{clock}}
+\index{clock@{clock}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{clock}{clock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Clock signal. 
+
+\Hypertarget{classmultiplier__ctrl_a073693c43dd31e8f81c032743beb988a}\label{classmultiplier__ctrl_a073693c43dd31e8f81c032743beb988a} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!finished@{finished}}
+\index{finished@{finished}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{finished}{finished}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_a073693c43dd31e8f81c032743beb988a}{finished}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal indicating the completion of multiplication. 
+
+\Hypertarget{classmultiplier__ctrl_ae4f03c286607f3181e16b9aa12d0c6d4}\label{classmultiplier__ctrl_ae4f03c286607f3181e16b9aa12d0c6d4} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!IEEE@{IEEE}}
+\index{IEEE@{IEEE}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{IEEE}{IEEE}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_ae4f03c286607f3181e16b9aa12d0c6d4}{IEEE}}\hspace{0.3cm}{\ttfamily [Library]}}
+
+\Hypertarget{classmultiplier__ctrl_a37dbd137befab3e3968194c5efd942cb}\label{classmultiplier__ctrl_a37dbd137befab3e3968194c5efd942cb} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!load@{load}}
+\index{load@{load}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{load}{load}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_a37dbd137befab3e3968194c5efd942cb}{load}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to initiate loading of operands. 
+
+\Hypertarget{classmultiplier__ctrl_a2edc34402b573437d5f25fa90ba4013e}\label{classmultiplier__ctrl_a2edc34402b573437d5f25fa90ba4013e} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!numeric\_std@{numeric\_std}}
+\index{numeric\_std@{numeric\_std}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{numeric\_std}{numeric\_std}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_a2edc34402b573437d5f25fa90ba4013e}{numeric\+\_\+std}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classmultiplier__ctrl_a3ebc9855ae39cd9921a8b9fcddeb8e19}\label{classmultiplier__ctrl_a3ebc9855ae39cd9921a8b9fcddeb8e19} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!ready@{ready}}
+\index{ready@{ready}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_a3ebc9855ae39cd9921a8b9fcddeb8e19}{ready}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to indicate the system is ready. 
+
+\Hypertarget{classmultiplier__ctrl_a108f6801ba4104063b9d5f9286194302}\label{classmultiplier__ctrl_a108f6801ba4104063b9d5f9286194302} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!reset@{reset}}
+\index{reset@{reset}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{reset}{reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Reset signal. 
+
+\Hypertarget{classmultiplier__ctrl_a029947026d0f0ddf7b79f97d4e36bbb4}\label{classmultiplier__ctrl_a029947026d0f0ddf7b79f97d4e36bbb4} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!shift\_operands@{shift\_operands}}
+\index{shift\_operands@{shift\_operands}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{shift\_operands}{shift\_operands}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_a029947026d0f0ddf7b79f97d4e36bbb4}{shift\+\_\+operands}} {\bfseries \textcolor{keywordflow}{out}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Signal to shift the operands. 
+
+\Hypertarget{classmultiplier__ctrl_acd03516902501cd1c7296a98e22c6fcb}\label{classmultiplier__ctrl_acd03516902501cd1c7296a98e22c6fcb} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!std\_logic\_1164@{std\_logic\_1164}}
+\index{std\_logic\_1164@{std\_logic\_1164}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{std\_logic\_1164}{std\_logic\_1164}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_acd03516902501cd1c7296a98e22c6fcb}{std\+\_\+logic\+\_\+1164}}\hspace{0.3cm}{\ttfamily [use clause]}}
+
+\Hypertarget{classmultiplier__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}\label{classmultiplier__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c} 
+\index{multiplier\_ctrl@{multiplier\_ctrl}!valid@{valid}}
+\index{valid@{valid}!multiplier\_ctrl@{multiplier\_ctrl}}
+\doxysubsubsection{\texorpdfstring{valid}{valid}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}} {\bfseries \textcolor{keywordflow}{in}\textcolor{vhdlchar}{ }} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Port]}}
+
+
+
+Input validation signal. 
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/arithmetic/\mbox{\hyperlink{multiplier__ctrl_8vhdl}{multiplier\+\_\+ctrl.\+vhdl}}\end{DoxyCompactItemize}

@@ -1,16 +1,19 @@
 var searchData=
 [
-  ['fifo_0',['fifo',['../d7/d8a/classfifo.html',1,'fifo'],['../dc/dc6/classuart_1_1structural.html#a576cc2b7670fbb1753a2eb96fe3c0d1d',1,'uart.structural.fifo']]],
-  ['fifo_2evhdl_1',['fifo.vhdl',['../d3/d9a/fifo_8vhdl.html',1,'']]],
-  ['fifo_5fctrl_2',['fifo_ctrl',['../dd/dec/classfifo_1_1structural.html#a836a588bee2503d0b00431df0b751bb4',1,'fifo.structural.fifo_ctrl'],['../d0/dfd/classfifo__ctrl.html',1,'fifo_ctrl']]],
-  ['fifo_5fctrl_2evhdl_3',['fifo_ctrl.vhdl',['../d2/d93/fifo__ctrl_8vhdl.html',1,'']]],
-  ['fifo_5fw_4',['FIFO_W',['../d8/dd4/classuart.html#a5300a12082350406618a83d2adaeef83',1,'uart']]],
-  ['fp_5fsp_5fadder_5fdp_5',['fp_sp_adder_dp',['../dc/d60/classfp__sp__adder__dp.html',1,'']]],
-  ['fp_5fsp_5fadder_5fdp_2evhdl_6',['fp_sp_adder_dp.vhdl',['../dd/d5e/fp__sp__adder__dp_8vhdl.html',1,'']]],
-  ['fsm_7',['fsm',['../d9/d93/classcomm__interface_1_1behavioral.html#acc3698299cb73913a7f7faf22f3054c3',1,'comm_interface::behavioral']]],
-  ['fsm_5farch_8',['fsm_arch',['../d7/d04/classgerador__pulso_1_1fsm__arch.html',1,'gerador_pulso']]],
-  ['fsm_5flogic_9',['fsm_logic',['../d9/d93/classcomm__interface_1_1behavioral.html#ad708b95b211904a3878bbbc443dc60b0',1,'comm_interface::behavioral']]],
-  ['full_10',['full',['../d7/d8a/classfifo.html#abc3ea2e37d83ccb991b87c2ef3105769',1,'fifo.full'],['../d0/dfd/classfifo__ctrl.html#abc3ea2e37d83ccb991b87c2ef3105769',1,'fifo_ctrl.full']]],
-  ['full_5flogic_11',['full_logic',['../d4/d9d/classfifo__ctrl_1_1behavioral.html#adf12d3d70ec2ac787f2827f63ae31da5',1,'fifo_ctrl::behavioral']]],
-  ['full_5ftmp_12',['full_tmp',['../dd/dec/classfifo_1_1structural.html#a7ceb42cd4cf1d42d79d3d7c7578e4eec',1,'fifo::structural']]]
+  ['fetch_5fnext_5fstate_0',['fetch_next_state',['../de/d6b/classmultiplier__ctrl_1_1behavioral.html#ad9e15439dc63c3598854ce458afd507f',1,'multiplier_ctrl::behavioral']]],
+  ['fifo_1',['fifo',['../d7/d8a/classfifo.html',1,'fifo'],['../dc/dc6/classuart_1_1structural.html#a576cc2b7670fbb1753a2eb96fe3c0d1d',1,'uart.structural.fifo']]],
+  ['fifo_2evhdl_2',['fifo.vhdl',['../d3/d9a/fifo_8vhdl.html',1,'']]],
+  ['fifo_5fctrl_3',['fifo_ctrl',['../d0/dfd/classfifo__ctrl.html',1,'fifo_ctrl'],['../dd/dec/classfifo_1_1structural.html#a836a588bee2503d0b00431df0b751bb4',1,'fifo.structural.fifo_ctrl']]],
+  ['fifo_5fctrl_2evhdl_4',['fifo_ctrl.vhdl',['../d2/d93/fifo__ctrl_8vhdl.html',1,'']]],
+  ['fifo_5fw_5',['FIFO_W',['../d8/dd4/classuart.html#a5300a12082350406618a83d2adaeef83',1,'uart']]],
+  ['final_5fexp_6',['final_exp',['../df/d83/classsp__fp__adder__dpath_1_1behavioral.html#a2e9bb6e3988eac12fa318c5629fb8cf4',1,'sp_fp_adder_dpath::behavioral']]],
+  ['final_5fsum_5fout_7',['final_sum_out',['../df/d83/classsp__fp__adder__dpath_1_1behavioral.html#a930c29a96856e6f80858db3d65c20976',1,'sp_fp_adder_dpath::behavioral']]],
+  ['finished_8',['finished',['../d2/de4/classdivisor__dpath.html#a48262f984a80691fc25ec83b2a820790',1,'divisor_dpath.finished'],['../d1/dbf/classdivisor__ctrl.html#a073693c43dd31e8f81c032743beb988a',1,'divisor_ctrl.finished'],['../d3/d3c/classmultiplier__top_1_1structural.html#a0f02f3b55c3abc6d4a4638b6c3c3201b',1,'multiplier_top.structural.finished'],['../d7/dcf/classdivisor__top_1_1structural.html#a0f02f3b55c3abc6d4a4638b6c3c3201b',1,'divisor_top.structural.finished'],['../d4/d31/classmultiplier__ctrl.html#a073693c43dd31e8f81c032743beb988a',1,'multiplier_ctrl.finished'],['../d7/dcf/classmultiplier__dpath.html#a48262f984a80691fc25ec83b2a820790',1,'multiplier_dpath.finished']]],
+  ['finished_5fshift_9',['finished_shift',['../d0/d5e/classsp__fp__adder__dpath.html#acd410dfc16b824ef7a71d8ae1e61c3dc',1,'sp_fp_adder_dpath']]],
+  ['fsm_10',['fsm',['../d9/d93/classcomm__interface_1_1behavioral.html#acc3698299cb73913a7f7faf22f3054c3',1,'comm_interface::behavioral']]],
+  ['fsm_5farch_11',['fsm_arch',['../d7/d04/classgerador__pulso_1_1fsm__arch.html',1,'gerador_pulso']]],
+  ['fsm_5flogic_12',['fsm_logic',['../d9/d93/classcomm__interface_1_1behavioral.html#ad708b95b211904a3878bbbc443dc60b0',1,'comm_interface::behavioral']]],
+  ['full_13',['full',['../d7/d8a/classfifo.html#abc3ea2e37d83ccb991b87c2ef3105769',1,'fifo.full'],['../d0/dfd/classfifo__ctrl.html#abc3ea2e37d83ccb991b87c2ef3105769',1,'fifo_ctrl.full']]],
+  ['full_5flogic_14',['full_logic',['../d4/d9d/classfifo__ctrl_1_1behavioral.html#adf12d3d70ec2ac787f2827f63ae31da5',1,'fifo_ctrl::behavioral']]],
+  ['full_5ftmp_15',['full_tmp',['../dd/dec/classfifo_1_1structural.html#a7ceb42cd4cf1d42d79d3d7c7578e4eec',1,'fifo::structural']]]
 ];

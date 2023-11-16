@@ -1,0 +1,179 @@
+\doxysection{multiplier\+\_\+dpath.\+structural Architecture Reference}
+\hypertarget{classmultiplier__dpath_1_1structural}{}\label{classmultiplier__dpath_1_1structural}\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classmultiplier__dpath_1_1structural}{multiplier\+\_\+dpath\+::structural}}\newline
+\doxysubsubsection*{Components}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Width of the operands. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}}  {\bfseries }  
+\begin{DoxyCompactList}\small\item\em Sum output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Constants}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a2a5cee746de45f4950fce4979dfd52ec}{zero\+\_\+vector}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{>}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_ae7a708c0cfbdc2915f6f37b1c4aa1da3}{multiplier\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\begin{DoxyCompactList}\small\item\em Data output. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a3eb6986acda1e9adfe810dbb07b4d0f6}{multiplier\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a383fa4c29af782eeeb2a33b825d7d93e}{multiplier\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a85410e4d85045d5b1b237920cda0d91b}{multiplicand\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a93df0e6d2c5c60999fb9c9d416a5273e}{multiplicand\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a0bd7e5996f09568306fec3c0f067106b}{multiplicand\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_ad6313540eba9b2ad7983da256407303b}{product\+\_\+reg\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a40cf047eaa012327970e87faf0ea5231}{partial\+\_\+sum}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a44131672ea5d3bbe57e48d336ac2b345}{product\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Instantiations}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a0e8dee63adf6a6fc8ec56fbed2617ae3}{multiplier\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\begin{DoxyCompactList}\small\item\em Logic for shifting and storing the multiplier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a71a3fe6d7e459525a5e749653338819e}{multiplicand\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\begin{DoxyCompactList}\small\item\em Logic for shifting and storing the multiplicand. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{adder}}  {\bfseries sklansky\+\_\+adder}   
+\begin{DoxyCompactList}\small\item\em Instantiation of the Sklansky adder to calculate the partial sum. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classmultiplier__dpath_1_1structural_a15101f206b115a84d1f5355a2cf00fa7}{product\+\_\+reg}}  {\bfseries register\+\_\+d}   
+\begin{DoxyCompactList}\small\item\em Logic for updating the product register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classmultiplier__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}\label{classmultiplier__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!adder@{adder}}
+\index{adder@{adder}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{adder}{adder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a9d7a8a381439c61aea549e7a47ec7a6f}{adder}} {\bfseries \textcolor{vhdlchar}{sklansky\_adder}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Instantiation of the Sklansky adder to calculate the partial sum. 
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a71a3fe6d7e459525a5e749653338819e}\label{classmultiplier__dpath_1_1structural_a71a3fe6d7e459525a5e749653338819e} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplicand\_reg@{multiplicand\_reg}}
+\index{multiplicand\_reg@{multiplicand\_reg}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_reg}{multiplicand\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a71a3fe6d7e459525a5e749653338819e}{multiplicand\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for shifting and storing the multiplicand. 
+
+Instantiation of the multiplicand register. \Hypertarget{classmultiplier__dpath_1_1structural_a85410e4d85045d5b1b237920cda0d91b}\label{classmultiplier__dpath_1_1structural_a85410e4d85045d5b1b237920cda0d91b} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplicand\_reg\_en@{multiplicand\_reg\_en}}
+\index{multiplicand\_reg\_en@{multiplicand\_reg\_en}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_reg\_en}{multiplicand\_reg\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a85410e4d85045d5b1b237920cda0d91b}{multiplicand\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a93df0e6d2c5c60999fb9c9d416a5273e}\label{classmultiplier__dpath_1_1structural_a93df0e6d2c5c60999fb9c9d416a5273e} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplicand\_reg\_in@{multiplicand\_reg\_in}}
+\index{multiplicand\_reg\_in@{multiplicand\_reg\_in}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_reg\_in}{multiplicand\_reg\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a93df0e6d2c5c60999fb9c9d416a5273e}{multiplicand\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a0bd7e5996f09568306fec3c0f067106b}\label{classmultiplier__dpath_1_1structural_a0bd7e5996f09568306fec3c0f067106b} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplicand\_reg\_out@{multiplicand\_reg\_out}}
+\index{multiplicand\_reg\_out@{multiplicand\_reg\_out}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplicand\_reg\_out}{multiplicand\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a0bd7e5996f09568306fec3c0f067106b}{multiplicand\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a0e8dee63adf6a6fc8ec56fbed2617ae3}\label{classmultiplier__dpath_1_1structural_a0e8dee63adf6a6fc8ec56fbed2617ae3} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplier\_reg@{multiplier\_reg}}
+\index{multiplier\_reg@{multiplier\_reg}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_reg}{multiplier\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a0e8dee63adf6a6fc8ec56fbed2617ae3}{multiplier\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for shifting and storing the multiplier. 
+
+Instantiation of the multiplier register. \Hypertarget{classmultiplier__dpath_1_1structural_ae7a708c0cfbdc2915f6f37b1c4aa1da3}\label{classmultiplier__dpath_1_1structural_ae7a708c0cfbdc2915f6f37b1c4aa1da3} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplier\_reg\_en@{multiplier\_reg\_en}}
+\index{multiplier\_reg\_en@{multiplier\_reg\_en}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_reg\_en}{multiplier\_reg\_en}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_ae7a708c0cfbdc2915f6f37b1c4aa1da3}{multiplier\+\_\+reg\+\_\+en}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+
+
+Data output. 
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a3eb6986acda1e9adfe810dbb07b4d0f6}\label{classmultiplier__dpath_1_1structural_a3eb6986acda1e9adfe810dbb07b4d0f6} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplier\_reg\_in@{multiplier\_reg\_in}}
+\index{multiplier\_reg\_in@{multiplier\_reg\_in}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_reg\_in}{multiplier\_reg\_in}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a3eb6986acda1e9adfe810dbb07b4d0f6}{multiplier\+\_\+reg\+\_\+in}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a383fa4c29af782eeeb2a33b825d7d93e}\label{classmultiplier__dpath_1_1structural_a383fa4c29af782eeeb2a33b825d7d93e} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!multiplier\_reg\_out@{multiplier\_reg\_out}}
+\index{multiplier\_reg\_out@{multiplier\_reg\_out}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{multiplier\_reg\_out}{multiplier\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a383fa4c29af782eeeb2a33b825d7d93e}{multiplier\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a40cf047eaa012327970e87faf0ea5231}\label{classmultiplier__dpath_1_1structural_a40cf047eaa012327970e87faf0ea5231} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!partial\_sum@{partial\_sum}}
+\index{partial\_sum@{partial\_sum}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{partial\_sum}{partial\_sum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a40cf047eaa012327970e87faf0ea5231}{partial\+\_\+sum}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a15101f206b115a84d1f5355a2cf00fa7}\label{classmultiplier__dpath_1_1structural_a15101f206b115a84d1f5355a2cf00fa7} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!product\_reg@{product\_reg}}
+\index{product\_reg@{product\_reg}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{product\_reg}{product\_reg}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a15101f206b115a84d1f5355a2cf00fa7}{product\+\_\+reg}} {\bfseries \textcolor{vhdlchar}{register\_d}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Instantiation]}}
+
+
+
+Logic for updating the product register. 
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a44131672ea5d3bbe57e48d336ac2b345}\label{classmultiplier__dpath_1_1structural_a44131672ea5d3bbe57e48d336ac2b345} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!product\_reg\_out@{product\_reg\_out}}
+\index{product\_reg\_out@{product\_reg\_out}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{product\_reg\_out}{product\_reg\_out}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a44131672ea5d3bbe57e48d336ac2b345}{product\+\_\+reg\+\_\+out}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{31} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_ad6313540eba9b2ad7983da256407303b}\label{classmultiplier__dpath_1_1structural_ad6313540eba9b2ad7983da256407303b} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!product\_reg\_reset@{product\_reg\_reset}}
+\index{product\_reg\_reset@{product\_reg\_reset}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{product\_reg\_reset}{product\_reg\_reset}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_ad6313540eba9b2ad7983da256407303b}{product\+\_\+reg\+\_\+reset}} {\bfseries \textcolor{keywordtype}{std\_logic}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classmultiplier__dpath_1_1structural_abb1f4b1077fed42215491ace6164cf2c}\label{classmultiplier__dpath_1_1structural_abb1f4b1077fed42215491ace6164cf2c} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!register\_d@{register\_d}}
+\index{register\_d@{register\_d}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{register\_d}{register\_d}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_abb1f4b1077fed42215491ace6164cf2c}{register\+\_\+d}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Sum output. 
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a61bb95b7aff675edd529b4109382862f}\label{classmultiplier__dpath_1_1structural_a61bb95b7aff675edd529b4109382862f} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!sklansky\_adder@{sklansky\_adder}}
+\index{sklansky\_adder@{sklansky\_adder}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{sklansky\_adder}{sklansky\_adder}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a61bb95b7aff675edd529b4109382862f}{sklansky\+\_\+adder}} {\bfseries \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Component]}}
+
+
+
+Width of the operands. 
+
+\Hypertarget{classmultiplier__dpath_1_1structural_a2a5cee746de45f4950fce4979dfd52ec}\label{classmultiplier__dpath_1_1structural_a2a5cee746de45f4950fce4979dfd52ec} 
+\index{multiplier\_dpath.structural@{multiplier\_dpath.structural}!zero\_vector@{zero\_vector}}
+\index{zero\_vector@{zero\_vector}!multiplier\_dpath.structural@{multiplier\_dpath.structural}}
+\doxysubsubsection{\texorpdfstring{zero\_vector}{zero\_vector}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classmultiplier__dpath_1_1structural_a2a5cee746de45f4950fce4979dfd52ec}{zero\+\_\+vector}} {\bfseries \textcolor{keywordtype}{std\_logic\_vector}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{15} \textcolor{vhdlchar}{ }\textcolor{keywordflow}{downto}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{:}\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{keywordflow}{others}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{=}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{>}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ } \textcolor{vhdldigit}{0} \textcolor{vhdlchar}{ }\textcolor{vhdlchar}{'}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Constant]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/arithmetic/\mbox{\hyperlink{multiplier__dpath_8vhdl}{multiplier\+\_\+dpath.\+vhdl}}\end{DoxyCompactItemize}

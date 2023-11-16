@@ -15,12 +15,15 @@ var searchData=
   ['dist_5fh_12',['dist_h',['../d8/deb/classhcsr04_1_1structural.html#a06f72a9409a88e2e944cf712f455f2a1',1,'hcsr04.structural.dist_h'],['../df/d5e/classhcsr04__interface.html#a430c0ea27be353392423a03839bb3862',1,'hcsr04_interface.dist_h'],['../d9/d17/classtb__hcsr04__interface_1_1sim.html#a06f72a9409a88e2e944cf712f455f2a1',1,'tb_hcsr04_interface.sim.dist_h']]],
   ['dist_5fh_5fl_13',['dist_h_l',['../dd/d58/classhcsr04__interface_1_1rtl.html#ab1d045db2509f10d74c2d1464846006a',1,'hcsr04_interface::rtl']]],
   ['dist_5fl_14',['dist_l',['../d8/deb/classhcsr04_1_1structural.html#a2fe348bf946dd128e96d445843b814f7',1,'hcsr04.structural.dist_l'],['../df/d5e/classhcsr04__interface.html#afd99b52ee69c28df4eeba2bfe609714e',1,'hcsr04_interface.dist_l'],['../d9/d17/classtb__hcsr04__interface_1_1sim.html#a2fe348bf946dd128e96d445843b814f7',1,'tb_hcsr04_interface.sim.dist_l']]],
-  ['distance_5fcm_7e2_15',['distance_cm~2',['../d3/d3d/classtb__hcsr04_1_1sim.html#a0a257edf6a181de869b13f7baa1ae0bc',1,'tb_hcsr04::sim']]],
-  ['distance_5fcm_7e5_16',['distance_cm~5',['../d7/dc4/classtb__hcsr04__ctrl_1_1sim.html#ad8935185dc26984b20033e2152b266f5',1,'tb_hcsr04_ctrl::sim']]],
-  ['distance_5fcm_7e8_17',['distance_cm~8',['../d9/d17/classtb__hcsr04__interface_1_1sim.html#a50fd3f1873ad58b9184fad2dee4efc4d',1,'tb_hcsr04_interface::sim']]],
-  ['divisor_18',['divisor',['../d0/d76/classbaud__gen.html#a854af6183d8d62f266ebd83de2b04898',1,'baud_gen.divisor'],['../d8/dd4/classuart.html#a854af6183d8d62f266ebd83de2b04898',1,'uart.divisor'],['../d9/d93/classcomm__interface_1_1behavioral.html#a636e440072702abd69a83e15fe810f90',1,'comm_interface.behavioral.divisor']]],
-  ['dout_19',['dout',['../d0/d43/classuart__rx.html#a2bc0176254244b80e2399ad17f1f956d',1,'uart_rx']]],
-  ['duration_7e1_20',['duration~1',['../d3/d3d/classtb__hcsr04_1_1sim.html#a15f149ca1a4939320c93dce1f91f3bbf',1,'tb_hcsr04::sim']]],
-  ['duration_7e4_21',['duration~4',['../d7/dc4/classtb__hcsr04__ctrl_1_1sim.html#ac0eef070ca4dbe312093f66ce694949c',1,'tb_hcsr04_ctrl::sim']]],
-  ['duration_7e7_22',['duration~7',['../d9/d17/classtb__hcsr04__interface_1_1sim.html#ab4a5d840f19bb6203249023ad5c63d2a',1,'tb_hcsr04_interface::sim']]]
+  ['distance_5fcm_7e11_15',['distance_cm~11',['../d9/d17/classtb__hcsr04__interface_1_1sim.html#ade69e37dd2d092dc3e87cdbf119e9c74',1,'tb_hcsr04_interface::sim']]],
+  ['distance_5fcm_7e5_16',['distance_cm~5',['../d3/d3d/classtb__hcsr04_1_1sim.html#ad8935185dc26984b20033e2152b266f5',1,'tb_hcsr04::sim']]],
+  ['distance_5fcm_7e8_17',['distance_cm~8',['../d7/dc4/classtb__hcsr04__ctrl_1_1sim.html#a50fd3f1873ad58b9184fad2dee4efc4d',1,'tb_hcsr04_ctrl::sim']]],
+  ['dividend_18',['dividend',['../d2/de4/classdivisor__dpath.html#ae4a678fe56f94dbe65485d5e6c7ffcd7',1,'divisor_dpath.dividend'],['../de/d36/classdivisor__top.html#ae4a678fe56f94dbe65485d5e6c7ffcd7',1,'divisor_top.dividend']]],
+  ['divisor_19',['divisor',['../d2/de4/classdivisor__dpath.html#a0ecf702b55cddd4aa8fdb032a18db5c8',1,'divisor_dpath.divisor'],['../de/d36/classdivisor__top.html#a0ecf702b55cddd4aa8fdb032a18db5c8',1,'divisor_top.divisor'],['../d0/d76/classbaud__gen.html#a854af6183d8d62f266ebd83de2b04898',1,'baud_gen.divisor'],['../d8/dd4/classuart.html#a854af6183d8d62f266ebd83de2b04898',1,'uart.divisor'],['../d9/d93/classcomm__interface_1_1behavioral.html#a636e440072702abd69a83e15fe810f90',1,'comm_interface.behavioral.divisor']]],
+  ['divisor_5fctrl_20',['divisor_ctrl',['../d7/dcf/classdivisor__top_1_1structural.html#aeadb8758c6db40b419cc40ce86b7a8d2',1,'divisor_top::structural']]],
+  ['divisor_5fdpath_21',['divisor_dpath',['../d7/dcf/classdivisor__top_1_1structural.html#a805c707cbaec0258cd8f3acff1cdb3a8',1,'divisor_top::structural']]],
+  ['dout_22',['dout',['../d0/d43/classuart__rx.html#a2bc0176254244b80e2399ad17f1f956d',1,'uart_rx']]],
+  ['duration_7e10_23',['duration~10',['../d9/d17/classtb__hcsr04__interface_1_1sim.html#ac45ab45e1634df480c01db6efb11ba75',1,'tb_hcsr04_interface::sim']]],
+  ['duration_7e4_24',['duration~4',['../d3/d3d/classtb__hcsr04_1_1sim.html#ac0eef070ca4dbe312093f66ce694949c',1,'tb_hcsr04::sim']]],
+  ['duration_7e7_25',['duration~7',['../d7/dc4/classtb__hcsr04__ctrl_1_1sim.html#ab4a5d840f19bb6203249023ad5c63d2a',1,'tb_hcsr04_ctrl::sim']]]
 ];

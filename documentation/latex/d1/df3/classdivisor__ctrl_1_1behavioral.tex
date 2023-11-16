@@ -1,0 +1,67 @@
+\doxysection{divisor\+\_\+ctrl.\+behavioral Architecture Reference}
+\hypertarget{classdivisor__ctrl_1_1behavioral}{}\label{classdivisor__ctrl_1_1behavioral}\index{divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}}
+{\bfseries Architecture $>$$>$ }\mbox{\hyperlink{classdivisor__ctrl_1_1behavioral}{divisor\+\_\+ctrl\+::behavioral}}\newline
+\doxysubsubsection*{Processes}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a833a3834b7730e1d6572edfb9d3f94ff}{state\+\_\+fetch}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} )}
+\item 
+\mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a86bea61ddc19a886f518c58e193a7eca}{next\+\_\+state\+\_\+logic}}{\bfseries  ( {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_adc6e5733fc3c22f0a7b2914188c49c90}{state}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_a9e03d68c88c070e9a8b8f516b01bc194}{neg\+\_\+remainder}}} \textcolor{vhdlchar}{ }} , {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_a073693c43dd31e8f81c032743beb988a}{finished}}} \textcolor{vhdlchar}{ }} )}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Types}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{subtracting}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{testing\_remainder}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+ \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_adc6e5733fc3c22f0a7b2914188c49c90}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\item 
+\mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function/\+Procedure/\+Process Documentation}
+\Hypertarget{classdivisor__ctrl_1_1behavioral_a86bea61ddc19a886f518c58e193a7eca}\label{classdivisor__ctrl_1_1behavioral_a86bea61ddc19a886f518c58e193a7eca} 
+\index{divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}!next\_state\_logic@{next\_state\_logic}}
+\index{next\_state\_logic@{next\_state\_logic}!divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state\_logic()}{next\_state\_logic()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} next\+\_\+state\+\_\+logic(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_adc6e5733fc3c22f0a7b2914188c49c90}{state}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_ab0d9464755fcd2cecd3faaf470fd5a7c}{valid}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_a9e03d68c88c070e9a8b8f516b01bc194}{neg\+\_\+remainder}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_a073693c43dd31e8f81c032743beb988a}{finished}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+\textbackslash{}process next\+\_\+state\+\_\+logic Determines the next state of the division control process based on the current state and input signals.
+
+This process sets control outputs and transitions between states based on the inputs and current state. It handles the main logic of the division control including ready signal, loading, writing remainder, etc. \Hypertarget{classdivisor__ctrl_1_1behavioral_a833a3834b7730e1d6572edfb9d3f94ff}\label{classdivisor__ctrl_1_1behavioral_a833a3834b7730e1d6572edfb9d3f94ff} 
+\index{divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}!state\_fetch@{state\_fetch}}
+\index{state\_fetch@{state\_fetch}!divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_fetch()}{state\_fetch()}}
+{\footnotesize\ttfamily  {\bfseries \textcolor{vhdlchar}{ }} state\+\_\+fetch(\begin{DoxyParamCaption}\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_ac7d2714e799fc3b1af36d5ebbc3c3564}{clock}}} \textcolor{vhdlchar}{ }} {\em } ,  }\item[{}]{{\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_a108f6801ba4104063b9d5f9286194302}{reset}}} \textcolor{vhdlchar}{ }} {\em } }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [Process]}}
+
+\textbackslash{}process state\+\_\+fetch Responsible for updating the current state based on the next state and reset signal.
+
+This process triggers on the rising edge of the clock or a reset signal. It sets the current state to idle on reset or to the next state on the clock\textquotesingle{}s rising edge. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classdivisor__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}\label{classdivisor__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b} 
+\index{divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}!next\_state@{next\_state}}
+\index{next\_state@{next\_state}!divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{next\_state}{next\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_af9b6f839b1d5ac3b3822aced1329ca7b}{next\+\_\+state}} {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+\Hypertarget{classdivisor__ctrl_1_1behavioral_adc6e5733fc3c22f0a7b2914188c49c90}\label{classdivisor__ctrl_1_1behavioral_adc6e5733fc3c22f0a7b2914188c49c90} 
+\index{divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}!state@{state}}
+\index{state@{state}!divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_adc6e5733fc3c22f0a7b2914188c49c90}{state}} {\bfseries {\bfseries \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}{state\+\_\+type}}} \textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Signal]}}
+
+Holds the current state of the division control process. \Hypertarget{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}\label{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24} 
+\index{divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}!state\_type@{state\_type}}
+\index{state\_type@{state\_type}!divisor\_ctrl.behavioral@{divisor\_ctrl.behavioral}}
+\doxysubsubsection{\texorpdfstring{state\_type}{state\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdivisor__ctrl_1_1behavioral_a860a1065fe40866822c26fedd7d93e24}{state\+\_\+type}} {\bfseries \textcolor{vhdlchar}{(}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{idle}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{subtracting}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{,}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{testing\_remainder}\textcolor{vhdlchar}{ }\textcolor{vhdlchar}{)}\textcolor{vhdlchar}{ }} \hspace{0.3cm}{\ttfamily [Type]}}
+
+
+
+The documentation for this design unit was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+components/arithmetic/\mbox{\hyperlink{divisor__ctrl_8vhdl}{divisor\+\_\+ctrl.\+vhdl}}\end{DoxyCompactItemize}
