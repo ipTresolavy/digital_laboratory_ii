@@ -3,6 +3,12 @@
 ../../components/register_d.vhdl
 ../../components/arithmetic/multiplier_dpath.vhdl
 ../../components/arithmetic/multiplier_ctrl.vhdl
+../../components/arithmetic/multiplier_top.vhdl
+../../components/arithmetic/divisor_dpath.vhdl
+../../components/arithmetic/divisor_ctrl.vhdl
 ./tb_sklansky_adder.vhdl
 ./tb_multiplier_dpath.vhdl
 ./tb_multiplier_ctrl.vhdl
+./tb_multiplier_top.vhdl
+./tb_divisor_dpath.vhdl
+./tb_divisor_ctrl.vhdl
