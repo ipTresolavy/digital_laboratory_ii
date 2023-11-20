@@ -69,18 +69,6 @@ architecture structural of divisor_dpath is
   component sync_par_counter is
     generic
     (
-    (
-      clock         : in  std_logic;
-      reset         : in  std_logic;
-      enable        : in  std_logic;
-      data_in       : in  std_logic_vector(WIDTH-1 downto 0);
-      data_out      : out std_logic_vector(WIDTH-1 downto 0)
-    );
-  end component register_d;
-
-  component sync_par_counter is
-    generic
-    (
       constant MODU : natural := 16 --! \brief Modulus of the counter.
     );
     port
