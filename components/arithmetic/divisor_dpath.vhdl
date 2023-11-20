@@ -36,7 +36,85 @@ entity divisor_dpath is
 end entity divisor_dpath;
 
 architecture structural of divisor_dpath is
-  -- Component and signal declarations...
+  component sklansky_adder is
+    generic
+    (
+      WIDTH : natural := 16 --! Width of the operands.
+    );
+    port
+    (
+      a     : in  std_logic_vector(WIDTH-1 downto 0); --! First operand.
+      b     : in  std_logic_vector(WIDTH-1 downto 0); --! Second operand.
+      c_in  : in  std_logic; --! Carry input.
+      c_out : out std_logic; --! Carry output.
+      s     : out std_logic_vector(WIDTH-1 downto 0) --! Sum output.
+    );
+  end component sklansky_adder;
+
+  component register_d is
+    generic
+    (
+      WIDTH : natural := 8
+    );
+    port
+    (
+      clock         : in  std_logic;
+      reset         : in  std_logic;
+      enable        : in  std_logic;
+      data_in       : in  std_logic_vector(WIDTH-1 downto 0);
+      data_out      : out std_logic_vector(WIDTH-1 downto 0)
+    );
+  end component register_d;
+
+  component sync_par_counter is
+    generic
+    (
+    (
+      clock         : in  std_logic;
+      reset         : in  std_logic;
+      enable        : in  std_logic;
+      data_in       : in  std_logic_vector(WIDTH-1 downto 0);
+      data_out      : out std_logic_vector(WIDTH-1 downto 0)
+    );
+  end component register_d;
+
+  component sync_par_counter is
+    generic
+    (
+      constant MODU : natural := 16 --! \brief Modulus of the counter.
+    );
+    port
+    (
+      clock  : in  std_logic; --! \brief Clock input.
+      reset  : in  std_logic; --! \brief Reset input.
+      cnt_en : in  std_logic; --! \brief Count enable signal.
+      q_in   : in  std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0); --! \brief Parallel load input.
+      load   : in  std_logic; --! \brief Load signal.
+      q      : out std_logic_vector(natural(ceil(log2(real(MODU))))-1 downto 0) --! \brief Counter output.
+    );
+  end component sync_par_counter;
+
+  constant zero_vector : std_logic_vector(15 downto 0) := (others => '0');
+
+  signal quotient_reg_en  : std_logic;
+  signal quotient_reg_in  : std_logic_vector(15 downto 0);
+  signal quotient_reg_out : std_logic_vector(15 downto 0);
+
+  signal divisor_reg_en  : std_logic;
+  signal divisor_reg_in  : std_logic_vector(31 downto 0);
+  signal divisor_reg_out : std_logic_vector(31 downto 0);
+
+  signal remainder_reg_reset : std_logic;
+  signal remainder_reg_en    : std_logic;
+  signal remainder_reg_in    : std_logic_vector(31 downto 0);
+  signal remainder_reg_out   : std_logic_vector(31 downto 0);
+
+  signal b : std_logic_vector(31 downto 0);
+  signal c_in : std_logic;
+  signal s : std_logic_vector(31 downto 0);
+
+  signal iteration_counter_reset : std_logic;
+  signal iteration_count : std_logic_vector(natural(ceil(log2(real(18))))-1 downto 0);
 
 begin
   --! Behavioral part of the architecture.
