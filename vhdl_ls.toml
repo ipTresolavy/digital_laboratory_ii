@@ -17,3 +17,8 @@ week2.files = [
   "week2/rtl/*.vhdl",
   "week2/simulation/*.vhdl"
 ]
+
+week3.files = [
+  "week3/rtl/*.vhdl",
+  "week3/simulation/*.vhdl"
+]
