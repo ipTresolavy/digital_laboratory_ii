@@ -15,7 +15,7 @@
 
 # Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 # File: /home/ipontes3olavy/second_quadrimester/diglabii/week3/doc/main.csv
-# Generated on: Mon Nov 20 18:32:22 2023
+# Generated on: Mon Nov 20 18:51:21 2023
 
 # Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
 
@@ -56,8 +56,8 @@ db_estado[3],Output,PIN_P14,4A,B4A_N0,,,,,,,,,,,,,,
 db_estado[2],Output,PIN_T14,4A,B4A_N0,,,,,,,,,,,,,,
 db_estado[1],Output,PIN_M8,3B,B3B_N0,,,,,,,,,,,,,,
 db_estado[0],Output,PIN_N9,3B,B3B_N0,,,,,,,,,,,,,,
-db_sw[1],Input,PIN_V13,4A,B4A_N0,,,,,,,,,,,,,,
-db_sw[0],Input,PIN_AB12,4A,B4A_N0,,,,,,,,,,,,,,
+db_sw[1],Input,PIN_AB12,4A,B4A_N0,,,,,,,,,,,,,,
+db_sw[0],Input,PIN_AB13,4A,B4A_N0,,,,,,,,,,,,,,
 echo,Input,PIN_H15,7A,B7A_N0,,,,,,,,,,,,,,
 lidar_rx,Input,PIN_H16,7A,B7A_N0,,,,,,,,,,,,,,
 lidar_tx,Output,PIN_A12,7A,B7A_N0,,,,,,,,,,,,,,
