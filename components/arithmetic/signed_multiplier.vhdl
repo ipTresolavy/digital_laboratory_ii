@@ -73,7 +73,7 @@ architecture structural of signed_multiplier is
   signal state, next_state : state_type;
 
   signal mult_ready : std_logic;
-  signal buffer_signal : std_logic;
+  signal buffer_sign : std_logic;
   signal signal_reg_in : std_logic_vector(0 downto 0);
   signal signal_reg_out : std_logic_vector(0 downto 0);
 
@@ -100,7 +100,7 @@ begin
   (
     clock    => clock,
     reset    => reset,
-    enable   => buffer_signal,
+    enable   => buffer_sign,
     data_in  => signal_reg_in,
     data_out => signal_reg_out
   );
@@ -116,12 +116,12 @@ begin
 
   next_state_logic: process(state, valid, mult_ready)
   begin
-    buffer_signal <= '0';
+    buffer_sign <= '0';
 
     case state is
       when idle =>
         if valid = '1' then
-          buffer_signal <= '1';
+          buffer_sign <= '1';
           next_state <= waiting;
         else
           next_state <= idle;
@@ -189,7 +189,7 @@ begin
     product      => product_out
   );
 
-  n_product <= not product;
+  n_product <= not product_out;
   product_inverter: sklansky_adder
   generic map
   (

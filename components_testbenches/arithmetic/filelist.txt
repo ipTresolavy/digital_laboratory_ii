@@ -10,6 +10,7 @@
 ../../components/arithmetic/divisor_ctrl.vhdl
 ../../components/arithmetic/divisor_top.vhdl
 ../../components/arithmetic/signed_multiplier.vhdl
+../../components/arithmetic/signed_divisor.vhdl
 ./tb_sklansky_adder.vhdl
 ./tb_multiplier_dpath.vhdl
 ./tb_multiplier_ctrl.vhdl
@@ -18,3 +19,4 @@
 ./tb_divisor_ctrl.vhdl
 ./tb_divisor_top.vhdl
 ./tb_signed_multiplier.vhdl
+./tb_signed_divisor.vhdl

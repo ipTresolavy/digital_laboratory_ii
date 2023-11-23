@@ -14,6 +14,8 @@ architecture sim of tb_signed_multiplier is
   signal ready           : std_logic;
   signal multiplicand    : std_logic_vector(15 downto 0) := (others => '0');
   signal multiplier      : std_logic_vector(15 downto 0) := (others => '0');
+  signal tmp_multiplicand    : std_logic_vector(15 downto 0) := (others => '0');
+  signal tmp_multiplier      : std_logic_vector(15 downto 0) := (others => '0');
   signal product         : std_logic_vector(31 downto 0);
 
   constant clockPeriod : time := 20 ns; -- Clock period (50 MHz)
@@ -74,13 +76,19 @@ begin
       valid <= '1';
       wait until rising_edge(clock);
       valid <= '0';
+      wait for 0 ns;
+      tmp_multiplicand <= multiplicand;
+      tmp_multiplier <= multiplier;
+      multiplicand <= (others => '0');
+      multiplier <= (others => '0');
+
 
       -- Wait for the result
       wait until ready = '1';
       wait until rising_edge(clock);
 
       -- Assert correctness of the result
-      assert (to_integer(signed(product)) = to_integer(signed(multiplicand)) * to_integer(signed(multiplier)))
+      assert (to_integer(signed(product)) = to_integer(signed(tmp_multiplicand)) * to_integer(signed(tmp_multiplier)))
         report "Multiplication result is incorrect"
         severity failure;
 
