@@ -18,7 +18,7 @@ entity kalman_filter_dpath is
     div_src       : in std_logic;
     div_valid     : in std_logic;
     add_src       : in std_logic;
-    prev_en       : in std_logic;
+    pred_en       : in std_logic;
 
     -- control outputs
     mult_ready : out std_logic;
@@ -111,23 +111,28 @@ architecture structural of kalman_filter_dpath is
   signal x_reg_out : std_logic_vector(15 downto 0);
   signal p_reg_in  : std_logic_vector(15 downto 0);
   signal p_reg_out : std_logic_vector(15 downto 0);
-  signal prev_x_reg_out : std_logic_vector(15 downto 0);
-  signal prev_p_reg_out : std_logic_vector(15 downto 0);
-  signal prev_x_sum_out : std_logic_vector(15 downto 0);
-  signal prev_p_sum_out : std_logic_vector(15 downto 0);
+  signal pred_x_reg_out : std_logic_vector(15 downto 0);
+  signal pred_p_reg_out : std_logic_vector(15 downto 0);
+  signal pred_x_sum_out : std_logic_vector(15 downto 0);
+  signal pred_p_sum_out : std_logic_vector(15 downto 0);
   signal next_x : std_logic_vector(15 downto 0);
   signal next_p : std_logic_vector(15 downto 0);
 
   signal diff_a : std_logic_vector(15 downto 0);
   signal diff_b : std_logic_vector(15 downto 0);
   signal diff_out : std_logic_vector(15 downto 0);
+
   signal multiplier : std_logic_vector(15 downto 0);
   signal multiplicand : std_logic_vector(15 downto 0);
-  signal product : std_logic_vector(15 downto 0);
+  signal product : std_logic_vector(31 downto 0);
+
+  signal dividend : std_logic_vector(15 downto 0);
   signal divisor_adder_a : std_logic_vector(15 downto 0);
   signal divisor : std_logic_vector(15 downto 0);
   signal quotient : std_logic_vector(31 downto 0);
-  signal remainder : std_logic_vector(31 downto 0);
+
+  signal add_a : std_logic_vector(31 downto 0);
+  signal add_b : std_logic_vector(31 downto 0);
   signal add_out : std_logic_vector(31 downto 0);
   
 begin
@@ -178,7 +183,7 @@ begin
   with x_src select
     x_reg_in <= inputs_mean when "00",
                 next_x when "11",
-                add_out when others;
+                add_out(15 downto 0) when others;
   x: register_d
   generic map
   (
@@ -194,9 +199,9 @@ begin
   );
 
   with p_src select
-    p_reg_in <= (2 downto 0 => "110", others => '0') when "00",
+    p_reg_in <= (3 to 15 => '0') & "110" when "00",
                 next_p when "11",
-                add_out when others;
+                add_out(15 downto 0) when others;
   p: register_d
   generic map
   (
@@ -246,8 +251,8 @@ begin
   );
 
   with div_src select
-    divisor_adder_a <= (2 downto 0 => "110", others => '0') when '1',
-                       (others => '0') when others;
+    divisor_adder_a <= (3 to 15 => '0') & "110" when '1',
+                       (others  => '0') when others;
   divisor_adder: sklansky_adder
   generic map
   (
@@ -262,6 +267,7 @@ begin
     s     => divisor
   );
 
+  dividend <= product(15 downto 0);
   divisor_component: signed_divisor
   port map
   (
@@ -269,10 +275,35 @@ begin
     reset     => reset,
     valid     => div_valid,
     ready     => div_ready,
-    dividend  => product,
+    dividend  => dividend,
     divisor   => divisor,
     quotient  => quotient,
-    remainder => remainder
+    remainder => open
   );
+
+  with add_src select
+    add_a <= (16 to 31 => p_reg_out(15)) & p_reg_out when '1',
+             (16 to 31 => x_reg_out(15)) & x_reg_out when others;
+  with add_src select
+    add_b <= not quotient when '1',
+             quotient when others;
+  add: sklansky_adder
+  generic map
+  (
+    WIDTH => 32
+  )
+  port map
+  (
+    a     => add_a,
+    b     => add_b,
+    c_in  => add_src,
+    c_out => open,
+    s     => add_out
+  );
+
+  next_x <= x_reg_out;
+  next_p <= p_reg_out;
+
+  dist <= x_reg_out;
   
 end architecture structural;
