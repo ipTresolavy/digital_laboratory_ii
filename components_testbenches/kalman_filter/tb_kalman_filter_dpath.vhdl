@@ -122,7 +122,7 @@ begin
     procedure lidar_update is
     begin
       lidar  <= std_logic_vector(to_unsigned(real_dist + rand_int(-6, +6), 16));
-      hcsr04 <= std_logic_vector(to_unsigned(real_dist + rand_int(-1, +1), 16));
+      hcsr04 <= std_logic_vector(to_unsigned(real_dist + rand_int(-2, +2), 16));
       buffer_inputs <= '1';
       wait until rising_edge(clock);
       buffer_inputs <= '0';

@@ -3,8 +3,9 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity kalman_filter_dpath is
-  port (
-    -- stystem signals
+  port
+  (
+    -- system signals
     clock : std_logic;
     reset : std_logic;
 
