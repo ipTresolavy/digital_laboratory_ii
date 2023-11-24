@@ -199,7 +199,7 @@ begin
   );
 
   with p_src select
-    p_reg_in <= (4 to 15 => '0') & "1100" when "00",
+    p_reg_in <= (6 to 15 => '0') & "100111" when "00",
                 next_p when "11",
                 add_out(15 downto 0) when others;
   p: register_d
@@ -251,8 +251,8 @@ begin
   );
 
   with div_src select
-    divisor_adder_a <= (3 to 15 => '0') & "110" when '1',
-                       (3 to 15 => '0') & "110" when others;
+    divisor_adder_a <= (6 to 15 => '0') & "100100" when '1',
+                       (2 to 15 => '0') & "10" when others;
   divisor_adder: sklansky_adder
   generic map
   (
@@ -302,7 +302,20 @@ begin
   );
 
   next_x <= x_reg_out;
-  next_p <= p_reg_out;
+
+  next_p_adder: sklansky_adder
+  generic map
+  (
+    WIDTH => 16
+  )
+  port map
+  (
+    a     => x"0006",
+    b     => p_reg_out,
+    c_in  => '0',
+    c_out => open,
+    s     => next_p
+  );
 
   dist <= x_reg_out;
   

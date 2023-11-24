@@ -18,7 +18,7 @@ architecture sim of tb_kalman_filter_dpath is
   signal mult_ready, div_ready : std_logic;
 
   constant clockPeriod : time := 20 ns; -- Clock period (50 MHz)
-  constant num_tests   : natural := 100;   -- Number of tests
+  constant num_tests   : natural := 5;   -- Number of tests
 
   component kalman_filter_dpath
     port
@@ -252,8 +252,8 @@ begin
 
     initialize;
 
-    for i in 1 to 2 loop
-      for i in 1 to num_tests loop
+    for i in 1 to num_tests loop
+      for i in 1 to 100 loop
         predict;
         lidar_update;
         hcsr04_update;
@@ -261,7 +261,7 @@ begin
         wait until rising_edge(clock);
         valid_output := false;
       end loop;
-      real_dist := 100;
+      real_dist := rand_int(10, 400);
       wait for 0 ns;
     end loop;
 

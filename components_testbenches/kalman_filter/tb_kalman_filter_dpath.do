@@ -23,9 +23,10 @@ add wave -noupdate /tb_kalman_filter_dpath/mult_ready
 add wave -noupdate /tb_kalman_filter_dpath/div_ready
 add wave -noupdate -divider debug
 add wave -noupdate /tb_kalman_filter_dpath/stimulus_process/valid_output
+add wave -noupdate /tb_kalman_filter_dpath/stimulus_process/real_dist
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
-quietly wave cursor active 0
+WaveRestoreCursors {{Cursor 1} {231354 ns} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 287
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -40,4 +41,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {0 ns} {872 ns}
+WaveRestoreZoom {0 ns} {1984553 ns}
