@@ -181,8 +181,8 @@ begin
   inputs_mean <= "0" & lidar_hcsr04_sum(lidar_hcsr04_sum'LENGTH-1 downto 1);
 
   with x_src select
-    x_reg_in <= inputs_mean when "00",
-                next_x when "11",
+    x_reg_in <= inputs_mean when "11",
+                next_x when "00",
                 add_out(15 downto 0) when others;
   x: register_d
   generic map
@@ -199,7 +199,7 @@ begin
   );
 
   with p_src select
-    p_reg_in <= (3 to 15 => '0') & "110" when "00",
+    p_reg_in <= (4 to 15 => '0') & "1100" when "00",
                 next_p when "11",
                 add_out(15 downto 0) when others;
   p: register_d
@@ -252,7 +252,7 @@ begin
 
   with div_src select
     divisor_adder_a <= (3 to 15 => '0') & "110" when '1',
-                       (others  => '0') when others;
+                       (3 to 15 => '0') & "110" when others;
   divisor_adder: sklansky_adder
   generic map
   (
