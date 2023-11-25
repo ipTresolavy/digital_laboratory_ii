@@ -200,8 +200,8 @@ begin
   );
 
   with p_src select
-    p_reg_in <= (6 to 15 => '0') & "100111" when "00",
-                next_p when "11",
+    p_reg_in <= (6 to 15 => '0') & "100111" when "11",
+                next_p when "00",
                 add_out(15 downto 0) when others;
   p: register_d
   generic map

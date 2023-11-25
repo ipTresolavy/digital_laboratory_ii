@@ -12,4 +12,7 @@
 ../../components/arithmetic/signed_multiplier.vhdl
 ../../components/arithmetic/signed_divisor.vhdl
 ../../components/kalman_filter/kalman_filter_dpath.vhdl
+../../components/kalman_filter/kalman_filter_ctrl.vhdl
+../../components/kalman_filter/kalman_filter.vhdl
 ./tb_kalman_filter_dpath.vhdl
+./tb_kalman_filter.vhdl
