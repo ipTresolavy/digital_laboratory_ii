@@ -86,6 +86,7 @@ begin
         x_en       <= '1';
         p_en       <= '1';
         pred_en    <= '1';
+        o_valid    <= '1';
         next_state <= update_idle;
 
       when update_idle =>
@@ -247,7 +248,6 @@ begin
         add_src <= '1';
         p_src <= "10";
         p_en <= '1';
-        o_valid <= '1';
         next_state <= predict;
 
       when others =>
