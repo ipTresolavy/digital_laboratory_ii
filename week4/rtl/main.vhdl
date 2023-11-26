@@ -83,8 +83,7 @@ architecture structural of main is
       lidar_dist        : in  std_logic_vector(15 downto 0);
       hcsr04_dist       : in  std_logic_vector(15 downto 0);
       dist_estimate     : in  std_logic_vector(15 downto 0);
-      send_measurements : in  std_logic;
-      send_estimate     : in  std_logic;
+      send_data         : in  std_logic;
       rx                : in  std_logic;
       tx                : out std_logic
     );
@@ -114,51 +113,6 @@ architecture structural of main is
     );
   end component sklansky_adder;
 
-  component multiplier_top is
-    port
-    (
-      -- system signals
-      clock : in std_logic;  
-      reset : in std_logic;
-
-      -- handshake signals
-      valid : in  std_logic;
-      ready : out std_logic;
-
-      -- data inputs and outputs
-      multiplicand : in  std_logic_vector(15 downto 0);
-      multiplier   : in  std_logic_vector(15 downto 0);
-      product      : out std_logic_vector(31 downto 0)
-    );
-  end component multiplier_top;
-
-  component divisor_top is
-    port
-    (
-      -- system signals
-      clock : in std_logic;
-      reset : in std_logic;
-      
-      -- handshake signals
-      valid : in  std_logic;
-      ready : out std_logic;
-
-      -- data inputs and outputs
-      dividend  : in  std_logic_vector(15 downto 0);
-      divisor   : in  std_logic_vector(15 downto 0);
-      quotient  : out std_logic_vector(31 downto 0);
-      remainder : out std_logic_vector(31 downto 0)
-    );
-  end component divisor_top;
-
-  component hexa7seg is
-    port
-    (
-      hexa : in  std_logic_vector(3 downto 0);
-      sseg : out std_logic_vector(6 downto 0)
-    );
-  end component hexa7seg;
-
   component kalman_filter is
     port
     (
@@ -180,20 +134,39 @@ architecture structural of main is
     );
   end component kalman_filter;
 
+  component register_d is
+    generic
+    (
+      WIDTH : natural := 8 --! @brief Width of the register.
+    );
+    port
+    (
+      clock         : in  std_logic; --! @brief System clock signal.
+      reset         : in  std_logic; --! @brief System reset signal.
+      enable        : in  std_logic; --! @brief Enable signal for the register.
+      data_in       : in  std_logic_vector(WIDTH-1 downto 0); --! @brief Input data for the register.
+      data_out      : out std_logic_vector(WIDTH-1 downto 0) --! @brief Output data of the register.
+    );
+  end component register_d;
+
   -- Signal declarations
-  signal lidar_dist        : std_logic_vector(15 downto 0);
-  signal hcsr04_dist       : std_logic_vector(15 downto 0);
-  signal estimate          : std_logic_vector(15 downto 0);
-  signal send_measurements : std_logic;
-  signal send_estimate     : std_logic;
-  signal lidar_db_dist_l0  : std_logic_vector(6 downto 0);
-  signal lidar_db_dist_l1  : std_logic_vector(6 downto 0);
-  signal lidar_db_dist_h0  : std_logic_vector(6 downto 0);
-  signal lidar_db_dist_h1  : std_logic_vector(6 downto 0);
-  signal hcsr04_db_dist_l0 : std_logic_vector(6 downto 0);
-  signal hcsr04_db_dist_l1 : std_logic_vector(6 downto 0);
-  signal hcsr04_db_dist_h0 : std_logic_vector(6 downto 0);
-  signal hcsr04_db_dist_h1 : std_logic_vector(6 downto 0);
+  signal lidar_dist          : std_logic_vector(15 downto 0);
+  signal hcsr04_dist         : std_logic_vector(15 downto 0);
+  signal lidar_dist_buf      : std_logic_vector(15 downto 0);
+  signal hcsr04_dist_buf     : std_logic_vector(15 downto 0);
+  signal estimate            : std_logic_vector(15 downto 0);
+  signal buf_en              : std_logic;
+  signal pronto              : std_logic;
+  signal kalman_filter_ready : std_logic;
+  signal send_data           : std_logic;
+  signal lidar_db_dist_l0    : std_logic_vector(6 downto 0);
+  signal lidar_db_dist_l1    : std_logic_vector(6 downto 0);
+  signal lidar_db_dist_h0    : std_logic_vector(6 downto 0);
+  signal lidar_db_dist_h1    : std_logic_vector(6 downto 0);
+  signal hcsr04_db_dist_l0   : std_logic_vector(6 downto 0);
+  signal hcsr04_db_dist_l1   : std_logic_vector(6 downto 0);
+  signal hcsr04_db_dist_h0   : std_logic_vector(6 downto 0);
+  signal hcsr04_db_dist_h1   : std_logic_vector(6 downto 0);
 
   signal posicao   : std_logic_vector(2 downto 0);
 
@@ -221,7 +194,7 @@ begin
     reset       => reset,
     echo        => echo,
     trigger     => trigger,
-    pronto      => send_measurements,
+    pronto      => pronto,
     dist        => hcsr04_dist,
     db_dist_l0  => hcsr04_db_dist_l0,
     db_dist_l1  => hcsr04_db_dist_l1,
@@ -230,14 +203,44 @@ begin
     db_estado   => db_estado
   );
 
+  buf_en <= pronto and kalman_filter_ready;
+
+  lidar_dist_reg: register_d
+  generic map
+  (
+    WIDTH => 16
+  )
+  port map
+  (
+    clock    => clock,
+    reset    => reset,
+    enable   => buf_en,
+    data_in  => lidar_dist,
+    data_out => lidar_dist_buf
+  );
+
+  hcsr04_dist_reg: register_d
+  generic map
+  (
+    WIDTH => 16
+  )
+  port map
+  (
+    clock    => clock,
+    reset    => reset,
+    enable   => buf_en,
+    data_in  => hcsr04_dist,
+    data_out => hcsr04_dist_buf
+  );
+
   kalman_filter_component: kalman_filter
   port map
   (
     clock   => clock,
     reset   => reset,
-    i_valid => send_measurements,
-    o_valid => send_estimate,
-    ready   => open,
+    i_valid => pronto,
+    o_valid => send_data,
+    ready   => kalman_filter_ready,
     lidar   => lidar_dist,
     hcsr04  => hcsr04_dist,
     dist    => estimate
@@ -247,32 +250,31 @@ begin
   comm_interface_inst: comm_interface
   port map
   (
-    clock              => clock,
-    reset              => reset,
-    lidar_dist         => lidar_dist,
-    hcsr04_dist        => hcsr04_dist,
-    dist_estimate      => estimate,
-    send_measurements  => send_measurements,
-    send_estimate      => send_estimate,
-    rx                 => rx,
-    tx                 => tx
+    clock         => clock,
+    reset         => reset,
+    lidar_dist    => lidar_dist_buf,
+    hcsr04_dist   => hcsr04_dist_buf,
+    dist_estimate => estimate,
+    send_data     => send_data,
+    rx            => rx,
+    tx            => tx
   );
 
   posicao_logic: process(estimate)
   begin
-    if lidar_dist <= "0000000000001010" then
+    if estimate <= "0000000000001010" then
       posicao <= "000";
-    elsif lidar_dist <= "0000000000001111" then
+    elsif estimate <= "0000000000001111" then
       posicao <= "001";
-    elsif lidar_dist <= "0000000000010100" then
+    elsif estimate <= "0000000000010100" then
       posicao <= "010";
-    elsif lidar_dist <= "0000000000011001" then
+    elsif estimate <= "0000000000011001" then
       posicao <= "011";
-    elsif lidar_dist <= "0000000000011110" then
+    elsif estimate <= "0000000000011110" then
       posicao <= "100";
-    elsif lidar_dist <= "0000000000100011" then
+    elsif estimate <= "0000000000100011" then
       posicao <= "101";
-    elsif lidar_dist <= "0000000000101000" then
+    elsif estimate <= "0000000000101000" then
       posicao <= "110";
     else
       posicao <= "111";

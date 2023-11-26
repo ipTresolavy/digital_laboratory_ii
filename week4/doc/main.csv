@@ -1,0 +1,67 @@
+# Copyright (C) 2022  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+
+# Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+# File: /home/ipontes3olavy/second_quadrimester/diglabii/week4/doc/main.csv
+# Generated on: Sat Nov 25 15:43:53 2023
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Transceiver Analog Settings Protocol,VCCR_GXB/VCCT_GXB Voltage,Transceiver I/O Pin Termination,Transceiver Dedicated Refclk Pin Termination,Transmitter Common Mode Driver Voltage,Transmitter Slew Rate Control,Transmitter Differential Output Voltage,Receiver Buffer Common Mode Voltage,Strict Preservation
+clock,Input,PIN_M9,3B,B3B_N0,PIN_M9,2.5 V,,,,,,,,,,,,,
+db_dist_h0[6],Output,PIN_AB21,4A,B4A_N0,PIN_AB21,2.5 V,,,,,,,,,,,,,
+db_dist_h0[5],Output,PIN_AB22,4A,B4A_N0,PIN_AB22,2.5 V,,,,,,,,,,,,,
+db_dist_h0[4],Output,PIN_V14,4A,B4A_N0,PIN_V14,2.5 V,,,,,,,,,,,,,
+db_dist_h0[3],Output,PIN_Y14,4A,B4A_N0,PIN_Y14,2.5 V,,,,,,,,,,,,,
+db_dist_h0[2],Output,PIN_AA10,3B,B3B_N0,PIN_AA10,2.5 V,,,,,,,,,,,,,
+db_dist_h0[1],Output,PIN_AB17,4A,B4A_N0,PIN_AB17,2.5 V,,,,,,,,,,,,,
+db_dist_h0[0],Output,PIN_Y19,4A,B4A_N0,PIN_Y19,2.5 V,,,,,,,,,,,,,
+db_dist_h1[6],Output,PIN_V19,4A,B4A_N0,PIN_V19,2.5 V,,,,,,,,,,,,,
+db_dist_h1[5],Output,PIN_V18,4A,B4A_N0,PIN_V18,2.5 V,,,,,,,,,,,,,
+db_dist_h1[4],Output,PIN_U17,4A,B4A_N0,PIN_U17,2.5 V,,,,,,,,,,,,,
+db_dist_h1[3],Output,PIN_V16,4A,B4A_N0,PIN_V16,2.5 V,,,,,,,,,,,,,
+db_dist_h1[2],Output,PIN_Y17,4A,B4A_N0,PIN_Y17,2.5 V,,,,,,,,,,,,,
+db_dist_h1[1],Output,PIN_W16,4A,B4A_N0,PIN_W16,2.5 V,,,,,,,,,,,,,
+db_dist_h1[0],Output,PIN_Y16,4A,B4A_N0,PIN_Y16,2.5 V,,,,,,,,,,,,,
+db_dist_l0[6],Output,PIN_AA22,4A,B4A_N0,PIN_AA22,2.5 V,,,,,,,,,,,,,
+db_dist_l0[5],Output,PIN_Y21,4A,B4A_N0,PIN_Y21,2.5 V,,,,,,,,,,,,,
+db_dist_l0[4],Output,PIN_Y22,4A,B4A_N0,PIN_Y22,2.5 V,,,,,,,,,,,,,
+db_dist_l0[3],Output,PIN_W21,4A,B4A_N0,PIN_W21,2.5 V,,,,,,,,,,,,,
+db_dist_l0[2],Output,PIN_W22,4A,B4A_N0,PIN_W22,2.5 V,,,,,,,,,,,,,
+db_dist_l0[1],Output,PIN_V21,4A,B4A_N0,PIN_V21,2.5 V,,,,,,,,,,,,,
+db_dist_l0[0],Output,PIN_U21,4A,B4A_N0,PIN_U21,2.5 V,,,,,,,,,,,,,
+db_dist_l1[6],Output,PIN_U22,4A,B4A_N0,PIN_U22,2.5 V,,,,,,,,,,,,,
+db_dist_l1[5],Output,PIN_AA17,4A,B4A_N0,PIN_AA17,2.5 V,,,,,,,,,,,,,
+db_dist_l1[4],Output,PIN_AB18,4A,B4A_N0,PIN_AB18,2.5 V,,,,,,,,,,,,,
+db_dist_l1[3],Output,PIN_AA18,4A,B4A_N0,PIN_AA18,2.5 V,,,,,,,,,,,,,
+db_dist_l1[2],Output,PIN_AA19,4A,B4A_N0,PIN_AA19,2.5 V,,,,,,,,,,,,,
+db_dist_l1[1],Output,PIN_AB20,4A,B4A_N0,PIN_AB20,2.5 V,,,,,,,,,,,,,
+db_dist_l1[0],Output,PIN_AA20,4A,B4A_N0,PIN_AA20,2.5 V,,,,,,,,,,,,,
+db_estado[6],Output,PIN_W19,4A,B4A_N0,PIN_W19,2.5 V,,,,,,,,,,,,,
+db_estado[5],Output,PIN_C2,2A,B2A_N0,PIN_C2,2.5 V,,,,,,,,,,,,,
+db_estado[4],Output,PIN_C1,2A,B2A_N0,PIN_C1,2.5 V,,,,,,,,,,,,,
+db_estado[3],Output,PIN_P14,4A,B4A_N0,PIN_P14,2.5 V,,,,,,,,,,,,,
+db_estado[2],Output,PIN_T14,4A,B4A_N0,PIN_T14,2.5 V,,,,,,,,,,,,,
+db_estado[1],Output,PIN_M8,3B,B3B_N0,PIN_M8,2.5 V,,,,,,,,,,,,,
+db_estado[0],Output,PIN_N9,3B,B3B_N0,PIN_N9,2.5 V,,,,,,,,,,,,,
+db_sw,Input,PIN_AB12,4A,B4A_N0,PIN_AB12,2.5 V,,,,,,,,,,,,,
+echo,Input,PIN_H15,7A,B7A_N0,PIN_H15,2.5 V,,,,,,,,,,,,,
+lidar_rx,Input,PIN_H16,7A,B7A_N0,PIN_H16,2.5 V,,,,,,,,,,,,,
+lidar_tx,Output,PIN_A12,7A,B7A_N0,PIN_A12,2.5 V,,,,,,,,,,,,,
+pwm,Output,PIN_D13,7A,B7A_N0,PIN_D13,2.5 V,,,,,,,,,,,,,
+reset,Input,PIN_U13,4A,B4A_N0,PIN_U13,2.5 V,,,,,,,,,,,,,
+rx,Input,PIN_A13,7A,B7A_N0,PIN_A13,2.5 V,,,,,,,,,,,,,
+trigger,Output,PIN_B12,7A,B7A_N0,PIN_B12,2.5 V,,,,,,,,,,,,,
+tx,Output,PIN_B13,7A,B7A_N0,PIN_B13,2.5 V,,,,,,,,,,,,,

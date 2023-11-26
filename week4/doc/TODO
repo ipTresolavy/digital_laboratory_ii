@@ -1,0 +1,4 @@
+# TODO
+
+- testbench da comm_interface
+- verificar ligações do kalman_filter e comm_interface na main
