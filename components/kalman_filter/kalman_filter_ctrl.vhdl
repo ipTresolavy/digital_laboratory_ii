@@ -1,44 +1,51 @@
+-- Standard library and logic types are included for VHDL design.
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+--! @brief Entity for Kalman Filter Control.
+--! This entity controls the Kalman filter process, managing states and control signals for the filter's operation.
 entity kalman_filter_ctrl is
   port
   (
-    -- system signals
-    clock : in std_logic;
-    reset : in std_logic;
+    -- System signals
+    clock : in std_logic; --! @brief Clock signal for synchronization.
+    reset : in std_logic; --! @brief Reset signal to initialize or reset the control logic.
 
-    -- handshake signals
-    i_valid : in  std_logic;
-    o_valid : out std_logic;
-    ready   : out std_logic;
+    -- Handshake signals
+    i_valid : in  std_logic; --! @brief Input validation signal to start the filter operation.
+    o_valid : out std_logic; --! @brief Output validation signal indicating the completion of a filter operation.
+    ready   : out std_logic; --! @brief Ready signal to indicate readiness for new data.
 
-    -- control inputs
-    mult_ready : in std_logic;
-    div_ready  : in std_logic;
+    -- Control inputs
+    mult_ready : in std_logic; --! @brief Signal indicating the multiplier is ready.
+    div_ready  : in std_logic; --! @brief Signal indicating the divider is ready.
 
-    -- control outputs
-    buffer_inputs : out std_logic;
-    x_src, p_src  : out std_logic_vector(1 downto 0);
-    x_en, p_en    : out std_logic;
-    diff_src      : out std_logic;
-    mult_src      : out std_logic;
-    mult_valid    : out std_logic;
-    div_src       : out std_logic;
-    div_valid     : out std_logic;
-    add_src       : out std_logic;
-    pred_en       : out std_logic
+    -- Control outputs
+    buffer_inputs : out std_logic; --! @brief Signal to buffer the inputs.
+    x_src, p_src  : out std_logic_vector(1 downto 0); --! @brief Source selectors for x and p.
+    x_en, p_en    : out std_logic; --! @brief Enable signals for x and p.
+    diff_src      : out std_logic; --! @brief Source selector for the difference calculation.
+    mult_src      : out std_logic; --! @brief Source selector for the multiplier.
+    mult_valid    : out std_logic; --! @brief Validation signal for the multiplier.
+    div_src       : out std_logic; --! @brief Source selector for the divider.
+    div_valid     : out std_logic; --! @brief Validation signal for the divider.
+    add_src       : out std_logic; --! @brief Source selector for the adder.
+    pred_en       : out std_logic  --! @brief Enable signal for the predictor.
   );
 end entity kalman_filter_ctrl;
 
+--! @brief Behavioral architecture of the Kalman Filter Control.
+--! This architecture defines the state machine for controlling the Kalman filter process.
 architecture behavioral of kalman_filter_ctrl is
+  -- State definition for the Kalman filter control state machine.
   type state_type is (init_idle, init_regs, predict, update_idle, update_lidar_x_mult_init, update_lidar_x_mult_end, update_lidar_x_div_init, update_lidar_x_div_end, update_lidar_x_add, update_lidar_p_mult_init, update_lidar_p_mult_end, update_lidar_p_div_init, update_lidar_p_div_end, update_lidar_p_add, update_hcsr04_x_mult_init, update_hcsr04_x_mult_end, update_hcsr04_x_div_init, update_hcsr04_x_div_end, update_hcsr04_x_add, update_hcsr04_p_mult_init, update_hcsr04_p_mult_end, update_hcsr04_p_div_init, update_hcsr04_p_div_end, update_hcsr04_p_add);
   
+  -- Signal declarations for the current and next state.
   signal state, next_state : state_type;
   
 begin
-  
+  -- Process for latching the state on the clock's rising edge or resetting.
   state_latch: process(clock, reset)
   begin
     if reset = '1' then
@@ -48,6 +55,7 @@ begin
     end if;
   end process state_latch;
   
+  -- Process for determining the next state logic based on the current state and input signals.
   next_state_logic: process(state, i_valid, mult_ready, div_ready)
   begin
     ready <= '0';

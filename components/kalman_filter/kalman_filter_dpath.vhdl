@@ -1,52 +1,58 @@
+-- Standard library and logic types are included for VHDL design.
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
+--! @brief Entity for Kalman Filter Datapath.
+--! This entity represents the datapath of a Kalman filter, processing sensor inputs to estimate a state.
 entity kalman_filter_dpath is
   port
   (
-    -- system signals
-    clock : std_logic;
-    reset : std_logic;
+    -- System signals
+    clock : std_logic; --! @brief Clock signal for synchronization.
+    reset : std_logic; --! @brief Reset signal to initialize or reset the datapath logic.
 
-    -- control inputs
-    buffer_inputs : in std_logic;
-    x_src, p_src  : in std_logic_vector(1 downto 0);
-    x_en, p_en    : in std_logic;
-    diff_src      : in std_logic;
-    mult_src      : in std_logic;
-    mult_valid    : in std_logic;
-    div_src       : in std_logic;
-    div_valid     : in std_logic;
-    add_src       : in std_logic;
-    pred_en       : in std_logic;
+    -- Control inputs
+    buffer_inputs : in std_logic; --! @brief Signal to buffer inputs from sensors.
+    x_src, p_src  : in std_logic_vector(1 downto 0); --! @brief Source selectors for state estimate (x) and error covariance (p).
+    x_en, p_en    : in std_logic; --! @brief Enable signals for x and p registers.
+    diff_src      : in std_logic; --! @brief Source selector for the difference calculation.
+    mult_src      : in std_logic; --! @brief Source selector for the multiplier.
+    mult_valid    : in std_logic; --! @brief Validation signal for the multiplier.
+    div_src       : in std_logic; --! @brief Source selector for the divider.
+    div_valid     : in std_logic; --! @brief Validation signal for the divider.
+    add_src       : in std_logic; --! @brief Source selector for the adder.
+    pred_en       : in std_logic; --! @brief Enable signal for the predictor.
 
-    -- control outputs
-    mult_ready : out std_logic;
-    div_ready  : out std_logic;
+    -- Control outputs
+    mult_ready : out std_logic; --! @brief Signal indicating the multiplier is ready.
+    div_ready  : out std_logic; --! @brief Signal indicating the divider is ready.
 
-    -- data inputs
-    lidar  : in std_logic_vector(15 downto 0);
-    hcsr04 : in std_logic_vector(15 downto 0);
+    -- Data inputs
+    lidar  : in std_logic_vector(15 downto 0); --! @brief Input from lidar sensor.
+    hcsr04 : in std_logic_vector(15 downto 0); --! @brief Input from hcsr04 ultrasonic sensor.
 
-    -- data output
-    dist : out std_logic_vector(15 downto 0)
+    -- Data output
+    dist : out std_logic_vector(15 downto 0) --! @brief Output estimated distance.
   );
 end entity kalman_filter_dpath;
 
+--! @brief Structural architecture of the kalman_filter_dpath entity.
+--! This architecture includes various components for arithmetic operations that constitute the Kalman filter's datapath.
 architecture structural of kalman_filter_dpath is
+  -- Component declarations for arithmetic operations used in Kalman filter
   component sklansky_adder is
     generic
     (
-      WIDTH : natural := 16
+      WIDTH : natural := 16 --! @brief Width of the operands for the adder.
     );
     port
     (
-      a     : in  std_logic_vector(WIDTH-1 downto 0);
-      b     : in  std_logic_vector(WIDTH-1 downto 0);
-      c_in  : in  std_logic;
-      c_out : out std_logic;
-      s     : out std_logic_vector(WIDTH-1 downto 0)
+      a     : in  std_logic_vector(WIDTH-1 downto 0); --! @brief First operand.
+      b     : in  std_logic_vector(WIDTH-1 downto 0); --! @brief Second operand.
+      c_in  : in  std_logic; --! @brief Carry input.
+      c_out : out std_logic; --! @brief Carry output.
+      s     : out std_logic_vector(WIDTH-1 downto 0) --! @brief Sum output.
     );
   end component sklansky_adder;
 

@@ -2,6 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
+--! @brief Entity for a signed multiplier.
+--! This entity represents a signed multiplier that takes two 16-bit inputs (multiplicand and multiplier) and produces a 32-bit product.
+--! It includes system signals for clock and reset, handshake signals for validation and readiness, and data inputs/outputs for the multiplication operation.
 entity signed_multiplier is
   port
   (
