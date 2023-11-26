@@ -1,0 +1,81 @@
+digraph kalman_filter_diagram {
+  rankdir=LR;
+
+  node [shape=box];
+  edge [dir=none, color=black];
+
+  subgraph cluster_ctrl {
+    label="kalman_filter_ctrl";
+    style=filled;
+    color=lightgrey;
+
+    ctrl_clock;
+    ctrl_reset;
+    ctrl_i_valid;
+    ctrl_o_valid;
+    ctrl_ready;
+    ctrl_mult_ready;
+    ctrl_div_ready;
+    ctrl_buffer_inputs;
+    ctrl_x_src;
+    ctrl_p_src;
+    ctrl_x_en;
+    ctrl_p_en;
+    ctrl_diff_src;
+    ctrl_mult_src;
+    ctrl_mult_valid;
+    ctrl_div_src;
+    ctrl_div_valid;
+    ctrl_add_src;
+    ctrl_pred_en;
+  }
+
+  subgraph cluster_dpath {
+    label="kalman_filter_dpath";
+    style=filled;
+    color=lightgrey;
+
+    dpath_clock;
+    dpath_reset;
+    dpath_mult_ready;
+    dpath_div_ready;
+    dpath_buffer_inputs;
+    dpath_x_src;
+    dpath_p_src;
+    dpath_x_en;
+    dpath_p_en;
+    dpath_diff_src;
+    dpath_mult_src;
+    dpath_mult_valid;
+    dpath_div_src;
+    dpath_div_valid;
+    dpath_add_src;
+    dpath_pred_en;
+    dpath_lidar;
+    dpath_hcsr04;
+    dpath_dist;
+  }
+
+  ctrl_mult_ready -> dpath_mult_ready [label="mult_ready"];
+  ctrl_div_ready -> dpath_div_ready [label="div_ready"];
+  ctrl_buffer_inputs -> dpath_buffer_inputs [label="buffer_inputs"];
+  ctrl_x_src -> dpath_x_src [label="x_src"];
+  ctrl_p_src -> dpath_p_src [label="p_src"];
+  ctrl_x_en -> dpath_x_en [label="x_en"];
+  ctrl_p_en -> dpath_p_en [label="p_en"];
+  ctrl_diff_src -> dpath_diff_src [label="diff_src"];
+  ctrl_mult_src -> dpath_mult_src [label="mult_src"];
+  ctrl_mult_valid -> dpath_mult_valid [label="mult_valid"];
+  ctrl_div_src -> dpath_div_src [label="div_src"];
+  ctrl_div_valid -> dpath_div_valid [label="div_valid"];
+  ctrl_add_src -> dpath_add_src [label="add_src"];
+  ctrl_pred_en -> dpath_pred_en [label="pred_en"];
+
+  ctrl_clock -> dpath_clock [label="clock"];
+  ctrl_reset -> dpath_reset [label="reset"];
+  ctrl_i_valid -> dpath_lidar [label="lidar"];
+  ctrl_i_valid -> dpath_hcsr04 [label="hcsr04"];
+  dpath_dist -> ctrl_o_valid [label="dist"];
+  dpath_pred_en -> ctrl_ready [label="ready"];
+}
+

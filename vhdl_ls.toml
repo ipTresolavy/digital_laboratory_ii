@@ -19,8 +19,7 @@ week2.files = [
 ]
 
 week3.files = [
-  "week3/rtl/*.vhdl",
-  "week3/simulation/*.vhdl"
+  "week3/rtl/*.vhdl"
 ]
 
 week4.files = [
