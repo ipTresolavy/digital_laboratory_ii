@@ -258,8 +258,8 @@ begin
   );
 
   with div_src select
-    divisor_adder_a <= (6 to 15 => '0') & "100100" when '1',
-                       (2 to 15 => '0') & "10" when others;
+    divisor_adder_a <= (7 to 15 => '0') & "1100100" when '1',
+                       (7 to 15 => '0') & "1100100" when others;
   divisor_adder: sklansky_adder
   generic map
   (
